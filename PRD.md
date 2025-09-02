@@ -1,10 +1,6 @@
-Awesome—here’s the expanded, Codex-ready spec with the additional market sectors folded into the single-package design. It’s detailed, implementation-oriented, and follows the same API/namespace patterns you approved.
+Veritas — Complete Specification (v1)
 
-⸻
-
-Powell.Veritas — Complete Specification (v1)
-
-Package ID: Powell.Veritas (single NuGet)
+Package ID: Veritas (single NuGet)
 Purpose: Normalize, validate, and (where safe) generate identifiers across Finance, Tax, Energy, Identity/Software, plus Logistics & Supply Chain, Healthcare & Pharma, Telecom & IT, Education & Research, Media & Entertainment, Government & Legal, and Retail & Commerce.
 TFMs: net8.0;netstandard2.0
 Deps: none
@@ -14,34 +10,34 @@ Design: static types per ID, uniform Try* APIs, Span-first, zero reflection, tri
 
 1) Assembly & Namespaces
 
-Single assembly. Logical namespaces (all under Powell.Veritas):
+Single assembly. Logical namespaces (all under Veritas):
 
 Core primitives:
-  Powell.Veritas                // ValidationResult, errors, formatting, bulk, algorithms
+  Veritas                // ValidationResult, errors, formatting, bulk, algorithms
 
 Domains:
-  Powell.Veritas.Finance
-  Powell.Veritas.Tax
-  Powell.Veritas.Energy
-  Powell.Veritas.Identity
-  Powell.Veritas.Logistics
-  Powell.Veritas.Healthcare
-  Powell.Veritas.Telecom
-  Powell.Veritas.Education
-  Powell.Veritas.Media
-  Powell.Veritas.Gov
-  Powell.Veritas.Retail
+  Veritas.Finance
+  Veritas.Tax
+  Veritas.Energy
+  Veritas.Identity
+  Veritas.Logistics
+  Veritas.Healthcare
+  Veritas.Telecom
+  Veritas.Education
+  Veritas.Media
+  Veritas.Gov
+  Veritas.Retail
 
 Country-specific subnamespaces where relevant:
-  Powell.Veritas.Tax.DE, .UK, .FR, .IT, .ES, .NL, .PL, .SE, .US, .BR, .CA, .IN, .AU, .CN, .NZ
-  Powell.Veritas.Energy.DE, .GB, .FR, .NL, .IT, .ES
+  Veritas.Tax.DE, .UK, .FR, .IT, .ES, .NL, .PL, .SE, .US, .BR, .CA, .IN, .AU, .CN, .NZ
+  Veritas.Energy.DE, .GB, .FR, .NL, .IT, .ES
 
 
 ⸻
 
 2) Core Public API (uniform)
 
-namespace Powell.Veritas;
+namespace Veritas;
 
 public enum ValidationError { None, Length, Charset, Checksum, CountryRule, Format, Range, ReservedPrefix }
 
@@ -284,8 +280,8 @@ foreach (var s in Bulk.GenerateMany(
 
 10) Project Layout
 
-/src/Powell.Veritas/
-  Powell.Veritas.csproj
+/src/Veritas/
+  Veritas.csproj
   Core/
     ValidationError.cs
     ValidationResult.cs
@@ -400,4 +396,8 @@ Gov.PassportMrz.TryValidate(line1.AsSpan(), line2.AsSpan(), out var mrzResult);
 
 ⸻
 
-That’s the full, expanded spec—ready to scaffold and implement incrementally while keeping APIs uniform and the package single and lightweight. If you want, I can produce a repo skeleton (folders, empty classes with signatures, csproj, and a README scaffold) matching this spec so you can start coding straight away.
+Include extensive unit tests in a well structures manner.
+include the GitHub Actions workflows and YAML for CI/CD with NuGet publication and vweaon releaae managwment with automarix release notes.
+Include readme and keep it ip to date
+Include an auto generated redthedocs style output
+Include a aeparate clean well structured CLI tool
