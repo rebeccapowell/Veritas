@@ -29,7 +29,7 @@ Domains:
   Veritas.Retail
 
 Country-specific subnamespaces where relevant:
-  Veritas.Tax.DE, .UK, .FR, .IT, .ES, .NL, .PL, .SE, .US, .BR, .CA, .IN, .AU, .CN, .NZ
+  Veritas.Tax.DE, .UK, .FR, .IT, .ES, .NL, .PL, .SE, .EU, .US, .BR, .CA, .IN, .AU, .CN, .NZ
   Veritas.Energy.DE, .GB, .FR, .NL, .IT, .ES
 
 
@@ -297,6 +297,7 @@ foreach (var s in Bulk.GenerateMany(
       Base58Check.cs
   Finance/ (Iban, Bic, Isin, Rf, Pan, AbaRouting)
   Tax/
+    EU/ (Vat)
     DE/ (UstIdNr, IdNr)
     UK/ (Utr, Vat, Nino, CompanyNumber)
     FR/ (Siren, Siret, Vat)
@@ -353,13 +354,14 @@ foreach (var s in Bulk.GenerateMany(
 	•	Implements the bold subset below with tests & docs:
 
 Finance: IBAN, BIC, RF, ISIN, PAN (validate), ABA
-Tax: DE (USt-IdNr, IdNr), UK (UTR, VAT, NINO, Company), FR (SIREN/SIRET), US (SSN/EIN/ITIN), BR (CPF/CNPJ)
+Tax: DE (USt-IdNr, IdNr), UK (UTR, VAT, NINO, Company), FR (SIREN/SIRET), US (SSN/EIN/ITIN), BR (CPF/CNPJ), IT (PIVA), ES (NIF/NIE/CIF), NL (BSN/BTW)
 Energy: EIC; DE (MaLo/MeLo), GB (MPAN/MPRN), NL (Energy EAN), ES (CUPS)
 Identity: ULID, UUID, NanoID, Email, Phone, Domain
-Logistics: GTIN/EAN/UPC, GLN, SSCC, VIN, ISO 6346
+Logistics: GTIN/EAN/UPC, GLN, SSCC, VIN, ISO 6346, AWB, IMO
 Healthcare: NHS Number, ORCID
 Telecom: IMEI, ICCID, MAC, IPv4/IPv6
-Education/Media: ISBN-10/13, ISSN, DOI
+Education/Media: ISBN-10/13, ISSN, DOI, ISNI
+Generation implemented for: RF, MPAN core, GTIN, GLN, SSCC, IMEI, ICCID, ULID, NanoID, ISBN-10/13, ISSN
 	•	Performance targets met (see §8).
 	•	Tests ≥ 90% coverage for algorithms & critical validators.
 	•	README includes a support matrix (V/G) and examples.
