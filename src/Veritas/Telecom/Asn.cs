@@ -4,10 +4,24 @@ using Veritas;
 
 namespace Veritas.Telecom;
 
-public readonly struct AsnValue { public uint Value { get; } public AsnValue(uint v) => Value = v; }
+/// <summary>Represents a validated Autonomous System Number (ASN).</summary>
+public readonly struct AsnValue
+{
+    /// <summary>Gets the numeric ASN value.</summary>
+    public uint Value { get; }
 
+    /// <summary>Initializes a new instance of the <see cref="AsnValue"/> struct.</summary>
+    /// <param name="value">The parsed ASN.</param>
+    public AsnValue(uint value) => Value = value;
+}
+
+/// <summary>Provides validation and generation for Autonomous System Numbers.</summary>
 public static class Asn
 {
+    /// <summary>Attempts to validate the supplied input as an ASN.</summary>
+    /// <param name="input">Candidate ASN to validate.</param>
+    /// <param name="result">The validation outcome including the parsed value when valid.</param>
+    /// <returns><c>true</c> if validation executed; the <see cref="ValidationResult{T}.IsValid"/> property indicates success.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<AsnValue> result)
     {
         if (uint.TryParse(input, NumberStyles.None, CultureInfo.InvariantCulture, out var value))
@@ -19,9 +33,18 @@ public static class Asn
         return true;
     }
 
+    /// <summary>Attempts to generate a random ASN into the provided buffer.</summary>
+    /// <param name="destination">Buffer that receives the generated number.</param>
+    /// <param name="written">When the method returns, contains the number of characters produced.</param>
+    /// <returns><c>true</c> if generation was attempted; otherwise, <c>false</c>.</returns>
     public static bool TryGenerate(Span<char> destination, out int written)
         => TryGenerate(default, destination, out written);
 
+    /// <summary>Attempts to generate a random ASN using the supplied options.</summary>
+    /// <param name="options">Options controlling generation.</param>
+    /// <param name="destination">Buffer that receives the generated number.</param>
+    /// <param name="written">When the method returns, contains the number of characters produced.</param>
+    /// <returns><c>true</c> if generation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written)
     {
         var rng = options.Seed.HasValue ? new Random(options.Seed.Value) : Random.Shared;
@@ -33,3 +56,4 @@ public static class Asn
         return true;
     }
 }
+

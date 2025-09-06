@@ -7,13 +7,21 @@ namespace Veritas.Energy;
 /// <summary>Represents a validated Energy Identification Code (EIC).</summary>
 public readonly struct EicValue
 {
+    /// <summary>Gets the normalized EIC code string.</summary>
     public string Value { get; }
+
+    /// <summary>Initializes a new instance of the <see cref="EicValue"/> struct.</summary>
+    /// <param name="value">The code string.</param>
     public EicValue(string value) => Value = value;
 }
 
 /// <summary>Provides validation for EIC codes.</summary>
 public static class Eic
 {
+    /// <summary>Attempts to validate the supplied input as an EIC code.</summary>
+    /// <param name="input">Candidate code to validate.</param>
+    /// <param name="result">The validation outcome including the parsed value when valid.</param>
+    /// <returns><c>true</c> if validation executed; the <see cref="ValidationResult{T}.IsValid"/> property indicates success.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<EicValue> result)
     {
         Span<char> buffer = stackalloc char[16];
@@ -32,9 +40,18 @@ public static class Eic
         return true;
     }
 
+    /// <summary>Attempts to generate a random EIC code into the provided buffer.</summary>
+    /// <param name="destination">Buffer that receives the generated code.</param>
+    /// <param name="written">When the method returns, contains the number of characters produced.</param>
+    /// <returns><c>true</c> if generation was attempted; otherwise, <c>false</c>.</returns>
     public static bool TryGenerate(Span<char> destination, out int written)
         => TryGenerate(default, destination, out written);
 
+    /// <summary>Attempts to generate a random EIC code using the supplied options.</summary>
+    /// <param name="options">Options controlling generation.</param>
+    /// <param name="destination">Buffer that receives the generated code.</param>
+    /// <param name="written">When the method returns, contains the number of characters produced.</param>
+    /// <returns><c>true</c> if generation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written)
     {
         written = 0;

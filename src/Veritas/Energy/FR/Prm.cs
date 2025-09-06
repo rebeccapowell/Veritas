@@ -3,14 +3,24 @@ using Veritas;
 
 namespace Veritas.Energy.FR;
 
+/// <summary>Represents a validated French PRM identifier.</summary>
 public readonly struct PrmValue
 {
+    /// <summary>Gets the normalized PRM identifier string.</summary>
     public string Value { get; }
+
+    /// <summary>Initializes a new instance of the <see cref="PrmValue"/> struct.</summary>
+    /// <param name="value">The identifier string.</param>
     public PrmValue(string value) => Value = value;
 }
 
+/// <summary>Provides validation for PRM identifiers.</summary>
 public static class Prm
 {
+    /// <summary>Attempts to validate the supplied input as a PRM identifier.</summary>
+    /// <param name="input">Candidate identifier to validate.</param>
+    /// <param name="result">The validation outcome including the parsed value when valid.</param>
+    /// <returns><c>true</c> if validation executed; the <see cref="ValidationResult{T}.IsValid"/> property indicates success.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<PrmValue> result)
     {
         Span<char> digits = stackalloc char[14];

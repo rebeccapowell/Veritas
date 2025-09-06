@@ -3,10 +3,24 @@ using Veritas;
 
 namespace Veritas.Telecom;
 
-public readonly struct MacValue { public string Value { get; } public MacValue(string v) => Value = v; }
+/// <summary>Represents a validated MAC address.</summary>
+public readonly struct MacValue
+{
+    /// <summary>Gets the normalized MAC address string.</summary>
+    public string Value { get; }
 
+    /// <summary>Initializes a new instance of the <see cref="MacValue"/> struct.</summary>
+    /// <param name="value">The address string.</param>
+    public MacValue(string value) => Value = value;
+}
+
+/// <summary>Provides validation and generation for MAC addresses.</summary>
 public static class Mac
 {
+    /// <summary>Attempts to validate the supplied input as a MAC address.</summary>
+    /// <param name="input">Candidate address to validate.</param>
+    /// <param name="result">The validation outcome including the parsed value when valid.</param>
+    /// <returns><c>true</c> if validation executed; the <see cref="ValidationResult{T}.IsValid"/> property indicates success.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<MacValue> result)
     {
         Span<char> buf = stackalloc char[12];
@@ -24,9 +38,18 @@ public static class Mac
         return true;
     }
 
+    /// <summary>Attempts to generate a random MAC address into the provided buffer.</summary>
+    /// <param name="destination">Buffer that receives the generated address.</param>
+    /// <param name="written">When the method returns, contains the number of characters produced.</param>
+    /// <returns><c>true</c> if generation was attempted; otherwise, <c>false</c>.</returns>
     public static bool TryGenerate(Span<char> destination, out int written)
         => TryGenerate(default, destination, out written);
 
+    /// <summary>Attempts to generate a random MAC address using the supplied options.</summary>
+    /// <param name="options">Options controlling generation.</param>
+    /// <param name="destination">Buffer that receives the generated address.</param>
+    /// <param name="written">When the method returns, contains the number of characters produced.</param>
+    /// <returns><c>true</c> if generation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written)
     {
         if (destination.Length < 12)
@@ -42,3 +65,4 @@ public static class Mac
         return true;
     }
 }
+

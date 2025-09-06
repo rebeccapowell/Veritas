@@ -3,14 +3,24 @@ using Veritas;
 
 namespace Veritas.Energy.GB;
 
+/// <summary>Represents a validated UK Meter Point Reference Number (MPRN).</summary>
 public readonly struct MprnValue
 {
+    /// <summary>Gets the normalized MPRN string.</summary>
     public string Value { get; }
+
+    /// <summary>Initializes a new instance of the <see cref="MprnValue"/> struct.</summary>
+    /// <param name="value">The identifier string.</param>
     public MprnValue(string value) => Value = value;
 }
 
+/// <summary>Provides validation for MPRN identifiers.</summary>
 public static class Mprn
 {
+    /// <summary>Attempts to validate the supplied input as an MPRN.</summary>
+    /// <param name="input">Candidate identifier to validate.</param>
+    /// <param name="result">The validation outcome including the parsed value when valid.</param>
+    /// <returns><c>true</c> if validation executed; the <see cref="ValidationResult{T}.IsValid"/> property indicates success.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<MprnValue> result)
     {
         Span<char> digits = stackalloc char[10];

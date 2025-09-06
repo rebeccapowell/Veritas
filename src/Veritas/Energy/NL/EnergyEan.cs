@@ -4,14 +4,24 @@ using Veritas.Algorithms;
 
 namespace Veritas.Energy.NL;
 
+/// <summary>Represents a validated Dutch energy EAN code.</summary>
 public readonly struct EnergyEanValue
 {
+    /// <summary>Gets the normalized EAN code string.</summary>
     public string Value { get; }
+
+    /// <summary>Initializes a new instance of the <see cref="EnergyEanValue"/> struct.</summary>
+    /// <param name="value">The code string.</param>
     public EnergyEanValue(string value) => Value = value;
 }
 
+/// <summary>Provides validation and generation for Dutch energy EAN codes.</summary>
 public static class EnergyEan
 {
+    /// <summary>Attempts to validate the supplied input as an energy EAN code.</summary>
+    /// <param name="input">Candidate code to validate.</param>
+    /// <param name="result">The validation outcome including the parsed value when valid.</param>
+    /// <returns><c>true</c> if validation executed; the <see cref="ValidationResult{T}.IsValid"/> property indicates success.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<EnergyEanValue> result)
     {
         Span<char> digits = stackalloc char[18];
@@ -35,9 +45,18 @@ public static class EnergyEan
         return true;
     }
 
+    /// <summary>Attempts to generate a random energy EAN code into the provided buffer.</summary>
+    /// <param name="destination">Buffer that receives the generated code.</param>
+    /// <param name="written">When the method returns, contains the number of characters produced.</param>
+    /// <returns><c>true</c> if generation was attempted; otherwise, <c>false</c>.</returns>
     public static bool TryGenerate(Span<char> destination, out int written)
         => TryGenerate(default, destination, out written);
 
+    /// <summary>Attempts to generate a random energy EAN code using the supplied options.</summary>
+    /// <param name="options">Options controlling generation.</param>
+    /// <param name="destination">Buffer that receives the generated code.</param>
+    /// <param name="written">When the method returns, contains the number of characters produced.</param>
+    /// <returns><c>true</c> if generation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written)
     {
         if (destination.Length < 18)

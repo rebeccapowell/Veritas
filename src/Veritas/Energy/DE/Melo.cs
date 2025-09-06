@@ -3,14 +3,24 @@ using Veritas;
 
 namespace Veritas.Energy.DE;
 
+/// <summary>Represents a validated German Meter Location (MeLo) identifier.</summary>
 public readonly struct MeloValue
 {
+    /// <summary>Gets the normalized MeLo identifier string.</summary>
     public string Value { get; }
+
+    /// <summary>Initializes a new instance of the <see cref="MeloValue"/> struct.</summary>
+    /// <param name="value">The identifier string.</param>
     public MeloValue(string value) => Value = value;
 }
 
+/// <summary>Provides validation and generation for MeLo identifiers.</summary>
 public static class Melo
 {
+    /// <summary>Attempts to validate the supplied input as a MeLo identifier.</summary>
+    /// <param name="input">Candidate identifier to validate.</param>
+    /// <param name="result">The validation outcome including the parsed value when valid.</param>
+    /// <returns><c>true</c> if validation executed; the <see cref="ValidationResult{T}.IsValid"/> property indicates success.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<MeloValue> result)
     {
         Span<char> chars = stackalloc char[33];
@@ -29,9 +39,18 @@ public static class Melo
         return true;
     }
 
+    /// <summary>Attempts to generate a random MeLo identifier into the provided buffer.</summary>
+    /// <param name="destination">Buffer that receives the generated identifier.</param>
+    /// <param name="written">When the method returns, contains the number of characters produced.</param>
+    /// <returns><c>true</c> if generation was attempted; otherwise, <c>false</c>.</returns>
     public static bool TryGenerate(Span<char> destination, out int written)
         => TryGenerate(default, destination, out written);
 
+    /// <summary>Attempts to generate a random MeLo identifier using the supplied options.</summary>
+    /// <param name="options">Options controlling generation.</param>
+    /// <param name="destination">Buffer that receives the generated identifier.</param>
+    /// <param name="written">When the method returns, contains the number of characters produced.</param>
+    /// <returns><c>true</c> if generation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written)
     {
         written = 0;
