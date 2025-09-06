@@ -10,6 +10,15 @@ public class OrcidTests
     public void Validate(string input, bool expected)
     {
         Orcid.TryValidate(input, out var r);
-        r.IsValid.ShouldBe(expected);
+       r.IsValid.ShouldBe(expected);
+    }
+
+    [Fact]
+    public void GenerateProducesValid()
+    {
+        Span<char> buffer = stackalloc char[16];
+        Orcid.TryGenerate(buffer, out var written).ShouldBeTrue();
+        Orcid.TryValidate(buffer[..written], out var r);
+        r.IsValid.ShouldBeTrue();
     }
 }

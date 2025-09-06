@@ -59,7 +59,7 @@ Core primitives and algorithms for identifier validation and generation.
 - Germany IdNr validation/generation
 - Canada SIN validation/generation
 - Canada Business Number validation/generation
-- United States SSN structural validation
+- United States SSN structural validation and generation
 - United Kingdom NINO structural validation
 - United Kingdom UTR checksum validation
 - United Kingdom VAT checksum validation
@@ -100,7 +100,7 @@ Core primitives and algorithms for identifier validation and generation.
 - IMEI validation and generation
 - MEID validation and generation
 - ICCID validation and generation
-- MAC address validation
+- MAC address validation and generation
 - OUI validation and generation
 - ASN validation and generation
 - IPv4 structural validation
@@ -116,8 +116,8 @@ Core primitives and algorithms for identifier validation and generation.
 - ISRC structural validation
 
 ### Healthcare
-- NHS Number validation
-- ORCID validation
+- NHS Number validation and generation
+- ORCID validation and generation
 
 Additional identifiers and algorithms will be added per the [PRD](PRD.md).
 

@@ -12,4 +12,13 @@ public class SsnTests
         Ssn.TryValidate(input, out var r);
         r.IsValid.ShouldBe(expected);
     }
+
+    [Fact]
+    public void GenerateProducesValid()
+    {
+        Span<char> buffer = stackalloc char[9];
+        Ssn.TryGenerate(buffer, out var written).ShouldBeTrue();
+        Ssn.TryValidate(buffer[..written], out var r);
+        r.IsValid.ShouldBeTrue();
+    }
 }

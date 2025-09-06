@@ -25,4 +25,22 @@ public static class Orcid
         result = new ValidationResult<OrcidValue>(true, new OrcidValue(new string(digits)), ValidationError.None);
         return true;
     }
+
+    public static bool TryGenerate(Span<char> destination, out int written)
+        => TryGenerate(default, destination, out written);
+
+    public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written)
+    {
+        if (destination.Length < 16)
+        {
+            written = 0;
+            return false;
+        }
+        var rng = options.Seed.HasValue ? new Random(options.Seed.Value) : Random.Shared;
+        for (int i = 0; i < 15; i++)
+            destination[i] = (char)('0' + rng.Next(10));
+        destination[15] = Iso7064.ComputeCheckDigitMod11_2(destination[..15]);
+        written = 16;
+        return true;
+    }
 }

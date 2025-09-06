@@ -27,4 +27,35 @@ public static class Ssn
         result = new ValidationResult<SsnValue>(true, new SsnValue(new string(digits)), ValidationError.None);
         return true;
     }
+
+    public static bool TryGenerate(Span<char> destination, out int written)
+        => TryGenerate(default, destination, out written);
+
+    public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written)
+    {
+        if (destination.Length < 9)
+        {
+            written = 0;
+            return false;
+        }
+        var rng = options.Seed.HasValue ? new Random(options.Seed.Value) : Random.Shared;
+        int area;
+        do
+        {
+            area = rng.Next(1, 900); // 001-899
+        } while (area == 666);
+        int group = rng.Next(1, 100); // 01-99
+        int serial = rng.Next(1, 10000); // 0001-9999
+        destination[0] = (char)('0' + area / 100);
+        destination[1] = (char)('0' + (area / 10) % 10);
+        destination[2] = (char)('0' + area % 10);
+        destination[3] = (char)('0' + group / 10);
+        destination[4] = (char)('0' + group % 10);
+        destination[5] = (char)('0' + serial / 1000);
+        destination[6] = (char)('0' + (serial / 100) % 10);
+        destination[7] = (char)('0' + (serial / 10) % 10);
+        destination[8] = (char)('0' + serial % 10);
+        written = 9;
+        return true;
+    }
 }

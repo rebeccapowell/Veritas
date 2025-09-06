@@ -23,4 +23,22 @@ public static class Mac
         result = new ValidationResult<MacValue>(true, new MacValue(new string(buf)), ValidationError.None);
         return true;
     }
+
+    public static bool TryGenerate(Span<char> destination, out int written)
+        => TryGenerate(default, destination, out written);
+
+    public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written)
+    {
+        if (destination.Length < 12)
+        {
+            written = 0;
+            return false;
+        }
+        var rng = options.Seed.HasValue ? new Random(options.Seed.Value) : Random.Shared;
+        const string hex = "0123456789ABCDEF";
+        for (int i = 0; i < 12; i++)
+            destination[i] = hex[rng.Next(16)];
+        written = 12;
+        return true;
+    }
 }
