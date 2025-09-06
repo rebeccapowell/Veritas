@@ -22,6 +22,10 @@ Currently implemented:
 - US ABA routing number validation
 - Mexican CLABE validation and generation
 - Legal Entity Identifier (LEI) validation and generation
+- SEDOL validation and generation
+- CUSIP validation and generation
+- Market Identifier Code (MIC) structural validation
+- German WKN structural validation
 
 ### Energy
 - Energy Identification Code (EIC) validation and generation (ISO 7064 mod 37,2)
@@ -32,6 +36,8 @@ Currently implemented:
 - Germany MaLo validation and generation
 - Germany MeLo validation and generation
 - France PRM validation
+- Italy POD structural validation
+- Italy PDR structural validation
 
 ### Identity
 - UUID/GUID validation and generation
@@ -50,6 +56,8 @@ Currently implemented:
 - Brazil CNPJ validation/generation
 - Germany USt-IdNr validation/generation
 - Germany IdNr validation/generation
+- Canada SIN validation/generation
+- Canada Business Number validation/generation
 - United States SSN structural validation
 - United Kingdom NINO structural validation
 - United Kingdom UTR checksum validation
@@ -57,10 +65,14 @@ Currently implemented:
 - United Kingdom Company Number structural validation
 - United States EIN prefix validation
 - United States ITIN structural validation
+- Australia TFN checksum validation/generation
+- Australia ABN checksum validation/generation
+- India PAN validation/generation
 - France SIREN validation
 - France SIRET validation
 - France VAT checksum validation
 - Italy VAT (PIVA) checksum validation
+- China USCC validation/generation
 - Spain NIF checksum validation
 - Spain NIE checksum validation
 - Spain CIF checksum validation
@@ -72,6 +84,7 @@ Currently implemented:
 - Poland PESEL checksum validation
 - Sweden Personnummer checksum validation
 - Sweden OrgNr checksum validation
+- New Zealand IRD checksum validation
 
 ### Logistics
 - GTIN/EAN/UPC validation and generation (GS1 mod 10)

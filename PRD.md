@@ -116,6 +116,10 @@ Where only format exists (no checksum), implement fast structural validation (ma
 	•	US ABA Routing — V (weighted mod 10)
         •       Mexican CLABE — V/G (weighted mod 10)
         •       Legal Entity Identifier (LEI) — V/G (mod 97)
+        •       SEDOL — V/G (weighted mod 10)
+        •       CUSIP — V/G (Luhn with alphanumeric mapping)
+        •       MIC — V (4 alphanumeric, lookup)
+        •       WKN — V (6 alphanumeric)
 
 4.2 Tax (country-specific; validate-only unless spec allows test gen)
 
