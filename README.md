@@ -2,11 +2,11 @@
 
 Core primitives and algorithms for identifier validation and generation.
 
-Currently implemented:
+## Currently implemented
 
 ### Algorithms
 - Luhn (mod 10)
- - ISO 7064 (mod 11,10; mod 97; mod 37,2)
+- ISO 7064 (mod 11,10; mod 97; mod 37,2)
 - GS1 mod 10
 - Weighted mod 11 variants
 - ISO 6346 container check digit
@@ -35,6 +35,7 @@ Currently implemented:
 - Spain CUPS validation and generation
 - Germany MaLo validation and generation
 - Germany MeLo validation and generation
+- Germany ZPN validation and generation
 - France PRM validation
 - Italy POD structural validation
 - Italy PDR structural validation
@@ -49,7 +50,7 @@ Currently implemented:
 - KSUID validation and generation
 - BCP 47 language tag validation
 - Ethereum address validation
-- Base58Check encoding/decoding utilities
+- Base58Check validation and generation
 
 ### Tax
 - Brazil CPF validation/generation
@@ -97,8 +98,11 @@ Currently implemented:
 
 ### Telecom
 - IMEI validation and generation
+- MEID validation and generation
 - ICCID validation and generation
 - MAC address validation
+- OUI validation and generation
+- ASN validation and generation
 - IPv4 structural validation
 - IPv6 structural validation
 
@@ -117,8 +121,55 @@ Currently implemented:
 
 Additional identifiers and algorithms will be added per the [PRD](PRD.md).
 
-## Development
+## Example usage
+```csharp
+// Validate an IBAN
+Finance.Iban.TryValidate("FR14 2004 1010 0505 0001 3M02 606", out var iban);
+Console.WriteLine(iban.IsValid);            // True
+Console.WriteLine(iban.Value!.Value);       // FR1420041010050500013M02606
 
-Continuous integration is provided via [GitHub Actions](.github/workflows/ci.yml) which restores dependencies, builds, runs the test suite, and publishes coverage and result artifacts on every push and pull request. Packages can be produced via the [publish workflow](.github/workflows/publish.yml) which supports manual dispatch, pushes to `main`, and release tags; tagged releases push the generated packages to NuGet. Release notes are prepared automatically by the [release drafter workflow](.github/workflows/releasedrafter.yml).
+// Generate a GTIN-13
+foreach (var s in Bulk.GenerateMany(dst => {
+    var ok = Logistics.Gtin13.TryGenerate("4006381".AsSpan(), dst, out var w);
+    return (ok, w);
+}, count: 3, seed: 42))
+{
+    Console.WriteLine(s);
+}
 
-Community contributions are welcome—use the issue and pull request templates to report bugs or propose enhancements.
+// Validate a telecom identifier
+Telecom.Imei.TryValidate("490154203237518", out var imei);
+Console.WriteLine(imei.IsValid);            // True
+```
+
+## Project structure
+```
+src/Veritas/          core library organised by domain
+  Core/              shared primitives and algorithms
+  Finance/           financial identifiers
+  Tax/               national and regional tax identifiers
+  Energy/            electricity and gas identifiers
+  Identity/          software and personal identifiers
+  Logistics/         supply chain identifiers
+  Healthcare/        health identifiers
+  Telecom/           network and telecom identifiers
+  Education/         research and publishing identifiers
+  Media/             media identifiers
+
+test/Veritas.Tests/   xUnit test suite
+```
+
+## Adding new identifiers
+1. Add a new static class `<IdName>` in the appropriate domain with `TryValidate` and, when safe, `TryGenerate` methods.
+2. Include a value type `<IdName>Value` containing the normalized representation.
+3. Add unit tests under `test/Veritas.Tests` verifying valid and invalid cases.
+4. Update the [PRD](PRD.md) and this README with the new identifier and its capabilities.
+5. Run `dotnet test -f net8.0` and ensure all tests pass.
+
+## Contributing
+Contributions are welcome! Fork the repository, create a topic branch, and open a pull request:
+1. Describe the motivation and design in the PR description.
+2. Ensure tests and formatting checks pass.
+3. The maintainers will review and merge when ready.
+
+Continuous integration via [GitHub Actions](.github/workflows/ci.yml) restores dependencies, builds, and runs the test suite on every push and pull request. Packages are produced by the [publish workflow](.github/workflows/publish.yml) and releases are drafted automatically.
