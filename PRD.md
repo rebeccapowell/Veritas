@@ -29,7 +29,7 @@ Domains:
   Veritas.Retail
 
 Country-specific subnamespaces where relevant:
-  Veritas.Tax.DE, .UK, .FR, .IT, .ES, .NL, .PL, .SE, .US, .BR, .CA, .IN, .AU, .CN, .NZ
+  Veritas.Tax.DE, .UK, .FR, .IT, .ES, .NL, .PL, .SE, .EU, .US, .BR, .CA, .IN, .AU, .CN, .NZ
   Veritas.Energy.DE, .GB, .FR, .NL, .IT, .ES
 
 
@@ -91,7 +91,7 @@ Per-ID conventions
 	•	Luhn (mod 10) — GTIN/UPC/ISBN-13/GLN/SSCC/IMEI/ICCID/etc.
 	•	ISBN-10/ISSN weighted checksums
 	•	VIN transliteration + weights
-	•	ISO 7064 (mod 11,10; mod 97,10; mod 97) — IBAN/ISIN/RF/various tax IDs
+	•	ISO 7064 (mod 11,10; mod 97,10; mod 97; mod 37,2) — IBAN/ISIN/RF/EIC/various tax IDs
 	•	Verhoeff / Damm (reserved for IDs that use them)
 	•	Bech32/Bech32m + Base58Check enc/dec
 	•	MRZ (ICAO 9303) check-digit (weights: 7-3-1 pattern)
@@ -114,6 +114,12 @@ Where only format exists (no checksum), implement fast structural validation (ma
 	•	ISO 11649 RF — V/G (mod 97, “RF” + 2 digits + up to 21 alnum)
 	•	Payment Card PAN — V (Luhn, 12–19); G (test numbers only, brand-agnostic)
 	•	US ABA Routing — V (weighted mod 10)
+        •       Mexican CLABE — V/G (weighted mod 10)
+        •       Legal Entity Identifier (LEI) — V/G (mod 97)
+        •       SEDOL — V/G (weighted mod 10)
+        •       CUSIP — V/G (Luhn with alphanumeric mapping)
+        •       MIC — V (4 alphanumeric, lookup)
+        •       WKN — V (6 alphanumeric)
 
 4.2 Tax (country-specific; validate-only unless spec allows test gen)
 
@@ -141,7 +147,7 @@ Global
 	•	EIC — V/G (checksum)
 
 Country
-	•	DE: MaLo (11 digits) V, MeLo (33 digits) V, Zählpunktnummer V
+	•	DE: MaLo (11 digits) V/G, MeLo (33 chars) V/G, Zählpunktnummer V
 	•	GB: MPAN (21 digits, weighted check) V/G, MPRN (6–10 digits) V
 	•	FR: PRM (14 digits) V
 	•	NL: Energy EAN (18 digits, GS1 mod 10) V/G
@@ -297,6 +303,7 @@ foreach (var s in Bulk.GenerateMany(
       Base58Check.cs
   Finance/ (Iban, Bic, Isin, Rf, Pan, AbaRouting)
   Tax/
+    EU/ (Vat)
     DE/ (UstIdNr, IdNr)
     UK/ (Utr, Vat, Nino, CompanyNumber)
     FR/ (Siren, Siret, Vat)
@@ -353,13 +360,14 @@ foreach (var s in Bulk.GenerateMany(
 	•	Implements the bold subset below with tests & docs:
 
 Finance: IBAN, BIC, RF, ISIN, PAN (validate), ABA
-Tax: DE (USt-IdNr, IdNr), UK (UTR, VAT, NINO, Company), FR (SIREN/SIRET), US (SSN/EIN/ITIN), BR (CPF/CNPJ)
-Energy: EIC; DE (MaLo/MeLo), GB (MPAN/MPRN), NL (Energy EAN), ES (CUPS)
-Identity: ULID, UUID, NanoID, Email, Phone, Domain
-Logistics: GTIN/EAN/UPC, GLN, SSCC, VIN, ISO 6346
+Tax: DE (USt-IdNr, IdNr), UK (UTR, VAT, NINO, Company), FR (SIREN/SIRET, VAT), IT (PIVA), ES (NIF/NIE/CIF), NL (BSN/BTW), PL (NIP/REGON/PESEL), SE (Personnummer/OrgNr), EU VAT, US (SSN/EIN/ITIN), BR (CPF/CNPJ)
+Energy: EIC; DE (MaLo/MeLo), GB (MPAN/MPRN), NL (Energy EAN), ES (CUPS), FR (PRM)
+Identity: ULID, UUID, NanoID, KSUID, Email, Phone, Domain, BCP-47, Ethereum address, Base58Check
+Logistics: GTIN/EAN/UPC, GLN, SSCC, VIN, ISO 6346, AWB, IMO
 Healthcare: NHS Number, ORCID
 Telecom: IMEI, ICCID, MAC, IPv4/IPv6
-Education/Media: ISBN-10/13, ISSN, DOI
+Education/Media: ISBN-10/13, ISSN, DOI, ISNI, ISMN, ISRC
+Generation implemented for: RF, MPAN core, Energy EAN, CUPS, GTIN, GLN, SSCC, IMEI, ICCID, AWB, IMO, ISNI, ISMN, ISBN-10/13, ISSN, ULID, NanoID, KSUID, CPF, CNPJ, USt-IdNr, IdNr
 	•	Performance targets met (see §8).
 	•	Tests ≥ 90% coverage for algorithms & critical validators.
 	•	README includes a support matrix (V/G) and examples.
@@ -397,7 +405,7 @@ Gov.PassportMrz.TryValidate(line1.AsSpan(), line2.AsSpan(), out var mrzResult);
 ⸻
 
 Include extensive unit tests in a well structures manner.
-include the GitHub Actions workflows and YAML for CI/CD with NuGet publication and vweaon releaae managwment with automarix release notes.
+Include GitHub Actions workflows and YAML for CI/CD with coverage and test-result publishing, NuGet publication, and version release management with automatic release notes.
 Include readme and keep it ip to date
 Include an auto generated redthedocs style output
 Include a aeparate clean well structured CLI tool
