@@ -119,6 +119,6 @@ Additional identifiers and algorithms will be added per the [PRD](PRD.md).
 
 ## Development
 
-Continuous integration is provided via [GitHub Actions](.github/workflows/ci.yml) which restores dependencies, builds, and runs the test suite on every push and pull request. Tagged releases trigger the [release workflow](.github/workflows/release.yml) to generate NuGet packages, publish them to nuget.org, and create GitHub releases with automatic release notes.
+Continuous integration is provided via [GitHub Actions](.github/workflows/ci.yml) which restores dependencies, builds, runs the test suite, and publishes coverage and result artifacts on every push and pull request. Packages can be produced via the [publish workflow](.github/workflows/publish.yml) which supports manual dispatch, pushes to `main`, and release tags; tagged releases push the generated packages to NuGet. Release notes are prepared automatically by the [release drafter workflow](.github/workflows/releasedrafter.yml).
 
 Community contributions are welcome—use the issue and pull request templates to report bugs or propose enhancements.

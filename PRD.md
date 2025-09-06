@@ -405,7 +405,7 @@ Gov.PassportMrz.TryValidate(line1.AsSpan(), line2.AsSpan(), out var mrzResult);
 ⸻
 
 Include extensive unit tests in a well structures manner.
-include the GitHub Actions workflows and YAML for CI/CD with NuGet publication and vweaon releaae managwment with automarix release notes.
+Include GitHub Actions workflows and YAML for CI/CD with coverage and test-result publishing, NuGet publication, and version release management with automatic release notes.
 Include readme and keep it ip to date
 Include an auto generated redthedocs style output
 Include a aeparate clean well structured CLI tool
