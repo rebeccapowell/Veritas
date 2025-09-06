@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1ED41363-016F-4E05-A06A-887A2839A9A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veritas", "src\Veritas\Veritas.csproj", "{73466B06-C67D-4BF8-B8A5-87F278A342BC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{10DC9B65-34EA-4F1B-9D5E-48B33CF3F08E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veritas.Tests", "test\Veritas.Tests\Veritas.Tests.csproj", "{53276156-88EA-462C-A0AF-1D7C27E7DDA1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73466B06-C67D-4BF8-B8A5-87F278A342BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73466B06-C67D-4BF8-B8A5-87F278A342BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73466B06-C67D-4BF8-B8A5-87F278A342BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73466B06-C67D-4BF8-B8A5-87F278A342BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53276156-88EA-462C-A0AF-1D7C27E7DDA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53276156-88EA-462C-A0AF-1D7C27E7DDA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53276156-88EA-462C-A0AF-1D7C27E7DDA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53276156-88EA-462C-A0AF-1D7C27E7DDA1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{73466B06-C67D-4BF8-B8A5-87F278A342BC} = {1ED41363-016F-4E05-A06A-887A2839A9A7}
+		{53276156-88EA-462C-A0AF-1D7C27E7DDA1} = {10DC9B65-34EA-4F1B-9D5E-48B33CF3F08E}
+	EndGlobalSection
+EndGlobal

@@ -15,8 +15,8 @@ jobs:
         with:
           dotnet-version: 8.0.x
       - name: Restore
-        run: dotnet restore
+        run: dotnet restore Veritas.sln -p:TargetFramework=net8.0
       - name: Build
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build Veritas.sln --configuration Release -p:TargetFramework=net8.0 --no-restore
       - name: Test
         run: dotnet test test/Veritas.Tests/Veritas.Tests.csproj --configuration Release --no-build
