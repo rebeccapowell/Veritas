@@ -354,14 +354,14 @@ foreach (var s in Bulk.GenerateMany(
 	•	Implements the bold subset below with tests & docs:
 
 Finance: IBAN, BIC, RF, ISIN, PAN (validate), ABA
-Tax: DE (USt-IdNr, IdNr), UK (UTR, VAT, NINO, Company), FR (SIREN/SIRET), US (SSN/EIN/ITIN), BR (CPF/CNPJ), IT (PIVA), ES (NIF/NIE/CIF), NL (BSN/BTW)
-Energy: EIC; DE (MaLo/MeLo), GB (MPAN/MPRN), NL (Energy EAN), ES (CUPS)
-Identity: ULID, UUID, NanoID, Email, Phone, Domain
+Tax: DE (USt-IdNr, IdNr), UK (UTR, VAT, NINO, Company), FR (SIREN/SIRET, VAT), IT (PIVA), ES (NIF/NIE/CIF), NL (BSN/BTW), PL (NIP/REGON/PESEL), SE (Personnummer/OrgNr), EU VAT, US (SSN/EIN/ITIN), BR (CPF/CNPJ)
+Energy: EIC; DE (MaLo/MeLo), GB (MPAN/MPRN), NL (Energy EAN), ES (CUPS), FR (PRM)
+Identity: ULID, UUID, NanoID, KSUID, Email, Phone, Domain, BCP-47, Ethereum address, Base58Check
 Logistics: GTIN/EAN/UPC, GLN, SSCC, VIN, ISO 6346, AWB, IMO
 Healthcare: NHS Number, ORCID
 Telecom: IMEI, ICCID, MAC, IPv4/IPv6
-Education/Media: ISBN-10/13, ISSN, DOI, ISNI
-Generation implemented for: RF, MPAN core, GTIN, GLN, SSCC, IMEI, ICCID, ULID, NanoID, ISBN-10/13, ISSN
+Education/Media: ISBN-10/13, ISSN, DOI, ISNI, ISMN, ISRC
+Generation implemented for: RF, MPAN core, Energy EAN, CUPS, GTIN, GLN, SSCC, IMEI, ICCID, AWB, IMO, ISNI, ISMN, ISBN-10/13, ISSN, ULID, NanoID, KSUID, CPF, CNPJ, USt-IdNr, IdNr
 	•	Performance targets met (see §8).
 	•	Tests ≥ 90% coverage for algorithms & critical validators.
 	•	README includes a support matrix (V/G) and examples.

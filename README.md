@@ -4,6 +4,15 @@ Core primitives and algorithms for identifier validation and generation.
 
 Currently implemented:
 
+### Algorithms
+- Luhn (mod 10)
+- ISO 7064 (mod 11,10 and mod 97)
+- GS1 mod 10
+- Weighted mod 11 variants
+- ISO 6346 container check digit
+- MRZ (ICAO 9303 7-3-1 pattern)
+- Base58Check codec
+
 ### Finance
 - IBAN validation (ISO 13616 / ISO 7064 mod 97)
 - BIC/SWIFT code structural validation
