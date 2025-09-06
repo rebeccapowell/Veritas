@@ -71,7 +71,6 @@ Legend: **V** = validate, **G** = generate (where safe).
 - German WKN — **V**
 
 ### Tax
-- EU VAT
 - DE: USt‑IdNr, IdNr
 - UK: UTR, VAT, NINO, CompanyNumber
 - FR: Siren, Siret, VAT
