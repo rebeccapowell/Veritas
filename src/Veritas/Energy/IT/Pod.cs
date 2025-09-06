@@ -3,14 +3,24 @@ using Veritas;
 
 namespace Veritas.Energy.IT;
 
+/// <summary>Represents a validated Italian POD identifier.</summary>
 public readonly struct PodValue
 {
+    /// <summary>Gets the normalized POD identifier string.</summary>
     public string Value { get; }
+
+    /// <summary>Initializes a new instance of the <see cref="PodValue"/> struct.</summary>
+    /// <param name="value">The identifier string.</param>
     public PodValue(string value) => Value = value;
 }
 
+/// <summary>Provides validation for POD identifiers.</summary>
 public static class Pod
 {
+    /// <summary>Attempts to validate the supplied input as a POD identifier.</summary>
+    /// <param name="input">Candidate identifier to validate.</param>
+    /// <param name="result">The validation outcome including the parsed value when valid.</param>
+    /// <returns><c>true</c> if validation executed; the <see cref="ValidationResult{T}.IsValid"/> property indicates success.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<PodValue> result)
     {
         Span<char> chars = stackalloc char[16];

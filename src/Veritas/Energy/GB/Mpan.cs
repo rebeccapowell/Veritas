@@ -3,16 +3,26 @@ using Veritas;
 
 namespace Veritas.Energy.GB;
 
+/// <summary>Represents a validated UK Meter Point Administration Number (MPAN).</summary>
 public readonly struct MpanValue
 {
+    /// <summary>Gets the normalized MPAN string.</summary>
     public string Value { get; }
+
+    /// <summary>Initializes a new instance of the <see cref="MpanValue"/> struct.</summary>
+    /// <param name="value">The identifier string.</param>
     public MpanValue(string value) => Value = value;
 }
 
+/// <summary>Provides validation and generation for MPAN identifiers.</summary>
 public static class Mpan
 {
     private static readonly int[] Weights = new[] { 3, 7, 1, 3, 7, 1, 3, 7, 1, 3, 7, 1 };
 
+    /// <summary>Attempts to validate the supplied input as an MPAN.</summary>
+    /// <param name="input">Candidate identifier to validate.</param>
+    /// <param name="result">The validation outcome including the parsed value when valid.</param>
+    /// <returns><c>true</c> if validation executed; the <see cref="ValidationResult{T}.IsValid"/> property indicates success.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<MpanValue> result)
     {
         Span<char> digits = stackalloc char[13];
@@ -41,9 +51,18 @@ public static class Mpan
         return true;
     }
 
+    /// <summary>Attempts to generate a random MPAN into the provided buffer.</summary>
+    /// <param name="destination">Buffer that receives the generated identifier.</param>
+    /// <param name="written">When the method returns, contains the number of characters produced.</param>
+    /// <returns><c>true</c> if generation was attempted; otherwise, <c>false</c>.</returns>
     public static bool TryGenerate(Span<char> destination, out int written)
         => TryGenerate(default, destination, out written);
 
+    /// <summary>Attempts to generate a random MPAN using the supplied options.</summary>
+    /// <param name="options">Options controlling generation.</param>
+    /// <param name="destination">Buffer that receives the generated identifier.</param>
+    /// <param name="written">When the method returns, contains the number of characters produced.</param>
+    /// <returns><c>true</c> if generation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written)
     {
         if (destination.Length < 13)
