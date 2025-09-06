@@ -47,15 +47,21 @@ public static class Abn
         if (destination.Length < 11) return false;
         var rng = options.Seed.HasValue ? new Random(options.Seed.Value) : Random.Shared;
         Span<char> digits = destination[..11];
-        for (int i = 0; i < 10; i++)
-            digits[i] = (char)('0' + rng.Next(10));
-        for (int d = 0; d < 10; d++)
+        const int inverse = 75; // modular inverse of weight 19 mod 89
+        for (int attempt = 0; attempt < 100; attempt++)
         {
-            digits[10] = (char)('0' + d);
+            for (int i = 0; i < 10; i++)
+                digits[i] = (char)('0' + rng.Next(10));
+
             int sum = (digits[0] - '1') * Weights[0];
-            for (int i = 1; i < 11; i++) sum += (digits[i] - '0') * Weights[i];
-            if (sum % 89 == 0)
+            for (int i = 1; i < 10; i++)
+                sum += (digits[i] - '0') * Weights[i];
+
+            int rem = sum % 89;
+            int check = (89 - rem) * inverse % 89;
+            if ((uint)check < 10u)
             {
+                digits[10] = (char)('0' + check);
                 written = 11;
                 return true;
             }
