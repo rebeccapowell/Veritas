@@ -80,7 +80,7 @@ Legend: **V** = validate, **G** = generate (where safe).
 - NL: BSN, BTW
 - PL: NIP, REGON, PESEL
 - SE: Personnummer, OrgNr
-- US: SSN, EIN, ITIN
+- US: SSN — V/G, EIN, ITIN
 - BR: CPF, CNPJ
 - CA: SIN, BN
 - IN: PAN, GSTIN
@@ -116,14 +116,14 @@ Legend: **V** = validate, **G** = generate (where safe).
 - IMO ship identification number
 
 ### Healthcare & Pharma
-- NHS Number
-- ORCID
+- NHS Number — V/G
+- ORCID — V/G
 
 ### Telecom & IT
 - IMEI
 - MEID
 - ICCID
-- MAC
+- MAC — V/G
 - OUI
 - ASN
 - IPv4 / IPv6

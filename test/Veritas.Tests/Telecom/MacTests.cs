@@ -12,4 +12,13 @@ public class MacTests
         Mac.TryValidate(input, out var r);
         r.IsValid.ShouldBe(expected);
     }
+
+    [Fact]
+    public void GenerateProducesValid()
+    {
+        Span<char> buffer = stackalloc char[12];
+        Mac.TryGenerate(buffer, out var written).ShouldBeTrue();
+        Mac.TryValidate(buffer[..written], out var r);
+        r.IsValid.ShouldBeTrue();
+    }
 }
