@@ -79,7 +79,6 @@ Core primitives and algorithms for identifier validation and generation.
 - Spain CIF checksum validation
 - Netherlands BSN checksum validation
 - Netherlands VAT (BTW) checksum validation
-- EU VAT structural validation
 - Poland NIP checksum validation
 - Poland REGON checksum validation
 - Poland PESEL checksum validation
