@@ -57,17 +57,25 @@ public static class Pan
         if (destination.Length < 10) return false;
         var rng = options.Seed.HasValue ? new Random(options.Seed.Value) : Random.Shared;
         Span<char> chars = destination[..10];
-        for (int i = 0; i < 5; i++) chars[i] = (char)('A' + rng.Next(26));
-        for (int i = 5; i < 9; i++) chars[i] = (char)('0' + rng.Next(10));
-        int sum = 0;
-        for (int i = 0; i < 9; i++)
+        while (true)
         {
-            int v = Alphabet.IndexOf(chars[i]);
-            sum += v * (i + 1);
+            for (int i = 0; i < 5; i++) chars[i] = (char)('A' + rng.Next(26));
+            for (int i = 5; i < 9; i++) chars[i] = (char)('0' + rng.Next(10));
+            int sum = 0;
+            for (int i = 0; i < 9; i++)
+            {
+                int v = Alphabet.IndexOf(chars[i]);
+                sum += v * (i + 1);
+            }
+            int check = sum % 36;
+            if (check >= 10)
+            {
+                chars[9] = Alphabet[check];
+                written = 10;
+                return true;
+            }
+            // checksum resulted in a digit; regenerate
         }
-        chars[9] = Alphabet[sum % 36];
-        written = 10;
-        return true;
     }
 
     private static bool Normalize(ReadOnlySpan<char> input, Span<char> dest, out int len)
