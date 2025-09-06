@@ -100,4 +100,36 @@ internal static class Iso7064
         else { check = c - '0'; if ((uint)check > 9) return false; }
         return (sum + check) % 11 == 1;
     }
+
+    private static int CharToMod37Value(char ch)
+    {
+        if (ch >= '0' && ch <= '9') return ch - '0';
+        if (ch >= 'A' && ch <= 'Z') return ch - 'A' + 10;
+        if (ch == '*') return 36;
+        throw new ArgumentException("Invalid character", nameof(ch));
+    }
+
+    private static char ValueToMod37Char(int value)
+        => value < 10 ? (char)('0' + value) : value < 36 ? (char)('A' + value - 10) : '*';
+
+    /// <summary>Computes the ISO 7064 Mod 37,2 check character for the supplied string.</summary>
+    public static char ComputeCheckCharacterMod37_2(ReadOnlySpan<char> input)
+    {
+        int p = 36;
+        foreach (var ch in input)
+        {
+            int c = CharToMod37Value(ch);
+            p = ((p + c) * 2) % 37;
+        }
+        int check = (38 - p) % 37;
+        return ValueToMod37Char(check);
+    }
+
+    /// <summary>Validates a string with ISO 7064 Mod 37,2 checksum.</summary>
+    public static bool ValidateMod37_2(ReadOnlySpan<char> input)
+    {
+        if (input.Length < 2) return false;
+        char expected = ComputeCheckCharacterMod37_2(input[..^1]);
+        return input[^1] == expected;
+    }
 }

@@ -91,7 +91,7 @@ Per-ID conventions
 	•	Luhn (mod 10) — GTIN/UPC/ISBN-13/GLN/SSCC/IMEI/ICCID/etc.
 	•	ISBN-10/ISSN weighted checksums
 	•	VIN transliteration + weights
-	•	ISO 7064 (mod 11,10; mod 97,10; mod 97) — IBAN/ISIN/RF/various tax IDs
+	•	ISO 7064 (mod 11,10; mod 97,10; mod 97; mod 37,2) — IBAN/ISIN/RF/EIC/various tax IDs
 	•	Verhoeff / Damm (reserved for IDs that use them)
 	•	Bech32/Bech32m + Base58Check enc/dec
 	•	MRZ (ICAO 9303) check-digit (weights: 7-3-1 pattern)
@@ -114,6 +114,8 @@ Where only format exists (no checksum), implement fast structural validation (ma
 	•	ISO 11649 RF — V/G (mod 97, “RF” + 2 digits + up to 21 alnum)
 	•	Payment Card PAN — V (Luhn, 12–19); G (test numbers only, brand-agnostic)
 	•	US ABA Routing — V (weighted mod 10)
+        •       Mexican CLABE — V/G (weighted mod 10)
+        •       Legal Entity Identifier (LEI) — V/G (mod 97)
 
 4.2 Tax (country-specific; validate-only unless spec allows test gen)
 
@@ -141,7 +143,7 @@ Global
 	•	EIC — V/G (checksum)
 
 Country
-	•	DE: MaLo (11 digits) V, MeLo (33 digits) V, Zählpunktnummer V
+	•	DE: MaLo (11 digits) V/G, MeLo (33 chars) V/G, Zählpunktnummer V
 	•	GB: MPAN (21 digits, weighted check) V/G, MPRN (6–10 digits) V
 	•	FR: PRM (14 digits) V
 	•	NL: Energy EAN (18 digits, GS1 mod 10) V/G

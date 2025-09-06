@@ -5,7 +5,8 @@ using Shouldly;
 public class EicTests
 {
     [Theory]
-    [InlineData("XAT0000012345678", true)]
+    [InlineData("XAT000001234567Y", true)]
+    [InlineData("XAT000001234567Z", false)]
     [InlineData("XAT000001234567", false)]
     public void Validate_Works(string input, bool expected)
     {

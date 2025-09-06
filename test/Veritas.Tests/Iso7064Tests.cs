@@ -45,4 +45,14 @@ public class Iso7064Tests
         var ok = Iso7064.ValidateMod11_10(input);
         ok.ShouldBe(expected);
     }
+
+    [Fact]
+    public void Mod37_2_Roundtrip()
+    {
+        var baseStr = "XAT000001234567";
+        var check = Iso7064.ComputeCheckCharacterMod37_2(baseStr);
+        var full = baseStr + check;
+        Iso7064.ValidateMod37_2(full).ShouldBeTrue();
+        Iso7064.ValidateMod37_2(baseStr + (check == '0' ? '1' : '0')).ShouldBeFalse();
+    }
 }

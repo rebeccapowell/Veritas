@@ -6,7 +6,7 @@ Currently implemented:
 
 ### Algorithms
 - Luhn (mod 10)
-- ISO 7064 (mod 11,10 and mod 97)
+ - ISO 7064 (mod 11,10; mod 97; mod 37,2)
 - GS1 mod 10
 - Weighted mod 11 variants
 - ISO 6346 container check digit
@@ -20,14 +20,17 @@ Currently implemented:
 - ISO 11649 RF creditor reference validation and generation
 - Payment card PAN validation (Luhn)
 - US ABA routing number validation
+- Mexican CLABE validation and generation
+- Legal Entity Identifier (LEI) validation and generation
 
 ### Energy
-- Energy Identification Code (EIC) structural validation
+- Energy Identification Code (EIC) validation and generation (ISO 7064 mod 37,2)
 - Great Britain MPAN core validation and generation
 - Great Britain MPRN validation
 - Netherlands Energy EAN validation and generation
 - Spain CUPS validation and generation
-- Germany MaLo and MeLo validation
+- Germany MaLo validation and generation
+- Germany MeLo validation and generation
 - France PRM validation
 
 ### Identity

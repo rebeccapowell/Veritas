@@ -5,9 +5,9 @@ using Shouldly;
 public class MeloTests
 {
     [Theory]
-    [InlineData("123456789012345678901234567890123", true)]
-    [InlineData("12345678901234567890123456789012", false)]
-    [InlineData("12345678901234567890123456789012A", false)]
+    [InlineData("DEDGX4QK0NIAD8KYGGK09X58Y0Q4HLFEB", true)]
+    [InlineData("XEDGX4QK0NIAD8KYGGK09X58Y0Q4HLFEB", false)]
+    [InlineData("DEDGX4QK0NIAD8KYGGK09X58Y0Q4HLFE", false)]
     public void Validate(string input, bool expected)
     {
         Melo.TryValidate(input, out var result);
