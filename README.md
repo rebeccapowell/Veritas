@@ -128,8 +128,8 @@ Console.WriteLine(iban.IsValid);            // True
 Console.WriteLine(iban.Value!.Value);       // FR1420041010050500013M02606
 
 // Generate a GTIN-13
-foreach (var s in Bulk.GenerateMany(dst => {
-    var ok = Logistics.Gtin13.TryGenerate("4006381".AsSpan(), dst, out var w);
+foreach (var s in Bulk.GenerateMany((dst, rng) => {
+    var ok = Logistics.Gtin.TryGenerate(13, new GenerationOptions { Seed = rng.Next() }, dst, out var w);
     return (ok, w);
 }, count: 3, seed: 42))
 {
