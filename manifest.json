@@ -1,0 +1,3140 @@
+{
+  "source_base_path": "/home/runner/work/Veritas/Veritas/docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Bulk.SpanGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Bulk.SpanGenerator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Bulk.SpanGenerator",
+      "Summary": "<p sourcefile=\"api/Veritas.Bulk.SpanGenerator.yml\" sourcestartlinenumber=\"1\">Delegate matching generator signatures using <xref href=\"System.Span%601\" data-throw-if-not-resolved=\"false\"></xref> and a provided <xref href=\"System.Random\" data-throw-if-not-resolved=\"false\"></xref> instance.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Bulk.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Bulk.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Bulk",
+      "Summary": "<p sourcefile=\"api/Veritas.Bulk.yml\" sourcestartlinenumber=\"1\">Helpers for bulk identifier generation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Education.Doi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Education.Doi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Education.Doi",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Education.DoiValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Education.DoiValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Education.DoiValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Education.Ismn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Education.Ismn.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Education.Ismn",
+      "Summary": "<p sourcefile=\"api/Veritas.Education.Ismn.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for ISMN identifiers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Education.IsmnValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Education.IsmnValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Education.IsmnValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Education.IsmnValue.yml\" sourcestartlinenumber=\"1\">Represents a validated International Standard Music Number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Education.Isni.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Education.Isni.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Education.Isni",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Education.IsniValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Education.IsniValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Education.IsniValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Education.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Education.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Education",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Energy.DE.Malo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Energy.DE.Malo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Energy.DE.Malo",
+      "Summary": "<p sourcefile=\"api/Veritas.Energy.DE.Malo.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for MaLo identifiers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Energy.DE.MaloValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Energy.DE.MaloValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Energy.DE.MaloValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Energy.DE.MaloValue.yml\" sourcestartlinenumber=\"1\">Represents a validated German Market Location (MaLo) identifier.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Energy.DE.Melo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Energy.DE.Melo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Energy.DE.Melo",
+      "Summary": "<p sourcefile=\"api/Veritas.Energy.DE.Melo.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for MeLo identifiers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Energy.DE.MeloValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Energy.DE.MeloValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Energy.DE.MeloValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Energy.DE.MeloValue.yml\" sourcestartlinenumber=\"1\">Represents a validated German Meter Location (MeLo) identifier.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Energy.DE.Zpn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Energy.DE.Zpn.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Energy.DE.Zpn",
+      "Summary": "<p sourcefile=\"api/Veritas.Energy.DE.Zpn.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for ZPN identifiers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Energy.DE.ZpnValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Energy.DE.ZpnValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Energy.DE.ZpnValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Energy.DE.ZpnValue.yml\" sourcestartlinenumber=\"1\">Represents a validated German metering point number (ZPN) identifier.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Energy.DE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Energy.DE.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Energy.DE",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Energy.ES.Cups.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Energy.ES.Cups.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Energy.ES.Cups",
+      "Summary": "<p sourcefile=\"api/Veritas.Energy.ES.Cups.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for CUPS identifiers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Energy.ES.CupsValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Energy.ES.CupsValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Energy.ES.CupsValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Energy.ES.CupsValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Spanish CUPS identifier.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Energy.ES.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Energy.ES.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Energy.ES",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Energy.Eic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Energy.Eic.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Energy.Eic",
+      "Summary": "<p sourcefile=\"api/Veritas.Energy.Eic.yml\" sourcestartlinenumber=\"1\">Provides validation for EIC codes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Energy.EicValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Energy.EicValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Energy.EicValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Energy.EicValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Energy Identification Code (EIC).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Energy.FR.Prm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Energy.FR.Prm.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Energy.FR.Prm",
+      "Summary": "<p sourcefile=\"api/Veritas.Energy.FR.Prm.yml\" sourcestartlinenumber=\"1\">Provides validation for PRM identifiers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Energy.FR.PrmValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Energy.FR.PrmValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Energy.FR.PrmValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Energy.FR.PrmValue.yml\" sourcestartlinenumber=\"1\">Represents a validated French PRM identifier.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Energy.FR.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Energy.FR.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Energy.FR",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Energy.GB.Mpan.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Energy.GB.Mpan.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Energy.GB.Mpan",
+      "Summary": "<p sourcefile=\"api/Veritas.Energy.GB.Mpan.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for MPAN identifiers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Energy.GB.MpanValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Energy.GB.MpanValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Energy.GB.MpanValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Energy.GB.MpanValue.yml\" sourcestartlinenumber=\"1\">Represents a validated UK Meter Point Administration Number (MPAN).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Energy.GB.Mprn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Energy.GB.Mprn.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Energy.GB.Mprn",
+      "Summary": "<p sourcefile=\"api/Veritas.Energy.GB.Mprn.yml\" sourcestartlinenumber=\"1\">Provides validation for MPRN identifiers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Energy.GB.MprnValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Energy.GB.MprnValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Energy.GB.MprnValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Energy.GB.MprnValue.yml\" sourcestartlinenumber=\"1\">Represents a validated UK Meter Point Reference Number (MPRN).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Energy.GB.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Energy.GB.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Energy.GB",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Energy.IT.Pdr.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Energy.IT.Pdr.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Energy.IT.Pdr",
+      "Summary": "<p sourcefile=\"api/Veritas.Energy.IT.Pdr.yml\" sourcestartlinenumber=\"1\">Provides validation for PDR identifiers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Energy.IT.PdrValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Energy.IT.PdrValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Energy.IT.PdrValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Energy.IT.PdrValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Italian PDR identifier.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Energy.IT.Pod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Energy.IT.Pod.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Energy.IT.Pod",
+      "Summary": "<p sourcefile=\"api/Veritas.Energy.IT.Pod.yml\" sourcestartlinenumber=\"1\">Provides validation for POD identifiers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Energy.IT.PodValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Energy.IT.PodValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Energy.IT.PodValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Energy.IT.PodValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Italian POD identifier.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Energy.IT.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Energy.IT.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Energy.IT",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Energy.NL.EnergyEan.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Energy.NL.EnergyEan.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Energy.NL.EnergyEan",
+      "Summary": "<p sourcefile=\"api/Veritas.Energy.NL.EnergyEan.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Dutch energy EAN codes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Energy.NL.EnergyEanValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Energy.NL.EnergyEanValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Energy.NL.EnergyEanValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Energy.NL.EnergyEanValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Dutch energy EAN code.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Energy.NL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Energy.NL.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Energy.NL",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Energy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Energy.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Energy",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.AbaRouting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.AbaRouting.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.AbaRouting",
+      "Summary": "<p sourcefile=\"api/Veritas.Finance.AbaRouting.yml\" sourcestartlinenumber=\"1\">Provides validation for ABA routing numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.AbaRoutingValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.AbaRoutingValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.AbaRoutingValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Finance.AbaRoutingValue.yml\" sourcestartlinenumber=\"1\">Represents a validated US ABA routing number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.Bic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.Bic.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.Bic",
+      "Summary": "<p sourcefile=\"api/Veritas.Finance.Bic.yml\" sourcestartlinenumber=\"1\">Provides validation for BIC/SWIFT codes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.BicValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.BicValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.BicValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Finance.BicValue.yml\" sourcestartlinenumber=\"1\">Represents a validated BIC/SWIFT code.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.Clabe.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.Clabe.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.Clabe",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.ClabeValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.ClabeValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.ClabeValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.Cusip.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.Cusip.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.Cusip",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.CusipValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.CusipValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.CusipValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.Iban.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.Iban.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.Iban",
+      "Summary": "<p sourcefile=\"api/Veritas.Finance.Iban.yml\" sourcestartlinenumber=\"1\">Provides validation helpers for IBAN strings.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.IbanValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.IbanValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.IbanValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Finance.IbanValue.yml\" sourcestartlinenumber=\"1\">Represents a validated International Bank Account Number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.Isin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.Isin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.Isin",
+      "Summary": "<p sourcefile=\"api/Veritas.Finance.Isin.yml\" sourcestartlinenumber=\"1\">Provides helpers for ISIN validation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.IsinValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.IsinValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.IsinValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Finance.IsinValue.yml\" sourcestartlinenumber=\"1\">Represents a validated ISIN.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.Lei.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.Lei.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.Lei",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.LeiValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.LeiValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.LeiValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.Mic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.Mic.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.Mic",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.MicValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.MicValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.MicValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.Pan.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.Pan.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.Pan",
+      "Summary": "<p sourcefile=\"api/Veritas.Finance.Pan.yml\" sourcestartlinenumber=\"1\">Provides validation for payment card PANs.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.PanValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.PanValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.PanValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Finance.PanValue.yml\" sourcestartlinenumber=\"1\">Represents a validated payment card PAN.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.Rf.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.Rf.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.Rf",
+      "Summary": "<p sourcefile=\"api/Veritas.Finance.Rf.yml\" sourcestartlinenumber=\"1\">Provides validation for ISO 11649 RF references.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.RfValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.RfValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.RfValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Finance.RfValue.yml\" sourcestartlinenumber=\"1\">Represents an ISO 11649 RF creditor reference.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.Sedol.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.Sedol.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.Sedol",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.SedolValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.SedolValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.SedolValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.Wkn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.Wkn.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.Wkn",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.WknValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.WknValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.WknValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.FormatStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.FormatStyle.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.FormatStyle",
+      "Summary": "<p sourcefile=\"api/Veritas.FormatStyle.yml\" sourcestartlinenumber=\"1\">Controls identifier string formatting.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.GenerationOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.GenerationOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.GenerationOptions",
+      "Summary": "<p sourcefile=\"api/Veritas.GenerationOptions.yml\" sourcestartlinenumber=\"1\">Options controlling identifier generation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Healthcare.NhsNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Healthcare.NhsNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Healthcare.NhsNumber",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Healthcare.NhsNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Healthcare.NhsNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Healthcare.NhsNumberValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Healthcare.Orcid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Healthcare.Orcid.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Healthcare.Orcid",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Healthcare.OrcidValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Healthcare.OrcidValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Healthcare.OrcidValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Healthcare.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Healthcare.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Healthcare",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.IGenerator-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.IGenerator-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.IGenerator<T>",
+      "Summary": "<p sourcefile=\"api/Veritas.IGenerator-1.yml\" sourcestartlinenumber=\"1\">Generates identifiers for testing or reserved ranges.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.IValidator-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.IValidator-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.IValidator<T>",
+      "Summary": "<p sourcefile=\"api/Veritas.IValidator-1.yml\" sourcestartlinenumber=\"1\">Validates an identifier into a strongly typed value.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.Base58Check.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.Base58Check.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.Base58Check",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.Base58CheckValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.Base58CheckValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.Base58CheckValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.Bcp47.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.Bcp47.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.Bcp47",
+      "Summary": "<p sourcefile=\"api/Veritas.Identity.Bcp47.yml\" sourcestartlinenumber=\"1\">Provides validation for BCP 47 language tags.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.Bcp47Value.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.Bcp47Value.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.Bcp47Value",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.Domain.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.Domain.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.Domain",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.DomainValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.DomainValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.DomainValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.Email.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.Email.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.Email",
+      "Summary": "<p sourcefile=\"api/Veritas.Identity.Email.yml\" sourcestartlinenumber=\"1\">Provides validation for email addresses.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.EmailValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.EmailValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.EmailValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Identity.EmailValue.yml\" sourcestartlinenumber=\"1\">Represents a validated email address.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.Ethereum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.Ethereum.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.Ethereum",
+      "Summary": "<p sourcefile=\"api/Veritas.Identity.Ethereum.yml\" sourcestartlinenumber=\"1\">Provides validation for Ethereum addresses.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.EthereumValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.EthereumValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.EthereumValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.Ksuid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.Ksuid.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.Ksuid",
+      "Summary": "<p sourcefile=\"api/Veritas.Identity.Ksuid.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for KSUID identifiers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.KsuidValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.KsuidValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.KsuidValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.NanoId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.NanoId.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.NanoId",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.NanoIdValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.NanoIdValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.NanoIdValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.Phone.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.Phone.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.Phone",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.PhoneValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.PhoneValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.PhoneValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.Ulid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.Ulid.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.Ulid",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.UlidValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.UlidValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.UlidValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.Uuid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.Uuid.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.Uuid",
+      "Summary": "<p sourcefile=\"api/Veritas.Identity.Uuid.yml\" sourcestartlinenumber=\"1\">Provides validation for UUID strings.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.UuidValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.UuidValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.UuidValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Identity.UuidValue.yml\" sourcestartlinenumber=\"1\">Represents a validated UUID/GUID.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Logistics.Awb.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Logistics.Awb.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Logistics.Awb",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Logistics.AwbValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Logistics.AwbValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Logistics.AwbValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Logistics.Gln.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Logistics.Gln.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Logistics.Gln",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Logistics.GlnValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Logistics.GlnValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Logistics.GlnValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Logistics.Gtin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Logistics.Gtin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Logistics.Gtin",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Logistics.GtinValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Logistics.GtinValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Logistics.GtinValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Logistics.Imo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Logistics.Imo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Logistics.Imo",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Logistics.ImoValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Logistics.ImoValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Logistics.ImoValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Logistics.Iso6346.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Logistics.Iso6346.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Logistics.Iso6346",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Logistics.Iso6346Value.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Logistics.Iso6346Value.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Logistics.Iso6346Value",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Logistics.Sscc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Logistics.Sscc.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Logistics.Sscc",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Logistics.SsccValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Logistics.SsccValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Logistics.SsccValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Logistics.Vin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Logistics.Vin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Logistics.Vin",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Logistics.VinValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Logistics.VinValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Logistics.VinValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Logistics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Logistics.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Logistics",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Media.Isbn10.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Media.Isbn10.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Media.Isbn10",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Media.Isbn10Value.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Media.Isbn10Value.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Media.Isbn10Value",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Media.Isbn13.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Media.Isbn13.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Media.Isbn13",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Media.Isbn13Value.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Media.Isbn13Value.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Media.Isbn13Value",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Media.Isrc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Media.Isrc.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Media.Isrc",
+      "Summary": "<p sourcefile=\"api/Veritas.Media.Isrc.yml\" sourcestartlinenumber=\"1\">Provides structural validation for ISRC identifiers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Media.IsrcValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Media.IsrcValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Media.IsrcValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Media.IsrcValue.yml\" sourcestartlinenumber=\"1\">Represents a validated International Standard Recording Code.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Media.Issn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Media.Issn.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Media.Issn",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Media.IssnValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Media.IssnValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Media.IssnValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Media.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Media.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Media",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.AU.Abn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.AU.Abn.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.AU.Abn",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.AU.AbnValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.AU.AbnValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.AU.AbnValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.AU.Tfn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.AU.Tfn.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.AU.Tfn",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.AU.TfnValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.AU.TfnValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.AU.TfnValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.AU.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.AU.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.AU",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.BR.Cnpj.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.BR.Cnpj.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.BR.Cnpj",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.BR.CnpjValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.BR.CnpjValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.BR.CnpjValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.BR.Cpf.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.BR.Cpf.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.BR.Cpf",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.BR.CpfValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.BR.CpfValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.BR.CpfValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.BR.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.BR.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.BR",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.CA.Bn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.CA.Bn.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.CA.Bn",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.CA.BnValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.CA.BnValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.CA.BnValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.CA.Sin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.CA.Sin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.CA.Sin",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.CA.SinValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.CA.SinValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.CA.SinValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.CA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.CA.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.CA",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.CN.Uscc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.CN.Uscc.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.CN.Uscc",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.CN.UsccValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.CN.UsccValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.CN.UsccValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.CN.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.CN.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.CN",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.DE.IdNr.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.DE.IdNr.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.DE.IdNr",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.DE.IdNrValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.DE.IdNrValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.DE.IdNrValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.DE.UstIdNr.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.DE.UstIdNr.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.DE.UstIdNr",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.DE.UstIdNrValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.DE.UstIdNrValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.DE.UstIdNrValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.DE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.DE.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.DE",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.ES.Cif.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.ES.Cif.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.ES.Cif",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.ES.CifValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.ES.CifValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.ES.CifValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.ES.Nie.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.ES.Nie.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.ES.Nie",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.ES.NieValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.ES.NieValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.ES.NieValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.ES.Nif.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.ES.Nif.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.ES.Nif",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.ES.NifValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.ES.NifValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.ES.NifValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.ES.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.ES.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.ES",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.FR.Siren.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.FR.Siren.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.FR.Siren",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.FR.SirenValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.FR.SirenValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.FR.SirenValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.FR.Siret.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.FR.Siret.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.FR.Siret",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.FR.SiretValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.FR.SiretValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.FR.SiretValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.FR.Vat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.FR.Vat.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.FR.Vat",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.FR.VatValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.FR.VatValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.FR.VatValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.FR.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.FR.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.FR",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.IN.Gstin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.IN.Gstin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.IN.Gstin",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.IN.GstinValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.IN.GstinValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.IN.GstinValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.IN.Pan.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.IN.Pan.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.IN.Pan",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.IN.PanValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.IN.PanValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.IN.PanValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.IN.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.IN.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.IN",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.IT.Piva.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.IT.Piva.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.IT.Piva",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.IT.PivaValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.IT.PivaValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.IT.PivaValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.IT.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.IT.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.IT",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.NL.Bsn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.NL.Bsn.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.NL.Bsn",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.NL.BsnValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.NL.BsnValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.NL.BsnValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.NL.Btw.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.NL.Btw.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.NL.Btw",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.NL.BtwValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.NL.BtwValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.NL.BtwValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.NL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.NL.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.NL",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.NZ.Ird.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.NZ.Ird.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.NZ.Ird",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.NZ.IrdValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.NZ.IrdValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.NZ.IrdValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.NZ.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.NZ.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.NZ",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.PL.Nip.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.PL.Nip.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.PL.Nip",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.PL.NipValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.PL.NipValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.PL.NipValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.PL.Pesel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.PL.Pesel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.PL.Pesel",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.PL.PeselValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.PL.PeselValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.PL.PeselValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.PL.Regon.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.PL.Regon.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.PL.Regon",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.PL.RegonValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.PL.RegonValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.PL.RegonValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.PL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.PL.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.PL",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.SE.OrgNr.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.SE.OrgNr.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.SE.OrgNr",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.SE.OrgNrValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.SE.OrgNrValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.SE.OrgNrValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.SE.Personnummer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.SE.Personnummer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.SE.Personnummer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.SE.PersonnummerValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.SE.PersonnummerValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.SE.PersonnummerValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.SE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.SE.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.SE",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.UK.CompanyNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.UK.CompanyNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.UK.CompanyNumber",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.UK.CompanyNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.UK.CompanyNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.UK.CompanyNumberValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.UK.Nino.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.UK.Nino.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.UK.Nino",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.UK.NinoValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.UK.NinoValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.UK.NinoValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.UK.Utr.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.UK.Utr.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.UK.Utr",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.UK.UtrValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.UK.UtrValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.UK.UtrValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.UK.Vat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.UK.Vat.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.UK.Vat",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.UK.VatValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.UK.VatValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.UK.VatValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.UK.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.UK.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.UK",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.US.Ein.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.US.Ein.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.US.Ein",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.US.EinValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.US.EinValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.US.EinValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.US.Itin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.US.Itin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.US.Itin",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.US.ItinValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.US.ItinValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.US.ItinValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.US.Ssn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.US.Ssn.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.US.Ssn",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.US.SsnValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.US.SsnValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.US.SsnValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.US.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.US.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.US",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Telecom.Asn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Telecom.Asn.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Telecom.Asn",
+      "Summary": "<p sourcefile=\"api/Veritas.Telecom.Asn.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Autonomous System Numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Telecom.AsnValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Telecom.AsnValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Telecom.AsnValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Telecom.AsnValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Autonomous System Number (ASN).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Telecom.Iccid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Telecom.Iccid.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Telecom.Iccid",
+      "Summary": "<p sourcefile=\"api/Veritas.Telecom.Iccid.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for ICCIDs.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Telecom.IccidValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Telecom.IccidValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Telecom.IccidValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Telecom.IccidValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Integrated Circuit Card Identifier (ICCID).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Telecom.Imei.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Telecom.Imei.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Telecom.Imei",
+      "Summary": "<p sourcefile=\"api/Veritas.Telecom.Imei.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for IMEI numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Telecom.ImeiValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Telecom.ImeiValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Telecom.ImeiValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Telecom.ImeiValue.yml\" sourcestartlinenumber=\"1\">Represents a validated International Mobile Equipment Identity (IMEI).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Telecom.Ipv4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Telecom.Ipv4.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Telecom.Ipv4",
+      "Summary": "<p sourcefile=\"api/Veritas.Telecom.Ipv4.yml\" sourcestartlinenumber=\"1\">Provides validation for IPv4 addresses.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Telecom.Ipv4Value.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Telecom.Ipv4Value.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Telecom.Ipv4Value",
+      "Summary": "<p sourcefile=\"api/Veritas.Telecom.Ipv4Value.yml\" sourcestartlinenumber=\"1\">Represents a validated IPv4 address.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Telecom.Ipv6.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Telecom.Ipv6.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Telecom.Ipv6",
+      "Summary": "<p sourcefile=\"api/Veritas.Telecom.Ipv6.yml\" sourcestartlinenumber=\"1\">Provides validation for IPv6 addresses.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Telecom.Ipv6Value.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Telecom.Ipv6Value.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Telecom.Ipv6Value",
+      "Summary": "<p sourcefile=\"api/Veritas.Telecom.Ipv6Value.yml\" sourcestartlinenumber=\"1\">Represents a validated IPv6 address.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Telecom.Mac.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Telecom.Mac.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Telecom.Mac",
+      "Summary": "<p sourcefile=\"api/Veritas.Telecom.Mac.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for MAC addresses.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Telecom.MacValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Telecom.MacValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Telecom.MacValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Telecom.MacValue.yml\" sourcestartlinenumber=\"1\">Represents a validated MAC address.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Telecom.Meid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Telecom.Meid.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Telecom.Meid",
+      "Summary": "<p sourcefile=\"api/Veritas.Telecom.Meid.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for MEID numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Telecom.MeidValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Telecom.MeidValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Telecom.MeidValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Telecom.MeidValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Mobile Equipment Identifier (MEID).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Telecom.Oui.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Telecom.Oui.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Telecom.Oui",
+      "Summary": "<p sourcefile=\"api/Veritas.Telecom.Oui.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for OUI codes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Telecom.OuiValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Telecom.OuiValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Telecom.OuiValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Telecom.OuiValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Organizationally Unique Identifier (OUI).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Telecom.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Telecom.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Telecom",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.ValidationError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.ValidationError.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.ValidationError",
+      "Summary": "<p sourcefile=\"api/Veritas.ValidationError.yml\" sourcestartlinenumber=\"1\">Represents error categories when validating an identifier.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.ValidationResult-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.ValidationResult-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.ValidationResult<T>",
+      "Summary": "<p sourcefile=\"api/Veritas.ValidationResult-1.yml\" sourcestartlinenumber=\"1\">Represents the outcome of validating an identifier.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "docs/toc.json"
+        },
+        ".html": {
+          "relative_path": "docs/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

@@ -1,0 +1,1107 @@
+{
+  "api/Veritas.Bulk.SpanGenerator.html": {
+    "href": "api/Veritas.Bulk.SpanGenerator.html",
+    "title": "Delegate Bulk.SpanGenerator",
+    "summary": "Delegate Bulk.SpanGenerator Namespace Veritas Assembly Veritas.dll Delegate matching generator signatures using Span<T> and a provided Random instance. public delegate (bool ok, int written) Bulk.SpanGenerator(Span<char> destination, Random rng) Parameters destination Span<char> Delegate matching generator signatures using and a provided instance. rng Random Delegate matching generator signatures using and a provided instance. Returns (bool ok, int written) Delegate matching generator signatures using and a provided instance."
+  },
+  "api/Veritas.Bulk.html": {
+    "href": "api/Veritas.Bulk.html",
+    "title": "Class Bulk",
+    "summary": "Class Bulk Namespace Veritas Assembly Veritas.dll Helpers for bulk identifier generation. public static class Bulk Inheritance object Bulk Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods GenerateMany(SpanGenerator, int, int?) Generates a sequence of identifiers using the provided generator delegate. public static IEnumerable<string> GenerateMany(Bulk.SpanGenerator tryGenerate, int count, int? seed = null) Parameters tryGenerate Bulk.SpanGenerator Delegate that attempts to write an identifier into the provided span. count int How many identifiers to produce. seed int? Optional seed for deterministic generation. Returns IEnumerable<string>"
+  },
+  "api/Veritas.Education.Doi.html": {
+    "href": "api/Veritas.Education.Doi.html",
+    "title": "Class Doi",
+    "summary": "Class Doi Namespace Veritas.Education Assembly Veritas.dll public static class Doi Inheritance object Doi Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<DoiValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<DoiValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<DoiValue> Returns bool"
+  },
+  "api/Veritas.Education.DoiValue.html": {
+    "href": "api/Veritas.Education.DoiValue.html",
+    "title": "Struct DoiValue",
+    "summary": "Struct DoiValue Namespace Veritas.Education Assembly Veritas.dll public readonly struct DoiValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors DoiValue(string) public DoiValue(string v) Parameters v string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Education.Ismn.html": {
+    "href": "api/Veritas.Education.Ismn.html",
+    "title": "Class Ismn",
+    "summary": "Class Ismn Namespace Veritas.Education Assembly Veritas.dll Provides validation and generation for ISMN identifiers. public static class Ismn Inheritance object Ismn Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<IsmnValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<IsmnValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<IsmnValue> Returns bool"
+  },
+  "api/Veritas.Education.IsmnValue.html": {
+    "href": "api/Veritas.Education.IsmnValue.html",
+    "title": "Struct IsmnValue",
+    "summary": "Struct IsmnValue Namespace Veritas.Education Assembly Veritas.dll Represents a validated International Standard Music Number. public readonly struct IsmnValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors IsmnValue(string) public IsmnValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Education.Isni.html": {
+    "href": "api/Veritas.Education.Isni.html",
+    "title": "Class Isni",
+    "summary": "Class Isni Namespace Veritas.Education Assembly Veritas.dll public static class Isni Inheritance object Isni Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<IsniValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<IsniValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<IsniValue> Returns bool"
+  },
+  "api/Veritas.Education.IsniValue.html": {
+    "href": "api/Veritas.Education.IsniValue.html",
+    "title": "Struct IsniValue",
+    "summary": "Struct IsniValue Namespace Veritas.Education Assembly Veritas.dll public readonly struct IsniValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors IsniValue(string) public IsniValue(string v) Parameters v string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Education.html": {
+    "href": "api/Veritas.Education.html",
+    "title": "Namespace Veritas.Education",
+    "summary": "Namespace Veritas.Education Classes Doi Ismn Provides validation and generation for ISMN identifiers. Isni Structs DoiValue IsmnValue Represents a validated International Standard Music Number. IsniValue"
+  },
+  "api/Veritas.Energy.DE.Malo.html": {
+    "href": "api/Veritas.Energy.DE.Malo.html",
+    "title": "Class Malo",
+    "summary": "Class Malo Namespace Veritas.Energy.DE Assembly Veritas.dll Provides validation and generation for MaLo identifiers. public static class Malo Inheritance object Malo Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) Attempts to generate a random MaLo identifier into the provided buffer. public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> Buffer that receives the generated identifier. written int When the method returns, contains the number of characters produced. Returns bool true if generation was attempted; otherwise, false. TryGenerate(in GenerationOptions, Span<char>, out int) Attempts to generate a random MaLo identifier using the supplied options. public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions Options controlling generation. destination Span<char> Buffer that receives the generated identifier. written int When the method returns, contains the number of characters produced. Returns bool true if generation succeeded; otherwise, false. TryValidate(ReadOnlySpan<char>, out ValidationResult<MaloValue>) Attempts to validate the supplied input as a MaLo identifier. public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<MaloValue> result) Parameters input ReadOnlySpan<char> Candidate identifier to validate. result ValidationResult<MaloValue> The validation outcome including the parsed value when valid. Returns bool true if validation executed; the IsValid property indicates success."
+  },
+  "api/Veritas.Energy.DE.MaloValue.html": {
+    "href": "api/Veritas.Energy.DE.MaloValue.html",
+    "title": "Struct MaloValue",
+    "summary": "Struct MaloValue Namespace Veritas.Energy.DE Assembly Veritas.dll Represents a validated German Market Location (MaLo) identifier. public readonly struct MaloValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors MaloValue(string) Initializes a new instance of the MaloValue struct. public MaloValue(string value) Parameters value string The identifier string. Properties Value Gets the normalized MaLo identifier string. public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Energy.DE.Melo.html": {
+    "href": "api/Veritas.Energy.DE.Melo.html",
+    "title": "Class Melo",
+    "summary": "Class Melo Namespace Veritas.Energy.DE Assembly Veritas.dll Provides validation and generation for MeLo identifiers. public static class Melo Inheritance object Melo Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) Attempts to generate a random MeLo identifier into the provided buffer. public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> Buffer that receives the generated identifier. written int When the method returns, contains the number of characters produced. Returns bool true if generation was attempted; otherwise, false. TryGenerate(in GenerationOptions, Span<char>, out int) Attempts to generate a random MeLo identifier using the supplied options. public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions Options controlling generation. destination Span<char> Buffer that receives the generated identifier. written int When the method returns, contains the number of characters produced. Returns bool true if generation succeeded; otherwise, false. TryValidate(ReadOnlySpan<char>, out ValidationResult<MeloValue>) Attempts to validate the supplied input as a MeLo identifier. public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<MeloValue> result) Parameters input ReadOnlySpan<char> Candidate identifier to validate. result ValidationResult<MeloValue> The validation outcome including the parsed value when valid. Returns bool true if validation executed; the IsValid property indicates success."
+  },
+  "api/Veritas.Energy.DE.MeloValue.html": {
+    "href": "api/Veritas.Energy.DE.MeloValue.html",
+    "title": "Struct MeloValue",
+    "summary": "Struct MeloValue Namespace Veritas.Energy.DE Assembly Veritas.dll Represents a validated German Meter Location (MeLo) identifier. public readonly struct MeloValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors MeloValue(string) Initializes a new instance of the MeloValue struct. public MeloValue(string value) Parameters value string The identifier string. Properties Value Gets the normalized MeLo identifier string. public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Energy.DE.Zpn.html": {
+    "href": "api/Veritas.Energy.DE.Zpn.html",
+    "title": "Class Zpn",
+    "summary": "Class Zpn Namespace Veritas.Energy.DE Assembly Veritas.dll Provides validation and generation for ZPN identifiers. public static class Zpn Inheritance object Zpn Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) Attempts to generate a random ZPN identifier into the provided buffer. public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> Buffer that receives the generated identifier. written int When the method returns, contains the number of characters produced. Returns bool true if generation was attempted; otherwise, false. TryGenerate(in GenerationOptions, Span<char>, out int) Attempts to generate a random ZPN identifier using the supplied options. public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions Options controlling generation. destination Span<char> Buffer that receives the generated identifier. written int When the method returns, contains the number of characters produced. Returns bool true if generation succeeded; otherwise, false. TryValidate(ReadOnlySpan<char>, out ValidationResult<ZpnValue>) Attempts to validate the supplied input as a ZPN identifier. public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<ZpnValue> result) Parameters input ReadOnlySpan<char> Candidate identifier to validate. result ValidationResult<ZpnValue> The validation outcome including the parsed value when valid. Returns bool true if validation executed; the IsValid property indicates success."
+  },
+  "api/Veritas.Energy.DE.ZpnValue.html": {
+    "href": "api/Veritas.Energy.DE.ZpnValue.html",
+    "title": "Struct ZpnValue",
+    "summary": "Struct ZpnValue Namespace Veritas.Energy.DE Assembly Veritas.dll Represents a validated German metering point number (ZPN) identifier. public readonly struct ZpnValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors ZpnValue(string) Initializes a new instance of the ZpnValue struct. public ZpnValue(string value) Parameters value string The identifier string. Properties Value Gets the normalized ZPN identifier string. public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Energy.DE.html": {
+    "href": "api/Veritas.Energy.DE.html",
+    "title": "Namespace Veritas.Energy.DE",
+    "summary": "Namespace Veritas.Energy.DE Classes Malo Provides validation and generation for MaLo identifiers. Melo Provides validation and generation for MeLo identifiers. Zpn Provides validation and generation for ZPN identifiers. Structs MaloValue Represents a validated German Market Location (MaLo) identifier. MeloValue Represents a validated German Meter Location (MeLo) identifier. ZpnValue Represents a validated German metering point number (ZPN) identifier."
+  },
+  "api/Veritas.Energy.ES.Cups.html": {
+    "href": "api/Veritas.Energy.ES.Cups.html",
+    "title": "Class Cups",
+    "summary": "Class Cups Namespace Veritas.Energy.ES Assembly Veritas.dll Provides validation and generation for CUPS identifiers. public static class Cups Inheritance object Cups Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) Attempts to generate a random CUPS identifier into the provided buffer. public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> Buffer that receives the generated identifier. written int When the method returns, contains the number of characters produced. Returns bool true if generation was attempted; otherwise, false. TryGenerate(in GenerationOptions, Span<char>, out int) Attempts to generate a random CUPS identifier using the supplied options. public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions Options controlling generation. destination Span<char> Buffer that receives the generated identifier. written int When the method returns, contains the number of characters produced. Returns bool true if generation succeeded; otherwise, false. TryValidate(ReadOnlySpan<char>, out ValidationResult<CupsValue>) Attempts to validate the supplied input as a CUPS identifier. public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<CupsValue> result) Parameters input ReadOnlySpan<char> Candidate identifier to validate. result ValidationResult<CupsValue> The validation outcome including the parsed value when valid. Returns bool true if validation executed; the IsValid property indicates success."
+  },
+  "api/Veritas.Energy.ES.CupsValue.html": {
+    "href": "api/Veritas.Energy.ES.CupsValue.html",
+    "title": "Struct CupsValue",
+    "summary": "Struct CupsValue Namespace Veritas.Energy.ES Assembly Veritas.dll Represents a validated Spanish CUPS identifier. public readonly struct CupsValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors CupsValue(string) Initializes a new instance of the CupsValue struct. public CupsValue(string value) Parameters value string The identifier string. Properties Value Gets the normalized CUPS identifier string. public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Energy.ES.html": {
+    "href": "api/Veritas.Energy.ES.html",
+    "title": "Namespace Veritas.Energy.ES",
+    "summary": "Namespace Veritas.Energy.ES Classes Cups Provides validation and generation for CUPS identifiers. Structs CupsValue Represents a validated Spanish CUPS identifier."
+  },
+  "api/Veritas.Energy.Eic.html": {
+    "href": "api/Veritas.Energy.Eic.html",
+    "title": "Class Eic",
+    "summary": "Class Eic Namespace Veritas.Energy Assembly Veritas.dll Provides validation for EIC codes. public static class Eic Inheritance object Eic Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) Attempts to generate a random EIC code into the provided buffer. public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> Buffer that receives the generated code. written int When the method returns, contains the number of characters produced. Returns bool true if generation was attempted; otherwise, false. TryGenerate(in GenerationOptions, Span<char>, out int) Attempts to generate a random EIC code using the supplied options. public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions Options controlling generation. destination Span<char> Buffer that receives the generated code. written int When the method returns, contains the number of characters produced. Returns bool true if generation succeeded; otherwise, false. TryValidate(ReadOnlySpan<char>, out ValidationResult<EicValue>) Attempts to validate the supplied input as an EIC code. public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<EicValue> result) Parameters input ReadOnlySpan<char> Candidate code to validate. result ValidationResult<EicValue> The validation outcome including the parsed value when valid. Returns bool true if validation executed; the IsValid property indicates success."
+  },
+  "api/Veritas.Energy.EicValue.html": {
+    "href": "api/Veritas.Energy.EicValue.html",
+    "title": "Struct EicValue",
+    "summary": "Struct EicValue Namespace Veritas.Energy Assembly Veritas.dll Represents a validated Energy Identification Code (EIC). public readonly struct EicValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors EicValue(string) Initializes a new instance of the EicValue struct. public EicValue(string value) Parameters value string The code string. Properties Value Gets the normalized EIC code string. public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Energy.FR.Prm.html": {
+    "href": "api/Veritas.Energy.FR.Prm.html",
+    "title": "Class Prm",
+    "summary": "Class Prm Namespace Veritas.Energy.FR Assembly Veritas.dll Provides validation for PRM identifiers. public static class Prm Inheritance object Prm Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<PrmValue>) Attempts to validate the supplied input as a PRM identifier. public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<PrmValue> result) Parameters input ReadOnlySpan<char> Candidate identifier to validate. result ValidationResult<PrmValue> The validation outcome including the parsed value when valid. Returns bool true if validation executed; the IsValid property indicates success."
+  },
+  "api/Veritas.Energy.FR.PrmValue.html": {
+    "href": "api/Veritas.Energy.FR.PrmValue.html",
+    "title": "Struct PrmValue",
+    "summary": "Struct PrmValue Namespace Veritas.Energy.FR Assembly Veritas.dll Represents a validated French PRM identifier. public readonly struct PrmValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors PrmValue(string) Initializes a new instance of the PrmValue struct. public PrmValue(string value) Parameters value string The identifier string. Properties Value Gets the normalized PRM identifier string. public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Energy.FR.html": {
+    "href": "api/Veritas.Energy.FR.html",
+    "title": "Namespace Veritas.Energy.FR",
+    "summary": "Namespace Veritas.Energy.FR Classes Prm Provides validation for PRM identifiers. Structs PrmValue Represents a validated French PRM identifier."
+  },
+  "api/Veritas.Energy.GB.Mpan.html": {
+    "href": "api/Veritas.Energy.GB.Mpan.html",
+    "title": "Class Mpan",
+    "summary": "Class Mpan Namespace Veritas.Energy.GB Assembly Veritas.dll Provides validation and generation for MPAN identifiers. public static class Mpan Inheritance object Mpan Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) Attempts to generate a random MPAN into the provided buffer. public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> Buffer that receives the generated identifier. written int When the method returns, contains the number of characters produced. Returns bool true if generation was attempted; otherwise, false. TryGenerate(in GenerationOptions, Span<char>, out int) Attempts to generate a random MPAN using the supplied options. public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions Options controlling generation. destination Span<char> Buffer that receives the generated identifier. written int When the method returns, contains the number of characters produced. Returns bool true if generation succeeded; otherwise, false. TryValidate(ReadOnlySpan<char>, out ValidationResult<MpanValue>) Attempts to validate the supplied input as an MPAN. public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<MpanValue> result) Parameters input ReadOnlySpan<char> Candidate identifier to validate. result ValidationResult<MpanValue> The validation outcome including the parsed value when valid. Returns bool true if validation executed; the IsValid property indicates success."
+  },
+  "api/Veritas.Energy.GB.MpanValue.html": {
+    "href": "api/Veritas.Energy.GB.MpanValue.html",
+    "title": "Struct MpanValue",
+    "summary": "Struct MpanValue Namespace Veritas.Energy.GB Assembly Veritas.dll Represents a validated UK Meter Point Administration Number (MPAN). public readonly struct MpanValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors MpanValue(string) Initializes a new instance of the MpanValue struct. public MpanValue(string value) Parameters value string The identifier string. Properties Value Gets the normalized MPAN string. public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Energy.GB.Mprn.html": {
+    "href": "api/Veritas.Energy.GB.Mprn.html",
+    "title": "Class Mprn",
+    "summary": "Class Mprn Namespace Veritas.Energy.GB Assembly Veritas.dll Provides validation for MPRN identifiers. public static class Mprn Inheritance object Mprn Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<MprnValue>) Attempts to validate the supplied input as an MPRN. public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<MprnValue> result) Parameters input ReadOnlySpan<char> Candidate identifier to validate. result ValidationResult<MprnValue> The validation outcome including the parsed value when valid. Returns bool true if validation executed; the IsValid property indicates success."
+  },
+  "api/Veritas.Energy.GB.MprnValue.html": {
+    "href": "api/Veritas.Energy.GB.MprnValue.html",
+    "title": "Struct MprnValue",
+    "summary": "Struct MprnValue Namespace Veritas.Energy.GB Assembly Veritas.dll Represents a validated UK Meter Point Reference Number (MPRN). public readonly struct MprnValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors MprnValue(string) Initializes a new instance of the MprnValue struct. public MprnValue(string value) Parameters value string The identifier string. Properties Value Gets the normalized MPRN string. public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Energy.GB.html": {
+    "href": "api/Veritas.Energy.GB.html",
+    "title": "Namespace Veritas.Energy.GB",
+    "summary": "Namespace Veritas.Energy.GB Classes Mpan Provides validation and generation for MPAN identifiers. Mprn Provides validation for MPRN identifiers. Structs MpanValue Represents a validated UK Meter Point Administration Number (MPAN). MprnValue Represents a validated UK Meter Point Reference Number (MPRN)."
+  },
+  "api/Veritas.Energy.IT.Pdr.html": {
+    "href": "api/Veritas.Energy.IT.Pdr.html",
+    "title": "Class Pdr",
+    "summary": "Class Pdr Namespace Veritas.Energy.IT Assembly Veritas.dll Provides validation for PDR identifiers. public static class Pdr Inheritance object Pdr Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<PdrValue>) Attempts to validate the supplied input as a PDR identifier. public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<PdrValue> result) Parameters input ReadOnlySpan<char> Candidate identifier to validate. result ValidationResult<PdrValue> The validation outcome including the parsed value when valid. Returns bool true if validation executed; the IsValid property indicates success."
+  },
+  "api/Veritas.Energy.IT.PdrValue.html": {
+    "href": "api/Veritas.Energy.IT.PdrValue.html",
+    "title": "Struct PdrValue",
+    "summary": "Struct PdrValue Namespace Veritas.Energy.IT Assembly Veritas.dll Represents a validated Italian PDR identifier. public readonly struct PdrValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors PdrValue(string) Initializes a new instance of the PdrValue struct. public PdrValue(string value) Parameters value string The identifier string. Properties Value Gets the normalized PDR identifier string. public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Energy.IT.Pod.html": {
+    "href": "api/Veritas.Energy.IT.Pod.html",
+    "title": "Class Pod",
+    "summary": "Class Pod Namespace Veritas.Energy.IT Assembly Veritas.dll Provides validation for POD identifiers. public static class Pod Inheritance object Pod Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<PodValue>) Attempts to validate the supplied input as a POD identifier. public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<PodValue> result) Parameters input ReadOnlySpan<char> Candidate identifier to validate. result ValidationResult<PodValue> The validation outcome including the parsed value when valid. Returns bool true if validation executed; the IsValid property indicates success."
+  },
+  "api/Veritas.Energy.IT.PodValue.html": {
+    "href": "api/Veritas.Energy.IT.PodValue.html",
+    "title": "Struct PodValue",
+    "summary": "Struct PodValue Namespace Veritas.Energy.IT Assembly Veritas.dll Represents a validated Italian POD identifier. public readonly struct PodValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors PodValue(string) Initializes a new instance of the PodValue struct. public PodValue(string value) Parameters value string The identifier string. Properties Value Gets the normalized POD identifier string. public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Energy.IT.html": {
+    "href": "api/Veritas.Energy.IT.html",
+    "title": "Namespace Veritas.Energy.IT",
+    "summary": "Namespace Veritas.Energy.IT Classes Pdr Provides validation for PDR identifiers. Pod Provides validation for POD identifiers. Structs PdrValue Represents a validated Italian PDR identifier. PodValue Represents a validated Italian POD identifier."
+  },
+  "api/Veritas.Energy.NL.EnergyEan.html": {
+    "href": "api/Veritas.Energy.NL.EnergyEan.html",
+    "title": "Class EnergyEan",
+    "summary": "Class EnergyEan Namespace Veritas.Energy.NL Assembly Veritas.dll Provides validation and generation for Dutch energy EAN codes. public static class EnergyEan Inheritance object EnergyEan Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) Attempts to generate a random energy EAN code into the provided buffer. public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> Buffer that receives the generated code. written int When the method returns, contains the number of characters produced. Returns bool true if generation was attempted; otherwise, false. TryGenerate(in GenerationOptions, Span<char>, out int) Attempts to generate a random energy EAN code using the supplied options. public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions Options controlling generation. destination Span<char> Buffer that receives the generated code. written int When the method returns, contains the number of characters produced. Returns bool true if generation succeeded; otherwise, false. TryValidate(ReadOnlySpan<char>, out ValidationResult<EnergyEanValue>) Attempts to validate the supplied input as an energy EAN code. public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<EnergyEanValue> result) Parameters input ReadOnlySpan<char> Candidate code to validate. result ValidationResult<EnergyEanValue> The validation outcome including the parsed value when valid. Returns bool true if validation executed; the IsValid property indicates success."
+  },
+  "api/Veritas.Energy.NL.EnergyEanValue.html": {
+    "href": "api/Veritas.Energy.NL.EnergyEanValue.html",
+    "title": "Struct EnergyEanValue",
+    "summary": "Struct EnergyEanValue Namespace Veritas.Energy.NL Assembly Veritas.dll Represents a validated Dutch energy EAN code. public readonly struct EnergyEanValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors EnergyEanValue(string) Initializes a new instance of the EnergyEanValue struct. public EnergyEanValue(string value) Parameters value string The code string. Properties Value Gets the normalized EAN code string. public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Energy.NL.html": {
+    "href": "api/Veritas.Energy.NL.html",
+    "title": "Namespace Veritas.Energy.NL",
+    "summary": "Namespace Veritas.Energy.NL Classes EnergyEan Provides validation and generation for Dutch energy EAN codes. Structs EnergyEanValue Represents a validated Dutch energy EAN code."
+  },
+  "api/Veritas.Energy.html": {
+    "href": "api/Veritas.Energy.html",
+    "title": "Namespace Veritas.Energy",
+    "summary": "Namespace Veritas.Energy Classes Eic Provides validation for EIC codes. Structs EicValue Represents a validated Energy Identification Code (EIC)."
+  },
+  "api/Veritas.Finance.AbaRouting.html": {
+    "href": "api/Veritas.Finance.AbaRouting.html",
+    "title": "Class AbaRouting",
+    "summary": "Class AbaRouting Namespace Veritas.Finance Assembly Veritas.dll Provides validation for ABA routing numbers. public static class AbaRouting Inheritance object AbaRouting Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<AbaRoutingValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<AbaRoutingValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<AbaRoutingValue> Returns bool"
+  },
+  "api/Veritas.Finance.AbaRoutingValue.html": {
+    "href": "api/Veritas.Finance.AbaRoutingValue.html",
+    "title": "Struct AbaRoutingValue",
+    "summary": "Struct AbaRoutingValue Namespace Veritas.Finance Assembly Veritas.dll Represents a validated US ABA routing number. public readonly struct AbaRoutingValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors AbaRoutingValue(string) public AbaRoutingValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Finance.Bic.html": {
+    "href": "api/Veritas.Finance.Bic.html",
+    "title": "Class Bic",
+    "summary": "Class Bic Namespace Veritas.Finance Assembly Veritas.dll Provides validation for BIC/SWIFT codes. public static class Bic Inheritance object Bic Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<BicValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<BicValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<BicValue> Returns bool"
+  },
+  "api/Veritas.Finance.BicValue.html": {
+    "href": "api/Veritas.Finance.BicValue.html",
+    "title": "Struct BicValue",
+    "summary": "Struct BicValue Namespace Veritas.Finance Assembly Veritas.dll Represents a validated BIC/SWIFT code. public readonly struct BicValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors BicValue(string) public BicValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Finance.Clabe.html": {
+    "href": "api/Veritas.Finance.Clabe.html",
+    "title": "Class Clabe",
+    "summary": "Class Clabe Namespace Veritas.Finance Assembly Veritas.dll public static class Clabe Inheritance object Clabe Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<ClabeValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<ClabeValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<ClabeValue> Returns bool"
+  },
+  "api/Veritas.Finance.ClabeValue.html": {
+    "href": "api/Veritas.Finance.ClabeValue.html",
+    "title": "Struct ClabeValue",
+    "summary": "Struct ClabeValue Namespace Veritas.Finance Assembly Veritas.dll public readonly struct ClabeValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors ClabeValue(string) public ClabeValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Finance.Cusip.html": {
+    "href": "api/Veritas.Finance.Cusip.html",
+    "title": "Class Cusip",
+    "summary": "Class Cusip Namespace Veritas.Finance Assembly Veritas.dll public static class Cusip Inheritance object Cusip Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<CusipValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<CusipValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<CusipValue> Returns bool"
+  },
+  "api/Veritas.Finance.CusipValue.html": {
+    "href": "api/Veritas.Finance.CusipValue.html",
+    "title": "Struct CusipValue",
+    "summary": "Struct CusipValue Namespace Veritas.Finance Assembly Veritas.dll public readonly struct CusipValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors CusipValue(string) public CusipValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Finance.Iban.html": {
+    "href": "api/Veritas.Finance.Iban.html",
+    "title": "Class Iban",
+    "summary": "Class Iban Namespace Veritas.Finance Assembly Veritas.dll Provides validation helpers for IBAN strings. public static class Iban Inheritance object Iban Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<IbanValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<IbanValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<IbanValue> Returns bool"
+  },
+  "api/Veritas.Finance.IbanValue.html": {
+    "href": "api/Veritas.Finance.IbanValue.html",
+    "title": "Struct IbanValue",
+    "summary": "Struct IbanValue Namespace Veritas.Finance Assembly Veritas.dll Represents a validated International Bank Account Number. public readonly struct IbanValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors IbanValue(string) public IbanValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Finance.Isin.html": {
+    "href": "api/Veritas.Finance.Isin.html",
+    "title": "Class Isin",
+    "summary": "Class Isin Namespace Veritas.Finance Assembly Veritas.dll Provides helpers for ISIN validation. public static class Isin Inheritance object Isin Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<IsinValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<IsinValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<IsinValue> Returns bool"
+  },
+  "api/Veritas.Finance.IsinValue.html": {
+    "href": "api/Veritas.Finance.IsinValue.html",
+    "title": "Struct IsinValue",
+    "summary": "Struct IsinValue Namespace Veritas.Finance Assembly Veritas.dll Represents a validated ISIN. public readonly struct IsinValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors IsinValue(string) public IsinValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Finance.Lei.html": {
+    "href": "api/Veritas.Finance.Lei.html",
+    "title": "Class Lei",
+    "summary": "Class Lei Namespace Veritas.Finance Assembly Veritas.dll public static class Lei Inheritance object Lei Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<LeiValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<LeiValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<LeiValue> Returns bool"
+  },
+  "api/Veritas.Finance.LeiValue.html": {
+    "href": "api/Veritas.Finance.LeiValue.html",
+    "title": "Struct LeiValue",
+    "summary": "Struct LeiValue Namespace Veritas.Finance Assembly Veritas.dll public readonly struct LeiValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors LeiValue(string) public LeiValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Finance.Mic.html": {
+    "href": "api/Veritas.Finance.Mic.html",
+    "title": "Class Mic",
+    "summary": "Class Mic Namespace Veritas.Finance Assembly Veritas.dll public static class Mic Inheritance object Mic Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<MicValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<MicValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<MicValue> Returns bool"
+  },
+  "api/Veritas.Finance.MicValue.html": {
+    "href": "api/Veritas.Finance.MicValue.html",
+    "title": "Struct MicValue",
+    "summary": "Struct MicValue Namespace Veritas.Finance Assembly Veritas.dll public readonly struct MicValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors MicValue(string) public MicValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Finance.Pan.html": {
+    "href": "api/Veritas.Finance.Pan.html",
+    "title": "Class Pan",
+    "summary": "Class Pan Namespace Veritas.Finance Assembly Veritas.dll Provides validation for payment card PANs. public static class Pan Inheritance object Pan Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<PanValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<PanValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<PanValue> Returns bool"
+  },
+  "api/Veritas.Finance.PanValue.html": {
+    "href": "api/Veritas.Finance.PanValue.html",
+    "title": "Struct PanValue",
+    "summary": "Struct PanValue Namespace Veritas.Finance Assembly Veritas.dll Represents a validated payment card PAN. public readonly struct PanValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors PanValue(string) public PanValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Finance.Rf.html": {
+    "href": "api/Veritas.Finance.Rf.html",
+    "title": "Class Rf",
+    "summary": "Class Rf Namespace Veritas.Finance Assembly Veritas.dll Provides validation for ISO 11649 RF references. public static class Rf Inheritance object Rf Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<RfValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<RfValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<RfValue> Returns bool"
+  },
+  "api/Veritas.Finance.RfValue.html": {
+    "href": "api/Veritas.Finance.RfValue.html",
+    "title": "Struct RfValue",
+    "summary": "Struct RfValue Namespace Veritas.Finance Assembly Veritas.dll Represents an ISO 11649 RF creditor reference. public readonly struct RfValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors RfValue(string) public RfValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Finance.Sedol.html": {
+    "href": "api/Veritas.Finance.Sedol.html",
+    "title": "Class Sedol",
+    "summary": "Class Sedol Namespace Veritas.Finance Assembly Veritas.dll public static class Sedol Inheritance object Sedol Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<SedolValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<SedolValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<SedolValue> Returns bool"
+  },
+  "api/Veritas.Finance.SedolValue.html": {
+    "href": "api/Veritas.Finance.SedolValue.html",
+    "title": "Struct SedolValue",
+    "summary": "Struct SedolValue Namespace Veritas.Finance Assembly Veritas.dll public readonly struct SedolValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors SedolValue(string) public SedolValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Finance.Wkn.html": {
+    "href": "api/Veritas.Finance.Wkn.html",
+    "title": "Class Wkn",
+    "summary": "Class Wkn Namespace Veritas.Finance Assembly Veritas.dll public static class Wkn Inheritance object Wkn Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<WknValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<WknValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<WknValue> Returns bool"
+  },
+  "api/Veritas.Finance.WknValue.html": {
+    "href": "api/Veritas.Finance.WknValue.html",
+    "title": "Struct WknValue",
+    "summary": "Struct WknValue Namespace Veritas.Finance Assembly Veritas.dll public readonly struct WknValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors WknValue(string) public WknValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Finance.html": {
+    "href": "api/Veritas.Finance.html",
+    "title": "Namespace Veritas.Finance",
+    "summary": "Namespace Veritas.Finance Classes AbaRouting Provides validation for ABA routing numbers. Bic Provides validation for BIC/SWIFT codes. Clabe Cusip Iban Provides validation helpers for IBAN strings. Isin Provides helpers for ISIN validation. Lei Mic Pan Provides validation for payment card PANs. Rf Provides validation for ISO 11649 RF references. Sedol Wkn Structs AbaRoutingValue Represents a validated US ABA routing number. BicValue Represents a validated BIC/SWIFT code. ClabeValue CusipValue IbanValue Represents a validated International Bank Account Number. IsinValue Represents a validated ISIN. LeiValue MicValue PanValue Represents a validated payment card PAN. RfValue Represents an ISO 11649 RF creditor reference. SedolValue WknValue"
+  },
+  "api/Veritas.FormatStyle.html": {
+    "href": "api/Veritas.FormatStyle.html",
+    "title": "Enum FormatStyle",
+    "summary": "Enum FormatStyle Namespace Veritas Assembly Veritas.dll Controls identifier string formatting. public enum FormatStyle Fields Canonical = 2 Compact = 0 Grouped = 1"
+  },
+  "api/Veritas.GenerationOptions.html": {
+    "href": "api/Veritas.GenerationOptions.html",
+    "title": "Struct GenerationOptions",
+    "summary": "Struct GenerationOptions Namespace Veritas Assembly Veritas.dll Options controlling identifier generation. public readonly struct GenerationOptions Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Properties Count Number of identifiers to generate. public int Count { get; init; } Property Value int Seed Optional seed for deterministic generation. public int? Seed { get; init; } Property Value int?"
+  },
+  "api/Veritas.Healthcare.NhsNumber.html": {
+    "href": "api/Veritas.Healthcare.NhsNumber.html",
+    "title": "Class NhsNumber",
+    "summary": "Class NhsNumber Namespace Veritas.Healthcare Assembly Veritas.dll public static class NhsNumber Inheritance object NhsNumber Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<NhsNumberValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<NhsNumberValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<NhsNumberValue> Returns bool"
+  },
+  "api/Veritas.Healthcare.NhsNumberValue.html": {
+    "href": "api/Veritas.Healthcare.NhsNumberValue.html",
+    "title": "Struct NhsNumberValue",
+    "summary": "Struct NhsNumberValue Namespace Veritas.Healthcare Assembly Veritas.dll public readonly struct NhsNumberValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors NhsNumberValue(string) public NhsNumberValue(string v) Parameters v string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Healthcare.Orcid.html": {
+    "href": "api/Veritas.Healthcare.Orcid.html",
+    "title": "Class Orcid",
+    "summary": "Class Orcid Namespace Veritas.Healthcare Assembly Veritas.dll public static class Orcid Inheritance object Orcid Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<OrcidValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<OrcidValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<OrcidValue> Returns bool"
+  },
+  "api/Veritas.Healthcare.OrcidValue.html": {
+    "href": "api/Veritas.Healthcare.OrcidValue.html",
+    "title": "Struct OrcidValue",
+    "summary": "Struct OrcidValue Namespace Veritas.Healthcare Assembly Veritas.dll public readonly struct OrcidValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors OrcidValue(string) public OrcidValue(string v) Parameters v string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Healthcare.html": {
+    "href": "api/Veritas.Healthcare.html",
+    "title": "Namespace Veritas.Healthcare",
+    "summary": "Namespace Veritas.Healthcare Classes NhsNumber Orcid Structs NhsNumberValue OrcidValue"
+  },
+  "api/Veritas.IGenerator-1.html": {
+    "href": "api/Veritas.IGenerator-1.html",
+    "title": "Interface IGenerator<T>",
+    "summary": "Interface IGenerator<T> Namespace Veritas Assembly Veritas.dll Generates identifiers for testing or reserved ranges. public interface IGenerator<T> Type Parameters T Strong type the generator emits. Methods TryGenerate(in GenerationOptions, Span<char>, out int) Attempts to generate an identifier using the supplied options. bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions Options controlling identifier generation. destination Span<char> Buffer to receive the generated value. written int When the method returns, contains the number of characters produced. Returns bool true if generation succeeded; otherwise, false."
+  },
+  "api/Veritas.IValidator-1.html": {
+    "href": "api/Veritas.IValidator-1.html",
+    "title": "Interface IValidator<T>",
+    "summary": "Interface IValidator<T> Namespace Veritas Assembly Veritas.dll Validates an identifier into a strongly typed value. public interface IValidator<T> Type Parameters T Resulting strong type. Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<T>) Attempts to validate the provided input. bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<T> result) Parameters input ReadOnlySpan<char> The value to examine. result ValidationResult<T> The validation result when the method returns. Returns bool true if the input could be processed; otherwise, false."
+  },
+  "api/Veritas.Identity.Base58Check.html": {
+    "href": "api/Veritas.Identity.Base58Check.html",
+    "title": "Class Base58Check",
+    "summary": "Class Base58Check Namespace Veritas.Identity Assembly Veritas.dll public static class Base58Check Inheritance object Base58Check Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<Base58CheckValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<Base58CheckValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<Base58CheckValue> Returns bool"
+  },
+  "api/Veritas.Identity.Base58CheckValue.html": {
+    "href": "api/Veritas.Identity.Base58CheckValue.html",
+    "title": "Struct Base58CheckValue",
+    "summary": "Struct Base58CheckValue Namespace Veritas.Identity Assembly Veritas.dll public readonly struct Base58CheckValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors Base58CheckValue(string) public Base58CheckValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Identity.Bcp47.html": {
+    "href": "api/Veritas.Identity.Bcp47.html",
+    "title": "Class Bcp47",
+    "summary": "Class Bcp47 Namespace Veritas.Identity Assembly Veritas.dll Provides validation for BCP 47 language tags. public static class Bcp47 Inheritance object Bcp47 Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<Bcp47Value>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<Bcp47Value> result) Parameters input ReadOnlySpan<char> result ValidationResult<Bcp47Value> Returns bool"
+  },
+  "api/Veritas.Identity.Bcp47Value.html": {
+    "href": "api/Veritas.Identity.Bcp47Value.html",
+    "title": "Struct Bcp47Value",
+    "summary": "Struct Bcp47Value Namespace Veritas.Identity Assembly Veritas.dll public readonly struct Bcp47Value Inherited Members ValueType.Equals(object) ValueType.GetHashCode() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors Bcp47Value(string) public Bcp47Value(string value) Parameters value string Properties Value public string Value { get; } Property Value string Methods ToString() Returns the fully qualified type name of this instance. public override string ToString() Returns string The fully qualified type name."
+  },
+  "api/Veritas.Identity.Domain.html": {
+    "href": "api/Veritas.Identity.Domain.html",
+    "title": "Class Domain",
+    "summary": "Class Domain Namespace Veritas.Identity Assembly Veritas.dll public static class Domain Inheritance object Domain Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<DomainValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<DomainValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<DomainValue> Returns bool"
+  },
+  "api/Veritas.Identity.DomainValue.html": {
+    "href": "api/Veritas.Identity.DomainValue.html",
+    "title": "Struct DomainValue",
+    "summary": "Struct DomainValue Namespace Veritas.Identity Assembly Veritas.dll public readonly struct DomainValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors DomainValue(string) public DomainValue(string v) Parameters v string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Identity.Email.html": {
+    "href": "api/Veritas.Identity.Email.html",
+    "title": "Class Email",
+    "summary": "Class Email Namespace Veritas.Identity Assembly Veritas.dll Provides validation for email addresses. public static class Email Inheritance object Email Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<EmailValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<EmailValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<EmailValue> Returns bool"
+  },
+  "api/Veritas.Identity.EmailValue.html": {
+    "href": "api/Veritas.Identity.EmailValue.html",
+    "title": "Struct EmailValue",
+    "summary": "Struct EmailValue Namespace Veritas.Identity Assembly Veritas.dll Represents a validated email address. public readonly struct EmailValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors EmailValue(string) public EmailValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Identity.Ethereum.html": {
+    "href": "api/Veritas.Identity.Ethereum.html",
+    "title": "Class Ethereum",
+    "summary": "Class Ethereum Namespace Veritas.Identity Assembly Veritas.dll Provides validation for Ethereum addresses. public static class Ethereum Inheritance object Ethereum Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<EthereumValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<EthereumValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<EthereumValue> Returns bool"
+  },
+  "api/Veritas.Identity.EthereumValue.html": {
+    "href": "api/Veritas.Identity.EthereumValue.html",
+    "title": "Struct EthereumValue",
+    "summary": "Struct EthereumValue Namespace Veritas.Identity Assembly Veritas.dll public readonly struct EthereumValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors EthereumValue(string) public EthereumValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Identity.Ksuid.html": {
+    "href": "api/Veritas.Identity.Ksuid.html",
+    "title": "Class Ksuid",
+    "summary": "Class Ksuid Namespace Veritas.Identity Assembly Veritas.dll Provides validation and generation for KSUID identifiers. public static class Ksuid Inheritance object Ksuid Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<KsuidValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<KsuidValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<KsuidValue> Returns bool"
+  },
+  "api/Veritas.Identity.KsuidValue.html": {
+    "href": "api/Veritas.Identity.KsuidValue.html",
+    "title": "Struct KsuidValue",
+    "summary": "Struct KsuidValue Namespace Veritas.Identity Assembly Veritas.dll public readonly struct KsuidValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors KsuidValue(string) public KsuidValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string Methods ToString() Returns the fully qualified type name of this instance. public override string ToString() Returns string The fully qualified type name."
+  },
+  "api/Veritas.Identity.NanoId.html": {
+    "href": "api/Veritas.Identity.NanoId.html",
+    "title": "Class NanoId",
+    "summary": "Class NanoId Namespace Veritas.Identity Assembly Veritas.dll public static class NanoId Inheritance object NanoId Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<NanoIdValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<NanoIdValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<NanoIdValue> Returns bool"
+  },
+  "api/Veritas.Identity.NanoIdValue.html": {
+    "href": "api/Veritas.Identity.NanoIdValue.html",
+    "title": "Struct NanoIdValue",
+    "summary": "Struct NanoIdValue Namespace Veritas.Identity Assembly Veritas.dll public readonly struct NanoIdValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors NanoIdValue(string) public NanoIdValue(string v) Parameters v string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Identity.Phone.html": {
+    "href": "api/Veritas.Identity.Phone.html",
+    "title": "Class Phone",
+    "summary": "Class Phone Namespace Veritas.Identity Assembly Veritas.dll public static class Phone Inheritance object Phone Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<PhoneValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<PhoneValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<PhoneValue> Returns bool"
+  },
+  "api/Veritas.Identity.PhoneValue.html": {
+    "href": "api/Veritas.Identity.PhoneValue.html",
+    "title": "Struct PhoneValue",
+    "summary": "Struct PhoneValue Namespace Veritas.Identity Assembly Veritas.dll public readonly struct PhoneValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors PhoneValue(string) public PhoneValue(string v) Parameters v string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Identity.Ulid.html": {
+    "href": "api/Veritas.Identity.Ulid.html",
+    "title": "Class Ulid",
+    "summary": "Class Ulid Namespace Veritas.Identity Assembly Veritas.dll public static class Ulid Inheritance object Ulid Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<UlidValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<UlidValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<UlidValue> Returns bool"
+  },
+  "api/Veritas.Identity.UlidValue.html": {
+    "href": "api/Veritas.Identity.UlidValue.html",
+    "title": "Struct UlidValue",
+    "summary": "Struct UlidValue Namespace Veritas.Identity Assembly Veritas.dll public readonly struct UlidValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors UlidValue(string) public UlidValue(string v) Parameters v string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Identity.Uuid.html": {
+    "href": "api/Veritas.Identity.Uuid.html",
+    "title": "Class Uuid",
+    "summary": "Class Uuid Namespace Veritas.Identity Assembly Veritas.dll Provides validation for UUID strings. public static class Uuid Inheritance object Uuid Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<UuidValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<UuidValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<UuidValue> Returns bool"
+  },
+  "api/Veritas.Identity.UuidValue.html": {
+    "href": "api/Veritas.Identity.UuidValue.html",
+    "title": "Struct UuidValue",
+    "summary": "Struct UuidValue Namespace Veritas.Identity Assembly Veritas.dll Represents a validated UUID/GUID. public readonly struct UuidValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors UuidValue(Guid) public UuidValue(Guid value) Parameters value Guid Properties Value public Guid Value { get; } Property Value Guid"
+  },
+  "api/Veritas.Identity.html": {
+    "href": "api/Veritas.Identity.html",
+    "title": "Namespace Veritas.Identity",
+    "summary": "Namespace Veritas.Identity Classes Base58Check Bcp47 Provides validation for BCP 47 language tags. Domain Email Provides validation for email addresses. Ethereum Provides validation for Ethereum addresses. Ksuid Provides validation and generation for KSUID identifiers. NanoId Phone Ulid Uuid Provides validation for UUID strings. Structs Base58CheckValue Bcp47Value DomainValue EmailValue Represents a validated email address. EthereumValue KsuidValue NanoIdValue PhoneValue UlidValue UuidValue Represents a validated UUID/GUID."
+  },
+  "api/Veritas.Logistics.Awb.html": {
+    "href": "api/Veritas.Logistics.Awb.html",
+    "title": "Class Awb",
+    "summary": "Class Awb Namespace Veritas.Logistics Assembly Veritas.dll public static class Awb Inheritance object Awb Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<AwbValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<AwbValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<AwbValue> Returns bool"
+  },
+  "api/Veritas.Logistics.AwbValue.html": {
+    "href": "api/Veritas.Logistics.AwbValue.html",
+    "title": "Struct AwbValue",
+    "summary": "Struct AwbValue Namespace Veritas.Logistics Assembly Veritas.dll public readonly struct AwbValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors AwbValue(string) public AwbValue(string v) Parameters v string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Logistics.Gln.html": {
+    "href": "api/Veritas.Logistics.Gln.html",
+    "title": "Class Gln",
+    "summary": "Class Gln Namespace Veritas.Logistics Assembly Veritas.dll public static class Gln Inheritance object Gln Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<GlnValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<GlnValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<GlnValue> Returns bool"
+  },
+  "api/Veritas.Logistics.GlnValue.html": {
+    "href": "api/Veritas.Logistics.GlnValue.html",
+    "title": "Struct GlnValue",
+    "summary": "Struct GlnValue Namespace Veritas.Logistics Assembly Veritas.dll public readonly struct GlnValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors GlnValue(string) public GlnValue(string v) Parameters v string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Logistics.Gtin.html": {
+    "href": "api/Veritas.Logistics.Gtin.html",
+    "title": "Class Gtin",
+    "summary": "Class Gtin Namespace Veritas.Logistics Assembly Veritas.dll public static class Gtin Inheritance object Gtin Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(int, Span<char>, out int) public static bool TryGenerate(int length, Span<char> destination, out int written) Parameters length int destination Span<char> written int Returns bool TryGenerate(int, in GenerationOptions, Span<char>, out int) public static bool TryGenerate(int length, in GenerationOptions options, Span<char> destination, out int written) Parameters length int options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<GtinValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<GtinValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<GtinValue> Returns bool"
+  },
+  "api/Veritas.Logistics.GtinValue.html": {
+    "href": "api/Veritas.Logistics.GtinValue.html",
+    "title": "Struct GtinValue",
+    "summary": "Struct GtinValue Namespace Veritas.Logistics Assembly Veritas.dll public readonly struct GtinValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors GtinValue(string) public GtinValue(string v) Parameters v string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Logistics.Imo.html": {
+    "href": "api/Veritas.Logistics.Imo.html",
+    "title": "Class Imo",
+    "summary": "Class Imo Namespace Veritas.Logistics Assembly Veritas.dll public static class Imo Inheritance object Imo Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<ImoValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<ImoValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<ImoValue> Returns bool"
+  },
+  "api/Veritas.Logistics.ImoValue.html": {
+    "href": "api/Veritas.Logistics.ImoValue.html",
+    "title": "Struct ImoValue",
+    "summary": "Struct ImoValue Namespace Veritas.Logistics Assembly Veritas.dll public readonly struct ImoValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors ImoValue(string) public ImoValue(string v) Parameters v string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Logistics.Iso6346.html": {
+    "href": "api/Veritas.Logistics.Iso6346.html",
+    "title": "Class Iso6346",
+    "summary": "Class Iso6346 Namespace Veritas.Logistics Assembly Veritas.dll public static class Iso6346 Inheritance object Iso6346 Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<Iso6346Value>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<Iso6346Value> result) Parameters input ReadOnlySpan<char> result ValidationResult<Iso6346Value> Returns bool"
+  },
+  "api/Veritas.Logistics.Iso6346Value.html": {
+    "href": "api/Veritas.Logistics.Iso6346Value.html",
+    "title": "Struct Iso6346Value",
+    "summary": "Struct Iso6346Value Namespace Veritas.Logistics Assembly Veritas.dll public readonly struct Iso6346Value Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors Iso6346Value(string) public Iso6346Value(string v) Parameters v string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Logistics.Sscc.html": {
+    "href": "api/Veritas.Logistics.Sscc.html",
+    "title": "Class Sscc",
+    "summary": "Class Sscc Namespace Veritas.Logistics Assembly Veritas.dll public static class Sscc Inheritance object Sscc Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<SsccValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<SsccValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<SsccValue> Returns bool"
+  },
+  "api/Veritas.Logistics.SsccValue.html": {
+    "href": "api/Veritas.Logistics.SsccValue.html",
+    "title": "Struct SsccValue",
+    "summary": "Struct SsccValue Namespace Veritas.Logistics Assembly Veritas.dll public readonly struct SsccValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors SsccValue(string) public SsccValue(string v) Parameters v string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Logistics.Vin.html": {
+    "href": "api/Veritas.Logistics.Vin.html",
+    "title": "Class Vin",
+    "summary": "Class Vin Namespace Veritas.Logistics Assembly Veritas.dll public static class Vin Inheritance object Vin Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<VinValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<VinValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<VinValue> Returns bool"
+  },
+  "api/Veritas.Logistics.VinValue.html": {
+    "href": "api/Veritas.Logistics.VinValue.html",
+    "title": "Struct VinValue",
+    "summary": "Struct VinValue Namespace Veritas.Logistics Assembly Veritas.dll public readonly struct VinValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors VinValue(string) public VinValue(string v) Parameters v string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Logistics.html": {
+    "href": "api/Veritas.Logistics.html",
+    "title": "Namespace Veritas.Logistics",
+    "summary": "Namespace Veritas.Logistics Classes Awb Gln Gtin Imo Iso6346 Sscc Vin Structs AwbValue GlnValue GtinValue ImoValue Iso6346Value SsccValue VinValue"
+  },
+  "api/Veritas.Media.Isbn10.html": {
+    "href": "api/Veritas.Media.Isbn10.html",
+    "title": "Class Isbn10",
+    "summary": "Class Isbn10 Namespace Veritas.Media Assembly Veritas.dll public static class Isbn10 Inheritance object Isbn10 Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<Isbn10Value>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<Isbn10Value> result) Parameters input ReadOnlySpan<char> result ValidationResult<Isbn10Value> Returns bool"
+  },
+  "api/Veritas.Media.Isbn10Value.html": {
+    "href": "api/Veritas.Media.Isbn10Value.html",
+    "title": "Struct Isbn10Value",
+    "summary": "Struct Isbn10Value Namespace Veritas.Media Assembly Veritas.dll public readonly struct Isbn10Value Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors Isbn10Value(string) public Isbn10Value(string v) Parameters v string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Media.Isbn13.html": {
+    "href": "api/Veritas.Media.Isbn13.html",
+    "title": "Class Isbn13",
+    "summary": "Class Isbn13 Namespace Veritas.Media Assembly Veritas.dll public static class Isbn13 Inheritance object Isbn13 Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<Isbn13Value>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<Isbn13Value> result) Parameters input ReadOnlySpan<char> result ValidationResult<Isbn13Value> Returns bool"
+  },
+  "api/Veritas.Media.Isbn13Value.html": {
+    "href": "api/Veritas.Media.Isbn13Value.html",
+    "title": "Struct Isbn13Value",
+    "summary": "Struct Isbn13Value Namespace Veritas.Media Assembly Veritas.dll public readonly struct Isbn13Value Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors Isbn13Value(string) public Isbn13Value(string v) Parameters v string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Media.Isrc.html": {
+    "href": "api/Veritas.Media.Isrc.html",
+    "title": "Class Isrc",
+    "summary": "Class Isrc Namespace Veritas.Media Assembly Veritas.dll Provides structural validation for ISRC identifiers. public static class Isrc Inheritance object Isrc Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<IsrcValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<IsrcValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<IsrcValue> Returns bool"
+  },
+  "api/Veritas.Media.IsrcValue.html": {
+    "href": "api/Veritas.Media.IsrcValue.html",
+    "title": "Struct IsrcValue",
+    "summary": "Struct IsrcValue Namespace Veritas.Media Assembly Veritas.dll Represents a validated International Standard Recording Code. public readonly struct IsrcValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors IsrcValue(string) public IsrcValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Media.Issn.html": {
+    "href": "api/Veritas.Media.Issn.html",
+    "title": "Class Issn",
+    "summary": "Class Issn Namespace Veritas.Media Assembly Veritas.dll public static class Issn Inheritance object Issn Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<IssnValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<IssnValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<IssnValue> Returns bool"
+  },
+  "api/Veritas.Media.IssnValue.html": {
+    "href": "api/Veritas.Media.IssnValue.html",
+    "title": "Struct IssnValue",
+    "summary": "Struct IssnValue Namespace Veritas.Media Assembly Veritas.dll public readonly struct IssnValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors IssnValue(string) public IssnValue(string v) Parameters v string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Media.html": {
+    "href": "api/Veritas.Media.html",
+    "title": "Namespace Veritas.Media",
+    "summary": "Namespace Veritas.Media Classes Isbn10 Isbn13 Isrc Provides structural validation for ISRC identifiers. Issn Structs Isbn10Value Isbn13Value IsrcValue Represents a validated International Standard Recording Code. IssnValue"
+  },
+  "api/Veritas.Tax.AU.Abn.html": {
+    "href": "api/Veritas.Tax.AU.Abn.html",
+    "title": "Class Abn",
+    "summary": "Class Abn Namespace Veritas.Tax.AU Assembly Veritas.dll public static class Abn Inheritance object Abn Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<AbnValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<AbnValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<AbnValue> Returns bool"
+  },
+  "api/Veritas.Tax.AU.AbnValue.html": {
+    "href": "api/Veritas.Tax.AU.AbnValue.html",
+    "title": "Struct AbnValue",
+    "summary": "Struct AbnValue Namespace Veritas.Tax.AU Assembly Veritas.dll public readonly struct AbnValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors AbnValue(string) public AbnValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.AU.Tfn.html": {
+    "href": "api/Veritas.Tax.AU.Tfn.html",
+    "title": "Class Tfn",
+    "summary": "Class Tfn Namespace Veritas.Tax.AU Assembly Veritas.dll public static class Tfn Inheritance object Tfn Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<TfnValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<TfnValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<TfnValue> Returns bool"
+  },
+  "api/Veritas.Tax.AU.TfnValue.html": {
+    "href": "api/Veritas.Tax.AU.TfnValue.html",
+    "title": "Struct TfnValue",
+    "summary": "Struct TfnValue Namespace Veritas.Tax.AU Assembly Veritas.dll public readonly struct TfnValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors TfnValue(string) public TfnValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.AU.html": {
+    "href": "api/Veritas.Tax.AU.html",
+    "title": "Namespace Veritas.Tax.AU",
+    "summary": "Namespace Veritas.Tax.AU Classes Abn Tfn Structs AbnValue TfnValue"
+  },
+  "api/Veritas.Tax.BR.Cnpj.html": {
+    "href": "api/Veritas.Tax.BR.Cnpj.html",
+    "title": "Class Cnpj",
+    "summary": "Class Cnpj Namespace Veritas.Tax.BR Assembly Veritas.dll public static class Cnpj Inheritance object Cnpj Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<CnpjValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<CnpjValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<CnpjValue> Returns bool"
+  },
+  "api/Veritas.Tax.BR.CnpjValue.html": {
+    "href": "api/Veritas.Tax.BR.CnpjValue.html",
+    "title": "Struct CnpjValue",
+    "summary": "Struct CnpjValue Namespace Veritas.Tax.BR Assembly Veritas.dll public readonly struct CnpjValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors CnpjValue(string) public CnpjValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.BR.Cpf.html": {
+    "href": "api/Veritas.Tax.BR.Cpf.html",
+    "title": "Class Cpf",
+    "summary": "Class Cpf Namespace Veritas.Tax.BR Assembly Veritas.dll public static class Cpf Inheritance object Cpf Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<CpfValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<CpfValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<CpfValue> Returns bool"
+  },
+  "api/Veritas.Tax.BR.CpfValue.html": {
+    "href": "api/Veritas.Tax.BR.CpfValue.html",
+    "title": "Struct CpfValue",
+    "summary": "Struct CpfValue Namespace Veritas.Tax.BR Assembly Veritas.dll public readonly struct CpfValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors CpfValue(string) public CpfValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.BR.html": {
+    "href": "api/Veritas.Tax.BR.html",
+    "title": "Namespace Veritas.Tax.BR",
+    "summary": "Namespace Veritas.Tax.BR Classes Cnpj Cpf Structs CnpjValue CpfValue"
+  },
+  "api/Veritas.Tax.CA.Bn.html": {
+    "href": "api/Veritas.Tax.CA.Bn.html",
+    "title": "Class Bn",
+    "summary": "Class Bn Namespace Veritas.Tax.CA Assembly Veritas.dll public static class Bn Inheritance object Bn Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<BnValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<BnValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<BnValue> Returns bool"
+  },
+  "api/Veritas.Tax.CA.BnValue.html": {
+    "href": "api/Veritas.Tax.CA.BnValue.html",
+    "title": "Struct BnValue",
+    "summary": "Struct BnValue Namespace Veritas.Tax.CA Assembly Veritas.dll public readonly struct BnValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors BnValue(string) public BnValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.CA.Sin.html": {
+    "href": "api/Veritas.Tax.CA.Sin.html",
+    "title": "Class Sin",
+    "summary": "Class Sin Namespace Veritas.Tax.CA Assembly Veritas.dll public static class Sin Inheritance object Sin Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<SinValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<SinValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<SinValue> Returns bool"
+  },
+  "api/Veritas.Tax.CA.SinValue.html": {
+    "href": "api/Veritas.Tax.CA.SinValue.html",
+    "title": "Struct SinValue",
+    "summary": "Struct SinValue Namespace Veritas.Tax.CA Assembly Veritas.dll public readonly struct SinValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors SinValue(string) public SinValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.CA.html": {
+    "href": "api/Veritas.Tax.CA.html",
+    "title": "Namespace Veritas.Tax.CA",
+    "summary": "Namespace Veritas.Tax.CA Classes Bn Sin Structs BnValue SinValue"
+  },
+  "api/Veritas.Tax.CN.Uscc.html": {
+    "href": "api/Veritas.Tax.CN.Uscc.html",
+    "title": "Class Uscc",
+    "summary": "Class Uscc Namespace Veritas.Tax.CN Assembly Veritas.dll public static class Uscc Inheritance object Uscc Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<UsccValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<UsccValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<UsccValue> Returns bool"
+  },
+  "api/Veritas.Tax.CN.UsccValue.html": {
+    "href": "api/Veritas.Tax.CN.UsccValue.html",
+    "title": "Struct UsccValue",
+    "summary": "Struct UsccValue Namespace Veritas.Tax.CN Assembly Veritas.dll public readonly struct UsccValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors UsccValue(string) public UsccValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.CN.html": {
+    "href": "api/Veritas.Tax.CN.html",
+    "title": "Namespace Veritas.Tax.CN",
+    "summary": "Namespace Veritas.Tax.CN Classes Uscc Structs UsccValue"
+  },
+  "api/Veritas.Tax.DE.IdNr.html": {
+    "href": "api/Veritas.Tax.DE.IdNr.html",
+    "title": "Class IdNr",
+    "summary": "Class IdNr Namespace Veritas.Tax.DE Assembly Veritas.dll public static class IdNr Inheritance object IdNr Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<IdNrValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<IdNrValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<IdNrValue> Returns bool"
+  },
+  "api/Veritas.Tax.DE.IdNrValue.html": {
+    "href": "api/Veritas.Tax.DE.IdNrValue.html",
+    "title": "Struct IdNrValue",
+    "summary": "Struct IdNrValue Namespace Veritas.Tax.DE Assembly Veritas.dll public readonly struct IdNrValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors IdNrValue(string) public IdNrValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.DE.UstIdNr.html": {
+    "href": "api/Veritas.Tax.DE.UstIdNr.html",
+    "title": "Class UstIdNr",
+    "summary": "Class UstIdNr Namespace Veritas.Tax.DE Assembly Veritas.dll public static class UstIdNr Inheritance object UstIdNr Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<UstIdNrValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<UstIdNrValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<UstIdNrValue> Returns bool"
+  },
+  "api/Veritas.Tax.DE.UstIdNrValue.html": {
+    "href": "api/Veritas.Tax.DE.UstIdNrValue.html",
+    "title": "Struct UstIdNrValue",
+    "summary": "Struct UstIdNrValue Namespace Veritas.Tax.DE Assembly Veritas.dll public readonly struct UstIdNrValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors UstIdNrValue(string) public UstIdNrValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.DE.html": {
+    "href": "api/Veritas.Tax.DE.html",
+    "title": "Namespace Veritas.Tax.DE",
+    "summary": "Namespace Veritas.Tax.DE Classes IdNr UstIdNr Structs IdNrValue UstIdNrValue"
+  },
+  "api/Veritas.Tax.ES.Cif.html": {
+    "href": "api/Veritas.Tax.ES.Cif.html",
+    "title": "Class Cif",
+    "summary": "Class Cif Namespace Veritas.Tax.ES Assembly Veritas.dll public static class Cif Inheritance object Cif Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<CifValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<CifValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<CifValue> Returns bool"
+  },
+  "api/Veritas.Tax.ES.CifValue.html": {
+    "href": "api/Veritas.Tax.ES.CifValue.html",
+    "title": "Struct CifValue",
+    "summary": "Struct CifValue Namespace Veritas.Tax.ES Assembly Veritas.dll public readonly struct CifValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors CifValue(string) public CifValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.ES.Nie.html": {
+    "href": "api/Veritas.Tax.ES.Nie.html",
+    "title": "Class Nie",
+    "summary": "Class Nie Namespace Veritas.Tax.ES Assembly Veritas.dll public static class Nie Inheritance object Nie Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<NieValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<NieValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<NieValue> Returns bool"
+  },
+  "api/Veritas.Tax.ES.NieValue.html": {
+    "href": "api/Veritas.Tax.ES.NieValue.html",
+    "title": "Struct NieValue",
+    "summary": "Struct NieValue Namespace Veritas.Tax.ES Assembly Veritas.dll public readonly struct NieValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors NieValue(string) public NieValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.ES.Nif.html": {
+    "href": "api/Veritas.Tax.ES.Nif.html",
+    "title": "Class Nif",
+    "summary": "Class Nif Namespace Veritas.Tax.ES Assembly Veritas.dll public static class Nif Inheritance object Nif Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<NifValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<NifValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<NifValue> Returns bool"
+  },
+  "api/Veritas.Tax.ES.NifValue.html": {
+    "href": "api/Veritas.Tax.ES.NifValue.html",
+    "title": "Struct NifValue",
+    "summary": "Struct NifValue Namespace Veritas.Tax.ES Assembly Veritas.dll public readonly struct NifValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors NifValue(string) public NifValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.ES.html": {
+    "href": "api/Veritas.Tax.ES.html",
+    "title": "Namespace Veritas.Tax.ES",
+    "summary": "Namespace Veritas.Tax.ES Classes Cif Nie Nif Structs CifValue NieValue NifValue"
+  },
+  "api/Veritas.Tax.FR.Siren.html": {
+    "href": "api/Veritas.Tax.FR.Siren.html",
+    "title": "Class Siren",
+    "summary": "Class Siren Namespace Veritas.Tax.FR Assembly Veritas.dll public static class Siren Inheritance object Siren Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<SirenValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<SirenValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<SirenValue> Returns bool"
+  },
+  "api/Veritas.Tax.FR.SirenValue.html": {
+    "href": "api/Veritas.Tax.FR.SirenValue.html",
+    "title": "Struct SirenValue",
+    "summary": "Struct SirenValue Namespace Veritas.Tax.FR Assembly Veritas.dll public readonly struct SirenValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors SirenValue(string) public SirenValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.FR.Siret.html": {
+    "href": "api/Veritas.Tax.FR.Siret.html",
+    "title": "Class Siret",
+    "summary": "Class Siret Namespace Veritas.Tax.FR Assembly Veritas.dll public static class Siret Inheritance object Siret Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<SiretValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<SiretValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<SiretValue> Returns bool"
+  },
+  "api/Veritas.Tax.FR.SiretValue.html": {
+    "href": "api/Veritas.Tax.FR.SiretValue.html",
+    "title": "Struct SiretValue",
+    "summary": "Struct SiretValue Namespace Veritas.Tax.FR Assembly Veritas.dll public readonly struct SiretValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors SiretValue(string) public SiretValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.FR.Vat.html": {
+    "href": "api/Veritas.Tax.FR.Vat.html",
+    "title": "Class Vat",
+    "summary": "Class Vat Namespace Veritas.Tax.FR Assembly Veritas.dll public static class Vat Inheritance object Vat Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<VatValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<VatValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<VatValue> Returns bool"
+  },
+  "api/Veritas.Tax.FR.VatValue.html": {
+    "href": "api/Veritas.Tax.FR.VatValue.html",
+    "title": "Struct VatValue",
+    "summary": "Struct VatValue Namespace Veritas.Tax.FR Assembly Veritas.dll public readonly struct VatValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors VatValue(string) public VatValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.FR.html": {
+    "href": "api/Veritas.Tax.FR.html",
+    "title": "Namespace Veritas.Tax.FR",
+    "summary": "Namespace Veritas.Tax.FR Classes Siren Siret Vat Structs SirenValue SiretValue VatValue"
+  },
+  "api/Veritas.Tax.IN.Gstin.html": {
+    "href": "api/Veritas.Tax.IN.Gstin.html",
+    "title": "Class Gstin",
+    "summary": "Class Gstin Namespace Veritas.Tax.IN Assembly Veritas.dll public static class Gstin Inheritance object Gstin Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<GstinValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<GstinValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<GstinValue> Returns bool"
+  },
+  "api/Veritas.Tax.IN.GstinValue.html": {
+    "href": "api/Veritas.Tax.IN.GstinValue.html",
+    "title": "Struct GstinValue",
+    "summary": "Struct GstinValue Namespace Veritas.Tax.IN Assembly Veritas.dll public readonly struct GstinValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors GstinValue(string) public GstinValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.IN.Pan.html": {
+    "href": "api/Veritas.Tax.IN.Pan.html",
+    "title": "Class Pan",
+    "summary": "Class Pan Namespace Veritas.Tax.IN Assembly Veritas.dll public static class Pan Inheritance object Pan Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<PanValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<PanValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<PanValue> Returns bool"
+  },
+  "api/Veritas.Tax.IN.PanValue.html": {
+    "href": "api/Veritas.Tax.IN.PanValue.html",
+    "title": "Struct PanValue",
+    "summary": "Struct PanValue Namespace Veritas.Tax.IN Assembly Veritas.dll public readonly struct PanValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors PanValue(string) public PanValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.IN.html": {
+    "href": "api/Veritas.Tax.IN.html",
+    "title": "Namespace Veritas.Tax.IN",
+    "summary": "Namespace Veritas.Tax.IN Classes Gstin Pan Structs GstinValue PanValue"
+  },
+  "api/Veritas.Tax.IT.Piva.html": {
+    "href": "api/Veritas.Tax.IT.Piva.html",
+    "title": "Class Piva",
+    "summary": "Class Piva Namespace Veritas.Tax.IT Assembly Veritas.dll public static class Piva Inheritance object Piva Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<PivaValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<PivaValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<PivaValue> Returns bool"
+  },
+  "api/Veritas.Tax.IT.PivaValue.html": {
+    "href": "api/Veritas.Tax.IT.PivaValue.html",
+    "title": "Struct PivaValue",
+    "summary": "Struct PivaValue Namespace Veritas.Tax.IT Assembly Veritas.dll public readonly struct PivaValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors PivaValue(string) public PivaValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.IT.html": {
+    "href": "api/Veritas.Tax.IT.html",
+    "title": "Namespace Veritas.Tax.IT",
+    "summary": "Namespace Veritas.Tax.IT Classes Piva Structs PivaValue"
+  },
+  "api/Veritas.Tax.NL.Bsn.html": {
+    "href": "api/Veritas.Tax.NL.Bsn.html",
+    "title": "Class Bsn",
+    "summary": "Class Bsn Namespace Veritas.Tax.NL Assembly Veritas.dll public static class Bsn Inheritance object Bsn Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<BsnValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<BsnValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<BsnValue> Returns bool"
+  },
+  "api/Veritas.Tax.NL.BsnValue.html": {
+    "href": "api/Veritas.Tax.NL.BsnValue.html",
+    "title": "Struct BsnValue",
+    "summary": "Struct BsnValue Namespace Veritas.Tax.NL Assembly Veritas.dll public readonly struct BsnValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors BsnValue(string) public BsnValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.NL.Btw.html": {
+    "href": "api/Veritas.Tax.NL.Btw.html",
+    "title": "Class Btw",
+    "summary": "Class Btw Namespace Veritas.Tax.NL Assembly Veritas.dll public static class Btw Inheritance object Btw Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<BtwValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<BtwValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<BtwValue> Returns bool"
+  },
+  "api/Veritas.Tax.NL.BtwValue.html": {
+    "href": "api/Veritas.Tax.NL.BtwValue.html",
+    "title": "Struct BtwValue",
+    "summary": "Struct BtwValue Namespace Veritas.Tax.NL Assembly Veritas.dll public readonly struct BtwValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors BtwValue(string) public BtwValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.NL.html": {
+    "href": "api/Veritas.Tax.NL.html",
+    "title": "Namespace Veritas.Tax.NL",
+    "summary": "Namespace Veritas.Tax.NL Classes Bsn Btw Structs BsnValue BtwValue"
+  },
+  "api/Veritas.Tax.NZ.Ird.html": {
+    "href": "api/Veritas.Tax.NZ.Ird.html",
+    "title": "Class Ird",
+    "summary": "Class Ird Namespace Veritas.Tax.NZ Assembly Veritas.dll public static class Ird Inheritance object Ird Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<IrdValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<IrdValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<IrdValue> Returns bool"
+  },
+  "api/Veritas.Tax.NZ.IrdValue.html": {
+    "href": "api/Veritas.Tax.NZ.IrdValue.html",
+    "title": "Struct IrdValue",
+    "summary": "Struct IrdValue Namespace Veritas.Tax.NZ Assembly Veritas.dll public readonly struct IrdValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors IrdValue(string) public IrdValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.NZ.html": {
+    "href": "api/Veritas.Tax.NZ.html",
+    "title": "Namespace Veritas.Tax.NZ",
+    "summary": "Namespace Veritas.Tax.NZ Classes Ird Structs IrdValue"
+  },
+  "api/Veritas.Tax.PL.Nip.html": {
+    "href": "api/Veritas.Tax.PL.Nip.html",
+    "title": "Class Nip",
+    "summary": "Class Nip Namespace Veritas.Tax.PL Assembly Veritas.dll public static class Nip Inheritance object Nip Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<NipValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<NipValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<NipValue> Returns bool"
+  },
+  "api/Veritas.Tax.PL.NipValue.html": {
+    "href": "api/Veritas.Tax.PL.NipValue.html",
+    "title": "Struct NipValue",
+    "summary": "Struct NipValue Namespace Veritas.Tax.PL Assembly Veritas.dll public readonly struct NipValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors NipValue(string) public NipValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.PL.Pesel.html": {
+    "href": "api/Veritas.Tax.PL.Pesel.html",
+    "title": "Class Pesel",
+    "summary": "Class Pesel Namespace Veritas.Tax.PL Assembly Veritas.dll public static class Pesel Inheritance object Pesel Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<PeselValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<PeselValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<PeselValue> Returns bool"
+  },
+  "api/Veritas.Tax.PL.PeselValue.html": {
+    "href": "api/Veritas.Tax.PL.PeselValue.html",
+    "title": "Struct PeselValue",
+    "summary": "Struct PeselValue Namespace Veritas.Tax.PL Assembly Veritas.dll public readonly struct PeselValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors PeselValue(string) public PeselValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.PL.Regon.html": {
+    "href": "api/Veritas.Tax.PL.Regon.html",
+    "title": "Class Regon",
+    "summary": "Class Regon Namespace Veritas.Tax.PL Assembly Veritas.dll public static class Regon Inheritance object Regon Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<RegonValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<RegonValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<RegonValue> Returns bool"
+  },
+  "api/Veritas.Tax.PL.RegonValue.html": {
+    "href": "api/Veritas.Tax.PL.RegonValue.html",
+    "title": "Struct RegonValue",
+    "summary": "Struct RegonValue Namespace Veritas.Tax.PL Assembly Veritas.dll public readonly struct RegonValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors RegonValue(string) public RegonValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.PL.html": {
+    "href": "api/Veritas.Tax.PL.html",
+    "title": "Namespace Veritas.Tax.PL",
+    "summary": "Namespace Veritas.Tax.PL Classes Nip Pesel Regon Structs NipValue PeselValue RegonValue"
+  },
+  "api/Veritas.Tax.SE.OrgNr.html": {
+    "href": "api/Veritas.Tax.SE.OrgNr.html",
+    "title": "Class OrgNr",
+    "summary": "Class OrgNr Namespace Veritas.Tax.SE Assembly Veritas.dll public static class OrgNr Inheritance object OrgNr Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<OrgNrValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<OrgNrValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<OrgNrValue> Returns bool"
+  },
+  "api/Veritas.Tax.SE.OrgNrValue.html": {
+    "href": "api/Veritas.Tax.SE.OrgNrValue.html",
+    "title": "Struct OrgNrValue",
+    "summary": "Struct OrgNrValue Namespace Veritas.Tax.SE Assembly Veritas.dll public readonly struct OrgNrValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors OrgNrValue(string) public OrgNrValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.SE.Personnummer.html": {
+    "href": "api/Veritas.Tax.SE.Personnummer.html",
+    "title": "Class Personnummer",
+    "summary": "Class Personnummer Namespace Veritas.Tax.SE Assembly Veritas.dll public static class Personnummer Inheritance object Personnummer Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<PersonnummerValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<PersonnummerValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<PersonnummerValue> Returns bool"
+  },
+  "api/Veritas.Tax.SE.PersonnummerValue.html": {
+    "href": "api/Veritas.Tax.SE.PersonnummerValue.html",
+    "title": "Struct PersonnummerValue",
+    "summary": "Struct PersonnummerValue Namespace Veritas.Tax.SE Assembly Veritas.dll public readonly struct PersonnummerValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors PersonnummerValue(string) public PersonnummerValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.SE.html": {
+    "href": "api/Veritas.Tax.SE.html",
+    "title": "Namespace Veritas.Tax.SE",
+    "summary": "Namespace Veritas.Tax.SE Classes OrgNr Personnummer Structs OrgNrValue PersonnummerValue"
+  },
+  "api/Veritas.Tax.UK.CompanyNumber.html": {
+    "href": "api/Veritas.Tax.UK.CompanyNumber.html",
+    "title": "Class CompanyNumber",
+    "summary": "Class CompanyNumber Namespace Veritas.Tax.UK Assembly Veritas.dll public static class CompanyNumber Inheritance object CompanyNumber Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<CompanyNumberValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<CompanyNumberValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<CompanyNumberValue> Returns bool"
+  },
+  "api/Veritas.Tax.UK.CompanyNumberValue.html": {
+    "href": "api/Veritas.Tax.UK.CompanyNumberValue.html",
+    "title": "Struct CompanyNumberValue",
+    "summary": "Struct CompanyNumberValue Namespace Veritas.Tax.UK Assembly Veritas.dll public readonly struct CompanyNumberValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors CompanyNumberValue(string) public CompanyNumberValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.UK.Nino.html": {
+    "href": "api/Veritas.Tax.UK.Nino.html",
+    "title": "Class Nino",
+    "summary": "Class Nino Namespace Veritas.Tax.UK Assembly Veritas.dll public static class Nino Inheritance object Nino Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<NinoValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<NinoValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<NinoValue> Returns bool"
+  },
+  "api/Veritas.Tax.UK.NinoValue.html": {
+    "href": "api/Veritas.Tax.UK.NinoValue.html",
+    "title": "Struct NinoValue",
+    "summary": "Struct NinoValue Namespace Veritas.Tax.UK Assembly Veritas.dll public readonly struct NinoValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors NinoValue(string) public NinoValue(string v) Parameters v string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.UK.Utr.html": {
+    "href": "api/Veritas.Tax.UK.Utr.html",
+    "title": "Class Utr",
+    "summary": "Class Utr Namespace Veritas.Tax.UK Assembly Veritas.dll public static class Utr Inheritance object Utr Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<UtrValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<UtrValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<UtrValue> Returns bool"
+  },
+  "api/Veritas.Tax.UK.UtrValue.html": {
+    "href": "api/Veritas.Tax.UK.UtrValue.html",
+    "title": "Struct UtrValue",
+    "summary": "Struct UtrValue Namespace Veritas.Tax.UK Assembly Veritas.dll public readonly struct UtrValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors UtrValue(string) public UtrValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.UK.Vat.html": {
+    "href": "api/Veritas.Tax.UK.Vat.html",
+    "title": "Class Vat",
+    "summary": "Class Vat Namespace Veritas.Tax.UK Assembly Veritas.dll public static class Vat Inheritance object Vat Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<VatValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<VatValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<VatValue> Returns bool"
+  },
+  "api/Veritas.Tax.UK.VatValue.html": {
+    "href": "api/Veritas.Tax.UK.VatValue.html",
+    "title": "Struct VatValue",
+    "summary": "Struct VatValue Namespace Veritas.Tax.UK Assembly Veritas.dll public readonly struct VatValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors VatValue(string) public VatValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.UK.html": {
+    "href": "api/Veritas.Tax.UK.html",
+    "title": "Namespace Veritas.Tax.UK",
+    "summary": "Namespace Veritas.Tax.UK Classes CompanyNumber Nino Utr Vat Structs CompanyNumberValue NinoValue UtrValue VatValue"
+  },
+  "api/Veritas.Tax.US.Ein.html": {
+    "href": "api/Veritas.Tax.US.Ein.html",
+    "title": "Class Ein",
+    "summary": "Class Ein Namespace Veritas.Tax.US Assembly Veritas.dll public static class Ein Inheritance object Ein Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<EinValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<EinValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<EinValue> Returns bool"
+  },
+  "api/Veritas.Tax.US.EinValue.html": {
+    "href": "api/Veritas.Tax.US.EinValue.html",
+    "title": "Struct EinValue",
+    "summary": "Struct EinValue Namespace Veritas.Tax.US Assembly Veritas.dll public readonly struct EinValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors EinValue(string) public EinValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.US.Itin.html": {
+    "href": "api/Veritas.Tax.US.Itin.html",
+    "title": "Class Itin",
+    "summary": "Class Itin Namespace Veritas.Tax.US Assembly Veritas.dll public static class Itin Inheritance object Itin Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<ItinValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<ItinValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<ItinValue> Returns bool"
+  },
+  "api/Veritas.Tax.US.ItinValue.html": {
+    "href": "api/Veritas.Tax.US.ItinValue.html",
+    "title": "Struct ItinValue",
+    "summary": "Struct ItinValue Namespace Veritas.Tax.US Assembly Veritas.dll public readonly struct ItinValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors ItinValue(string) public ItinValue(string value) Parameters value string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.US.Ssn.html": {
+    "href": "api/Veritas.Tax.US.Ssn.html",
+    "title": "Class Ssn",
+    "summary": "Class Ssn Namespace Veritas.Tax.US Assembly Veritas.dll public static class Ssn Inheritance object Ssn Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> written int Returns bool TryGenerate(in GenerationOptions, Span<char>, out int) public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions destination Span<char> written int Returns bool TryValidate(ReadOnlySpan<char>, out ValidationResult<SsnValue>) public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<SsnValue> result) Parameters input ReadOnlySpan<char> result ValidationResult<SsnValue> Returns bool"
+  },
+  "api/Veritas.Tax.US.SsnValue.html": {
+    "href": "api/Veritas.Tax.US.SsnValue.html",
+    "title": "Struct SsnValue",
+    "summary": "Struct SsnValue Namespace Veritas.Tax.US Assembly Veritas.dll public readonly struct SsnValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors SsnValue(string) public SsnValue(string v) Parameters v string Properties Value public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Tax.US.html": {
+    "href": "api/Veritas.Tax.US.html",
+    "title": "Namespace Veritas.Tax.US",
+    "summary": "Namespace Veritas.Tax.US Classes Ein Itin Ssn Structs EinValue ItinValue SsnValue"
+  },
+  "api/Veritas.Telecom.Asn.html": {
+    "href": "api/Veritas.Telecom.Asn.html",
+    "title": "Class Asn",
+    "summary": "Class Asn Namespace Veritas.Telecom Assembly Veritas.dll Provides validation and generation for Autonomous System Numbers. public static class Asn Inheritance object Asn Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) Attempts to generate a random ASN into the provided buffer. public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> Buffer that receives the generated number. written int When the method returns, contains the number of characters produced. Returns bool true if generation was attempted; otherwise, false. TryGenerate(in GenerationOptions, Span<char>, out int) Attempts to generate a random ASN using the supplied options. public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions Options controlling generation. destination Span<char> Buffer that receives the generated number. written int When the method returns, contains the number of characters produced. Returns bool true if generation succeeded; otherwise, false. TryValidate(ReadOnlySpan<char>, out ValidationResult<AsnValue>) Attempts to validate the supplied input as an ASN. public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<AsnValue> result) Parameters input ReadOnlySpan<char> Candidate ASN to validate. result ValidationResult<AsnValue> The validation outcome including the parsed value when valid. Returns bool true if validation executed; the IsValid property indicates success."
+  },
+  "api/Veritas.Telecom.AsnValue.html": {
+    "href": "api/Veritas.Telecom.AsnValue.html",
+    "title": "Struct AsnValue",
+    "summary": "Struct AsnValue Namespace Veritas.Telecom Assembly Veritas.dll Represents a validated Autonomous System Number (ASN). public readonly struct AsnValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors AsnValue(uint) Initializes a new instance of the AsnValue struct. public AsnValue(uint value) Parameters value uint The parsed ASN. Properties Value Gets the numeric ASN value. public uint Value { get; } Property Value uint"
+  },
+  "api/Veritas.Telecom.Iccid.html": {
+    "href": "api/Veritas.Telecom.Iccid.html",
+    "title": "Class Iccid",
+    "summary": "Class Iccid Namespace Veritas.Telecom Assembly Veritas.dll Provides validation and generation for ICCIDs. public static class Iccid Inheritance object Iccid Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) Attempts to generate a random ICCID into the provided buffer. public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> Buffer that receives the generated code. written int When the method returns, contains the number of characters produced. Returns bool true if generation was attempted; otherwise, false. TryGenerate(in GenerationOptions, Span<char>, out int) Attempts to generate a random ICCID using the supplied options. public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions Options controlling generation. destination Span<char> Buffer that receives the generated code. written int When the method returns, contains the number of characters produced. Returns bool true if generation succeeded; otherwise, false. TryValidate(ReadOnlySpan<char>, out ValidationResult<IccidValue>) Attempts to validate the supplied input as an ICCID. public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<IccidValue> result) Parameters input ReadOnlySpan<char> Candidate code to validate. result ValidationResult<IccidValue> The validation outcome including the parsed value when valid. Returns bool true if validation executed; the IsValid property indicates success."
+  },
+  "api/Veritas.Telecom.IccidValue.html": {
+    "href": "api/Veritas.Telecom.IccidValue.html",
+    "title": "Struct IccidValue",
+    "summary": "Struct IccidValue Namespace Veritas.Telecom Assembly Veritas.dll Represents a validated Integrated Circuit Card Identifier (ICCID). public readonly struct IccidValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors IccidValue(string) Initializes a new instance of the IccidValue struct. public IccidValue(string value) Parameters value string The code string. Properties Value Gets the normalized ICCID string. public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Telecom.Imei.html": {
+    "href": "api/Veritas.Telecom.Imei.html",
+    "title": "Class Imei",
+    "summary": "Class Imei Namespace Veritas.Telecom Assembly Veritas.dll Provides validation and generation for IMEI numbers. public static class Imei Inheritance object Imei Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) Attempts to generate a random IMEI into the provided buffer. public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> Buffer that receives the generated code. written int When the method returns, contains the number of characters produced. Returns bool true if generation was attempted; otherwise, false. TryGenerate(in GenerationOptions, Span<char>, out int) Attempts to generate a random IMEI using the supplied options. public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions Options controlling generation. destination Span<char> Buffer that receives the generated code. written int When the method returns, contains the number of characters produced. Returns bool true if generation succeeded; otherwise, false. TryValidate(ReadOnlySpan<char>, out ValidationResult<ImeiValue>) Attempts to validate the supplied input as an IMEI. public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<ImeiValue> result) Parameters input ReadOnlySpan<char> Candidate code to validate. result ValidationResult<ImeiValue> The validation outcome including the parsed value when valid. Returns bool true if validation executed; the IsValid property indicates success."
+  },
+  "api/Veritas.Telecom.ImeiValue.html": {
+    "href": "api/Veritas.Telecom.ImeiValue.html",
+    "title": "Struct ImeiValue",
+    "summary": "Struct ImeiValue Namespace Veritas.Telecom Assembly Veritas.dll Represents a validated International Mobile Equipment Identity (IMEI). public readonly struct ImeiValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors ImeiValue(string) Initializes a new instance of the ImeiValue struct. public ImeiValue(string value) Parameters value string The code string. Properties Value Gets the normalized IMEI string. public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Telecom.Ipv4.html": {
+    "href": "api/Veritas.Telecom.Ipv4.html",
+    "title": "Class Ipv4",
+    "summary": "Class Ipv4 Namespace Veritas.Telecom Assembly Veritas.dll Provides validation for IPv4 addresses. public static class Ipv4 Inheritance object Ipv4 Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<Ipv4Value>) Attempts to validate the supplied input as an IPv4 address. public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<Ipv4Value> result) Parameters input ReadOnlySpan<char> Candidate address to validate. result ValidationResult<Ipv4Value> The validation outcome including the parsed value when valid. Returns bool true if validation executed; the IsValid property indicates success."
+  },
+  "api/Veritas.Telecom.Ipv4Value.html": {
+    "href": "api/Veritas.Telecom.Ipv4Value.html",
+    "title": "Struct Ipv4Value",
+    "summary": "Struct Ipv4Value Namespace Veritas.Telecom Assembly Veritas.dll Represents a validated IPv4 address. public readonly struct Ipv4Value Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors Ipv4Value(string) Initializes a new instance of the Ipv4Value struct. public Ipv4Value(string value) Parameters value string The address string. Properties Value Gets the normalized IPv4 address string. public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Telecom.Ipv6.html": {
+    "href": "api/Veritas.Telecom.Ipv6.html",
+    "title": "Class Ipv6",
+    "summary": "Class Ipv6 Namespace Veritas.Telecom Assembly Veritas.dll Provides validation for IPv6 addresses. public static class Ipv6 Inheritance object Ipv6 Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryValidate(ReadOnlySpan<char>, out ValidationResult<Ipv6Value>) Attempts to validate the supplied input as an IPv6 address. public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<Ipv6Value> result) Parameters input ReadOnlySpan<char> Candidate address to validate. result ValidationResult<Ipv6Value> The validation outcome including the parsed value when valid. Returns bool true if validation executed; the IsValid property indicates success."
+  },
+  "api/Veritas.Telecom.Ipv6Value.html": {
+    "href": "api/Veritas.Telecom.Ipv6Value.html",
+    "title": "Struct Ipv6Value",
+    "summary": "Struct Ipv6Value Namespace Veritas.Telecom Assembly Veritas.dll Represents a validated IPv6 address. public readonly struct Ipv6Value Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors Ipv6Value(string) Initializes a new instance of the Ipv6Value struct. public Ipv6Value(string value) Parameters value string The address string. Properties Value Gets the normalized IPv6 address string. public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Telecom.Mac.html": {
+    "href": "api/Veritas.Telecom.Mac.html",
+    "title": "Class Mac",
+    "summary": "Class Mac Namespace Veritas.Telecom Assembly Veritas.dll Provides validation and generation for MAC addresses. public static class Mac Inheritance object Mac Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) Attempts to generate a random MAC address into the provided buffer. public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> Buffer that receives the generated address. written int When the method returns, contains the number of characters produced. Returns bool true if generation was attempted; otherwise, false. TryGenerate(in GenerationOptions, Span<char>, out int) Attempts to generate a random MAC address using the supplied options. public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions Options controlling generation. destination Span<char> Buffer that receives the generated address. written int When the method returns, contains the number of characters produced. Returns bool true if generation succeeded; otherwise, false. TryValidate(ReadOnlySpan<char>, out ValidationResult<MacValue>) Attempts to validate the supplied input as a MAC address. public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<MacValue> result) Parameters input ReadOnlySpan<char> Candidate address to validate. result ValidationResult<MacValue> The validation outcome including the parsed value when valid. Returns bool true if validation executed; the IsValid property indicates success."
+  },
+  "api/Veritas.Telecom.MacValue.html": {
+    "href": "api/Veritas.Telecom.MacValue.html",
+    "title": "Struct MacValue",
+    "summary": "Struct MacValue Namespace Veritas.Telecom Assembly Veritas.dll Represents a validated MAC address. public readonly struct MacValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors MacValue(string) Initializes a new instance of the MacValue struct. public MacValue(string value) Parameters value string The address string. Properties Value Gets the normalized MAC address string. public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Telecom.Meid.html": {
+    "href": "api/Veritas.Telecom.Meid.html",
+    "title": "Class Meid",
+    "summary": "Class Meid Namespace Veritas.Telecom Assembly Veritas.dll Provides validation and generation for MEID numbers. public static class Meid Inheritance object Meid Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) Attempts to generate a random MEID into the provided buffer. public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> Buffer that receives the generated code. written int When the method returns, contains the number of characters produced. Returns bool true if generation was attempted; otherwise, false. TryGenerate(in GenerationOptions, Span<char>, out int) Attempts to generate a random MEID using the supplied options. public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions Options controlling generation. destination Span<char> Buffer that receives the generated code. written int When the method returns, contains the number of characters produced. Returns bool true if generation succeeded; otherwise, false. TryValidate(ReadOnlySpan<char>, out ValidationResult<MeidValue>) Attempts to validate the supplied input as a MEID. public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<MeidValue> result) Parameters input ReadOnlySpan<char> Candidate code to validate. result ValidationResult<MeidValue> The validation outcome including the parsed value when valid. Returns bool true if validation executed; the IsValid property indicates success."
+  },
+  "api/Veritas.Telecom.MeidValue.html": {
+    "href": "api/Veritas.Telecom.MeidValue.html",
+    "title": "Struct MeidValue",
+    "summary": "Struct MeidValue Namespace Veritas.Telecom Assembly Veritas.dll Represents a validated Mobile Equipment Identifier (MEID). public readonly struct MeidValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors MeidValue(string) Initializes a new instance of the MeidValue struct. public MeidValue(string value) Parameters value string The code string. Properties Value Gets the normalized MEID string. public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Telecom.Oui.html": {
+    "href": "api/Veritas.Telecom.Oui.html",
+    "title": "Class Oui",
+    "summary": "Class Oui Namespace Veritas.Telecom Assembly Veritas.dll Provides validation and generation for OUI codes. public static class Oui Inheritance object Oui Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TryGenerate(Span<char>, out int) Attempts to generate a random OUI code into the provided buffer. public static bool TryGenerate(Span<char> destination, out int written) Parameters destination Span<char> Buffer that receives the generated code. written int When the method returns, contains the number of characters produced. Returns bool true if generation was attempted; otherwise, false. TryGenerate(in GenerationOptions, Span<char>, out int) Attempts to generate a random OUI code using the supplied options. public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written) Parameters options GenerationOptions Options controlling generation. destination Span<char> Buffer that receives the generated code. written int When the method returns, contains the number of characters produced. Returns bool true if generation succeeded; otherwise, false. TryValidate(ReadOnlySpan<char>, out ValidationResult<OuiValue>) Attempts to validate the supplied input as an OUI code. public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<OuiValue> result) Parameters input ReadOnlySpan<char> Candidate code to validate. result ValidationResult<OuiValue> The validation outcome including the parsed value when valid. Returns bool true if validation executed; the IsValid property indicates success."
+  },
+  "api/Veritas.Telecom.OuiValue.html": {
+    "href": "api/Veritas.Telecom.OuiValue.html",
+    "title": "Struct OuiValue",
+    "summary": "Struct OuiValue Namespace Veritas.Telecom Assembly Veritas.dll Represents a validated Organizationally Unique Identifier (OUI). public readonly struct OuiValue Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors OuiValue(string) Initializes a new instance of the OuiValue struct. public OuiValue(string value) Parameters value string The code string. Properties Value Gets the normalized OUI string. public string Value { get; } Property Value string"
+  },
+  "api/Veritas.Telecom.html": {
+    "href": "api/Veritas.Telecom.html",
+    "title": "Namespace Veritas.Telecom",
+    "summary": "Namespace Veritas.Telecom Classes Asn Provides validation and generation for Autonomous System Numbers. Iccid Provides validation and generation for ICCIDs. Imei Provides validation and generation for IMEI numbers. Ipv4 Provides validation for IPv4 addresses. Ipv6 Provides validation for IPv6 addresses. Mac Provides validation and generation for MAC addresses. Meid Provides validation and generation for MEID numbers. Oui Provides validation and generation for OUI codes. Structs AsnValue Represents a validated Autonomous System Number (ASN). IccidValue Represents a validated Integrated Circuit Card Identifier (ICCID). ImeiValue Represents a validated International Mobile Equipment Identity (IMEI). Ipv4Value Represents a validated IPv4 address. Ipv6Value Represents a validated IPv6 address. MacValue Represents a validated MAC address. MeidValue Represents a validated Mobile Equipment Identifier (MEID). OuiValue Represents a validated Organizationally Unique Identifier (OUI)."
+  },
+  "api/Veritas.ValidationError.html": {
+    "href": "api/Veritas.ValidationError.html",
+    "title": "Enum ValidationError",
+    "summary": "Enum ValidationError Namespace Veritas Assembly Veritas.dll Represents error categories when validating an identifier. public enum ValidationError Fields Charset = 2 Checksum = 3 CountryRule = 4 Format = 5 Length = 1 None = 0 Range = 6 ReservedPrefix = 7"
+  },
+  "api/Veritas.ValidationResult-1.html": {
+    "href": "api/Veritas.ValidationResult-1.html",
+    "title": "Struct ValidationResult<T>",
+    "summary": "Struct ValidationResult<T> Namespace Veritas Assembly Veritas.dll Represents the outcome of validating an identifier. public readonly struct ValidationResult<T> Type Parameters T Strongly typed value when validation succeeds. Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors ValidationResult(bool, T?, ValidationError, string?) Initializes a new instance of the ValidationResult<T> struct. public ValidationResult(bool isValid, T? value, ValidationError error, string? message = null) Parameters isValid bool Indicates whether the input was valid. value T The parsed value when validation succeeds. error ValidationError The error classification. message string Optional human-readable message. Properties Error Gets the classification of any validation error. public ValidationError Error { get; } Property Value ValidationError IsValid Gets a value indicating whether the input was valid. public bool IsValid { get; } Property Value bool Message Gets an optional message describing the validation result. public string? Message { get; } Property Value string Value Gets the parsed value when IsValid is true. public T? Value { get; } Property Value T"
+  },
+  "api/Veritas.html": {
+    "href": "api/Veritas.html",
+    "title": "Namespace Veritas",
+    "summary": "Namespace Veritas Classes Bulk Helpers for bulk identifier generation. Structs GenerationOptions Options controlling identifier generation. ValidationResult<T> Represents the outcome of validating an identifier. Interfaces IGenerator<T> Generates identifiers for testing or reserved ranges. IValidator<T> Validates an identifier into a strongly typed value. Enums FormatStyle Controls identifier string formatting. ValidationError Represents error categories when validating an identifier. Delegates Bulk.SpanGenerator Delegate matching generator signatures using Span<T> and a provided Random instance."
+  },
+  "docs/getting-started.html": {
+    "href": "docs/getting-started.html",
+    "title": "Getting Started",
+    "summary": "Getting Started"
+  },
+  "docs/introduction.html": {
+    "href": "docs/introduction.html",
+    "title": "Introduction",
+    "summary": "Introduction"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "This is the HOMEPAGE.",
+    "summary": "This is the HOMEPAGE. Refer to Markdown for how to write markdown files. Quick Start Notes: Add images to the images folder if the file is referencing an image."
+  }
+}
