@@ -35,6 +35,15 @@ jobs:
             --logger "trx;LogFileName=$(AssemblyName)-results.trx" \
             --results-directory ./TestResults \
             --collect:"XPlat Code Coverage"
+      - name: Coverage Report
+        uses: danielpalme/ReportGenerator-GitHub-Action@v5
+        with:
+          reports: 'TestResults/**/coverage.cobertura.xml'
+          targetdir: 'coveragereport'
+          reporttypes: 'HtmlInline_AzurePipelines;MarkdownSummaryGitHub;Badges'
+          tag: '${{ github.run_number }}'
+      - name: Append coverage to job summary
+        run: cat coveragereport/SummaryGithub.md >> $GITHUB_STEP_SUMMARY
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v4
@@ -52,6 +61,12 @@ jobs:
         with:
           name: coverage
           path: ./TestResults/**/coverage.cobertura.xml
+      - name: Upload coverage report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coveragereport
       - name: Upload NuGet package
         if: always()
         uses: actions/upload-artifact@v4
