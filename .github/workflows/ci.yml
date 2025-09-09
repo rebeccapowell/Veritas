@@ -27,6 +27,8 @@ jobs:
         run: dotnet restore Veritas.sln -p:TargetFramework=net8.0
       - name: Build
         run: dotnet build Veritas.sln --configuration Release -p:TargetFramework=net8.0 --no-restore
+      - name: Pack
+        run: dotnet pack src/Veritas/Veritas.csproj --configuration Release -p:TargetFramework=net8.0 --no-restore --output ./NuGet
       - name: Test
         run: |
           dotnet test test/Veritas.Tests/Veritas.Tests.csproj --configuration Release --no-build \
@@ -50,3 +52,9 @@ jobs:
         with:
           name: coverage
           path: TestResults/**/coverage.cobertura.xml
+      - name: Upload NuGet package
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nuget
+          path: ./NuGet/*.nupkg
