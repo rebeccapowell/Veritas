@@ -61,7 +61,7 @@ Core primitives and algorithms for identifier validation and generation.
 - Canada Business Number validation/generation
 - United States SSN structural validation and generation
 - United Kingdom NINO structural validation
-- United Kingdom UTR checksum validation
+- United Kingdom UTR checksum validation and generation
 - United Kingdom VAT checksum validation
 - United Kingdom Company Number structural validation
 - United States EIN prefix validation
