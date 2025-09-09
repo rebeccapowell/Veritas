@@ -24,11 +24,11 @@ jobs:
         with:
           dotnet-version: 8.0.x
       - name: Restore
-        run: dotnet restore Veritas.sln -p:TargetFramework=net8.0
+        run: dotnet restore Veritas.sln
       - name: Build
-        run: dotnet build Veritas.sln --configuration Release -p:TargetFramework=net8.0 --no-restore
+        run: dotnet build Veritas.sln --configuration Release --no-restore
       - name: Pack
-        run: dotnet pack src/Veritas/Veritas.csproj --configuration Release -p:TargetFramework=net8.0 --no-restore --output ./NuGet
+        run: dotnet pack src/Veritas/Veritas.csproj --configuration Release --no-restore --output ./NuGet
       - name: Test
         run: |
           dotnet test test/Veritas.Tests/Veritas.Tests.csproj --configuration Release --no-build \
