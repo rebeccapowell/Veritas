@@ -41,6 +41,29 @@ public static class Utr
         return true;
     }
 
+    public static bool TryGenerate(Span<char> destination, out int written)
+        => TryGenerate(default, destination, out written);
+
+    public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written)
+    {
+        if (destination.Length < 10)
+        {
+            written = 0;
+            return false;
+        }
+        var rng = options.Seed.HasValue ? new Random(options.Seed.Value) : Random.Shared;
+        int sum = 0;
+        for (int i = 0; i < 9; i++)
+        {
+            int d = rng.Next(10);
+            destination[i + 1] = (char)('0' + d);
+            sum += d * Weights[i];
+        }
+        destination[0] = Map[sum % 11];
+        written = 10;
+        return true;
+    }
+
     private static bool Normalize(ReadOnlySpan<char> input, Span<char> dest, out int len)
     {
         len = 0;
