@@ -37,7 +37,8 @@ enum FormatStyle { Compact, Grouped, Canonical }
 
 static class Bulk
 {
-    static IEnumerable<string> GenerateMany(Func<Span<char>, (bool ok, int written)> tryGenerate, int count, int? seed = null);
+    delegate (bool ok, int written) SpanGenerator(Span<char> destination, Random rng);
+    static IEnumerable<string> GenerateMany(SpanGenerator tryGenerate, int count, int? seed = null);
 }
 ```
 
