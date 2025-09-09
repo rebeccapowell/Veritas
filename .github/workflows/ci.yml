@@ -51,7 +51,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: coverage
-          path: TestResults/**/coverage.cobertura.xml
+          path: ./TestResults/**/coverage.cobertura.xml
       - name: Upload NuGet package
         if: always()
         uses: actions/upload-artifact@v4
