@@ -1,13 +1,29 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net8.0;netstandard2.1</TargetFrameworks>
+    <TargetFrameworks>net8.0;</TargetFrameworks>
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <NoWarn>1591</NoWarn>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Title>Veritas - Identifiers Generation and Validation</Title>
+    <Authors>Rebecca Powell</Authors>
+    <Description>A growing collection of various identifiers across various sector (identification, energy, finance, commerce, education) that allows you to both generate and validate those identifiers. </Description>
+    <Copyright>2025</Copyright>
+    <PackageProjectUrl>https://github.com/rebeccapowell/Veritas</PackageProjectUrl>
+    <PackageLicenseUrl>LICENSE</PackageLicenseUrl>
+    <PackageIcon>veritas.png</PackageIcon>
+    <RepositoryUrl>https://github.com/rebeccapowell/Veritas</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>validation;generation;iban;isbn;tax;energy;veritas</PackageTags>
   </PropertyGroup>
   <ItemGroup>
     <InternalsVisibleTo Include="Veritas.Tests" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="veritas.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 </Project>

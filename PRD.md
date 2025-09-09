@@ -37,7 +37,8 @@ enum FormatStyle { Compact, Grouped, Canonical }
 
 static class Bulk
 {
-    static IEnumerable<string> GenerateMany(Func<Span<char>, (bool ok, int written)> tryGenerate, int count, int? seed = null);
+    delegate (bool ok, int written) SpanGenerator(Span<char> destination, Random rng);
+    static IEnumerable<string> GenerateMany(SpanGenerator tryGenerate, int count, int? seed = null);
 }
 ```
 
@@ -154,9 +155,11 @@ Legend: **V** = validate, **G** = generate (where safe).
 if (Finance.Iban.TryValidate("FR14 2004 1010 0505 0001 3M02 606", out var iban) && iban.IsValid)
     Console.WriteLine(iban.Value!.Value); // compact normalized
 
-// Logistics: generate a GTIN‑13 with a known prefix
-var prefix = "4006381".AsSpan();
-foreach (var s in Bulk.GenerateMany(dst => { var ok = Logistics.Gtin13.TryGenerate(prefix, dst, out var w); return (ok, w); }, 5, seed: 42))
+// Logistics: generate a GTIN‑13
+foreach (var s in Bulk.GenerateMany((dst, rng) => {
+    var ok = Logistics.Gtin.TryGenerate(13, new GenerationOptions { Seed = rng.Next() }, dst, out var w);
+    return (ok, w);
+}, 5, seed: 42))
     Console.WriteLine(s);
 
 // Telecom: IMEI
