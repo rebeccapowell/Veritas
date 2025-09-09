@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net8.0;</TargetFrameworks>
+    <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
@@ -11,19 +11,34 @@
     <Description>A growing collection of various identifiers across various sector (identification, energy, finance, commerce, education) that allows you to both generate and validate those identifiers. </Description>
     <Copyright>2025</Copyright>
     <PackageProjectUrl>https://github.com/rebeccapowell/Veritas</PackageProjectUrl>
-    <PackageLicenseUrl>LICENSE</PackageLicenseUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>veritas.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/rebeccapowell/Veritas</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>validation;generation;iban;isbn;tax;energy;veritas</PackageTags>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <DebugType>portable</DebugType>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(CI)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
   <ItemGroup>
     <InternalsVisibleTo Include="Veritas.Tests" />
   </ItemGroup>
+
   <ItemGroup>
-    <None Update="veritas.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="veritas.png" Pack="true" PackagePath="\" />
+    <None Include="../../README.md" Pack="true" PackagePath="\" Link="README.md" />
   </ItemGroup>
 </Project>

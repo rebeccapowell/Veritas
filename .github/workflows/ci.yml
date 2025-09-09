@@ -24,17 +24,26 @@ jobs:
         with:
           dotnet-version: 8.0.x
       - name: Restore
-        run: dotnet restore Veritas.sln -p:TargetFramework=net8.0
+        run: dotnet restore Veritas.sln
       - name: Build
-        run: dotnet build Veritas.sln --configuration Release -p:TargetFramework=net8.0 --no-restore
+        run: dotnet build Veritas.sln --configuration Release --no-restore
       - name: Pack
-        run: dotnet pack src/Veritas/Veritas.csproj --configuration Release -p:TargetFramework=net8.0 --no-restore --output ./NuGet
+        run: dotnet pack src/Veritas/Veritas.csproj --configuration Release --no-restore --output ./NuGet
       - name: Test
         run: |
           dotnet test test/Veritas.Tests/Veritas.Tests.csproj --configuration Release --no-build \
             --logger "trx;LogFileName=$(AssemblyName)-results.trx" \
             --results-directory ./TestResults \
             --collect:"XPlat Code Coverage"
+      - name: Coverage Report
+        uses: danielpalme/ReportGenerator-GitHub-Action@v5
+        with:
+          reports: 'TestResults/**/coverage.cobertura.xml'
+          targetdir: 'coveragereport'
+          reporttypes: 'HtmlInline_AzurePipelines;MarkdownSummaryGitHub;Badges'
+          tag: '${{ github.run_number }}'
+      - name: Append coverage to job summary
+        run: cat coveragereport/SummaryGithub.md >> $GITHUB_STEP_SUMMARY
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v4
@@ -51,7 +60,13 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: coverage
-          path: TestResults/**/coverage.cobertura.xml
+          path: ./TestResults/**/coverage.cobertura.xml
+      - name: Upload coverage report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coveragereport
       - name: Upload NuGet package
         if: always()
         uses: actions/upload-artifact@v4
