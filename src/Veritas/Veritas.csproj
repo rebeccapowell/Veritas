@@ -38,14 +38,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="veritas.png">
-      <Pack>true</Pack>
-      <PackagePath></PackagePath>
-    </None>
-    <None Include="../../README.md">
-      <Pack>true</Pack>
-      <PackagePath></PackagePath>
-      <Link>README.md</Link>
-    </None>
+    <None Include="veritas.png" Pack="true" PackagePath="\" />
+    <None Include="../../README.md" Pack="true" PackagePath="\" Link="README.md" />
   </ItemGroup>
 </Project>
