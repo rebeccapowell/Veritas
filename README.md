@@ -11,7 +11,7 @@
 Core primitives and algorithms for identifier validation and generation.
 
 > **⚠️ Caution**
-> The vast majority of this code was written by AI. Please perform your own due diligence before deploying it in production. Feedback via GitHub issues and merge requests is always welcome.
+> In active development. Please perform your own due diligence before deploying it in production. Feedback via GitHub issues and merge requests is always welcome.
 
 ## Install
 
