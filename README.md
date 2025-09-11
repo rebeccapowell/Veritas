@@ -1,6 +1,23 @@
+<p align="center">
+  <img src="src/Veritas/veritas.png" alt="Veritas logo" width="200" />
+</p>
+
 # Veritas
 
+[![Build](https://github.com/rebeccapowell/Veritas/actions/workflows/ci.yml/badge.svg)](https://github.com/rebeccapowell/Veritas/actions/workflows/ci.yml)
+[![Docs](https://github.com/rebeccapowell/Veritas/actions/workflows/docs.yml/badge.svg)](https://github.com/rebeccapowell/Veritas/actions/workflows/docs.yml)
+[![NuGet](https://img.shields.io/nuget/v/Veritas.svg)](https://www.nuget.org/packages/Veritas)
+
 Core primitives and algorithms for identifier validation and generation.
+
+> **⚠️ Caution**
+> The vast majority of this code was written by AI. Please perform your own due diligence before deploying it in production. Feedback via GitHub issues and merge requests is always welcome.
+
+## Install
+
+```bash
+dotnet add package Veritas --version 1.0.1
+```
 
 ## Currently implemented
 
@@ -141,30 +158,6 @@ Telecom.Imei.TryValidate("490154203237518", out var imei);
 Console.WriteLine(imei.IsValid);            // True
 ```
 
-## Project structure
-```
-src/Veritas/          core library organised by domain
-  Core/              shared primitives and algorithms
-  Finance/           financial identifiers
-  Tax/               national and regional tax identifiers
-  Energy/            electricity and gas identifiers
-  Identity/          software and personal identifiers
-  Logistics/         supply chain identifiers
-  Healthcare/        health identifiers
-  Telecom/           network and telecom identifiers
-  Education/         research and publishing identifiers
-  Media/             media identifiers
-
-test/Veritas.Tests/   xUnit test suite
-```
-
-## Adding new identifiers
-1. Add a new static class `<IdName>` in the appropriate domain with `TryValidate` and, when safe, `TryGenerate` methods.
-2. Include a value type `<IdName>Value` containing the normalized representation.
-3. Add unit tests under `test/Veritas.Tests` verifying valid and invalid cases.
-4. Update the [PRD](PRD.md) and this README with the new identifier and its capabilities.
-5. Run `dotnet test -f net8.0` and ensure all tests pass.
-
 ## Contributing
 Contributions are welcome! Fork the repository, create a topic branch, and open a pull request:
 1. Describe the motivation and design in the PR description.
@@ -172,3 +165,4 @@ Contributions are welcome! Fork the repository, create a topic branch, and open 
 3. The maintainers will review and merge when ready.
 
 Continuous integration via [GitHub Actions](.github/workflows/ci.yml) restores dependencies, builds, and runs the test suite on every push and pull request. Packages are produced by the [publish workflow](.github/workflows/publish.yml) and releases are drafted automatically.
+
