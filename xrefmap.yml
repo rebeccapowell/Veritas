@@ -5941,6 +5941,31 @@ references:
   commentId: T:Veritas.Tax.UK.Utr
   fullName: Veritas.Tax.UK.Utr
   nameWithType: Utr
+- uid: Veritas.Tax.UK.Utr.TryGenerate(System.Span{System.Char},System.Int32@)
+  name: TryGenerate(Span<char>, out int)
+  href: api/Veritas.Tax.UK.Utr.html#Veritas_Tax_UK_Utr_TryGenerate_System_Span_System_Char__System_Int32__
+  commentId: M:Veritas.Tax.UK.Utr.TryGenerate(System.Span{System.Char},System.Int32@)
+  name.vb: TryGenerate(Span(Of Char), Integer)
+  fullName: Veritas.Tax.UK.Utr.TryGenerate(System.Span<char>, out int)
+  fullName.vb: Veritas.Tax.UK.Utr.TryGenerate(System.Span(Of Char), Integer)
+  nameWithType: Utr.TryGenerate(Span<char>, out int)
+  nameWithType.vb: Utr.TryGenerate(Span(Of Char), Integer)
+- uid: Veritas.Tax.UK.Utr.TryGenerate(Veritas.GenerationOptions@,System.Span{System.Char},System.Int32@)
+  name: TryGenerate(in GenerationOptions, Span<char>, out int)
+  href: api/Veritas.Tax.UK.Utr.html#Veritas_Tax_UK_Utr_TryGenerate_Veritas_GenerationOptions__System_Span_System_Char__System_Int32__
+  commentId: M:Veritas.Tax.UK.Utr.TryGenerate(Veritas.GenerationOptions@,System.Span{System.Char},System.Int32@)
+  name.vb: TryGenerate(GenerationOptions, Span(Of Char), Integer)
+  fullName: Veritas.Tax.UK.Utr.TryGenerate(in Veritas.GenerationOptions, System.Span<char>, out int)
+  fullName.vb: Veritas.Tax.UK.Utr.TryGenerate(Veritas.GenerationOptions, System.Span(Of Char), Integer)
+  nameWithType: Utr.TryGenerate(in GenerationOptions, Span<char>, out int)
+  nameWithType.vb: Utr.TryGenerate(GenerationOptions, Span(Of Char), Integer)
+- uid: Veritas.Tax.UK.Utr.TryGenerate*
+  name: TryGenerate
+  href: api/Veritas.Tax.UK.Utr.html#Veritas_Tax_UK_Utr_TryGenerate_
+  commentId: Overload:Veritas.Tax.UK.Utr.TryGenerate
+  isSpec: "True"
+  fullName: Veritas.Tax.UK.Utr.TryGenerate
+  nameWithType: Utr.TryGenerate
 - uid: Veritas.Tax.UK.Utr.TryValidate(System.ReadOnlySpan{System.Char},Veritas.ValidationResult{Veritas.Tax.UK.UtrValue}@)
   name: TryValidate(ReadOnlySpan<char>, out ValidationResult<UtrValue>)
   href: api/Veritas.Tax.UK.Utr.html#Veritas_Tax_UK_Utr_TryValidate_System_ReadOnlySpan_System_Char__Veritas_ValidationResult_Veritas_Tax_UK_UtrValue___
