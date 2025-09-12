@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="src/Veritas/veritas.png" alt="Veritas logo" width="200" />
-</p>
-
 # Veritas
 
 [![Build](https://github.com/rebeccapowell/Veritas/actions/workflows/ci.yml/badge.svg)](https://github.com/rebeccapowell/Veritas/actions/workflows/ci.yml)
@@ -16,7 +12,7 @@ Core primitives and algorithms for identifier validation and generation.
 ## Install
 
 ```bash
-dotnet add package Veritas --version 1.0.1
+dotnet add package Veritas --version 1.0.3
 ```
 
 ## Currently implemented
