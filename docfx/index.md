@@ -90,6 +90,8 @@ foreach (var s in Bulk.GenerateMany((dst, rng) => {
 | BCP47 tag | Global | structural check | <xref:Veritas.Identity.Bcp47> |
 | Ethereum address | Global | EIP-55 checksum | <xref:Veritas.Identity.Ethereum> |
 | Base58Check | Global | Base58 + double SHA-256 | <xref:Veritas.Identity.Base58Check> |
+| Aadhaar | India | Verhoeff checksum; test generation | <xref:Veritas.Identity.India.Aadhaar> |
+| National ID | Luxembourg | Luhn + Verhoeff; test generation | <xref:Veritas.Identity.Luxembourg.NationalId> |
 
 ### Tax
 
@@ -154,6 +156,12 @@ foreach (var s in Bulk.GenerateMany((dst, rng) => {
 | IPv4 | Global | structural check | <xref:Veritas.Telecom.Ipv4> |
 | IPv6 | Global | structural check | <xref:Veritas.Telecom.Ipv6> |
 
+### IP
+
+| Identifier | Country/Region | Validation & Generation | Docs |
+|------------|----------------|-------------------------|------|
+| IPOS Application Number | Singapore | Damm checksum; test generation | <xref:Veritas.IP.Singapore.IpApplicationNumber> |
+
 ### Education & Media
 
 | Identifier | Country/Region | Validation & Generation | Docs |
@@ -172,6 +180,7 @@ foreach (var s in Bulk.GenerateMany((dst, rng) => {
 |------------|----------------|-------------------------|------|
 | NHS Number | UK | mod 11 checksum; generation | <xref:Veritas.Healthcare.NhsNumber> |
 | ORCID | International | ISO 7064 mod 11,2 checksum; generation | <xref:Veritas.Healthcare.Orcid> |
+| SNOMED CT Concept ID | International | Verhoeff checksum; test generation | <xref:Veritas.Healthcare.Snomed.SctId> |
 
 ## Future identifiers
 
