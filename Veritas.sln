@@ -11,6 +11,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{10DC9B65-3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veritas.Tests", "test\Veritas.Tests\Veritas.Tests.csproj", "{53276156-88EA-462C-A0AF-1D7C27E7DDA1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "misc", "misc", "{132D6CCF-9CA5-4C8D-A230-A4A313335E00}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		docs.md = docs.md
+		LICENSE = LICENSE
+		PRD.md = PRD.md
+		PRD-Extensions-1.md = PRD-Extensions-1.md
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
