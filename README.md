@@ -25,6 +25,8 @@ dotnet add package Veritas --version 1.0.3
 - ISO 6346 container check digit
 - MRZ (ICAO 9303 7-3-1 pattern)
 - Base58Check codec
+- Verhoeff checksum
+- Damm checksum
 
 ### Finance
 - IBAN validation (ISO 13616 / ISO 7064 mod 97)
@@ -64,6 +66,8 @@ dotnet add package Veritas --version 1.0.3
 - BCP 47 language tag validation
 - Ethereum address validation
 - Base58Check validation and generation
+- India Aadhaar validation and generation
+- Luxembourg National ID validation and generation
 
 ### Tax
 - Brazil CPF validation/generation
@@ -118,6 +122,9 @@ dotnet add package Veritas --version 1.0.3
 - IPv4 structural validation
 - IPv6 structural validation
 
+### IP
+- Singapore IPOS application number validation and generation
+
 ### Education & Media
 - ISBN-10 validation and generation
 - ISBN-13 validation and generation
@@ -130,6 +137,7 @@ dotnet add package Veritas --version 1.0.3
 ### Healthcare
 - NHS Number validation and generation
 - ORCID validation and generation
+- SNOMED CT Concept ID validation and generation
 
 Additional identifiers and algorithms will be added per the [PRD](PRD.md).
 
