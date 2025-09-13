@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="">
       
       
-      <meta name="docfx:docurl" content="https://github.com/rebeccapowell/Veritas/blob/main/docfx/index.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/rebeccapowell/Veritas/blob/v1.0.4/docfx/index.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -87,8 +87,8 @@ Most of this code was agentically coded. Review and test thoroughly before relyi
 </code></pre>
 <h2 id="usage">Usage</h2>
 <pre><code class="lang-csharp">// Validate an IBAN
-Finance.Iban.TryValidate(&quot;FR14 2004 1010 0505 0001 3M02 606&quot;, out var iban);
-Console.WriteLine(iban.IsValid);            // True
+var ok = Finance.Iban.TryValidate(&quot;FR14 2004 1010 0505 0001 3M02 606&quot;, out var iban);
+Console.WriteLine(ok);                      // True
 
 // Generate an IMEI
 Telecom.Imei.TryGenerate(default, stackalloc char[15], out var written);
@@ -102,6 +102,19 @@ foreach (var s in Bulk.GenerateMany((dst, rng) =&gt; {
     Console.WriteLine(s);
 }
 </code></pre>
+<h2 id="algorithms">Algorithms</h2>
+<ul>
+<li>Luhn (mod 10 and base-36)</li>
+<li>ISO 7064 (mod 11,10; mod 97; mod 37,2; mod 37,36)</li>
+<li>GS1 mod 10</li>
+<li>Weighted mod 11 variants (custom weights)</li>
+<li>ISO 6346 container check digit</li>
+<li>MRZ (ICAO 9303 7-3-1 pattern)</li>
+<li>Base58Check codec</li>
+<li>Verhoeff checksum</li>
+<li>Damm checksum</li>
+<li>Checksum strategies via <code>IChecksum</code> interface and transliteration helpers</li>
+</ul>
 <h2 id="supported-identifiers">Supported identifiers</h2>
 <h3 id="finance">Finance</h3>
 <table>
@@ -137,6 +150,30 @@ foreach (var s in Bulk.GenerateMany((dst, rng) =&gt; {
 <td>International</td>
 <td>ISO 11649 mod 97; generation</td>
 <td><a class="xref" href="api/Veritas.Finance.Rf.html">Rf</a></td>
+</tr>
+<tr>
+<td>SEPA Creditor Identifier</td>
+<td>EU</td>
+<td>ISO 7064 mod 97 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Finance.SepaCreditorIdentifier.html">SepaCreditorIdentifier</a></td>
+</tr>
+<tr>
+<td>Structured Reference (OGM)</td>
+<td>BE</td>
+<td>mod 97 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Finance.BE.Ogm.html">Ogm</a></td>
+</tr>
+<tr>
+<td>RIB</td>
+<td>FR</td>
+<td>mod 97 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Finance.FR.Rib.html">Rib</a></td>
+</tr>
+<tr>
+<td>CCC</td>
+<td>ES</td>
+<td>dual mod 11 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Finance.ES.Ccc.html">Ccc</a></td>
 </tr>
 <tr>
 <td>Payment card PAN</td>
@@ -338,6 +375,48 @@ foreach (var s in Bulk.GenerateMany((dst, rng) =&gt; {
 <td>Base58 + double SHA-256</td>
 <td><a class="xref" href="api/Veritas.Identity.Base58Check.html">Base58Check</a></td>
 </tr>
+<tr>
+<td>Aadhaar</td>
+<td>India</td>
+<td>Verhoeff checksum; test generation</td>
+<td><a class="xref" href="api/Veritas.Identity.India.Aadhaar.html">Aadhaar</a></td>
+</tr>
+<tr>
+<td>National ID</td>
+<td>Luxembourg</td>
+<td>Luhn + Verhoeff; test generation</td>
+<td><a class="xref" href="api/Veritas.Identity.Luxembourg.NationalId.html">NationalId</a></td>
+</tr>
+<tr>
+<td>CURP</td>
+<td>Mexico</td>
+<td>mod 10 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Identity.Mexico.Curp.html">Curp</a></td>
+</tr>
+<tr>
+<td>National ID</td>
+<td>South Africa</td>
+<td>Luhn checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Identity.SouthAfrica.NationalId.html">NationalId</a></td>
+</tr>
+<tr>
+<td>Teudat Zehut</td>
+<td>Israel</td>
+<td>weighted mod 10 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Identity.Israel.TeudatZehut.html">TeudatZehut</a></td>
+</tr>
+<tr>
+<td>NIR (INSEE)</td>
+<td>France</td>
+<td>mod 97 key; generation</td>
+<td><a class="xref" href="api/Veritas.Identity.France.Nir.html">Nir</a></td>
+</tr>
+<tr>
+<td>ICAO MRZ (TD3)</td>
+<td>Global</td>
+<td>MRZ checksums; generation</td>
+<td><a class="xref" href="api/Veritas.Identity.IcaoMrz.html">IcaoMrz</a></td>
+</tr>
 </tbody>
 </table>
 <h3 id="tax">Tax</h3>
@@ -352,6 +431,18 @@ foreach (var s in Bulk.GenerateMany((dst, rng) =&gt; {
 </thead>
 <tbody>
 <tr>
+<td>EU/GB</td>
+<td>EORI</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.Eori.html">Eori</a></td>
+</tr>
+<tr>
+<td>AR</td>
+<td>CUIT</td>
+<td>mod 11 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.AR.Cuit.html">Cuit</a></td>
+</tr>
+<tr>
 <td>AU</td>
 <td>ABN</td>
 <td>weighted mod 11 checksum; generation</td>
@@ -362,6 +453,12 @@ foreach (var s in Bulk.GenerateMany((dst, rng) =&gt; {
 <td>TFN</td>
 <td>weighted mod 11 checksum; generation</td>
 <td><a class="xref" href="api/Veritas.Tax.AU.Tfn.html">Tfn</a></td>
+</tr>
+<tr>
+<td>BE</td>
+<td>National Number</td>
+<td>mod 97 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.BE.Nn.html">Nn</a></td>
 </tr>
 <tr>
 <td>BR</td>
@@ -388,10 +485,22 @@ foreach (var s in Bulk.GenerateMany((dst, rng) =&gt; {
 <td><a class="xref" href="api/Veritas.Tax.CA.Bn.html">Bn</a></td>
 </tr>
 <tr>
+<td>CL</td>
+<td>RUT</td>
+<td>mod 11 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.CL.Rut.html">Rut</a></td>
+</tr>
+<tr>
 <td>CN</td>
 <td>USCC</td>
 <td>weighted mod 31 checksum; generation</td>
 <td><a class="xref" href="api/Veritas.Tax.CN.Uscc.html">Uscc</a></td>
+</tr>
+<tr>
+<td>CZ</td>
+<td>Rodne cislo</td>
+<td>mod 11 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.CZ.RodneCislo.html">RodneCislo</a></td>
 </tr>
 <tr>
 <td>DE</td>
@@ -424,6 +533,12 @@ foreach (var s in Bulk.GenerateMany((dst, rng) =&gt; {
 <td><a class="xref" href="api/Veritas.Tax.ES.Cif.html">Cif</a></td>
 </tr>
 <tr>
+<td>FI</td>
+<td>HETU</td>
+<td>mod 31 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.FI.Hetu.html">Hetu</a></td>
+</tr>
+<tr>
 <td>FR</td>
 <td>Siren</td>
 <td>mod 11 checksum</td>
@@ -440,6 +555,150 @@ foreach (var s in Bulk.GenerateMany((dst, rng) =&gt; {
 <td>VAT</td>
 <td>ISO 7064 mod 97 checksum</td>
 <td><a class="xref" href="api/Veritas.Tax.FR.Vat.html">Vat</a></td>
+</tr>
+<tr>
+<td>GR</td>
+<td>AFM</td>
+<td>mod 11 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.GR.Afm.html">Afm</a></td>
+</tr>
+<tr>
+<td>HU</td>
+<td>Adoszam</td>
+<td>weighted mod 10 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.HU.Adoszam.html">Adoszam</a></td>
+</tr>
+<tr>
+<td>HR</td>
+<td>OIB</td>
+<td>ISO 7064 mod 11,10 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.HR.Oib.html">Oib</a></td>
+</tr>
+<tr>
+<td>RO</td>
+<td>CNP</td>
+<td>mod 11 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.RO.Cnp.html">Cnp</a></td>
+</tr>
+<tr>
+<td>BG</td>
+<td>EGN</td>
+<td>weighted checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.BG.Egn.html">Egn</a></td>
+</tr>
+<tr>
+<td>SI</td>
+<td>EMSO</td>
+<td>mod 11 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.SI.Emso.html">Emso</a></td>
+</tr>
+<tr>
+<td>RS</td>
+<td>JMBG</td>
+<td>mod 11 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.RS.Jmbg.html">Jmbg</a></td>
+</tr>
+<tr>
+<td>BA</td>
+<td>JMBG</td>
+<td>mod 11 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.BA.Jmbg.html">Jmbg</a></td>
+</tr>
+<tr>
+<td>MK</td>
+<td>EMBG</td>
+<td>mod 11 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.MK.Embg.html">Embg</a></td>
+</tr>
+<tr>
+<td>CH</td>
+<td>AHV</td>
+<td>ISO 7064 mod 11,10 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.CH.Ahv.html">Ahv</a></td>
+</tr>
+<tr>
+<td>CH</td>
+<td>UID</td>
+<td>mod 10 (EAN) checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.CH.Uid.html">Uid</a></td>
+</tr>
+<tr>
+<td>AT</td>
+<td>UID</td>
+<td>weighted mod 10 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.AT.Uid.html">Uid</a></td>
+</tr>
+<tr>
+<td>IS</td>
+<td>Kennitala</td>
+<td>mod 11 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.IS.Kennitala.html">Kennitala</a></td>
+</tr>
+<tr>
+<td>LT</td>
+<td>Asmens kodas</td>
+<td>two-stage mod 11 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.LT.AsmensKodas.html">AsmensKodas</a></td>
+</tr>
+<tr>
+<td>LV</td>
+<td>Personas kods</td>
+<td>mod 11 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.LV.PersonasKods.html">PersonasKods</a></td>
+</tr>
+<tr>
+<td>EE</td>
+<td>Isikukood</td>
+<td>two-stage mod 11 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.EE.Isikukood.html">Isikukood</a></td>
+</tr>
+<tr>
+<td>DK</td>
+<td>CPR</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.DK.Cpr.html">Cpr</a></td>
+</tr>
+<tr>
+<td>CO</td>
+<td>NIT</td>
+<td>mod 11 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.CO.Nit.html">Nit</a></td>
+</tr>
+<tr>
+<td>PE</td>
+<td>RUC</td>
+<td>weighted checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.PE.Ruc.html">Ruc</a></td>
+</tr>
+<tr>
+<td>TR</td>
+<td>TCKN</td>
+<td>parity checks; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.TR.Tckn.html">Tckn</a></td>
+</tr>
+<tr>
+<td>IT</td>
+<td>Codice Fiscale</td>
+<td>position table check; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.IT.CodiceFiscale.html">CodiceFiscale</a></td>
+</tr>
+<tr>
+<td>MX</td>
+<td>RFC</td>
+<td>mod 11 check; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.MX.Rfc.html">Rfc</a></td>
+</tr>
+<tr>
+<td>SG</td>
+<td>UEN</td>
+<td>mod 11 check; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.SG.Uen.html">Uen</a></td>
+</tr>
+<tr>
+<td>IE</td>
+<td>PPSN</td>
+<td>mod 23 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.IE.Ppsn.html">Ppsn</a></td>
 </tr>
 <tr>
 <td>IN</td>
@@ -472,6 +731,18 @@ foreach (var s in Bulk.GenerateMany((dst, rng) =&gt; {
 <td><a class="xref" href="api/Veritas.Tax.NL.Btw.html">Btw</a></td>
 </tr>
 <tr>
+<td>NO</td>
+<td>Fodselsnummer</td>
+<td>mod 11 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.NO.Fodselsnummer.html">Fodselsnummer</a></td>
+</tr>
+<tr>
+<td>NO</td>
+<td>KID</td>
+<td>mod 10/11 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.NO.Kid.html">Kid</a></td>
+</tr>
+<tr>
 <td>NZ</td>
 <td>IRD</td>
 <td>mod 11 checksum</td>
@@ -496,6 +767,12 @@ foreach (var s in Bulk.GenerateMany((dst, rng) =&gt; {
 <td><a class="xref" href="api/Veritas.Tax.PL.Pesel.html">Pesel</a></td>
 </tr>
 <tr>
+<td>PT</td>
+<td>NIF</td>
+<td>mod 11 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.PT.Nif.html">Nif</a></td>
+</tr>
+<tr>
 <td>SE</td>
 <td>Personnummer</td>
 <td>Luhn checksum</td>
@@ -506,6 +783,12 @@ foreach (var s in Bulk.GenerateMany((dst, rng) =&gt; {
 <td>OrgNr</td>
 <td>mod 10 checksum</td>
 <td><a class="xref" href="api/Veritas.Tax.SE.OrgNr.html">OrgNr</a></td>
+</tr>
+<tr>
+<td>SK</td>
+<td>Rodne cislo</td>
+<td>mod 11 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Tax.SK.RodneCislo.html">RodneCislo</a></td>
 </tr>
 <tr>
 <td>UK</td>
@@ -581,6 +864,42 @@ foreach (var s in Bulk.GenerateMany((dst, rng) =&gt; {
 <td><a class="xref" href="api/Veritas.Logistics.Sscc.html">Sscc</a></td>
 </tr>
 <tr>
+<td>GSRN</td>
+<td>International</td>
+<td>GS1 mod 10 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Logistics.Gsrn.html">Gsrn</a></td>
+</tr>
+<tr>
+<td>GRAI</td>
+<td>International</td>
+<td>GS1 mod 10 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Logistics.Grai.html">Grai</a></td>
+</tr>
+<tr>
+<td>GSIN</td>
+<td>International</td>
+<td>GS1 mod 10 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Logistics.Gsin.html">Gsin</a></td>
+</tr>
+<tr>
+<td>GDTI</td>
+<td>International</td>
+<td>GS1 mod 10 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Logistics.Gdti.html">Gdti</a></td>
+</tr>
+<tr>
+<td>GIAI</td>
+<td>International</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Logistics.Giai.html">Giai</a></td>
+</tr>
+<tr>
+<td>UPU S10</td>
+<td>International</td>
+<td>weighted mod 11 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Logistics.UpuS10.html">UpuS10</a></td>
+</tr>
+<tr>
 <td>VIN</td>
 <td>International</td>
 <td>transliteration + weighted checksum</td>
@@ -624,6 +943,12 @@ foreach (var s in Bulk.GenerateMany((dst, rng) =&gt; {
 <td><a class="xref" href="api/Veritas.Telecom.Imei.html">Imei</a></td>
 </tr>
 <tr>
+<td>IMSI</td>
+<td>Global</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Telecom.Imsi.html">Imsi</a></td>
+</tr>
+<tr>
 <td>MEID</td>
 <td>Global</td>
 <td>Luhn checksum; generation</td>
@@ -664,6 +989,86 @@ foreach (var s in Bulk.GenerateMany((dst, rng) =&gt; {
 <td>Global</td>
 <td>structural check</td>
 <td><a class="xref" href="api/Veritas.Telecom.Ipv6.html">Ipv6</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="intellectual-property">Intellectual Property</h3>
+<table>
+<thead>
+<tr>
+<th>Identifier</th>
+<th>Country/Region</th>
+<th>Validation &amp; Generation</th>
+<th>Docs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IPOS Application Number</td>
+<td>Singapore</td>
+<td>Damm checksum; test generation</td>
+<td><a class="xref" href="api/Veritas.IntellectualProperty.SG.IpApplicationNumber.html">IpApplicationNumber</a></td>
+</tr>
+<tr>
+<td>ISWC</td>
+<td>International</td>
+<td>mod 10 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.IntellectualProperty.Iswc.html">Iswc</a></td>
+</tr>
+<tr>
+<td>Patent Application Number</td>
+<td>International</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.IntellectualProperty.PatentApplicationNumber.html">PatentApplicationNumber</a></td>
+</tr>
+<tr>
+<td>Patent Publication Number</td>
+<td>International</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.IntellectualProperty.PatentPublicationNumber.html">PatentPublicationNumber</a></td>
+</tr>
+<tr>
+<td>Trademark Registration Number</td>
+<td>International</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.IntellectualProperty.TrademarkRegistrationNumber.html">TrademarkRegistrationNumber</a></td>
+</tr>
+<tr>
+<td>Copyright Registration Number</td>
+<td>International</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.IntellectualProperty.CopyrightRegistrationNumber.html">CopyrightRegistrationNumber</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="legal">Legal</h3>
+<table>
+<thead>
+<tr>
+<th>Identifier</th>
+<th>Country/Region</th>
+<th>Validation &amp; Generation</th>
+<th>Docs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>European Case Law Identifier (ECLI)</td>
+<td>EU</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Legal.EU.Ecli.html">Ecli</a></td>
+</tr>
+<tr>
+<td>Court Case Number</td>
+<td>US</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Legal.US.CourtCaseNumber.html">CourtCaseNumber</a></td>
+</tr>
+<tr>
+<td>European Patent Office Publication ID</td>
+<td>EU</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Legal.EU.EuropeanPatentOfficePublicationId.html">EuropeanPatentOfficePublicationId</a></td>
 </tr>
 </tbody>
 </table>
@@ -745,6 +1150,24 @@ foreach (var s in Bulk.GenerateMany((dst, rng) =&gt; {
 <td>ISO 7064 mod 11,2 checksum; generation</td>
 <td><a class="xref" href="api/Veritas.Healthcare.Orcid.html">Orcid</a></td>
 </tr>
+<tr>
+<td>SNOMED CT Concept ID</td>
+<td>International</td>
+<td>Verhoeff checksum; test generation</td>
+<td><a class="xref" href="api/Veritas.Healthcare.Snomed.SctId.html">SctId</a></td>
+</tr>
+<tr>
+<td>NPI</td>
+<td>US</td>
+<td>Luhn checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Healthcare.Npi.html">Npi</a></td>
+</tr>
+<tr>
+<td>DEA Number</td>
+<td>US</td>
+<td>weighted checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Healthcare.DeaNumber.html">DeaNumber</a></td>
+</tr>
 </tbody>
 </table>
 <h2 id="future-identifiers">Future identifiers</h2>
@@ -765,18 +1188,14 @@ foreach (var s in Bulk.GenerateMany((dst, rng) =&gt; {
 <h3 id="identity--telecom">Identity &amp; Telecom</h3>
 <ul>
 <li>OpenID Connect subject identifiers</li>
-<li>IMSI (mobile subscriber identities)</li>
 </ul>
 <h3 id="logistics-1">Logistics</h3>
-<ul>
-<li>UPU S10 postal tracking</li>
-</ul>
 <p>Contributions for these and other identifiers are welcome!</p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/rebeccapowell/Veritas/blob/main/docfx/index.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/rebeccapowell/Veritas/blob/v1.0.4/docfx/index.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

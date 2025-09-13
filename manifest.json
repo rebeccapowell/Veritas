@@ -12,6 +12,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Algorithms.ChecksumStrategies.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Algorithms.ChecksumStrategies.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Algorithms.ChecksumStrategies",
+      "Summary": "<p sourcefile=\"api/Veritas.Algorithms.ChecksumStrategies.yml\" sourcestartlinenumber=\"1\">Provides reusable checksum strategies.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Algorithms.IChecksum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Algorithms.IChecksum.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Algorithms.IChecksum",
+      "Summary": "<p sourcefile=\"api/Veritas.Algorithms.IChecksum.yml\" sourcestartlinenumber=\"1\">Defines a checksum strategy with compute and verify operations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Algorithms.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Algorithms.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Algorithms",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Veritas.Bulk.SpanGenerator.yml",
       "output": {
         ".html": {
@@ -37,6 +79,48 @@
       "IsMRef": true,
       "Title": "Veritas.Bulk",
       "Summary": "<p sourcefile=\"api/Veritas.Bulk.yml\" sourcestartlinenumber=\"1\">Helpers for bulk identifier generation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Checksums.Damm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Checksums.Damm.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Checksums.Damm",
+      "Summary": "<p sourcefile=\"api/Veritas.Checksums.Damm.yml\" sourcestartlinenumber=\"1\">Provides the Damm quasigroup checksum algorithm.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Checksums.Verhoeff.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Checksums.Verhoeff.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Checksums.Verhoeff",
+      "Summary": "<p sourcefile=\"api/Veritas.Checksums.Verhoeff.yml\" sourcestartlinenumber=\"1\">Provides the Verhoeff check digit algorithm.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Checksums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Checksums.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Checksums",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -572,6 +656,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.BE.Ogm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.BE.Ogm.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.BE.Ogm",
+      "Summary": "<p sourcefile=\"api/Veritas.Finance.BE.Ogm.yml\" sourcestartlinenumber=\"1\">Belgian structured communication (OGM) reference.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.BE.OgmValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.BE.OgmValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.BE.OgmValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Finance.BE.OgmValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Belgian structured communication reference.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.BE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.BE.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.BE",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Veritas.Finance.Bic.yml",
       "output": {
         ".html": {
@@ -652,6 +778,90 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Veritas.Finance.CusipValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.ES.Ccc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.ES.Ccc.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.ES.Ccc",
+      "Summary": "<p sourcefile=\"api/Veritas.Finance.ES.Ccc.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Spanish CCC numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.ES.CccValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.ES.CccValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.ES.CccValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Finance.ES.CccValue.yml\" sourcestartlinenumber=\"1\">Spanish bank account code (CCC) consisting of bank, branch, control digits, and account number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.ES.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.ES.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.ES",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.FR.Rib.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.FR.Rib.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.FR.Rib",
+      "Summary": "<p sourcefile=\"api/Veritas.Finance.FR.Rib.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for French RIB numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.FR.RibValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.FR.RibValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.FR.RibValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Finance.FR.RibValue.yml\" sourcestartlinenumber=\"1\">French RIB (Relevé d'Identité Bancaire) including the two-digit key.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.FR.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.FR.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.FR",
       "Summary": null
     },
     {
@@ -852,6 +1062,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.SepaCreditorIdentifier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.SepaCreditorIdentifier.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.SepaCreditorIdentifier",
+      "Summary": "<p sourcefile=\"api/Veritas.Finance.SepaCreditorIdentifier.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for SEPA Creditor Identifiers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.SepaCreditorIdentifierValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.SepaCreditorIdentifierValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.SepaCreditorIdentifierValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Finance.SepaCreditorIdentifierValue.yml\" sourcestartlinenumber=\"1\">Represents a validated SEPA Creditor Identifier.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Veritas.Finance.Wkn.yml",
       "output": {
         ".html": {
@@ -922,6 +1160,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Healthcare.DeaNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Healthcare.DeaNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Healthcare.DeaNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.Healthcare.DeaNumber.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for U.S. DEA registration numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Healthcare.DeaNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Healthcare.DeaNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Healthcare.DeaNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Healthcare.DeaNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated U.S. DEA registration number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Veritas.Healthcare.NhsNumber.yml",
       "output": {
         ".html": {
@@ -950,6 +1216,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Healthcare.Npi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Healthcare.Npi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Healthcare.Npi",
+      "Summary": "<p sourcefile=\"api/Veritas.Healthcare.Npi.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for U.S. National Provider Identifiers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Healthcare.NpiValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Healthcare.NpiValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Healthcare.NpiValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Healthcare.NpiValue.yml\" sourcestartlinenumber=\"1\">Represents a validated National Provider Identifier.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Veritas.Healthcare.Orcid.yml",
       "output": {
         ".html": {
@@ -974,6 +1268,48 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Veritas.Healthcare.OrcidValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Healthcare.Snomed.SctId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Healthcare.Snomed.SctId.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Healthcare.Snomed.SctId",
+      "Summary": "<p sourcefile=\"api/Veritas.Healthcare.Snomed.SctId.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for SNOMED CT Concept IDs.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Healthcare.Snomed.SctIdValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Healthcare.Snomed.SctIdValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Healthcare.Snomed.SctIdValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Healthcare.Snomed.SctIdValue.yml\" sourcestartlinenumber=\"1\">Represents a validated SNOMED CT Concept ID.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Healthcare.Snomed.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Healthcare.Snomed.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Healthcare.Snomed",
       "Summary": null
     },
     {
@@ -1160,6 +1496,160 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.France.Nir.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.France.Nir.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.France.Nir",
+      "Summary": "<p sourcefile=\"api/Veritas.Identity.France.Nir.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for French NIR (INSEE) numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.France.NirValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.France.NirValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.France.NirValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Identity.France.NirValue.yml\" sourcestartlinenumber=\"1\">Represents a validated French NIR (INSEE) number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.France.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.France.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.France",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.IcaoMrz.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.IcaoMrz.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.IcaoMrz",
+      "Summary": "<p sourcefile=\"api/Veritas.Identity.IcaoMrz.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for ICAO 9303 MRZ (TD3) lines.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.IcaoMrzValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.IcaoMrzValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.IcaoMrzValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Identity.IcaoMrzValue.yml\" sourcestartlinenumber=\"1\">Machine Readable Zone (MRZ) lines compliant with ICAO 9303 TD3 passports.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.India.Aadhaar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.India.Aadhaar.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.India.Aadhaar",
+      "Summary": "<p sourcefile=\"api/Veritas.Identity.India.Aadhaar.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Indian Aadhaar numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.India.AadhaarValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.India.AadhaarValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.India.AadhaarValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Identity.India.AadhaarValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Indian Aadhaar number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.India.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.India.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.India",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.Israel.TeudatZehut.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.Israel.TeudatZehut.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.Israel.TeudatZehut",
+      "Summary": "<p sourcefile=\"api/Veritas.Identity.Israel.TeudatZehut.yml\" sourcestartlinenumber=\"1\">Israel Teudat Zehut (9 digits, weighted mod-10 checksum).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.Israel.TeudatZehutValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.Israel.TeudatZehutValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.Israel.TeudatZehutValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.Israel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.Israel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.Israel",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Veritas.Identity.Ksuid.yml",
       "output": {
         ".html": {
@@ -1184,6 +1674,90 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Veritas.Identity.KsuidValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.Luxembourg.NationalId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.Luxembourg.NationalId.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.Luxembourg.NationalId",
+      "Summary": "<p sourcefile=\"api/Veritas.Identity.Luxembourg.NationalId.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Luxembourg National ID numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.Luxembourg.NationalIdValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.Luxembourg.NationalIdValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.Luxembourg.NationalIdValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Identity.Luxembourg.NationalIdValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Luxembourg National ID.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.Luxembourg.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.Luxembourg.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.Luxembourg",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.Mexico.Curp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.Mexico.Curp.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.Mexico.Curp",
+      "Summary": "<p sourcefile=\"api/Veritas.Identity.Mexico.Curp.yml\" sourcestartlinenumber=\"1\">Mexico Clave Única de Registro de Población (CURP) (18 alphanumeric, mod-10 check digit).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.Mexico.CurpValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.Mexico.CurpValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.Mexico.CurpValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.Mexico.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.Mexico.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.Mexico",
       "Summary": null
     },
     {
@@ -1240,6 +1814,48 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Veritas.Identity.PhoneValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.SouthAfrica.NationalId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.SouthAfrica.NationalId.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.SouthAfrica.NationalId",
+      "Summary": "<p sourcefile=\"api/Veritas.Identity.SouthAfrica.NationalId.yml\" sourcestartlinenumber=\"1\">South Africa National ID (13 digits, Luhn checksum).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.SouthAfrica.NationalIdValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.SouthAfrica.NationalIdValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.SouthAfrica.NationalIdValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Identity.SouthAfrica.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Identity.SouthAfrica.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Identity.SouthAfrica",
       "Summary": null
     },
     {
@@ -1314,6 +1930,314 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.IntellectualProperty.CopyrightRegistrationNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.IntellectualProperty.CopyrightRegistrationNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.IntellectualProperty.CopyrightRegistrationNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.IntellectualProperty.CopyrightRegistrationNumber.yml\" sourcestartlinenumber=\"1\">Validation and generation for copyright registration numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.IntellectualProperty.CopyrightRegistrationNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.IntellectualProperty.CopyrightRegistrationNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.IntellectualProperty.CopyrightRegistrationNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.IntellectualProperty.CopyrightRegistrationNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated copyright registration number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.IntellectualProperty.Iswc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.IntellectualProperty.Iswc.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.IntellectualProperty.Iswc",
+      "Summary": "<p sourcefile=\"api/Veritas.IntellectualProperty.Iswc.yml\" sourcestartlinenumber=\"1\">Validation and generation for International Standard Musical Work Codes (ISWC).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.IntellectualProperty.IswcValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.IntellectualProperty.IswcValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.IntellectualProperty.IswcValue",
+      "Summary": "<p sourcefile=\"api/Veritas.IntellectualProperty.IswcValue.yml\" sourcestartlinenumber=\"1\">Represents a validated International Standard Musical Work Code (ISWC).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.IntellectualProperty.PatentApplicationNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.IntellectualProperty.PatentApplicationNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.IntellectualProperty.PatentApplicationNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.IntellectualProperty.PatentApplicationNumber.yml\" sourcestartlinenumber=\"1\">Validation and generation for WIPO ST.13 patent application numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.IntellectualProperty.PatentApplicationNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.IntellectualProperty.PatentApplicationNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.IntellectualProperty.PatentApplicationNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.IntellectualProperty.PatentApplicationNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated WIPO ST.13 patent application number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.IntellectualProperty.PatentPublicationNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.IntellectualProperty.PatentPublicationNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.IntellectualProperty.PatentPublicationNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.IntellectualProperty.PatentPublicationNumber.yml\" sourcestartlinenumber=\"1\">Validation and generation for WIPO ST.16 patent publication numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.IntellectualProperty.PatentPublicationNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.IntellectualProperty.PatentPublicationNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.IntellectualProperty.PatentPublicationNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.IntellectualProperty.PatentPublicationNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated WIPO ST.16 patent publication number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.IntellectualProperty.SG.IpApplicationNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.IntellectualProperty.SG.IpApplicationNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.IntellectualProperty.SG.IpApplicationNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.IntellectualProperty.SG.IpApplicationNumber.yml\" sourcestartlinenumber=\"1\">Validation and generation for Singapore IPOS application numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.IntellectualProperty.SG.IpApplicationNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.IntellectualProperty.SG.IpApplicationNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.IntellectualProperty.SG.IpApplicationNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.IntellectualProperty.SG.IpApplicationNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Singapore IPOS application number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.IntellectualProperty.SG.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.IntellectualProperty.SG.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.IntellectualProperty.SG",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.IntellectualProperty.TrademarkRegistrationNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.IntellectualProperty.TrademarkRegistrationNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.IntellectualProperty.TrademarkRegistrationNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.IntellectualProperty.TrademarkRegistrationNumber.yml\" sourcestartlinenumber=\"1\">Validation and generation for trademark registration numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.IntellectualProperty.TrademarkRegistrationNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.IntellectualProperty.TrademarkRegistrationNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.IntellectualProperty.TrademarkRegistrationNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.IntellectualProperty.TrademarkRegistrationNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated trademark registration number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.IntellectualProperty.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.IntellectualProperty.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.IntellectualProperty",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Legal.EU.Ecli.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Legal.EU.Ecli.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Legal.EU.Ecli",
+      "Summary": "<p sourcefile=\"api/Veritas.Legal.EU.Ecli.yml\" sourcestartlinenumber=\"1\">Validation and generation for European Case Law Identifiers (ECLI).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Legal.EU.EcliValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Legal.EU.EcliValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Legal.EU.EcliValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Legal.EU.EcliValue.yml\" sourcestartlinenumber=\"1\">Represents a validated European Case Law Identifier (ECLI).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Legal.EU.EuropeanPatentOfficePublicationId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Legal.EU.EuropeanPatentOfficePublicationId.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Legal.EU.EuropeanPatentOfficePublicationId",
+      "Summary": "<p sourcefile=\"api/Veritas.Legal.EU.EuropeanPatentOfficePublicationId.yml\" sourcestartlinenumber=\"1\">Validation and generation for European Patent Office publication identifiers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Legal.EU.EuropeanPatentOfficePublicationIdValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Legal.EU.EuropeanPatentOfficePublicationIdValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Legal.EU.EuropeanPatentOfficePublicationIdValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Legal.EU.EuropeanPatentOfficePublicationIdValue.yml\" sourcestartlinenumber=\"1\">Represents a validated European Patent Office publication identifier.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Legal.EU.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Legal.EU.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Legal.EU",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Legal.US.CourtCaseNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Legal.US.CourtCaseNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Legal.US.CourtCaseNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.Legal.US.CourtCaseNumber.yml\" sourcestartlinenumber=\"1\">Validation and generation for baseline US court case numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Legal.US.CourtCaseNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Legal.US.CourtCaseNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Legal.US.CourtCaseNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Legal.US.CourtCaseNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated court case number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Legal.US.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Legal.US.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Legal.US",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Veritas.Logistics.Awb.yml",
       "output": {
         ".html": {
@@ -1342,6 +2266,62 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Logistics.Gdti.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Logistics.Gdti.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Logistics.Gdti",
+      "Summary": "<p sourcefile=\"api/Veritas.Logistics.Gdti.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for GDTI codes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Logistics.GdtiValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Logistics.GdtiValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Logistics.GdtiValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Logistics.GdtiValue.yml\" sourcestartlinenumber=\"1\">GS1 Global Document Type Identifier (GDTI).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Logistics.Giai.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Logistics.Giai.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Logistics.Giai",
+      "Summary": "<p sourcefile=\"api/Veritas.Logistics.Giai.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for GIAI codes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Logistics.GiaiValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Logistics.GiaiValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Logistics.GiaiValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Logistics.GiaiValue.yml\" sourcestartlinenumber=\"1\">GS1 Global Individual Asset Identifier (GIAI).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Veritas.Logistics.Gln.yml",
       "output": {
         ".html": {
@@ -1366,6 +2346,90 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Veritas.Logistics.GlnValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Logistics.Grai.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Logistics.Grai.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Logistics.Grai",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Logistics.GraiValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Logistics.GraiValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Logistics.GraiValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Logistics.Gsin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Logistics.Gsin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Logistics.Gsin",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Logistics.GsinValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Logistics.GsinValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Logistics.GsinValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Logistics.Gsrn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Logistics.Gsrn.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Logistics.Gsrn",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Logistics.GsrnValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Logistics.GsrnValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Logistics.GsrnValue",
       "Summary": null
     },
     {
@@ -1479,6 +2543,34 @@
       "IsMRef": true,
       "Title": "Veritas.Logistics.SsccValue",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Logistics.UpuS10.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Logistics.UpuS10.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Logistics.UpuS10",
+      "Summary": "<p sourcefile=\"api/Veritas.Logistics.UpuS10.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for UPU S10 tracking numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Logistics.UpuS10Value.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Logistics.UpuS10Value.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Logistics.UpuS10Value",
+      "Summary": "<p sourcefile=\"api/Veritas.Logistics.UpuS10Value.yml\" sourcestartlinenumber=\"1\">UPU S10 international postal tracking number.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1650,6 +2742,90 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.AR.Cuit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.AR.Cuit.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.AR.Cuit",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.AR.Cuit.yml\" sourcestartlinenumber=\"1\">Argentina CUIT/CUIL tax identifier (11 digits, mod-11 checksum).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.AR.CuitValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.AR.CuitValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.AR.CuitValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.AR.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.AR.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.AR",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.AT.Uid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.AT.Uid.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.AT.Uid",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.AT.Uid.yml\" sourcestartlinenumber=\"1\">Austrian VAT UID (ATU + 8 digits, weighted mod-10).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.AT.UidValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.AT.UidValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.AT.UidValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.AT.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.AT.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.AT",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Veritas.Tax.AU.Abn.yml",
       "output": {
         ".html": {
@@ -1716,6 +2892,132 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Veritas.Tax.AU",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.BA.Jmbg.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.BA.Jmbg.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.BA.Jmbg",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.BA.Jmbg.yml\" sourcestartlinenumber=\"1\">Bosnia and Herzegovina JMBG personal number (13 digits, mod-11 checksum).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.BA.JmbgValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.BA.JmbgValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.BA.JmbgValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.BA.JmbgValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Bosnia and Herzegovina JMBG number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.BA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.BA.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.BA",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.BE.Nn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.BE.Nn.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.BE.Nn",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.BE.Nn.yml\" sourcestartlinenumber=\"1\">Belgium National Number (NN) identifier (11 digits, mod-97 checksum).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.BE.NnValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.BE.NnValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.BE.NnValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.BE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.BE.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.BE",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.BG.Egn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.BG.Egn.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.BG.Egn",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.BG.Egn.yml\" sourcestartlinenumber=\"1\">Bulgaria EGN personal number (10 digits, weighted checksum).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.BG.EgnValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.BG.EgnValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.BG.EgnValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.BG.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.BG.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.BG",
       "Summary": null
     },
     {
@@ -1860,6 +3162,118 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.CH.Ahv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.CH.Ahv.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.CH.Ahv",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.CH.Ahv.yml\" sourcestartlinenumber=\"1\">Swiss AHV/AVS number (13 digits, ISO 7064 mod 11,10).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.CH.AhvValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.CH.AhvValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.CH.AhvValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.CH.Uid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.CH.Uid.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.CH.Uid",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.CH.Uid.yml\" sourcestartlinenumber=\"1\">Swiss UID (CHE) enterprise identifier with mod-10 (EAN) check digit.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.CH.UidValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.CH.UidValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.CH.UidValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.CH.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.CH.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.CH",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.CL.Rut.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.CL.Rut.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.CL.Rut",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.CL.Rut.yml\" sourcestartlinenumber=\"1\">Chilean Rol Único Tributario (RUT) identifier with mod-11 check digit.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.CL.RutValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.CL.RutValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.CL.RutValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.CL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.CL.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.CL",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Veritas.Tax.CN.Uscc.yml",
       "output": {
         ".html": {
@@ -1898,6 +3312,90 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Veritas.Tax.CN",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.CO.Nit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.CO.Nit.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.CO.Nit",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.CO.Nit.yml\" sourcestartlinenumber=\"1\">Colombia NIT tax identifier (up to 10 digits, mod-11 checksum).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.CO.NitValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.CO.NitValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.CO.NitValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.CO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.CO.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.CO",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.CZ.RodneCislo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.CZ.RodneCislo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.CZ.RodneCislo",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.CZ.RodneCislo.yml\" sourcestartlinenumber=\"1\">Czech Rodné číslo (9 or 10 digits, mod-11 check).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.CZ.RodneCisloValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.CZ.RodneCisloValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.CZ.RodneCisloValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.CZ.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.CZ.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.CZ",
       "Summary": null
     },
     {
@@ -1968,6 +3466,90 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Veritas.Tax.DE",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.DK.Cpr.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.DK.Cpr.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.DK.Cpr",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.DK.Cpr.yml\" sourcestartlinenumber=\"1\">Danish CPR number (10 digits, structural validation only).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.DK.CprValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.DK.CprValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.DK.CprValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.DK.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.DK.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.DK",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.EE.Isikukood.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.EE.Isikukood.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.EE.Isikukood",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.EE.Isikukood.yml\" sourcestartlinenumber=\"1\">Estonian Isikukood (11 digits, two-stage mod-11).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.EE.IsikukoodValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.EE.IsikukoodValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.EE.IsikukoodValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.EE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.EE.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.EE",
       "Summary": null
     },
     {
@@ -2070,6 +3652,76 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.Eori.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.Eori.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.Eori",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.Eori.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for EORI numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.EoriValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.EoriValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.EoriValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.EoriValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Economic Operator Registration and Identification (EORI) number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.FI.Hetu.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.FI.Hetu.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.FI.Hetu",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.FI.Hetu.yml\" sourcestartlinenumber=\"1\">Finland HETU personal identity code (11 characters, mod-31 check character).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.FI.HetuValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.FI.HetuValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.FI.HetuValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.FI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.FI.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.FI",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Veritas.Tax.FR.Siren.yml",
       "output": {
         ".html": {
@@ -2168,6 +3820,174 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.GR.Afm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.GR.Afm.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.GR.Afm",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.GR.Afm.yml\" sourcestartlinenumber=\"1\">Greek AFM tax identifier (9 digits, mod-11 checksum with powers-of-two weighting).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.GR.AfmValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.GR.AfmValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.GR.AfmValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.GR.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.GR.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.GR",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.HR.Oib.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.HR.Oib.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.HR.Oib",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.HR.Oib.yml\" sourcestartlinenumber=\"1\">Croatia OIB (11 digits, ISO 7064 mod 11,10 checksum).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.HR.OibValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.HR.OibValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.HR.OibValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.HR.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.HR.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.HR",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.HU.Adoszam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.HU.Adoszam.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.HU.Adoszam",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.HU.Adoszam.yml\" sourcestartlinenumber=\"1\">Hungary VAT number (Adószám) identifier (8+1+2 digits, weighted mod-10 checksum).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.HU.AdoszamValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.HU.AdoszamValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.HU.AdoszamValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.HU.AdoszamValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Hungarian VAT (Adószám) number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.HU.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.HU.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.HU",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.IE.Ppsn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.IE.Ppsn.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.IE.Ppsn",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.IE.Ppsn.yml\" sourcestartlinenumber=\"1\">Ireland PPSN (Personal Public Service Number) (7 digits plus 1–2 letters, mod-23 checksum).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.IE.PpsnValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.IE.PpsnValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.IE.PpsnValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.IE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.IE.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.IE",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Veritas.Tax.IN.Gstin.yml",
       "output": {
         ".html": {
@@ -2238,6 +4058,76 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.IS.Kennitala.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.IS.Kennitala.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.IS.Kennitala",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.IS.Kennitala.yml\" sourcestartlinenumber=\"1\">Icelandic Kennitala (10 digits, mod-11 checksum).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.IS.KennitalaValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.IS.KennitalaValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.IS.KennitalaValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.IS.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.IS.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.IS",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.IT.CodiceFiscale.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.IT.CodiceFiscale.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.IT.CodiceFiscale",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.IT.CodiceFiscale.yml\" sourcestartlinenumber=\"1\">Italy Codice Fiscale (16 alphanumeric, position table check character).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.IT.CodiceFiscaleValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.IT.CodiceFiscaleValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.IT.CodiceFiscaleValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Veritas.Tax.IT.Piva.yml",
       "output": {
         ".html": {
@@ -2276,6 +4166,174 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Veritas.Tax.IT",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.LT.AsmensKodas.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.LT.AsmensKodas.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.LT.AsmensKodas",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.LT.AsmensKodas.yml\" sourcestartlinenumber=\"1\">Lithuania Asmens kodas (11 digits, two-stage mod-11).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.LT.AsmensKodasValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.LT.AsmensKodasValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.LT.AsmensKodasValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.LT.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.LT.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.LT",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.LV.PersonasKods.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.LV.PersonasKods.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.LV.PersonasKods",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.LV.PersonasKods.yml\" sourcestartlinenumber=\"1\">Latvian Personas kods (11 digits, mod-11 checksum).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.LV.PersonasKodsValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.LV.PersonasKodsValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.LV.PersonasKodsValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.LV.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.LV.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.LV",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.MK.Embg.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.MK.Embg.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.MK.Embg",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.MK.Embg.yml\" sourcestartlinenumber=\"1\">North Macedonia EMBG personal number (13 digits, mod-11 checksum).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.MK.EmbgValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.MK.EmbgValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.MK.EmbgValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.MK.EmbgValue.yml\" sourcestartlinenumber=\"1\">Represents a validated North Macedonia EMBG number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.MK.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.MK.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.MK",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.MX.Rfc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.MX.Rfc.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.MX.Rfc",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.MX.Rfc.yml\" sourcestartlinenumber=\"1\">Mexico Registro Federal de Contribuyentes (RFC) (12-13 alphanumeric, mod-11 check character).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.MX.RfcValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.MX.RfcValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.MX.RfcValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.MX.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.MX.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.MX",
       "Summary": null
     },
     {
@@ -2350,6 +4408,90 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.NO.Fodselsnummer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.NO.Fodselsnummer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.NO.Fodselsnummer",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.NO.Fodselsnummer.yml\" sourcestartlinenumber=\"1\">Norway Fødselsnummer (11 digits, two mod-11 checks). Supports D-numbers (day +40).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.NO.FodselsnummerValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.NO.FodselsnummerValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.NO.FodselsnummerValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.NO.Kid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.NO.Kid.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.NO.Kid",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.NO.Kid.yml\" sourcestartlinenumber=\"1\">Norway KID (OCR reference) - variable length with mod-10 or mod-11 checksum.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.NO.KidValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.NO.KidValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.NO.KidValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.NO.KidVariant.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.NO.KidVariant.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.NO.KidVariant",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.NO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.NO.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.NO",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Veritas.Tax.NZ.Ird.yml",
       "output": {
         ".html": {
@@ -2388,6 +4530,48 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Veritas.Tax.NZ",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.PE.Ruc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.PE.Ruc.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.PE.Ruc",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.PE.Ruc.yml\" sourcestartlinenumber=\"1\">Peru RUC tax identifier (11 digits, weighted checksum).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.PE.RucValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.PE.RucValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.PE.RucValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.PE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.PE.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.PE",
       "Summary": null
     },
     {
@@ -2490,6 +4674,132 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.PT.Nif.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.PT.Nif.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.PT.Nif",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.PT.Nif.yml\" sourcestartlinenumber=\"1\">Portugal Número de Identificação Fiscal (NIF) (9 digits, mod-11 checksum).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.PT.NifValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.PT.NifValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.PT.NifValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.PT.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.PT.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.PT",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.RO.Cnp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.RO.Cnp.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.RO.Cnp",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.RO.Cnp.yml\" sourcestartlinenumber=\"1\">Romania CNP personal numeric code (13 digits, mod-11 checksum).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.RO.CnpValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.RO.CnpValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.RO.CnpValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.RO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.RO.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.RO",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.RS.Jmbg.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.RS.Jmbg.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.RS.Jmbg",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.RS.Jmbg.yml\" sourcestartlinenumber=\"1\">JMBG/EMBG personal number (13 digits, mod-11 checksum).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.RS.JmbgValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.RS.JmbgValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.RS.JmbgValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.RS.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.RS.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.RS",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Veritas.Tax.SE.OrgNr.yml",
       "output": {
         ".html": {
@@ -2556,6 +4866,174 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Veritas.Tax.SE",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.SG.Uen.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.SG.Uen.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.SG.Uen",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.SG.Uen.yml\" sourcestartlinenumber=\"1\">Singapore Unique Entity Number (UEN) (9-10 alphanumeric, weighted mod-11 check).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.SG.UenValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.SG.UenValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.SG.UenValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.SG.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.SG.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.SG",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.SI.Emso.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.SI.Emso.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.SI.Emso",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.SI.Emso.yml\" sourcestartlinenumber=\"1\">Slovenia EMŠO personal number (13 digits, mod-11).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.SI.EmsoValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.SI.EmsoValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.SI.EmsoValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.SI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.SI.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.SI",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.SK.RodneCislo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.SK.RodneCislo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.SK.RodneCislo",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.SK.RodneCislo.yml\" sourcestartlinenumber=\"1\">Czech Rodné číslo (9 or 10 digits, mod-11 check).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.SK.RodneCisloValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.SK.RodneCisloValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.SK.RodneCisloValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.SK.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.SK.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.SK",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.TR.Tckn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.TR.Tckn.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.TR.Tckn",
+      "Summary": "<p sourcefile=\"api/Veritas.Tax.TR.Tckn.yml\" sourcestartlinenumber=\"1\">Turkey T.C. Kimlik number (11 digits, parity checks).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.TR.TcknValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.TR.TcknValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.TR.TcknValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.TR.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.TR.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax.TR",
       "Summary": null
     },
     {
@@ -2784,6 +5262,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Tax.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Tax.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Tax",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Veritas.Telecom.Asn.yml",
       "output": {
         ".html": {
@@ -2865,6 +5357,34 @@
       "IsMRef": true,
       "Title": "Veritas.Telecom.ImeiValue",
       "Summary": "<p sourcefile=\"api/Veritas.Telecom.ImeiValue.yml\" sourcestartlinenumber=\"1\">Represents a validated International Mobile Equipment Identity (IMEI).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Telecom.Imsi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Telecom.Imsi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Telecom.Imsi",
+      "Summary": "<p sourcefile=\"api/Veritas.Telecom.Imsi.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for IMSI numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Telecom.ImsiValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Telecom.ImsiValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Telecom.ImsiValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Telecom.ImsiValue.yml\" sourcestartlinenumber=\"1\">Represents a validated International Mobile Subscriber Identity (IMSI).</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3019,6 +5539,20 @@
       "IsMRef": true,
       "Title": "Veritas.Telecom",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Transliteration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Transliteration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Transliteration",
+      "Summary": "<p sourcefile=\"api/Veritas.Transliteration.yml\" sourcestartlinenumber=\"1\">Provides transliteration helpers for various identifier schemes.</p>\n"
     },
     {
       "type": "ManagedReference",
