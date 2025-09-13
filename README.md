@@ -18,21 +18,23 @@ dotnet add package Veritas --version 1.0.3
 ## Currently implemented
 
 ### Algorithms
-- Luhn (mod 10)
-- ISO 7064 (mod 11,10; mod 97; mod 37,2)
+- Luhn (mod 10 and base-36)
+- ISO 7064 (mod 11,10; mod 97; mod 37,2; mod 37,36)
 - GS1 mod 10
-- Weighted mod 11 variants
+- Weighted mod 11 variants (custom weights)
 - ISO 6346 container check digit
 - MRZ (ICAO 9303 7-3-1 pattern)
 - Base58Check codec
 - Verhoeff checksum
 - Damm checksum
+- Checksum strategies via `IChecksum` interface and transliteration helpers
 
 ### Finance
 - IBAN validation (ISO 13616 / ISO 7064 mod 97)
 - BIC/SWIFT code structural validation
 - ISIN validation (alphabetic + numeric with Luhn check digit)
 - ISO 11649 RF creditor reference validation and generation
+- Belgium structured communication (OGM) validation and generation
 - Payment card PAN validation (Luhn)
 - US ABA routing number validation
 - Mexican CLABE validation and generation
@@ -68,6 +70,7 @@ dotnet add package Veritas --version 1.0.3
 - Base58Check validation and generation
 - India Aadhaar validation and generation
 - Luxembourg National ID validation and generation
+- France NIR (INSEE) validation and generation
 
 ### Tax
 - Brazil CPF validation/generation
@@ -107,6 +110,7 @@ dotnet add package Veritas --version 1.0.3
 - Belgium National Number validation/generation
 - Portugal NIF validation/generation
 - Greece AFM validation/generation
+- Hungary VAT (Adószám) validation/generation
 - Finland HETU validation/generation
 - Ireland PPSN validation/generation
 - Norway Fodselsnummer validation/generation
@@ -118,6 +122,8 @@ dotnet add package Veritas --version 1.0.3
 - Bulgaria EGN validation/generation
 - Slovenia EMSO validation/generation
 - Serbia JMBG validation/generation
+- Bosnia and Herzegovina JMBG validation/generation
+- North Macedonia EMBG validation/generation
 - Switzerland AHV validation/generation
 - Switzerland UID validation/generation
 - Austria UID validation/generation
@@ -140,6 +146,9 @@ dotnet add package Veritas --version 1.0.3
 - GTIN/EAN/UPC validation and generation (GS1 mod 10)
 - Global Location Number (GLN) validation and generation
 - Serial Shipping Container Code (SSCC) validation and generation
+- Global Service Relation Number (GSRN) validation and generation
+- Global Returnable Asset Identifier (GRAI) validation and generation
+- Global Shipment Identification Number (GSIN) validation and generation
 - Vehicle Identification Number (VIN) validation
 - ISO 6346 container code validation
 - Air Waybill (AWB) validation and generation

@@ -1,4 +1,5 @@
 using Veritas.Tax.NO;
+using Veritas;
 using Xunit;
 using Shouldly;
 
@@ -28,7 +29,7 @@ public class NoKidTests
     public void Generate_Mod11_Valid()
     {
         Span<char> buffer = stackalloc char[5];
-        Kid.TryGenerate(KidVariant.Mod11, 5, buffer, out var written).ShouldBeTrue();
+        Kid.TryGenerate(KidVariant.Mod11, new GenerationOptions { Seed = 1 }, 5, buffer, out var written).ShouldBeTrue();
         Kid.TryValidate(buffer[..written], KidVariant.Mod11, out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
     }
