@@ -20,14 +20,14 @@ public static class Meid
     /// <summary>Attempts to validate the supplied input as a MEID.</summary>
     /// <param name="input">Candidate code to validate.</param>
     /// <param name="result">The validation outcome including the parsed value when valid.</param>
-    /// <returns><c>true</c> if validation executed; the <see cref="ValidationResult{T}.IsValid"/> property indicates success.</returns>
+    /// <returns><c>true</c> if validation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<MeidValue> result)
     {
         Span<char> buf = stackalloc char[18];
         if (!Normalize(input, buf, out int len))
         {
             result = new ValidationResult<MeidValue>(false, default, ValidationError.Charset);
-            return true;
+            return false;
         }
         if (len == 14)
         {
@@ -37,7 +37,7 @@ public static class Meid
                 if (!Uri.IsHexDigit(c))
                 {
                     result = new ValidationResult<MeidValue>(false, default, ValidationError.Charset);
-                    return true;
+                    return false;
                 }
                 buf[i] = char.ToUpperInvariant(c);
             }
@@ -51,20 +51,20 @@ public static class Meid
                 if (!char.IsDigit(buf[i]))
                 {
                     result = new ValidationResult<MeidValue>(false, default, ValidationError.Charset);
-                    return true;
+                    return false;
                 }
             }
             int check = Luhn(buf[..17]);
             if (buf[17] != (char)('0' + check))
             {
                 result = new ValidationResult<MeidValue>(false, default, ValidationError.Checksum);
-                return true;
+                return false;
             }
             result = new ValidationResult<MeidValue>(true, new MeidValue(new string(buf[..18])), ValidationError.None);
             return true;
         }
         result = new ValidationResult<MeidValue>(false, default, ValidationError.Length);
-        return true;
+        return false;
     }
 
     /// <summary>Attempts to generate a random MEID into the provided buffer.</summary>

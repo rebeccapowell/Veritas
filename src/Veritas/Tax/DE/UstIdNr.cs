@@ -18,23 +18,23 @@ public static class UstIdNr
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<UstIdNrValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 9)
         {
             result = new ValidationResult<UstIdNrValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         if (digits[0] == '0')
         {
             result = new ValidationResult<UstIdNrValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         char check = Iso7064.ComputeCheckDigitMod11_10(digits[..8]);
         if (digits[8] != check)
         {
             result = new ValidationResult<UstIdNrValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<UstIdNrValue>(true, new UstIdNrValue(new string(digits)), ValidationError.None);
         return true;

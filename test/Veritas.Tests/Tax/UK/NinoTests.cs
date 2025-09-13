@@ -9,7 +9,7 @@ public class NinoTests
     [InlineData("DQ123456A", false)]
     public void Validate(string input, bool expected)
     {
-        Nino.TryValidate(input, out var r);
+        Nino.TryValidate(input, out var r).ShouldBe(expected);
         r.IsValid.ShouldBe(expected);
     }
 }

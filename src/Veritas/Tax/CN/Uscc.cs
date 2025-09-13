@@ -12,7 +12,7 @@ public readonly struct UsccValue
 public static class Uscc
 {
     private const string Alphabet = "0123456789ABCDEFGHJKLMNPQRTUWXY";
-    private static readonly int[] Weights = {1,3,9,27,19,26,16,17,20,29,25,13,8,24,10,30,28};
+    private static readonly int[] Weights = { 1, 3, 9, 27, 19, 26, 16, 17, 20, 29, 25, 13, 8, 24, 10, 30, 28 };
 
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<UsccValue> result)
     {
@@ -20,18 +20,18 @@ public static class Uscc
         if (!Normalize(input, chars, out int len))
         {
             result = new ValidationResult<UsccValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 18)
         {
             result = new ValidationResult<UsccValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         int sum = 0;
         for (int i = 0; i < 17; i++)
         {
             int v = Alphabet.IndexOf(chars[i]);
-            if (v < 0) { result = new ValidationResult<UsccValue>(false, default, ValidationError.Charset); return true; }
+            if (v < 0) { result = new ValidationResult<UsccValue>(false, default, ValidationError.Charset); return false; }
             sum += v * Weights[i];
         }
         int check = (31 - (sum % 31)) % 31;
@@ -39,7 +39,7 @@ public static class Uscc
         if (chars[17] != expected)
         {
             result = new ValidationResult<UsccValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<UsccValue>(true, new UsccValue(new string(chars)), ValidationError.None);
         return true;

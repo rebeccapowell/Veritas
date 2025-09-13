@@ -11,7 +11,7 @@ public class IsrcTests
     [InlineData("USRC1760783", false)]
     public void Validate(string input, bool expected)
     {
-        Isrc.TryValidate(input, out var r);
+        Isrc.TryValidate(input, out var r).ShouldBe(expected);
         r.IsValid.ShouldBe(expected);
     }
 }

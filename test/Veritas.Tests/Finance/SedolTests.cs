@@ -9,7 +9,7 @@ public class SedolTests
     [InlineData("B0YBKJ8", false)]
     public void Validate_Works(string input, bool expected)
     {
-        Sedol.TryValidate(input, out var result);
+        Sedol.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 
@@ -18,7 +18,7 @@ public class SedolTests
     {
         Span<char> buffer = stackalloc char[7];
         Sedol.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Sedol.TryValidate(buffer[..written], out var result);
+        Sedol.TryValidate(buffer[..written], out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
     }
 }

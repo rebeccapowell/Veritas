@@ -10,7 +10,7 @@ public class IccidTests
     [InlineData("8914800000000000001", false)]
     public void Validate(string input, bool expected)
     {
-        Iccid.TryValidate(input, out var r);
+        Iccid.TryValidate(input, out var r).ShouldBe(expected);
         r.IsValid.ShouldBe(expected);
     }
 
@@ -19,7 +19,7 @@ public class IccidTests
     {
         Span<char> buffer = stackalloc char[20];
         Iccid.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Iccid.TryValidate(buffer[..written], out var r);
+        Iccid.TryValidate(buffer[..written], out var r).ShouldBeTrue();
         r.IsValid.ShouldBeTrue();
     }
 }

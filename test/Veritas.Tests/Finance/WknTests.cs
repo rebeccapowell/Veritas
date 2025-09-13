@@ -9,7 +9,7 @@ public class WknTests
     [InlineData("M8QAUI1", false)]
     public void Validate_Works(string input, bool expected)
     {
-        Wkn.TryValidate(input, out var result);
+        Wkn.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 }

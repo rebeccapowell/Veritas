@@ -22,18 +22,18 @@ public static class Emso
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<EmsoValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 13)
         {
             result = new ValidationResult<EmsoValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         int check = ComputeCheckDigit(digits[..12]);
         if (digits[12] - '0' != check)
         {
             result = new ValidationResult<EmsoValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<EmsoValue>(true, new EmsoValue(new string(digits)), ValidationError.None);
         return true;

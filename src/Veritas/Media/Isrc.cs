@@ -21,20 +21,20 @@ public static class Isrc
         {
             if (ch == '-' || ch == ' ') continue;
             char up = char.ToUpperInvariant(ch);
-            if (len >= 12) { result = new ValidationResult<IsrcValue>(false, default, ValidationError.Length); return true; }
+            if (len >= 12) { result = new ValidationResult<IsrcValue>(false, default, ValidationError.Length); return false; }
             buf[len++] = up;
         }
-        if (len != 12) { result = new ValidationResult<IsrcValue>(false, default, ValidationError.Length); return true; }
+        if (len != 12) { result = new ValidationResult<IsrcValue>(false, default, ValidationError.Length); return false; }
         // CC
-        if (!IsLetter(buf[0]) || !IsLetter(buf[1])) { result = new ValidationResult<IsrcValue>(false, default, ValidationError.Charset); return true; }
+        if (!IsLetter(buf[0]) || !IsLetter(buf[1])) { result = new ValidationResult<IsrcValue>(false, default, ValidationError.Charset); return false; }
         // Registrant (alnum)
         for (int i = 2; i < 5; i++)
-            if (!IsAlnum(buf[i])) { result = new ValidationResult<IsrcValue>(false, default, ValidationError.Charset); return true; }
+            if (!IsAlnum(buf[i])) { result = new ValidationResult<IsrcValue>(false, default, ValidationError.Charset); return false; }
         // Year (digits)
-        if (!IsDigit(buf[5]) || !IsDigit(buf[6])) { result = new ValidationResult<IsrcValue>(false, default, ValidationError.Charset); return true; }
+        if (!IsDigit(buf[5]) || !IsDigit(buf[6])) { result = new ValidationResult<IsrcValue>(false, default, ValidationError.Charset); return false; }
         // Designation code (digits)
         for (int i = 7; i < 12; i++)
-            if (!IsDigit(buf[i])) { result = new ValidationResult<IsrcValue>(false, default, ValidationError.Charset); return true; }
+            if (!IsDigit(buf[i])) { result = new ValidationResult<IsrcValue>(false, default, ValidationError.Charset); return false; }
         result = new ValidationResult<IsrcValue>(true, new IsrcValue(new string(buf)), ValidationError.None);
         return true;
     }

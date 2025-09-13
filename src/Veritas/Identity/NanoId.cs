@@ -15,11 +15,11 @@ public static class NanoId
         int len = 0;
         foreach (var ch in input)
         {
-            if (Alphabet.IndexOf(ch) < 0) { result = new ValidationResult<NanoIdValue>(false, default, ValidationError.Charset); return true; }
-            if (len >= buf.Length) { result = new ValidationResult<NanoIdValue>(false, default, ValidationError.Length); return true; }
+            if (Alphabet.IndexOf(ch) < 0) { result = new ValidationResult<NanoIdValue>(false, default, ValidationError.Charset); return false; }
+            if (len >= buf.Length) { result = new ValidationResult<NanoIdValue>(false, default, ValidationError.Length); return false; }
             buf[len++] = ch;
         }
-        if (len != 21) { result = new ValidationResult<NanoIdValue>(false, default, ValidationError.Length); return true; }
+        if (len != 21) { result = new ValidationResult<NanoIdValue>(false, default, ValidationError.Length); return false; }
         result = new ValidationResult<NanoIdValue>(true, new NanoIdValue(new string(buf[..len])), ValidationError.None);
         return true;
     }

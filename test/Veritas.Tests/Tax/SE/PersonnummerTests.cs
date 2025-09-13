@@ -9,7 +9,7 @@ public class PersonnummerTests
     [InlineData("8507099804", false)]
     public void Validate(string input, bool expected)
     {
-        Personnummer.TryValidate(input, out var result);
+        Personnummer.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 }

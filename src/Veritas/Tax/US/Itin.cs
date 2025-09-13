@@ -27,23 +27,23 @@ public static class Itin
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<ItinValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 9)
         {
             result = new ValidationResult<ItinValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         if (digits[0] != '9')
         {
             result = new ValidationResult<ItinValue>(false, default, ValidationError.CountryRule);
-            return true;
+            return false;
         }
-        int group = (digits[3]-'0')*10 + (digits[4]-'0');
+        int group = (digits[3] - '0') * 10 + (digits[4] - '0');
         if (!AllowedGroups[group])
         {
             result = new ValidationResult<ItinValue>(false, default, ValidationError.CountryRule);
-            return true;
+            return false;
         }
         string value = new string(digits);
         result = new ValidationResult<ItinValue>(true, new ItinValue(value), ValidationError.None);

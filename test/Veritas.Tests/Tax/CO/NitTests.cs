@@ -29,7 +29,7 @@ public class NitTests
     [InlineData("abcdefghij")]
     public void ValidateBad(string input)
     {
-        Nit.TryValidate(input, out var r).ShouldBeTrue();
+        Nit.TryValidate(input, out var r).ShouldBeFalse();
         r.IsValid.ShouldBeFalse();
     }
 }

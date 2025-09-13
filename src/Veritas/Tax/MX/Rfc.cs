@@ -22,19 +22,19 @@ public static class Rfc
         if (!Normalize(input, chars, out int len))
         {
             result = new ValidationResult<RfcValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 12 && len != 13)
         {
             result = new ValidationResult<RfcValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         int totalLen = len;
         int sum = 0;
         for (int i = 0; i < totalLen - 1; i++)
         {
             int v = Alphabet.IndexOf(chars[i]);
-            if (v < 0) { result = new ValidationResult<RfcValue>(false, default, ValidationError.Charset); return true; }
+            if (v < 0) { result = new ValidationResult<RfcValue>(false, default, ValidationError.Charset); return false; }
             sum += v * (totalLen - i);
         }
         int checkVal = 11 - (sum % 11);
@@ -42,7 +42,7 @@ public static class Rfc
         if (chars[totalLen - 1] != expected)
         {
             result = new ValidationResult<RfcValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<RfcValue>(true, new RfcValue(new string(chars[..totalLen])), ValidationError.None);
         return true;

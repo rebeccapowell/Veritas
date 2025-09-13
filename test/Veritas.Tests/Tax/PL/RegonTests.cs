@@ -11,7 +11,7 @@ public class RegonTests
     [InlineData("12345678901235", false)]
     public void Validate(string input, bool expected)
     {
-        Regon.TryValidate(input, out var result);
+        Regon.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 }

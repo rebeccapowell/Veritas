@@ -9,7 +9,7 @@ public class PeselTests
     [InlineData("44051401358", false)]
     public void Validate(string input, bool expected)
     {
-        Pesel.TryValidate(input, out var result);
+        Pesel.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 }

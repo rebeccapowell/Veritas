@@ -17,18 +17,18 @@ public static class Cusip
         if (!Normalize(input, chars, out int len))
         {
             result = new ValidationResult<CusipValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 9)
         {
             result = new ValidationResult<CusipValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         int check = ComputeCheckDigit(chars[..8]);
         if (chars[8] - '0' != check)
         {
             result = new ValidationResult<CusipValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<CusipValue>(true, new CusipValue(new string(chars)), ValidationError.None);
         return true;

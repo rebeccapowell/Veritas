@@ -9,7 +9,7 @@ public class AbaRoutingTests
     [InlineData("111000026", false)]
     public void Validate_Works(string input, bool expected)
     {
-        AbaRouting.TryValidate(input, out var result);
+        AbaRouting.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 }

@@ -29,7 +29,7 @@ public class RucTests
     [InlineData("abcdefghijk")]
     public void ValidateBad(string input)
     {
-        Ruc.TryValidate(input, out var r).ShouldBeTrue();
+        Ruc.TryValidate(input, out var r).ShouldBeFalse();
         r.IsValid.ShouldBeFalse();
     }
 }

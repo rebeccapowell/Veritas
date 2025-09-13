@@ -12,7 +12,7 @@ public class IsniTests
     [InlineData("000000012146438", false)]
     public void Validate(string input, bool expected)
     {
-        Isni.TryValidate(input, out var r);
+        Isni.TryValidate(input, out var r).ShouldBe(expected);
         r.IsValid.ShouldBe(expected);
     }
 
@@ -21,7 +21,7 @@ public class IsniTests
     {
         Span<char> buffer = stackalloc char[16];
         Isni.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Isni.TryValidate(buffer[..written], out var r);
+        Isni.TryValidate(buffer[..written], out var r).ShouldBeTrue();
         r.IsValid.ShouldBeTrue();
     }
 }

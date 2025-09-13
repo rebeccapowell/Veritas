@@ -15,16 +15,16 @@ public static class Issn
         {
             if (ch == '-' || ch == ' ') continue;
             char u = char.ToUpperInvariant(ch);
-            if ((u < '0' || u > '9') && !(u == 'X' && len == 7)) { result = new ValidationResult<IssnValue>(false, default, ValidationError.Charset); return true; }
-            if (len >= 8) { result = new ValidationResult<IssnValue>(false, default, ValidationError.Length); return true; }
+            if ((u < '0' || u > '9') && !(u == 'X' && len == 7)) { result = new ValidationResult<IssnValue>(false, default, ValidationError.Charset); return false; }
+            if (len >= 8) { result = new ValidationResult<IssnValue>(false, default, ValidationError.Length); return false; }
             buf[len++] = u;
         }
-        if (len != 8) { result = new ValidationResult<IssnValue>(false, default, ValidationError.Length); return true; }
+        if (len != 8) { result = new ValidationResult<IssnValue>(false, default, ValidationError.Length); return false; }
         int sum = 0;
         for (int i = 0; i < 7; i++) sum += (8 - i) * (buf[i] - '0');
         int check = 11 - (sum % 11);
         char expected = check == 10 ? 'X' : check == 11 ? '0' : (char)('0' + check);
-        if (buf[7] != expected) { result = new ValidationResult<IssnValue>(false, default, ValidationError.Checksum); return true; }
+        if (buf[7] != expected) { result = new ValidationResult<IssnValue>(false, default, ValidationError.Checksum); return false; }
         result = new ValidationResult<IssnValue>(true, new IssnValue(new string(buf)), ValidationError.None);
         return true;
     }

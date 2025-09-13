@@ -9,7 +9,7 @@ public class PanTests
     [InlineData("4111 1111 1111 1112", false)]
     public void Validate_Works(string input, bool expected)
     {
-        Pan.TryValidate(input, out var result);
+        Pan.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 }

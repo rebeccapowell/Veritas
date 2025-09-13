@@ -9,7 +9,7 @@ public class DomainTests
     [InlineData("-bad.com", false)]
     public void Validate(string input, bool expected)
     {
-        Domain.TryValidate(input, out var r);
+        Domain.TryValidate(input, out var r).ShouldBe(expected);
         r.IsValid.ShouldBe(expected);
     }
 }

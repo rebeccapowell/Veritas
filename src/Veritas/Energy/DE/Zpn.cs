@@ -20,19 +20,19 @@ public static class Zpn
     /// <summary>Attempts to validate the supplied input as a ZPN identifier.</summary>
     /// <param name="input">Candidate identifier to validate.</param>
     /// <param name="result">The validation outcome including the parsed value when valid.</param>
-    /// <returns><c>true</c> if validation executed; the <see cref="ValidationResult{T}.IsValid"/> property indicates success.</returns>
+    /// <returns><c>true</c> if validation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<ZpnValue> result)
     {
         Span<char> chars = stackalloc char[33];
         if (!Normalize(input, chars, out int len) || len != 33)
         {
             result = new ValidationResult<ZpnValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         if (chars[0] != 'D' || chars[1] != 'E')
         {
             result = new ValidationResult<ZpnValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         string value = new string(chars);
         result = new ValidationResult<ZpnValue>(true, new ZpnValue(value), ValidationError.None);

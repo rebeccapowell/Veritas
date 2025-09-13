@@ -14,7 +14,7 @@ public readonly struct NitValue
 /// </summary>
 public static class Nit
 {
-    private static readonly int[] Weights = {3,7,13,17,19,23,29,37,41,43,47};
+    private static readonly int[] Weights = { 3, 7, 13, 17, 19, 23, 29, 37, 41, 43, 47 };
 
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<NitValue> result)
     {
@@ -22,18 +22,18 @@ public static class Nit
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<NitValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len < 2 || len > 10)
         {
             result = new ValidationResult<NitValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
-        int check = ComputeCheckDigit(digits[..(len-1)]);
-        if (digits[len-1]-'0' != check)
+        int check = ComputeCheckDigit(digits[..(len - 1)]);
+        if (digits[len - 1] - '0' != check)
         {
             result = new ValidationResult<NitValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<NitValue>(true, new NitValue(new string(digits[..len])), ValidationError.None);
         return true;
@@ -44,14 +44,14 @@ public static class Nit
 
     public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written)
     {
-        written=0;
-        if (destination.Length<10) return false;
+        written = 0;
+        if (destination.Length < 10) return false;
         var rng = options.Seed.HasValue ? new Random(options.Seed.Value) : Random.Shared;
-        int len = rng.Next(2,10); // including check
+        int len = rng.Next(2, 10); // including check
         Span<char> digits = destination[..len];
-        for(int i=0;i<len-1;i++) digits[i]=(char)('0'+rng.Next(10));
-        digits[len-1]=(char)('0'+ComputeCheckDigit(digits[..(len-1)]));
-        written=len;
+        for (int i = 0; i < len - 1; i++) digits[i] = (char)('0' + rng.Next(10));
+        digits[len - 1] = (char)('0' + ComputeCheckDigit(digits[..(len - 1)]));
+        written = len;
         return true;
     }
 
@@ -67,13 +67,13 @@ public static class Nit
 
     private static bool Normalize(ReadOnlySpan<char> input, Span<char> dest, out int len)
     {
-        len=0;
-        foreach(var ch in input)
+        len = 0;
+        foreach (var ch in input)
         {
-            if (ch=='-'||ch==' ') continue;
-            if(!char.IsDigit(ch)){ len=0; return false; }
-            if(len>=dest.Length){ len=0; return false; }
-            dest[len++]=ch;
+            if (ch == '-' || ch == ' ') continue;
+            if (!char.IsDigit(ch)) { len = 0; return false; }
+            if (len >= dest.Length) { len = 0; return false; }
+            dest[len++] = ch;
         }
         return true;
     }

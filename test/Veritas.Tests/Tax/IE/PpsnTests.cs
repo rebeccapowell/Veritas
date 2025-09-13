@@ -10,7 +10,7 @@ public class PpsnTests
     [InlineData("1234567WA", false)]
     public void Validate_Works(string input, bool expected)
     {
-        Ppsn.TryValidate(input, out var result);
+        Ppsn.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 
@@ -19,7 +19,7 @@ public class PpsnTests
     {
         Span<char> buffer = stackalloc char[9];
         Ppsn.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Ppsn.TryValidate(buffer[..written], out var result);
+        Ppsn.TryValidate(buffer[..written], out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
     }
 }

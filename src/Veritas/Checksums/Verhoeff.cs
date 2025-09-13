@@ -29,7 +29,7 @@ public static class Verhoeff
         {7,0,4,6,9,1,3,2,5,8}
     };
 
-    private static readonly int[] inv = {0,4,3,2,1,5,6,7,8,9};
+    private static readonly int[] inv = { 0, 4, 3, 2, 1, 5, 6, 7, 8, 9 };
 
     /// <summary>Computes the Verhoeff check digit for the supplied numeric string.</summary>
     /// <param name="digits">Digits without the check digit.</param>

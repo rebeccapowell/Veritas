@@ -18,23 +18,23 @@ public static class OrgNr
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<OrgNrValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 10 && len != 12)
         {
             result = new ValidationResult<OrgNrValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         ReadOnlySpan<char> num = len == 10 ? digits[..10] : digits[(len - 10)..len];
         if (num[2] < '2')
         {
             result = new ValidationResult<OrgNrValue>(false, default, ValidationError.CountryRule);
-            return true;
+            return false;
         }
         if (!Luhn.Validate(num))
         {
             result = new ValidationResult<OrgNrValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<OrgNrValue>(true, new OrgNrValue(new string(digits[..len])), ValidationError.None);
         return true;

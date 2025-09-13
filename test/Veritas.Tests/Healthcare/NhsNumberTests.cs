@@ -9,7 +9,7 @@ public class NhsNumberTests
     [InlineData("9434765918", false)]
     public void Validate(string input, bool expected)
     {
-        NhsNumber.TryValidate(input, out var r);
+        NhsNumber.TryValidate(input, out var r).ShouldBe(expected);
         r.IsValid.ShouldBe(expected);
     }
 
@@ -18,7 +18,7 @@ public class NhsNumberTests
     {
         Span<char> buffer = stackalloc char[10];
         NhsNumber.TryGenerate(buffer, out var written).ShouldBeTrue();
-        NhsNumber.TryValidate(buffer[..written], out var r);
+        NhsNumber.TryValidate(buffer[..written], out var r).ShouldBeTrue();
         r.IsValid.ShouldBeTrue();
     }
 }

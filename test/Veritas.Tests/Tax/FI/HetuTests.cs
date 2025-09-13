@@ -10,7 +10,7 @@ public class HetuTests
     [InlineData("131052-308U", false)]
     public void Validate_Works(string input, bool expected)
     {
-        Hetu.TryValidate(input, out var result);
+        Hetu.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 
@@ -19,7 +19,7 @@ public class HetuTests
     {
         Span<char> buffer = stackalloc char[11];
         Hetu.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Hetu.TryValidate(buffer[..written], out var result);
+        Hetu.TryValidate(buffer[..written], out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
     }
 }

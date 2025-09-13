@@ -9,7 +9,7 @@ public class Ipv6Tests
     [InlineData("2001::85a3::7334", false)]
     public void Validate(string input, bool expected)
     {
-        Ipv6.TryValidate(input, out var r);
+        Ipv6.TryValidate(input, out var r).ShouldBe(expected);
         r.IsValid.ShouldBe(expected);
     }
 }

@@ -20,7 +20,7 @@ public static class Oui
     /// <summary>Attempts to validate the supplied input as an OUI code.</summary>
     /// <param name="input">Candidate code to validate.</param>
     /// <param name="result">The validation outcome including the parsed value when valid.</param>
-    /// <returns><c>true</c> if validation executed; the <see cref="ValidationResult{T}.IsValid"/> property indicates success.</returns>
+    /// <returns><c>true</c> if validation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<OuiValue> result)
     {
         Span<char> buf = stackalloc char[6];
@@ -32,19 +32,19 @@ public static class Oui
             if (!Uri.IsHexDigit(c))
             {
                 result = new ValidationResult<OuiValue>(false, default, ValidationError.Charset);
-                return true;
+                return false;
             }
             if (len >= 6)
             {
                 result = new ValidationResult<OuiValue>(false, default, ValidationError.Length);
-                return true;
+                return false;
             }
             buf[len++] = c;
         }
         if (len != 6)
         {
             result = new ValidationResult<OuiValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         result = new ValidationResult<OuiValue>(true, new OuiValue(new string(buf)), ValidationError.None);
         return true;

@@ -18,7 +18,7 @@ public static class Lei
         if (!Normalize(input, chars, out int len) || len != 20)
         {
             result = new ValidationResult<LeiValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         Span<char> digits = stackalloc char[40];
         int idx = 0;
@@ -27,7 +27,7 @@ public static class Lei
         if (Iso7064.ComputeMod97(digits[..idx]) != 1)
         {
             result = new ValidationResult<LeiValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         string value = new string(chars);
         result = new ValidationResult<LeiValue>(true, new LeiValue(value), ValidationError.None);

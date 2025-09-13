@@ -19,12 +19,12 @@ public static class Nif
         if (!Normalize(input, buffer, out int len))
         {
             result = new ValidationResult<NifValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 9)
         {
             result = new ValidationResult<NifValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         int number = 0;
         for (int i = 0; i < 8; i++)
@@ -35,7 +35,7 @@ public static class Nif
         if (buffer[8] != expected)
         {
             result = new ValidationResult<NifValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<NifValue>(true, new NifValue(new string(buffer)), ValidationError.None);
         return true;

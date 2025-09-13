@@ -12,7 +12,7 @@ public class AwbTests
     [InlineData("1231234567", false)]
     public void Validate(string input, bool expected)
     {
-        Awb.TryValidate(input, out var r);
+        Awb.TryValidate(input, out var r).ShouldBe(expected);
         r.IsValid.ShouldBe(expected);
     }
 
@@ -21,7 +21,7 @@ public class AwbTests
     {
         Span<char> buffer = stackalloc char[11];
         Awb.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Awb.TryValidate(buffer[..written], out var r);
+        Awb.TryValidate(buffer[..written], out var r).ShouldBeTrue();
         r.IsValid.ShouldBeTrue();
     }
 }

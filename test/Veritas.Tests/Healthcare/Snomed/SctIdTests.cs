@@ -11,7 +11,7 @@ public class SctIdTests
         Span<char> dst = stackalloc char[10];
         SctId.TryGenerate(10, new GenerationOptions { Seed = 42 }, dst, out var written).ShouldBeTrue();
         var s = new string(dst[..written]);
-        SctId.TryValidate(s, out var r);
+        SctId.TryValidate(s, out var r).ShouldBeTrue();
         r.IsValid.ShouldBeTrue();
     }
 
@@ -24,7 +24,7 @@ public class SctIdTests
         // corrupt last digit
         char bad = s[^1] == '0' ? '1' : '0';
         var badStr = s[..^1] + bad;
-        SctId.TryValidate(badStr, out var r);
+        SctId.TryValidate(badStr, out var r).ShouldBeFalse();
         r.IsValid.ShouldBeFalse();
     }
 }

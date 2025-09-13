@@ -10,7 +10,7 @@ public class ImeiTests
     [InlineData("490154203237519", false)]
     public void Validate(string input, bool expected)
     {
-        Imei.TryValidate(input, out var r);
+        Imei.TryValidate(input, out var r).ShouldBe(expected);
         r.IsValid.ShouldBe(expected);
     }
 
@@ -19,7 +19,7 @@ public class ImeiTests
     {
         Span<char> buffer = stackalloc char[15];
         Imei.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Imei.TryValidate(buffer[..written], out var r);
+        Imei.TryValidate(buffer[..written], out var r).ShouldBeTrue();
         r.IsValid.ShouldBeTrue();
     }
 }

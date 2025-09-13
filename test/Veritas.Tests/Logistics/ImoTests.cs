@@ -12,7 +12,7 @@ public class ImoTests
     [InlineData("123456", false)]
     public void Validate(string input, bool expected)
     {
-        Imo.TryValidate(input, out var r);
+        Imo.TryValidate(input, out var r).ShouldBe(expected);
         r.IsValid.ShouldBe(expected);
     }
 
@@ -21,7 +21,7 @@ public class ImoTests
     {
         Span<char> buffer = stackalloc char[10];
         Imo.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Imo.TryValidate(buffer[..written], out var r);
+        Imo.TryValidate(buffer[..written], out var r).ShouldBeTrue();
         r.IsValid.ShouldBeTrue();
     }
 }

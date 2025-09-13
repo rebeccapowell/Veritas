@@ -9,7 +9,7 @@ public class OrgNrTests
     [InlineData("5560160681", false)]
     public void Validate(string input, bool expected)
     {
-        OrgNr.TryValidate(input, out var result);
+        OrgNr.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 }

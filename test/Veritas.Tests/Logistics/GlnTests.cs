@@ -10,7 +10,7 @@ public class GlnTests
     [InlineData("1234567890123", false)]
     public void Validate(string input, bool expected)
     {
-        Gln.TryValidate(input, out var r);
+        Gln.TryValidate(input, out var r).ShouldBe(expected);
         r.IsValid.ShouldBe(expected);
     }
 
@@ -19,7 +19,7 @@ public class GlnTests
     {
         Span<char> buffer = stackalloc char[13];
         Gln.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Gln.TryValidate(buffer[..written], out var r);
+        Gln.TryValidate(buffer[..written], out var r).ShouldBeTrue();
         r.IsValid.ShouldBeTrue();
     }
 }

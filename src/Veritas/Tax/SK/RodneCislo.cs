@@ -20,19 +20,19 @@ public static class RodneCislo
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<RodneCisloValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 9 && len != 10)
         {
             result = new ValidationResult<RodneCisloValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         if (len == 9)
         {
             if (ParseLong(digits[..9]) % 11 != 0)
             {
                 result = new ValidationResult<RodneCisloValue>(false, default, ValidationError.Checksum);
-                return true;
+                return false;
             }
         }
         else
@@ -43,7 +43,7 @@ public static class RodneCislo
             if (check != digits[9] - '0')
             {
                 result = new ValidationResult<RodneCisloValue>(false, default, ValidationError.Checksum);
-                return true;
+                return false;
             }
         }
         result = new ValidationResult<RodneCisloValue>(true, new RodneCisloValue(new string(digits[..len])), ValidationError.None);
@@ -84,7 +84,7 @@ public static class RodneCislo
     private static long ParseLong(ReadOnlySpan<char> digits)
     {
         long n = 0;
-        foreach (var ch in digits) n = n*10 + (ch - '0');
+        foreach (var ch in digits) n = n * 10 + (ch - '0');
         return n;
     }
 

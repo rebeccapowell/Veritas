@@ -12,7 +12,7 @@ public static class Aadhaar
         if (!Normalize(input, digits, out int len) || len != 12)
         {
             result = new ValidationResult<AadhaarValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         bool allSame = true;
         for (int i = 1; i < 12; i++)
@@ -20,12 +20,12 @@ public static class Aadhaar
         if (allSame)
         {
             result = new ValidationResult<AadhaarValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (!Verhoeff.Validate(digits))
         {
             result = new ValidationResult<AadhaarValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         var value = new string(digits);
         result = new ValidationResult<AadhaarValue>(true, new AadhaarValue(value), ValidationError.None);

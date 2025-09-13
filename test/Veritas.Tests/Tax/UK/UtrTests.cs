@@ -14,7 +14,7 @@ public class UtrTests
     [InlineData("11234A6789", false)]
     public void Validate(string input, bool expected)
     {
-        Utr.TryValidate(input, out var r);
+        Utr.TryValidate(input, out var r).ShouldBe(expected);
         r.IsValid.ShouldBe(expected);
     }
 
@@ -23,7 +23,7 @@ public class UtrTests
     {
         Span<char> buffer = stackalloc char[10];
         Utr.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Utr.TryValidate(buffer[..written], out var r);
+        Utr.TryValidate(buffer[..written], out var r).ShouldBeTrue();
         r.IsValid.ShouldBeTrue();
     }
 }

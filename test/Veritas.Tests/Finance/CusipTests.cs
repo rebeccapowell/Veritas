@@ -9,7 +9,7 @@ public class CusipTests
     [InlineData("037833101", false)]
     public void Validate_Works(string input, bool expected)
     {
-        Cusip.TryValidate(input, out var result);
+        Cusip.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 
@@ -18,7 +18,7 @@ public class CusipTests
     {
         Span<char> buffer = stackalloc char[9];
         Cusip.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Cusip.TryValidate(buffer[..written], out var result);
+        Cusip.TryValidate(buffer[..written], out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
     }
 }

@@ -21,12 +21,13 @@ public static class Email
         {
             var addr = new MailAddress(str);
             result = new ValidationResult<EmailValue>(true, new EmailValue(addr.Address), ValidationError.None);
+            return true;
         }
         catch
         {
             result = new ValidationResult<EmailValue>(false, default, ValidationError.Format);
+            return false;
         }
-        return true;
     }
 }
 

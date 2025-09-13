@@ -9,7 +9,7 @@ public class SinTests
     [InlineData("046454287", false)]
     public void Validate_Works(string input, bool expected)
     {
-        Sin.TryValidate(input, out var result);
+        Sin.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 
@@ -18,7 +18,7 @@ public class SinTests
     {
         Span<char> buffer = stackalloc char[9];
         Sin.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Sin.TryValidate(buffer[..written], out var result);
+        Sin.TryValidate(buffer[..written], out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
     }
 }

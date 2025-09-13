@@ -9,7 +9,7 @@ public class ItinTests
     [InlineData("912-93-4567", false)]
     public void Validate(string input, bool expected)
     {
-        Itin.TryValidate(input, out var r);
+        Itin.TryValidate(input, out var r).ShouldBe(expected);
         r.IsValid.ShouldBe(expected);
     }
 }

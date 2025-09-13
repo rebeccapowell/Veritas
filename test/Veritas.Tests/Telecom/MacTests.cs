@@ -9,7 +9,7 @@ public class MacTests
     [InlineData("00:1A:2B:3C:4D:5G", false)]
     public void Validate(string input, bool expected)
     {
-        Mac.TryValidate(input, out var r);
+        Mac.TryValidate(input, out var r).ShouldBe(expected);
         r.IsValid.ShouldBe(expected);
     }
 
@@ -18,7 +18,7 @@ public class MacTests
     {
         Span<char> buffer = stackalloc char[12];
         Mac.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Mac.TryValidate(buffer[..written], out var r);
+        Mac.TryValidate(buffer[..written], out var r).ShouldBeTrue();
         r.IsValid.ShouldBeTrue();
     }
 }

@@ -22,18 +22,18 @@ public static class Cnp
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<CnpValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 13)
         {
             result = new ValidationResult<CnpValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         int check = ComputeCheckDigit(digits[..12]);
         if (digits[12] - '0' != check)
         {
             result = new ValidationResult<CnpValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<CnpValue>(true, new CnpValue(new string(digits)), ValidationError.None);
         return true;

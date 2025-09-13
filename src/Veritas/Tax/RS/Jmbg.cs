@@ -22,18 +22,18 @@ public static class Jmbg
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<JmbgValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 13)
         {
             result = new ValidationResult<JmbgValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         int check = ComputeCheckDigit(digits[..12]);
         if (digits[12] - '0' != check)
         {
             result = new ValidationResult<JmbgValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<JmbgValue>(true, new JmbgValue(new string(digits)), ValidationError.None);
         return true;

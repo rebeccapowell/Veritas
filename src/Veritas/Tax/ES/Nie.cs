@@ -19,18 +19,18 @@ public static class Nie
         if (!Normalize(input, buffer, out int len))
         {
             result = new ValidationResult<NieValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 9)
         {
             result = new ValidationResult<NieValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         char first = buffer[0];
         if (first != 'X' && first != 'Y' && first != 'Z')
         {
             result = new ValidationResult<NieValue>(false, default, ValidationError.CountryRule);
-            return true;
+            return false;
         }
         int number = first == 'X' ? 0 : first == 'Y' ? 1 : 2;
         for (int i = 1; i < 8; i++)
@@ -41,7 +41,7 @@ public static class Nie
         if (buffer[8] != expected)
         {
             result = new ValidationResult<NieValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<NieValue>(true, new NieValue(new string(buffer)), ValidationError.None);
         return true;

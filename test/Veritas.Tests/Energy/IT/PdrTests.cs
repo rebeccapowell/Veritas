@@ -9,7 +9,7 @@ public class PdrTests
     [InlineData("1234567890123", false)]
     public void Validate_Works(string input, bool expected)
     {
-        Pdr.TryValidate(input, out var result);
+        Pdr.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 }

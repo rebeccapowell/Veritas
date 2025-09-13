@@ -19,22 +19,22 @@ public static class Pan
         if (!Normalize(input, chars, out int len))
         {
             result = new ValidationResult<PanValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 10)
         {
             result = new ValidationResult<PanValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         // pattern: 5 letters, 4 digits, 1 letter
-        for (int i = 0; i < 5; i++) if (!char.IsLetter(chars[i])) { result = new ValidationResult<PanValue>(false, default, ValidationError.Charset); return true; }
-        for (int i = 5; i < 9; i++) if (!char.IsDigit(chars[i])) { result = new ValidationResult<PanValue>(false, default, ValidationError.Charset); return true; }
-        if (!char.IsLetter(chars[9])) { result = new ValidationResult<PanValue>(false, default, ValidationError.Charset); return true; }
+        for (int i = 0; i < 5; i++) if (!char.IsLetter(chars[i])) { result = new ValidationResult<PanValue>(false, default, ValidationError.Charset); return false; }
+        for (int i = 5; i < 9; i++) if (!char.IsDigit(chars[i])) { result = new ValidationResult<PanValue>(false, default, ValidationError.Charset); return false; }
+        if (!char.IsLetter(chars[9])) { result = new ValidationResult<PanValue>(false, default, ValidationError.Charset); return false; }
         int sum = 0;
         for (int i = 0; i < 9; i++)
         {
             int v = Alphabet.IndexOf(chars[i]);
-            if (v < 0) { result = new ValidationResult<PanValue>(false, default, ValidationError.Charset); return true; }
+            if (v < 0) { result = new ValidationResult<PanValue>(false, default, ValidationError.Charset); return false; }
             sum += v * (i + 1);
         }
         int check = sum % 36;
@@ -42,7 +42,7 @@ public static class Pan
         if (chars[9] != expected)
         {
             result = new ValidationResult<PanValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<PanValue>(true, new PanValue(new string(chars)), ValidationError.None);
         return true;

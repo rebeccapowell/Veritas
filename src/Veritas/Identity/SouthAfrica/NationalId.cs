@@ -21,17 +21,17 @@ public static class NationalId
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<NationalIdValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 13)
         {
             result = new ValidationResult<NationalIdValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         if (!Luhn.Validate(digits))
         {
             result = new ValidationResult<NationalIdValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<NationalIdValue>(true, new NationalIdValue(new string(digits)), ValidationError.None);
         return true;

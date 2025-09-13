@@ -21,19 +21,19 @@ public static class Eic
     /// <summary>Attempts to validate the supplied input as an EIC code.</summary>
     /// <param name="input">Candidate code to validate.</param>
     /// <param name="result">The validation outcome including the parsed value when valid.</param>
-    /// <returns><c>true</c> if validation executed; the <see cref="ValidationResult{T}.IsValid"/> property indicates success.</returns>
+    /// <returns><c>true</c> if validation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<EicValue> result)
     {
         Span<char> buffer = stackalloc char[16];
         if (!Normalize(input, buffer, out int len) || len != 16)
         {
             result = new ValidationResult<EicValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         if (!Iso7064.ValidateMod37_2(buffer))
         {
             result = new ValidationResult<EicValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         string value = new string(buffer);
         result = new ValidationResult<EicValue>(true, new EicValue(value), ValidationError.None);

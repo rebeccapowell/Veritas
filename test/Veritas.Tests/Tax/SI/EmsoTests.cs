@@ -29,7 +29,7 @@ public class EmsoTests
     [InlineData("abcdefghijklm")]
     public void ValidateBad(string input)
     {
-        Emso.TryValidate(input, out var r).ShouldBeTrue();
+        Emso.TryValidate(input, out var r).ShouldBeFalse();
         r.IsValid.ShouldBeFalse();
     }
 }

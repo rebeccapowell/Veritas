@@ -20,17 +20,17 @@ public static class Pan
         if (!Normalize(input, buffer, out int len))
         {
             result = new ValidationResult<PanValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len < 12 || len > 19)
         {
             result = new ValidationResult<PanValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         if (!Luhn.Validate(buffer[..len]))
         {
             result = new ValidationResult<PanValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         string value = new string(buffer[..len]);
         result = new ValidationResult<PanValue>(true, new PanValue(value), ValidationError.None);

@@ -9,7 +9,7 @@ public class SiretTests
     [InlineData("55210055400014", false)]
     public void Validate(string input, bool expected)
     {
-        Siret.TryValidate(input, out var r);
+        Siret.TryValidate(input, out var r).ShouldBe(expected);
         r.IsValid.ShouldBe(expected);
     }
 }

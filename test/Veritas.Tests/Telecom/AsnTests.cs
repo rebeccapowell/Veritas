@@ -12,7 +12,7 @@ public class AsnTests
     [InlineData("abc", false)]
     public void Validate(string input, bool expected)
     {
-        Asn.TryValidate(input, out var result);
+        Asn.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 }

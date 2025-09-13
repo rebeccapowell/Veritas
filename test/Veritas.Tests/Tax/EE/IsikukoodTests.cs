@@ -29,7 +29,7 @@ public class IsikukoodTests
     [InlineData("abcdefghijk")]
     public void ValidateBad(string input)
     {
-        Isikukood.TryValidate(input, out var r).ShouldBeTrue();
+        Isikukood.TryValidate(input, out var r).ShouldBeFalse();
         r.IsValid.ShouldBeFalse();
     }
 }

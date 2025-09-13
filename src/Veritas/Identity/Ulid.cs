@@ -17,11 +17,11 @@ public static class Ulid
         {
             if (ch == ' ' || ch == '-') continue;
             char u = char.ToUpperInvariant(ch);
-            if (Alphabet.IndexOf(u) < 0) { result = new ValidationResult<UlidValue>(false, default, ValidationError.Charset); return true; }
-            if (len >= 26) { result = new ValidationResult<UlidValue>(false, default, ValidationError.Length); return true; }
+            if (Alphabet.IndexOf(u) < 0) { result = new ValidationResult<UlidValue>(false, default, ValidationError.Charset); return false; }
+            if (len >= 26) { result = new ValidationResult<UlidValue>(false, default, ValidationError.Length); return false; }
             buf[len++] = u;
         }
-        if (len != 26) { result = new ValidationResult<UlidValue>(false, default, ValidationError.Length); return true; }
+        if (len != 26) { result = new ValidationResult<UlidValue>(false, default, ValidationError.Length); return false; }
         result = new ValidationResult<UlidValue>(true, new UlidValue(new string(buf)), ValidationError.None);
         return true;
     }

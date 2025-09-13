@@ -10,7 +10,7 @@ public class EicTests
     [InlineData("XAT000001234567", false)]
     public void Validate_Works(string input, bool expected)
     {
-        Eic.TryValidate(input, out var result);
+        Eic.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 }

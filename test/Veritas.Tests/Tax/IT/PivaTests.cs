@@ -10,14 +10,14 @@ public class PivaTests
     [InlineData("01114601007", false)]
     public void Validate(string input, bool expected)
     {
-        Piva.TryValidate(input, out var result);
+        Piva.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 
     [Theory, AutoData]
     public void RandomString_IsInvalid(string random)
     {
-        Piva.TryValidate(random, out var result);
+        Piva.TryValidate(random, out var result).ShouldBeFalse();
         result.IsValid.ShouldBeFalse();
     }
 }

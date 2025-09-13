@@ -19,7 +19,7 @@ public static class Ethereum
         if (input.Length != 40)
         {
             result = new ValidationResult<EthereumValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         for (int i = 0; i < input.Length; i++)
         {
@@ -27,7 +27,7 @@ public static class Ethereum
             if (!Uri.IsHexDigit(c))
             {
                 result = new ValidationResult<EthereumValue>(false, default, ValidationError.Charset);
-                return true;
+                return false;
             }
         }
         string value = "0x" + new string(input).ToLowerInvariant();

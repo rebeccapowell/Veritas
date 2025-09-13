@@ -18,17 +18,17 @@ public static class Bn
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<BnValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 9)
         {
             result = new ValidationResult<BnValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         if (!Luhn.Validate(digits))
         {
             result = new ValidationResult<BnValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<BnValue>(true, new BnValue(new string(digits)), ValidationError.None);
         return true;

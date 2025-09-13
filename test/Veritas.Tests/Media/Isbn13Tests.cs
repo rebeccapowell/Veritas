@@ -10,7 +10,7 @@ public class Isbn13Tests
     [InlineData("9780306406158", false)]
     public void Validate(string input, bool expected)
     {
-        Isbn13.TryValidate(input, out var r);
+        Isbn13.TryValidate(input, out var r).ShouldBe(expected);
         r.IsValid.ShouldBe(expected);
     }
 
@@ -19,7 +19,7 @@ public class Isbn13Tests
     {
         Span<char> buffer = stackalloc char[13];
         Isbn13.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Isbn13.TryValidate(buffer[..written], out var r);
+        Isbn13.TryValidate(buffer[..written], out var r).ShouldBeTrue();
         r.IsValid.ShouldBeTrue();
     }
 }

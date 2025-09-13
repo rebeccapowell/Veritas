@@ -23,14 +23,14 @@ public static class Ksuid
         if (input.Length != 27)
         {
             result = new ValidationResult<KsuidValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         for (int i = 0; i < input.Length; i++)
         {
             if (Alphabet.IndexOf(input[i]) < 0)
             {
                 result = new ValidationResult<KsuidValue>(false, default, ValidationError.Charset);
-                return true;
+                return false;
             }
         }
         result = new ValidationResult<KsuidValue>(true, new KsuidValue(new string(input)), ValidationError.None);

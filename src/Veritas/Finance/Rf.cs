@@ -20,12 +20,12 @@ public static class Rf
         if (!Normalize(input, buffer, out int len))
         {
             result = new ValidationResult<RfValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len < 5 || len > 25 || buffer[0] != 'R' || buffer[1] != 'F')
         {
             result = new ValidationResult<RfValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         Span<char> digits = stackalloc char[50];
         int idx = 0;
@@ -34,7 +34,7 @@ public static class Rf
         if (Iso7064.ComputeMod97(digits[..idx]) != 1)
         {
             result = new ValidationResult<RfValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         string value = new string(buffer[..len]);
         result = new ValidationResult<RfValue>(true, new RfValue(value), ValidationError.None);

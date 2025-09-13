@@ -11,8 +11,8 @@ public readonly struct IrdValue
 
 public static class Ird
 {
-    private static readonly int[] PrimaryWeights = {3,2,7,6,5,4,3,2};
-    private static readonly int[] SecondaryWeights = {7,4,3,2,5,2,7,6};
+    private static readonly int[] PrimaryWeights = { 3, 2, 7, 6, 5, 4, 3, 2 };
+    private static readonly int[] SecondaryWeights = { 7, 4, 3, 2, 5, 2, 7, 6 };
 
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<IrdValue> result)
     {
@@ -20,12 +20,12 @@ public static class Ird
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<IrdValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len < 8 || len > 9)
         {
             result = new ValidationResult<IrdValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         Span<char> padded = stackalloc char[9];
         int offset = 9 - len;
@@ -37,7 +37,7 @@ public static class Ird
         if (check == 10 || padded[8] - '0' != check)
         {
             result = new ValidationResult<IrdValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<IrdValue>(true, new IrdValue(new string(padded)), ValidationError.None);
         return true;

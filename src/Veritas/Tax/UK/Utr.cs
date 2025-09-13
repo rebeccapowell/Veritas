@@ -20,12 +20,12 @@ public static class Utr
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<UtrValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 10)
         {
             result = new ValidationResult<UtrValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         int sum = 0;
         for (int i = 0; i < 9; i++)
@@ -34,7 +34,7 @@ public static class Utr
         if (digits[0] != check)
         {
             result = new ValidationResult<UtrValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         string value = new string(digits);
         result = new ValidationResult<UtrValue>(true, new UtrValue(value), ValidationError.None);

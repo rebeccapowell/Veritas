@@ -9,7 +9,7 @@ public class Iso6346Tests
     [InlineData("MSCU6639871", false)]
     public void Validate(string input, bool expected)
     {
-        Iso6346.TryValidate(input, out var r);
+        Iso6346.TryValidate(input, out var r).ShouldBe(expected);
         r.IsValid.ShouldBe(expected);
     }
 }

@@ -22,25 +22,25 @@ public static class Curp
         if (!Normalize(input, chars, out int len))
         {
             result = new ValidationResult<CurpValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 18)
         {
             result = new ValidationResult<CurpValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         int sum = 0;
         for (int i = 0; i < 17; i++)
         {
             int v = Alphabet.IndexOf(chars[i]);
-            if (v < 0) { result = new ValidationResult<CurpValue>(false, default, ValidationError.Charset); return true; }
+            if (v < 0) { result = new ValidationResult<CurpValue>(false, default, ValidationError.Charset); return false; }
             sum += v * (18 - i);
         }
         int check = (10 - (sum % 10)) % 10;
         if (chars[17] - '0' != check)
         {
             result = new ValidationResult<CurpValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<CurpValue>(true, new CurpValue(new string(chars)), ValidationError.None);
         return true;

@@ -29,7 +29,7 @@ public class JmbgTests
     [InlineData("abcdefghijklm")]
     public void ValidateBad(string input)
     {
-        Jmbg.TryValidate(input, out var r).ShouldBeTrue();
+        Jmbg.TryValidate(input, out var r).ShouldBeFalse();
         r.IsValid.ShouldBeFalse();
     }
 }

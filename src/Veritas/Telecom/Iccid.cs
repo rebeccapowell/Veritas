@@ -21,7 +21,7 @@ public static class Iccid
     /// <summary>Attempts to validate the supplied input as an ICCID.</summary>
     /// <param name="input">Candidate code to validate.</param>
     /// <param name="result">The validation outcome including the parsed value when valid.</param>
-    /// <returns><c>true</c> if validation executed; the <see cref="ValidationResult{T}.IsValid"/> property indicates success.</returns>
+    /// <returns><c>true</c> if validation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<IccidValue> result)
     {
         Span<char> digits = stackalloc char[20];
@@ -29,12 +29,12 @@ public static class Iccid
         foreach (var ch in input)
         {
             if (ch == ' ' || ch == '-') continue;
-            if (ch < '0' || ch > '9') { result = new ValidationResult<IccidValue>(false, default, ValidationError.Charset); return true; }
-            if (len >= 20) { result = new ValidationResult<IccidValue>(false, default, ValidationError.Length); return true; }
+            if (ch < '0' || ch > '9') { result = new ValidationResult<IccidValue>(false, default, ValidationError.Charset); return false; }
+            if (len >= 20) { result = new ValidationResult<IccidValue>(false, default, ValidationError.Length); return false; }
             digits[len++] = ch;
         }
-        if (len < 19 || len > 20) { result = new ValidationResult<IccidValue>(false, default, ValidationError.Length); return true; }
-        if (!Luhn.Validate(digits[..len])) { result = new ValidationResult<IccidValue>(false, default, ValidationError.Checksum); return true; }
+        if (len < 19 || len > 20) { result = new ValidationResult<IccidValue>(false, default, ValidationError.Length); return false; }
+        if (!Luhn.Validate(digits[..len])) { result = new ValidationResult<IccidValue>(false, default, ValidationError.Checksum); return false; }
         result = new ValidationResult<IccidValue>(true, new IccidValue(new string(digits[..len])), ValidationError.None);
         return true;
     }

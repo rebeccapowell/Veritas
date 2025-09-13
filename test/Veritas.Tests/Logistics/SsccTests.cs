@@ -10,7 +10,7 @@ public class SsccTests
     [InlineData("123456789012345671", false)]
     public void Validate(string input, bool expected)
     {
-        Sscc.TryValidate(input, out var r);
+        Sscc.TryValidate(input, out var r).ShouldBe(expected);
         r.IsValid.ShouldBe(expected);
     }
 
@@ -19,7 +19,7 @@ public class SsccTests
     {
         Span<char> buffer = stackalloc char[18];
         Sscc.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Sscc.TryValidate(buffer[..written], out var r);
+        Sscc.TryValidate(buffer[..written], out var r).ShouldBeTrue();
         r.IsValid.ShouldBeTrue();
     }
 }

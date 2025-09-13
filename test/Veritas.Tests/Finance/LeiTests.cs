@@ -10,7 +10,7 @@ public class LeiTests
     [InlineData("PPOT00HKB2SNV4KKT", false)]
     public void Validate(string input, bool expected)
     {
-        Lei.TryValidate(input, out var result);
+        Lei.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 }

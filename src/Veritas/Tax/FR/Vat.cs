@@ -17,12 +17,12 @@ public static class Vat
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<VatValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 11)
         {
             result = new ValidationResult<VatValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         // first two digits are the checksum key
         int key = (digits[0] - '0') * 10 + (digits[1] - '0');
@@ -35,7 +35,7 @@ public static class Vat
         if (key != expected)
         {
             result = new ValidationResult<VatValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<VatValue>(true, new VatValue(new string(digits)), ValidationError.None);
         return true;

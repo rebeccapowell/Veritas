@@ -10,7 +10,7 @@ public class GtinTests
     [InlineData("4006381333932", false)]
     public void Validate(string input, bool expected)
     {
-        Gtin.TryValidate(input, out var r);
+        Gtin.TryValidate(input, out var r).ShouldBe(expected);
         r.IsValid.ShouldBe(expected);
     }
 
@@ -19,7 +19,7 @@ public class GtinTests
     {
         Span<char> buffer = stackalloc char[13];
         Gtin.TryGenerate(13, buffer, out var written).ShouldBeTrue();
-        Gtin.TryValidate(buffer[..written], out var r);
+        Gtin.TryValidate(buffer[..written], out var r).ShouldBeTrue();
         r.IsValid.ShouldBeTrue();
     }
 }

@@ -20,12 +20,12 @@ public static class Regon
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<RegonValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 9 && len != 14)
         {
             result = new ValidationResult<RegonValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         if (len == 9)
         {
@@ -37,7 +37,7 @@ public static class Regon
             if (check != digits[8] - '0')
             {
                 result = new ValidationResult<RegonValue>(false, default, ValidationError.Checksum);
-                return true;
+                return false;
             }
         }
         else
@@ -50,7 +50,7 @@ public static class Regon
             if (check != digits[13] - '0')
             {
                 result = new ValidationResult<RegonValue>(false, default, ValidationError.Checksum);
-                return true;
+                return false;
             }
         }
         result = new ValidationResult<RegonValue>(true, new RegonValue(new string(digits[..len])), ValidationError.None);

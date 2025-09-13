@@ -29,7 +29,7 @@ public class KennitalaTests
     [InlineData("abcdefghij")]
     public void ValidateBad(string input)
     {
-        Kennitala.TryValidate(input, out var r).ShouldBeTrue();
+        Kennitala.TryValidate(input, out var r).ShouldBeFalse();
         r.IsValid.ShouldBeFalse();
     }
 }

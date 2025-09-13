@@ -15,12 +15,12 @@ public static class Gln
         foreach (var ch in input)
         {
             if (ch == ' ' || ch == '-') continue;
-            if (ch < '0' || ch > '9') { result = new ValidationResult<GlnValue>(false, default, ValidationError.Charset); return true; }
-            if (len >= 13) { result = new ValidationResult<GlnValue>(false, default, ValidationError.Length); return true; }
+            if (ch < '0' || ch > '9') { result = new ValidationResult<GlnValue>(false, default, ValidationError.Charset); return false; }
+            if (len >= 13) { result = new ValidationResult<GlnValue>(false, default, ValidationError.Length); return false; }
             digits[len++] = ch;
         }
-        if (len != 13) { result = new ValidationResult<GlnValue>(false, default, ValidationError.Length); return true; }
-        if (!Gs1.Validate(digits)) { result = new ValidationResult<GlnValue>(false, default, ValidationError.Checksum); return true; }
+        if (len != 13) { result = new ValidationResult<GlnValue>(false, default, ValidationError.Length); return false; }
+        if (!Gs1.Validate(digits)) { result = new ValidationResult<GlnValue>(false, default, ValidationError.Checksum); return false; }
         result = new ValidationResult<GlnValue>(true, new GlnValue(new string(digits)), ValidationError.None);
         return true;
     }

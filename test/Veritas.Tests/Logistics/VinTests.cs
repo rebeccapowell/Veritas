@@ -9,7 +9,7 @@ public class VinTests
     [InlineData("1HGCM82633A004353", false)]
     public void Validate(string input, bool expected)
     {
-        Vin.TryValidate(input, out var r);
+        Vin.TryValidate(input, out var r).ShouldBe(expected);
         r.IsValid.ShouldBe(expected);
     }
 }

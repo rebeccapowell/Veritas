@@ -19,24 +19,24 @@ public static class Isni
             if (len >= 16)
             {
                 result = new ValidationResult<IsniValue>(false, default, ValidationError.Length);
-                return true;
+                return false;
             }
             if ((up < '0' || up > '9') && up != 'X')
             {
                 result = new ValidationResult<IsniValue>(false, default, ValidationError.Charset);
-                return true;
+                return false;
             }
             buf[len++] = up;
         }
         if (len != 16)
         {
             result = new ValidationResult<IsniValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         if (!Iso7064.ValidateMod11_2(buf))
         {
             result = new ValidationResult<IsniValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<IsniValue>(true, new IsniValue(new string(buf)), ValidationError.None);
         return true;

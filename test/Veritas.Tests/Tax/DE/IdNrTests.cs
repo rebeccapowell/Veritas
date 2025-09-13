@@ -10,7 +10,7 @@ public class IdNrTests
     [InlineData("36574261890", false)]
     public void Validate(string input, bool expected)
     {
-        IdNr.TryValidate(input, out var result);
+        IdNr.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 
@@ -19,7 +19,7 @@ public class IdNrTests
     {
         Span<char> buffer = stackalloc char[11];
         IdNr.TryGenerate(buffer, out var written).ShouldBeTrue();
-        IdNr.TryValidate(buffer[..written], out var result);
+        IdNr.TryValidate(buffer[..written], out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
     }
 }

@@ -10,7 +10,7 @@ public class MaloTests
     [InlineData("1234567890A", false)]
     public void Validate(string input, bool expected)
     {
-        Malo.TryValidate(input, out var result);
+        Malo.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 }

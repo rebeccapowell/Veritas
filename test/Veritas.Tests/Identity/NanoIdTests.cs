@@ -10,7 +10,7 @@ public class NanoIdTests
     [InlineData("0123456789ABCDEFGH#K", false)]
     public void Validate(string input, bool expected)
     {
-        NanoId.TryValidate(input, out var r);
+        NanoId.TryValidate(input, out var r).ShouldBe(expected);
         r.IsValid.ShouldBe(expected);
     }
 
@@ -19,7 +19,7 @@ public class NanoIdTests
     {
         Span<char> buffer = stackalloc char[21];
         NanoId.TryGenerate(buffer, out var written).ShouldBeTrue();
-        NanoId.TryValidate(buffer[..written], out var r);
+        NanoId.TryValidate(buffer[..written], out var r).ShouldBeTrue();
         r.IsValid.ShouldBeTrue();
     }
 }

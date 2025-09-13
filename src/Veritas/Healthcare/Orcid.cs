@@ -16,12 +16,12 @@ public static class Orcid
         {
             if (ch == '-' || ch == ' ') continue;
             char u = char.ToUpperInvariant(ch);
-            if ((u < '0' || u > '9') && !(u == 'X' && len == 15)) { result = new ValidationResult<OrcidValue>(false, default, ValidationError.Charset); return true; }
-            if (len >= 16) { result = new ValidationResult<OrcidValue>(false, default, ValidationError.Length); return true; }
+            if ((u < '0' || u > '9') && !(u == 'X' && len == 15)) { result = new ValidationResult<OrcidValue>(false, default, ValidationError.Charset); return false; }
+            if (len >= 16) { result = new ValidationResult<OrcidValue>(false, default, ValidationError.Length); return false; }
             digits[len++] = u;
         }
-        if (len != 16) { result = new ValidationResult<OrcidValue>(false, default, ValidationError.Length); return true; }
-        if (!Iso7064.ValidateMod11_2(digits)) { result = new ValidationResult<OrcidValue>(false, default, ValidationError.Checksum); return true; }
+        if (len != 16) { result = new ValidationResult<OrcidValue>(false, default, ValidationError.Length); return false; }
+        if (!Iso7064.ValidateMod11_2(digits)) { result = new ValidationResult<OrcidValue>(false, default, ValidationError.Checksum); return false; }
         result = new ValidationResult<OrcidValue>(true, new OrcidValue(new string(digits)), ValidationError.None);
         return true;
     }

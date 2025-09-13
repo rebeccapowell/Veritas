@@ -9,7 +9,7 @@ public class InPanTests
     [InlineData("ABCDE1234A", false)]
     public void Validate_Works(string input, bool expected)
     {
-        Pan.TryValidate(input, out var result);
+        Pan.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 
@@ -18,7 +18,7 @@ public class InPanTests
     {
         Span<char> buffer = stackalloc char[10];
         Pan.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Pan.TryValidate(buffer[..written], out var result);
+        Pan.TryValidate(buffer[..written], out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
     }
 }

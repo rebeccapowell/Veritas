@@ -22,30 +22,30 @@ public static class Ppsn
         if (!Normalize(input, buffer, out int len))
         {
             result = new ValidationResult<PpsnValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 8 && len != 9)
         {
             result = new ValidationResult<PpsnValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         for (int i = 0; i < 7; i++)
             if (!char.IsDigit(buffer[i]))
             {
                 result = new ValidationResult<PpsnValue>(false, default, ValidationError.Format);
-                return true;
+                return false;
             }
         char check = buffer[7];
         if (!char.IsLetter(check))
         {
             result = new ValidationResult<PpsnValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         char second = len == 9 ? buffer[8] : 'W';
         if (len == 9 && !char.IsLetter(second))
         {
             result = new ValidationResult<PpsnValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         int sum = 0;
         int[] weights = { 8, 7, 6, 5, 4, 3, 2 };
@@ -55,14 +55,14 @@ public static class Ppsn
         if (secondVal < 0)
         {
             result = new ValidationResult<PpsnValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         sum += secondVal * 9;
         char expected = CheckMap[sum % 23];
         if (check != expected)
         {
             result = new ValidationResult<PpsnValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<PpsnValue>(true, new PpsnValue(new string(buffer[..len])), ValidationError.None);
         return true;

@@ -9,7 +9,7 @@ public class BicTests
     [InlineData("DEUT12FF", false)]
     public void Validate_Works(string input, bool expected)
     {
-        Bic.TryValidate(input, out var result);
+        Bic.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 }

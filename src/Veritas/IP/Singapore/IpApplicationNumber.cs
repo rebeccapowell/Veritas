@@ -11,26 +11,26 @@ public static class IpApplicationNumber
         if (!Normalize(input, buf, out int len) || len != 12)
         {
             result = new ValidationResult<IpApplicationNumberValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         if (!char.IsLetter(buf[0]) || !char.IsLetter(buf[1]))
         {
             result = new ValidationResult<IpApplicationNumberValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         for (int i = 2; i < 12; i++)
         {
             if (!char.IsDigit(buf[i]))
             {
                 result = new ValidationResult<IpApplicationNumberValue>(false, default, ValidationError.Format);
-                return true;
+                return false;
             }
         }
         byte check = Damm.Compute(buf.Slice(2, 9));
         if (buf[11] != (char)('0' + check))
         {
             result = new ValidationResult<IpApplicationNumberValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         var value = new string(buf);
         result = new ValidationResult<IpApplicationNumberValue>(true, new IpApplicationNumberValue(value), ValidationError.None);

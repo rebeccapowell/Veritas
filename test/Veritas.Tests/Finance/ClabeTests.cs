@@ -10,7 +10,7 @@ public class ClabeTests
     [InlineData("34931396232370974", false)]
     public void Validate(string input, bool expected)
     {
-        Clabe.TryValidate(input, out var result);
+        Clabe.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 }

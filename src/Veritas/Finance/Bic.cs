@@ -19,12 +19,12 @@ public static class Bic
         if (!Normalize(input, buffer, out int len))
         {
             result = new ValidationResult<BicValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 8 && len != 11)
         {
             result = new ValidationResult<BicValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         for (int i = 0; i < 4; i++)
         {
@@ -32,7 +32,7 @@ public static class Bic
             if (c < 'A' || c > 'Z')
             {
                 result = new ValidationResult<BicValue>(false, default, ValidationError.Charset);
-                return true;
+                return false;
             }
         }
         for (int i = 4; i < 6; i++)
@@ -41,7 +41,7 @@ public static class Bic
             if (c < 'A' || c > 'Z')
             {
                 result = new ValidationResult<BicValue>(false, default, ValidationError.Charset);
-                return true;
+                return false;
             }
         }
         for (int i = 6; i < len; i++)
@@ -50,7 +50,7 @@ public static class Bic
             if (!char.IsLetterOrDigit(c))
             {
                 result = new ValidationResult<BicValue>(false, default, ValidationError.Charset);
-                return true;
+                return false;
             }
         }
         string value = new string(buffer[..len]);

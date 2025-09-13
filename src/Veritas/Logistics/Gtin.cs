@@ -15,12 +15,12 @@ public static class Gtin
         foreach (var ch in input)
         {
             if (ch == ' ' || ch == '-') continue;
-            if (ch < '0' || ch > '9') { result = new ValidationResult<GtinValue>(false, default, ValidationError.Charset); return true; }
-            if (len >= digits.Length) { result = new ValidationResult<GtinValue>(false, default, ValidationError.Length); return true; }
+            if (ch < '0' || ch > '9') { result = new ValidationResult<GtinValue>(false, default, ValidationError.Charset); return false; }
+            if (len >= digits.Length) { result = new ValidationResult<GtinValue>(false, default, ValidationError.Length); return false; }
             digits[len++] = ch;
         }
-        if (!(len == 8 || len == 12 || len == 13 || len == 14)) { result = new ValidationResult<GtinValue>(false, default, ValidationError.Length); return true; }
-        if (!Gs1.Validate(digits[..len])) { result = new ValidationResult<GtinValue>(false, default, ValidationError.Checksum); return true; }
+        if (!(len == 8 || len == 12 || len == 13 || len == 14)) { result = new ValidationResult<GtinValue>(false, default, ValidationError.Length); return false; }
+        if (!Gs1.Validate(digits[..len])) { result = new ValidationResult<GtinValue>(false, default, ValidationError.Checksum); return false; }
         result = new ValidationResult<GtinValue>(true, new GtinValue(new string(digits[..len])), ValidationError.None);
         return true;
     }

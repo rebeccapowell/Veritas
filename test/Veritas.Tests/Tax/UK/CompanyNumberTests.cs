@@ -11,14 +11,14 @@ public class CompanyNumberTests
     [InlineData("1234567", false)]
     public void Validate(string input, bool expected)
     {
-        CompanyNumber.TryValidate(input, out var result);
+        CompanyNumber.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 
     [Theory, AutoData]
     public void RandomString_IsInvalid(string random)
     {
-        CompanyNumber.TryValidate(random, out var result);
+        CompanyNumber.TryValidate(random, out var result).ShouldBeFalse();
         result.IsValid.ShouldBeFalse();
     }
 }

@@ -15,11 +15,11 @@ public static class Iso6346
         foreach (var ch in input)
         {
             if (ch == ' ') continue;
-            if (len >= 11) { result = new ValidationResult<Iso6346Value>(false, default, ValidationError.Length); return true; }
+            if (len >= 11) { result = new ValidationResult<Iso6346Value>(false, default, ValidationError.Length); return false; }
             buf[len++] = char.ToUpperInvariant(ch);
         }
-        if (len != 11) { result = new ValidationResult<Iso6346Value>(false, default, ValidationError.Length); return true; }
-        if (!Iso6346Algorithm.Validate(buf)) { result = new ValidationResult<Iso6346Value>(false, default, ValidationError.Checksum); return true; }
+        if (len != 11) { result = new ValidationResult<Iso6346Value>(false, default, ValidationError.Length); return false; }
+        if (!Iso6346Algorithm.Validate(buf)) { result = new ValidationResult<Iso6346Value>(false, default, ValidationError.Checksum); return false; }
         result = new ValidationResult<Iso6346Value>(true, new Iso6346Value(new string(buf)), ValidationError.None);
         return true;
     }

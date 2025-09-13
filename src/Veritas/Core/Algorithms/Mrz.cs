@@ -5,7 +5,7 @@ namespace Veritas.Algorithms;
 /// <summary>Machine Readable Zone check digit calculator.</summary>
 internal static class Mrz
 {
-    private static readonly int[] Weights = {7,3,1};
+    private static readonly int[] Weights = { 7, 3, 1 };
 
     public static int Compute(ReadOnlySpan<char> input)
     {

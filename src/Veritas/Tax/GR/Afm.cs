@@ -20,12 +20,12 @@ public static class Afm
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<AfmValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 9)
         {
             result = new ValidationResult<AfmValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         int sum = 0;
         for (int i = 0; i < 8; i++)
@@ -34,7 +34,7 @@ public static class Afm
         if (digits[8] - '0' != expected)
         {
             result = new ValidationResult<AfmValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<AfmValue>(true, new AfmValue(new string(digits)), ValidationError.None);
         return true;

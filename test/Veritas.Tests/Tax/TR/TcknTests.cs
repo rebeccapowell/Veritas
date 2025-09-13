@@ -29,7 +29,7 @@ public class TcknTests
     [InlineData("abcdefghijk")]
     public void ValidateBad(string input)
     {
-        Tckn.TryValidate(input, out var r).ShouldBeTrue();
+        Tckn.TryValidate(input, out var r).ShouldBeFalse();
         r.IsValid.ShouldBeFalse();
     }
 }

@@ -10,14 +10,14 @@ public class NieTests
     [InlineData("X2482300A", false)]
     public void Validate(string input, bool expected)
     {
-        Nie.TryValidate(input, out var result);
+        Nie.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 
     [Theory, AutoData]
     public void RandomString_IsInvalid(string random)
     {
-        Nie.TryValidate(random, out var result);
+        Nie.TryValidate(random, out var result).ShouldBeFalse();
         result.IsValid.ShouldBeFalse();
     }
 }

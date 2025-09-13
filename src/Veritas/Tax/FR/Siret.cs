@@ -18,12 +18,12 @@ public static class Siret
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<SiretValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 14)
         {
             result = new ValidationResult<SiretValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         ReadOnlySpan<char> laPoste = "356000000";
         bool special = digits[..9].SequenceEqual(laPoste) && !digits.SequenceEqual("35600000000048");
@@ -34,18 +34,18 @@ public static class Siret
             if (sum % 5 != 0)
             {
                 result = new ValidationResult<SiretValue>(false, default, ValidationError.Checksum);
-                return true;
+                return false;
             }
         }
         else if (!Luhn.Validate(digits))
         {
             result = new ValidationResult<SiretValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         if (!Siren.TryValidate(digits[..9], out var sr) || !sr.IsValid)
         {
             result = new ValidationResult<SiretValue>(false, default, ValidationError.CountryRule);
-            return true;
+            return false;
         }
         string value = new string(digits);
         result = new ValidationResult<SiretValue>(true, new SiretValue(value), ValidationError.None);

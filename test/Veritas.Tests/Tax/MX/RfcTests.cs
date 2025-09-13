@@ -10,7 +10,7 @@ public class RfcTests
     {
         Span<char> buffer = stackalloc char[13];
         Rfc.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Rfc.TryValidate(buffer[..written], out var result);
+        Rfc.TryValidate(buffer[..written], out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
     }
 
@@ -20,7 +20,7 @@ public class RfcTests
         Span<char> buffer = stackalloc char[13];
         Rfc.TryGenerate(new GenerationOptions { Seed = 2 }, buffer, out var w).ShouldBeTrue();
         buffer[w - 1] = buffer[w - 1] == '0' ? '1' : '0';
-        Rfc.TryValidate(buffer[..w], out var result);
+        Rfc.TryValidate(buffer[..w], out var result).ShouldBeFalse();
         result.IsValid.ShouldBeFalse();
     }
 }

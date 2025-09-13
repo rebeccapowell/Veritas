@@ -10,7 +10,7 @@ public class MeloTests
     [InlineData("DEDGX4QK0NIAD8KYGGK09X58Y0Q4HLFE", false)]
     public void Validate(string input, bool expected)
     {
-        Melo.TryValidate(input, out var result);
+        Melo.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 }

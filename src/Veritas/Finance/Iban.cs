@@ -20,12 +20,12 @@ public static class Iban
         if (!Normalize(input, normalized, out int len))
         {
             result = new ValidationResult<IbanValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len < 5)
         {
             result = new ValidationResult<IbanValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
 
         Span<char> digits = stackalloc char[68];
@@ -35,7 +35,7 @@ public static class Iban
         if (Iso7064.ComputeMod97(digits[..idx]) != 1)
         {
             result = new ValidationResult<IbanValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         string value = new string(normalized[..len]);
         result = new ValidationResult<IbanValue>(true, new IbanValue(value), ValidationError.None);

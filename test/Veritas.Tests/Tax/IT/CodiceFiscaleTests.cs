@@ -10,7 +10,7 @@ public class CodiceFiscaleTests
     {
         Span<char> buffer = stackalloc char[16];
         CodiceFiscale.TryGenerate(buffer, out var written).ShouldBeTrue();
-        CodiceFiscale.TryValidate(buffer[..written], out var result);
+        CodiceFiscale.TryValidate(buffer[..written], out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
     }
 
@@ -20,7 +20,7 @@ public class CodiceFiscaleTests
         Span<char> buffer = stackalloc char[16];
         CodiceFiscale.TryGenerate(new GenerationOptions { Seed = 1 }, buffer, out var w).ShouldBeTrue();
         buffer[w - 1] = buffer[w - 1] == 'A' ? 'B' : 'A';
-        CodiceFiscale.TryValidate(buffer[..w], out var result);
+        CodiceFiscale.TryValidate(buffer[..w], out var result).ShouldBeFalse();
         result.IsValid.ShouldBeFalse();
     }
 }

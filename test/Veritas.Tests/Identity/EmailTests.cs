@@ -9,7 +9,7 @@ public class EmailTests
     [InlineData("not-an-email", false)]
     public void Validate_Works(string input, bool expected)
     {
-        Email.TryValidate(input, out var result);
+        Email.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 }

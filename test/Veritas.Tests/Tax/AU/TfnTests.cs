@@ -9,7 +9,7 @@ public class TfnTests
     [InlineData("123456789", false)]
     public void Validate_Works(string input, bool expected)
     {
-        Tfn.TryValidate(input, out var result);
+        Tfn.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 
@@ -18,7 +18,7 @@ public class TfnTests
     {
         Span<char> buffer = stackalloc char[9];
         Tfn.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Tfn.TryValidate(buffer[..written], out var result);
+        Tfn.TryValidate(buffer[..written], out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
     }
 }

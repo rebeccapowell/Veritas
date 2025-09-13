@@ -19,12 +19,12 @@ public static class Nip
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<NipValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 10)
         {
             result = new ValidationResult<NipValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         int sum = 0;
         for (int i = 0; i < 9; i++)
@@ -33,7 +33,7 @@ public static class Nip
         if (check == 10 || check != digits[9] - '0')
         {
             result = new ValidationResult<NipValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<NipValue>(true, new NipValue(new string(digits)), ValidationError.None);
         return true;

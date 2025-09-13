@@ -21,7 +21,7 @@ public static class Imei
     /// <summary>Attempts to validate the supplied input as an IMEI.</summary>
     /// <param name="input">Candidate code to validate.</param>
     /// <param name="result">The validation outcome including the parsed value when valid.</param>
-    /// <returns><c>true</c> if validation executed; the <see cref="ValidationResult{T}.IsValid"/> property indicates success.</returns>
+    /// <returns><c>true</c> if validation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<ImeiValue> result)
     {
         Span<char> digits = stackalloc char[15];
@@ -29,12 +29,12 @@ public static class Imei
         foreach (var ch in input)
         {
             if (ch == ' ' || ch == '-') continue;
-            if (ch < '0' || ch > '9') { result = new ValidationResult<ImeiValue>(false, default, ValidationError.Charset); return true; }
-            if (len >= 15) { result = new ValidationResult<ImeiValue>(false, default, ValidationError.Length); return true; }
+            if (ch < '0' || ch > '9') { result = new ValidationResult<ImeiValue>(false, default, ValidationError.Charset); return false; }
+            if (len >= 15) { result = new ValidationResult<ImeiValue>(false, default, ValidationError.Length); return false; }
             digits[len++] = ch;
         }
-        if (len != 15) { result = new ValidationResult<ImeiValue>(false, default, ValidationError.Length); return true; }
-        if (!Luhn.Validate(digits)) { result = new ValidationResult<ImeiValue>(false, default, ValidationError.Checksum); return true; }
+        if (len != 15) { result = new ValidationResult<ImeiValue>(false, default, ValidationError.Length); return false; }
+        if (!Luhn.Validate(digits)) { result = new ValidationResult<ImeiValue>(false, default, ValidationError.Checksum); return false; }
         result = new ValidationResult<ImeiValue>(true, new ImeiValue(new string(digits)), ValidationError.None);
         return true;
     }

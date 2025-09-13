@@ -20,18 +20,18 @@ public static class Oib
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<OibValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 11)
         {
             result = new ValidationResult<OibValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         int check = digits[10] - '0';
         if (ComputeCheck(digits[..10]) != check)
         {
             result = new ValidationResult<OibValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<OibValue>(true, new OibValue(new string(digits)), ValidationError.None);
         return true;

@@ -30,7 +30,7 @@ public class CnpTests
     [InlineData("abcdefghijklm")]
     public void ValidateBad(string input)
     {
-        Cnp.TryValidate(input, out var r).ShouldBeTrue();
+        Cnp.TryValidate(input, out var r).ShouldBeFalse();
         r.IsValid.ShouldBeFalse();
     }
 }

@@ -9,7 +9,7 @@ public class Mod11Tests
     public void ComputeMod11_Works()
     {
         var digits = "12345".AsSpan();
-        int[] weights = {5,4,3,2,1};
+        int[] weights = { 5, 4, 3, 2, 1 };
         Mod11.ComputeMod11(digits, weights).ShouldBe(2);
     }
 }

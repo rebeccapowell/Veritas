@@ -15,12 +15,12 @@ public static class Sscc
         foreach (var ch in input)
         {
             if (ch == ' ' || ch == '-') continue;
-            if (ch < '0' || ch > '9') { result = new ValidationResult<SsccValue>(false, default, ValidationError.Charset); return true; }
-            if (len >= 18) { result = new ValidationResult<SsccValue>(false, default, ValidationError.Length); return true; }
+            if (ch < '0' || ch > '9') { result = new ValidationResult<SsccValue>(false, default, ValidationError.Charset); return false; }
+            if (len >= 18) { result = new ValidationResult<SsccValue>(false, default, ValidationError.Length); return false; }
             digits[len++] = ch;
         }
-        if (len != 18) { result = new ValidationResult<SsccValue>(false, default, ValidationError.Length); return true; }
-        if (!Gs1.Validate(digits)) { result = new ValidationResult<SsccValue>(false, default, ValidationError.Checksum); return true; }
+        if (len != 18) { result = new ValidationResult<SsccValue>(false, default, ValidationError.Length); return false; }
+        if (!Gs1.Validate(digits)) { result = new ValidationResult<SsccValue>(false, default, ValidationError.Checksum); return false; }
         result = new ValidationResult<SsccValue>(true, new SsccValue(new string(digits)), ValidationError.None);
         return true;
     }

@@ -14,16 +14,16 @@ public static class Ssn
         foreach (var ch in input)
         {
             if (ch == '-' || ch == ' ') continue;
-            if (ch < '0' || ch > '9') { result = new ValidationResult<SsnValue>(false, default, ValidationError.Charset); return true; }
-            if (len >= 9) { result = new ValidationResult<SsnValue>(false, default, ValidationError.Length); return true; }
+            if (ch < '0' || ch > '9') { result = new ValidationResult<SsnValue>(false, default, ValidationError.Charset); return false; }
+            if (len >= 9) { result = new ValidationResult<SsnValue>(false, default, ValidationError.Length); return false; }
             digits[len++] = ch;
         }
-        if (len != 9) { result = new ValidationResult<SsnValue>(false, default, ValidationError.Length); return true; }
-        if (digits[0] == '0' && digits[1] == '0' && digits[2] == '0') { result = new ValidationResult<SsnValue>(false, default, ValidationError.CountryRule); return true; }
-        int area = (digits[0]-'0')*100 + (digits[1]-'0')*10 + (digits[2]-'0');
-        if (area == 0 || area == 666 || area >= 900) { result = new ValidationResult<SsnValue>(false, default, ValidationError.CountryRule); return true; }
-        if (digits[3] == '0' && digits[4] == '0') { result = new ValidationResult<SsnValue>(false, default, ValidationError.CountryRule); return true; }
-        if (digits[5] == '0' && digits[6] == '0' && digits[7] == '0' && digits[8] == '0') { result = new ValidationResult<SsnValue>(false, default, ValidationError.CountryRule); return true; }
+        if (len != 9) { result = new ValidationResult<SsnValue>(false, default, ValidationError.Length); return false; }
+        if (digits[0] == '0' && digits[1] == '0' && digits[2] == '0') { result = new ValidationResult<SsnValue>(false, default, ValidationError.CountryRule); return false; }
+        int area = (digits[0] - '0') * 100 + (digits[1] - '0') * 10 + (digits[2] - '0');
+        if (area == 0 || area == 666 || area >= 900) { result = new ValidationResult<SsnValue>(false, default, ValidationError.CountryRule); return false; }
+        if (digits[3] == '0' && digits[4] == '0') { result = new ValidationResult<SsnValue>(false, default, ValidationError.CountryRule); return false; }
+        if (digits[5] == '0' && digits[6] == '0' && digits[7] == '0' && digits[8] == '0') { result = new ValidationResult<SsnValue>(false, default, ValidationError.CountryRule); return false; }
         result = new ValidationResult<SsnValue>(true, new SsnValue(new string(digits)), ValidationError.None);
         return true;
     }

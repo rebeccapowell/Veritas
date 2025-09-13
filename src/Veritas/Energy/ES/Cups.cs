@@ -22,31 +22,31 @@ public static class Cups
     /// <summary>Attempts to validate the supplied input as a CUPS identifier.</summary>
     /// <param name="input">Candidate identifier to validate.</param>
     /// <param name="result">The validation outcome including the parsed value when valid.</param>
-    /// <returns><c>true</c> if validation executed; the <see cref="ValidationResult{T}.IsValid"/> property indicates success.</returns>
+    /// <returns><c>true</c> if validation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<CupsValue> result)
     {
         Span<char> buffer = stackalloc char[22];
         if (!Normalize(input, buffer, out int len))
         {
             result = new ValidationResult<CupsValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 20 && len != 22)
         {
             result = new ValidationResult<CupsValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         if (buffer[0] != 'E' || buffer[1] != 'S')
         {
             result = new ValidationResult<CupsValue>(false, default, ValidationError.CountryRule);
-            return true;
+            return false;
         }
         for (int i = 2; i < 18; i++)
         {
             if (!char.IsDigit(buffer[i]))
             {
                 result = new ValidationResult<CupsValue>(false, default, ValidationError.Charset);
-                return true;
+                return false;
             }
         }
         if (len == 22)
@@ -54,12 +54,12 @@ public static class Cups
             if (!char.IsDigit(buffer[20]))
             {
                 result = new ValidationResult<CupsValue>(false, default, ValidationError.Charset);
-                return true;
+                return false;
             }
             if ("FPRCXYZ".IndexOf(buffer[21]) < 0)
             {
                 result = new ValidationResult<CupsValue>(false, default, ValidationError.Charset);
-                return true;
+                return false;
             }
         }
         int rem = 0;
@@ -70,7 +70,7 @@ public static class Cups
         if (buffer[18] != Alphabet[check0] || buffer[19] != Alphabet[check1])
         {
             result = new ValidationResult<CupsValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         string value = new string(buffer[..len]);
         result = new ValidationResult<CupsValue>(true, new CupsValue(value), ValidationError.None);
