@@ -219,11 +219,24 @@ foreach (var s in Bulk.GenerateMany((dst, rng) => {
 | IPv4 | Global | structural check | <xref:Veritas.Telecom.Ipv4> |
 | IPv6 | Global | structural check | <xref:Veritas.Telecom.Ipv6> |
 
-### IP
+### Intellectual Property
 
 | Identifier | Country/Region | Validation & Generation | Docs |
 |------------|----------------|-------------------------|------|
-| IPOS Application Number | Singapore | Damm checksum; test generation | <xref:Veritas.IP.Singapore.IpApplicationNumber> |
+| IPOS Application Number | Singapore | Damm checksum; test generation | <xref:Veritas.IntellectualProperty.SG.IpApplicationNumber> |
+| ISWC | International | mod 10 checksum; generation | <xref:Veritas.IntellectualProperty.Iswc> |
+| Patent Application Number | International | structural check; generation | <xref:Veritas.IntellectualProperty.PatentApplicationNumber> |
+| Patent Publication Number | International | structural check; generation | <xref:Veritas.IntellectualProperty.PatentPublicationNumber> |
+| Trademark Registration Number | International | structural check; generation | <xref:Veritas.IntellectualProperty.TrademarkRegistrationNumber> |
+| Copyright Registration Number | International | structural check; generation | <xref:Veritas.IntellectualProperty.CopyrightRegistrationNumber> |
+
+### Legal
+
+| Identifier | Country/Region | Validation & Generation | Docs |
+|------------|----------------|-------------------------|------|
+| European Case Law Identifier (ECLI) | EU | structural check; generation | <xref:Veritas.Legal.EU.Ecli> |
+| Court Case Number | US | structural check; generation | <xref:Veritas.Legal.US.CourtCaseNumber> |
+| European Patent Office Publication ID | EU | structural check; generation | <xref:Veritas.Legal.EU.EuropeanPatentOfficePublicationId> |
 
 ### Education & Media
 
