@@ -154,3 +154,7 @@ Continue your established pattern:
     `test/Veritas.Tests/<Sector>/<Country?>/<Identifier>Tests.cs`.\
 -   ✅ Optional: register each identifier in a metadata catalog so
     docs/website can auto-list.
+
+## Status
+
+All identifiers listed above have been implemented.

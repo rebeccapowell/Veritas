@@ -64,7 +64,10 @@ foreach (var s in Bulk.GenerateMany((dst, rng) => {
 | BIC/SWIFT | International | format check | <xref:Veritas.Finance.Bic> |
 | ISIN | International | Luhn checksum | <xref:Veritas.Finance.Isin> |
 | RF Creditor Reference | International | ISO 11649 mod 97; generation | <xref:Veritas.Finance.Rf> |
+| SEPA Creditor Identifier | EU | ISO 7064 mod 97 checksum; generation | <xref:Veritas.Finance.SepaCreditorIdentifier> |
 | Structured Reference (OGM) | BE | mod 97 checksum; generation | <xref:Veritas.Finance.BE.Ogm> |
+| RIB | FR | mod 97 checksum; generation | <xref:Veritas.Finance.FR.Rib> |
+| CCC | ES | dual mod 11 checksum; generation | <xref:Veritas.Finance.ES.Ccc> |
 | Payment card PAN | International | Luhn checksum; test generation | <xref:Veritas.Finance.Pan> |
 | ABA Routing | US | weighted mod 11 checksum | <xref:Veritas.Finance.AbaRouting> |
 | CLABE | Mexico | weighted mod 11 checksum; generation | <xref:Veritas.Finance.Clabe> |
@@ -110,11 +113,13 @@ foreach (var s in Bulk.GenerateMany((dst, rng) => {
 | National ID | South Africa | Luhn checksum; generation | <xref:Veritas.Identity.SouthAfrica.NationalId> |
 | Teudat Zehut | Israel | weighted mod 10 checksum; generation | <xref:Veritas.Identity.Israel.TeudatZehut> |
 | NIR (INSEE) | France | mod 97 key; generation | <xref:Veritas.Identity.France.Nir> |
+| ICAO MRZ (TD3) | Global | MRZ checksums; generation | <xref:Veritas.Identity.IcaoMrz> |
 
 ### Tax
 
 | Country | Identifier | Validation & Generation | Docs |
 |---------|------------|-------------------------|------|
+| EU/GB | EORI | structural check; generation | <xref:Veritas.Tax.Eori> |
 | AR | CUIT | mod 11 checksum; generation | <xref:Veritas.Tax.AR.Cuit> |
 | AU | ABN | weighted mod 11 checksum; generation | <xref:Veritas.Tax.AU.Abn> |
 | AU | TFN | weighted mod 11 checksum; generation | <xref:Veritas.Tax.AU.Tfn> |
@@ -192,6 +197,9 @@ foreach (var s in Bulk.GenerateMany((dst, rng) => {
 | GSRN | International | GS1 mod 10 checksum; generation | <xref:Veritas.Logistics.Gsrn> |
 | GRAI | International | GS1 mod 10 checksum; generation | <xref:Veritas.Logistics.Grai> |
 | GSIN | International | GS1 mod 10 checksum; generation | <xref:Veritas.Logistics.Gsin> |
+| GDTI | International | GS1 mod 10 checksum; generation | <xref:Veritas.Logistics.Gdti> |
+| GIAI | International | structural check; generation | <xref:Veritas.Logistics.Giai> |
+| UPU S10 | International | weighted mod 11 checksum; generation | <xref:Veritas.Logistics.UpuS10> |
 | VIN | International | transliteration + weighted checksum | <xref:Veritas.Logistics.Vin> |
 | ISO 6346 | International | ISO 6346 checksum | <xref:Veritas.Logistics.Iso6346> |
 | AWB | International | mod 7 checksum; generation | <xref:Veritas.Logistics.Awb> |
@@ -202,6 +210,7 @@ foreach (var s in Bulk.GenerateMany((dst, rng) => {
 | Identifier | Country/Region | Validation & Generation | Docs |
 |------------|----------------|-------------------------|------|
 | IMEI | Global | Luhn checksum; generation | <xref:Veritas.Telecom.Imei> |
+| IMSI | Global | structural check; generation | <xref:Veritas.Telecom.Imsi> |
 | MEID | Global | Luhn checksum; generation | <xref:Veritas.Telecom.Meid> |
 | ICCID | Global | Luhn checksum; generation | <xref:Veritas.Telecom.Iccid> |
 | MAC | Global | format + OUI | <xref:Veritas.Telecom.Mac> |
@@ -235,6 +244,8 @@ foreach (var s in Bulk.GenerateMany((dst, rng) => {
 | NHS Number | UK | mod 11 checksum; generation | <xref:Veritas.Healthcare.NhsNumber> |
 | ORCID | International | ISO 7064 mod 11,2 checksum; generation | <xref:Veritas.Healthcare.Orcid> |
 | SNOMED CT Concept ID | International | Verhoeff checksum; test generation | <xref:Veritas.Healthcare.Snomed.SctId> |
+| NPI | US | Luhn checksum; generation | <xref:Veritas.Healthcare.Npi> |
+| DEA Number | US | weighted checksum; generation | <xref:Veritas.Healthcare.DeaNumber> |
 
 ## Future identifiers
 
@@ -251,10 +262,8 @@ foreach (var s in Bulk.GenerateMany((dst, rng) => {
 
 ### Identity & Telecom
 - OpenID Connect subject identifiers
-- IMSI (mobile subscriber identities)
 
 ### Logistics
-- UPU S10 postal tracking
 
 Contributions for these and other identifiers are welcome!
 
