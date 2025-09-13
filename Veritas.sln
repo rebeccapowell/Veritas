@@ -17,9 +17,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "misc", "misc", "{132D6CCF-9
 		.gitignore = .gitignore
 		docs.md = docs.md
 		LICENSE = LICENSE
-		PRD.md = PRD.md
-		PRD-Extensions-1.md = PRD-Extensions-1.md
-		README.md = README.md
+                prds\PRD.md = prds\PRD.md
+                prds\PRD-Extensions-1.md = prds\PRD-Extensions-1.md
+                prds\PRD-Extensions-2.md = prds\PRD-Extensions-2.md
+                README.md = README.md
+                AGENTS.md = AGENTS.md
+                contributors.md = contributors.md
 	EndProjectSection
 EndProject
 Global

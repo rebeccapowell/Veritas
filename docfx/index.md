@@ -92,37 +92,70 @@ foreach (var s in Bulk.GenerateMany((dst, rng) => {
 | Base58Check | Global | Base58 + double SHA-256 | <xref:Veritas.Identity.Base58Check> |
 | Aadhaar | India | Verhoeff checksum; test generation | <xref:Veritas.Identity.India.Aadhaar> |
 | National ID | Luxembourg | Luhn + Verhoeff; test generation | <xref:Veritas.Identity.Luxembourg.NationalId> |
+| CURP | Mexico | mod 10 checksum; generation | <xref:Veritas.Identity.Mexico.Curp> |
+| National ID | South Africa | Luhn checksum; generation | <xref:Veritas.Identity.SouthAfrica.NationalId> |
+| Teudat Zehut | Israel | weighted mod 10 checksum; generation | <xref:Veritas.Identity.Israel.TeudatZehut> |
 
 ### Tax
 
 | Country | Identifier | Validation & Generation | Docs |
 |---------|------------|-------------------------|------|
+| AR | CUIT | mod 11 checksum; generation | <xref:Veritas.Tax.AR.Cuit> |
 | AU | ABN | weighted mod 11 checksum; generation | <xref:Veritas.Tax.AU.Abn> |
 | AU | TFN | weighted mod 11 checksum; generation | <xref:Veritas.Tax.AU.Tfn> |
+| BE | National Number | mod 97 checksum; generation | <xref:Veritas.Tax.BE.Nn> |
 | BR | CPF | mod 11 checksum; generation | <xref:Veritas.Tax.BR.Cpf> |
 | BR | CNPJ | mod 11 checksum; generation | <xref:Veritas.Tax.BR.Cnpj> |
 | CA | SIN | Luhn checksum; generation | <xref:Veritas.Tax.CA.Sin> |
 | CA | BN | mod 11 checksum; generation | <xref:Veritas.Tax.CA.Bn> |
+| CL | RUT | mod 11 checksum; generation | <xref:Veritas.Tax.CL.Rut> |
 | CN | USCC | weighted mod 31 checksum; generation | <xref:Veritas.Tax.CN.Uscc> |
+| CZ | Rodne cislo | mod 11 checksum; generation | <xref:Veritas.Tax.CZ.RodneCislo> |
 | DE | UStIdNr | mod 97 checksum; generation | <xref:Veritas.Tax.DE.UstIdNr> |
 | DE | IdNr | mod 11 checksum; generation | <xref:Veritas.Tax.DE.IdNr> |
 | ES | NIF | mod 11 checksum; generation | <xref:Veritas.Tax.ES.Nif> |
 | ES | NIE | mod 11 checksum; generation | <xref:Veritas.Tax.ES.Nie> |
 | ES | CIF | mod 11 checksum; generation | <xref:Veritas.Tax.ES.Cif> |
+| FI | HETU | mod 31 checksum; generation | <xref:Veritas.Tax.FI.Hetu> |
 | FR | Siren | mod 11 checksum | <xref:Veritas.Tax.FR.Siren> |
 | FR | Siret | mod 11 checksum | <xref:Veritas.Tax.FR.Siret> |
 | FR | VAT | ISO 7064 mod 97 checksum | <xref:Veritas.Tax.FR.Vat> |
+| GR | AFM | mod 11 checksum; generation | <xref:Veritas.Tax.GR.Afm> |
+| HR | OIB | ISO 7064 mod 11,10 checksum; generation | <xref:Veritas.Tax.HR.Oib> |
+| RO | CNP | mod 11 checksum; generation | <xref:Veritas.Tax.RO.Cnp> |
+| BG | EGN | weighted checksum; generation | <xref:Veritas.Tax.BG.Egn> |
+| SI | EMSO | mod 11 checksum; generation | <xref:Veritas.Tax.SI.Emso> |
+| RS | JMBG | mod 11 checksum; generation | <xref:Veritas.Tax.RS.Jmbg> |
+| CH | AHV | ISO 7064 mod 11,10 checksum; generation | <xref:Veritas.Tax.CH.Ahv> |
+| CH | UID | mod 10 (EAN) checksum; generation | <xref:Veritas.Tax.CH.Uid> |
+| AT | UID | weighted mod 10 checksum; generation | <xref:Veritas.Tax.AT.Uid> |
+| IS | Kennitala | mod 11 checksum; generation | <xref:Veritas.Tax.IS.Kennitala> |
+| LT | Asmens kodas | two-stage mod 11 checksum; generation | <xref:Veritas.Tax.LT.AsmensKodas> |
+| LV | Personas kods | mod 11 checksum; generation | <xref:Veritas.Tax.LV.PersonasKods> |
+| EE | Isikukood | two-stage mod 11 checksum; generation | <xref:Veritas.Tax.EE.Isikukood> |
+| DK | CPR | structural check; generation | <xref:Veritas.Tax.DK.Cpr> |
+| CO | NIT | mod 11 checksum; generation | <xref:Veritas.Tax.CO.Nit> |
+| PE | RUC | weighted checksum; generation | <xref:Veritas.Tax.PE.Ruc> |
+| TR | TCKN | parity checks; generation | <xref:Veritas.Tax.TR.Tckn> |
+| IT | Codice Fiscale | position table check; generation | <xref:Veritas.Tax.IT.CodiceFiscale> |
+| MX | RFC | mod 11 check; generation | <xref:Veritas.Tax.MX.Rfc> |
+| SG | UEN | mod 11 check; generation | <xref:Veritas.Tax.SG.Uen> |
+| IE | PPSN | mod 23 checksum; generation | <xref:Veritas.Tax.IE.Ppsn> |
 | IN | PAN | mod 36 checksum; generation | <xref:Veritas.Tax.IN.Pan> |
 | IN | GSTIN | mod 36 checksum; generation | <xref:Veritas.Tax.IN.Gstin> |
 | IT | PIVA | mod 11 checksum | <xref:Veritas.Tax.IT.Piva> |
 | NL | BSN | mod 11 checksum | <xref:Veritas.Tax.NL.Bsn> |
 | NL | BTW | mod 11 checksum | <xref:Veritas.Tax.NL.Btw> |
+| NO | Fodselsnummer | mod 11 checksum; generation | <xref:Veritas.Tax.NO.Fodselsnummer> |
+| NO | KID | mod 10/11 checksum; generation | <xref:Veritas.Tax.NO.Kid> |
 | NZ | IRD | mod 11 checksum | <xref:Veritas.Tax.NZ.Ird> |
 | PL | NIP | mod 11 checksum | <xref:Veritas.Tax.PL.Nip> |
 | PL | REGON | mod 11 checksum | <xref:Veritas.Tax.PL.Regon> |
 | PL | PESEL | weighted mod 10 checksum | <xref:Veritas.Tax.PL.Pesel> |
+| PT | NIF | mod 11 checksum; generation | <xref:Veritas.Tax.PT.Nif> |
 | SE | Personnummer | Luhn checksum | <xref:Veritas.Tax.SE.Personnummer> |
 | SE | OrgNr | mod 10 checksum | <xref:Veritas.Tax.SE.OrgNr> |
+| SK | Rodne cislo | mod 11 checksum; generation | <xref:Veritas.Tax.SK.RodneCislo> |
 | UK | NINO | structural check | <xref:Veritas.Tax.UK.Nino> |
 | UK | UTR | mod 97 checksum; generation | <xref:Veritas.Tax.UK.Utr> |
 | UK | VAT | mod 97 checksum | <xref:Veritas.Tax.UK.Vat> |
