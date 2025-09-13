@@ -10,7 +10,7 @@ public class CpfTests
     [InlineData("111.444.777-36", false)]
     public void Validate_Works(string input, bool expected)
     {
-        Cpf.TryValidate(input, out var result);
+        Cpf.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 
@@ -19,7 +19,7 @@ public class CpfTests
     {
         Span<char> buffer = stackalloc char[11];
         Cpf.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Cpf.TryValidate(buffer[..written], out var result);
+        Cpf.TryValidate(buffer[..written], out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
     }
 }

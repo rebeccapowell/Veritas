@@ -10,7 +10,7 @@ public class CuitTests
     [InlineData("20-12345678-5", false)]
     public void Validate_Works(string input, bool expected)
     {
-        Cuit.TryValidate(input, out var result);
+        Cuit.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 
@@ -19,7 +19,7 @@ public class CuitTests
     {
         Span<char> buffer = stackalloc char[11];
         Cuit.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Cuit.TryValidate(buffer[..written], out var result);
+        Cuit.TryValidate(buffer[..written], out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
     }
 }

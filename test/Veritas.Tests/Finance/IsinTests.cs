@@ -9,7 +9,7 @@ public class IsinTests
     [InlineData("US0378331006", false)]
     public void Validate_Works(string input, bool expected)
     {
-        Isin.TryValidate(input, out var result);
+        Isin.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 }

@@ -22,18 +22,18 @@ public static class Ein
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<EinValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 9)
         {
             result = new ValidationResult<EinValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
-        int prefix = (digits[0]-'0')*10 + (digits[1]-'0');
+        int prefix = (digits[0] - '0') * 10 + (digits[1] - '0');
         if (Array.BinarySearch(Prefixes, prefix) < 0)
         {
             result = new ValidationResult<EinValue>(false, default, ValidationError.CountryRule);
-            return true;
+            return false;
         }
         string value = new string(digits);
         result = new ValidationResult<EinValue>(true, new EinValue(value), ValidationError.None);

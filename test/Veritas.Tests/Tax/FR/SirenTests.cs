@@ -9,7 +9,7 @@ public class SirenTests
     [InlineData("552100555", false)]
     public void Validate(string input, bool expected)
     {
-        Siren.TryValidate(input, out var r);
+        Siren.TryValidate(input, out var r).ShouldBe(expected);
         r.IsValid.ShouldBe(expected);
     }
 }

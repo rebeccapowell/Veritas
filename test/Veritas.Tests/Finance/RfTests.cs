@@ -10,7 +10,7 @@ public class RfTests
     [InlineData("RF00539007547034", false)]
     public void Validate_Works(string input, bool expected)
     {
-        Rf.TryValidate(input, out var result);
+        Rf.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 
@@ -19,7 +19,7 @@ public class RfTests
     {
         Span<char> buffer = stackalloc char[25];
         Rf.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Rf.TryValidate(buffer[..written], out var result);
+        Rf.TryValidate(buffer[..written], out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
     }
 }

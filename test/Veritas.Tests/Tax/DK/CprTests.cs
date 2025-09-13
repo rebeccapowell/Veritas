@@ -29,7 +29,7 @@ public class CprTests
     [InlineData("abcdefghij")]
     public void ValidateBad(string input)
     {
-        Cpr.TryValidate(input, out var r).ShouldBeTrue();
+        Cpr.TryValidate(input, out var r).ShouldBeFalse();
         r.IsValid.ShouldBeFalse();
     }
 }

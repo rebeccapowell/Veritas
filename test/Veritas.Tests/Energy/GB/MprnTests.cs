@@ -12,7 +12,7 @@ public class MprnTests
     [InlineData("12345A", false)]
     public void Validate(string input, bool expected)
     {
-        Mprn.TryValidate(input, out var result);
+        Mprn.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 }

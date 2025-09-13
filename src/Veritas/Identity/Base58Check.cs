@@ -21,7 +21,7 @@ public static class Base58Check
             return true;
         }
         result = new ValidationResult<Base58CheckValue>(false, default, ValidationError.Format);
-        return true;
+        return false;
     }
 
     public static bool TryGenerate(Span<char> destination, out int written)

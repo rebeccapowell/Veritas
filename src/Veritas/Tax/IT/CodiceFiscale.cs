@@ -29,26 +29,26 @@ public static class CodiceFiscale
         if (!Normalize(input, chars, out int len))
         {
             result = new ValidationResult<CodiceFiscaleValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 16)
         {
             result = new ValidationResult<CodiceFiscaleValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         int sum = 0;
         for (int i = 0; i < 15; i++)
         {
             char c = chars[i];
             int idx = EvenMap.IndexOf(c);
-            if (idx < 0) { result = new ValidationResult<CodiceFiscaleValue>(false, default, ValidationError.Charset); return true; }
+            if (idx < 0) { result = new ValidationResult<CodiceFiscaleValue>(false, default, ValidationError.Charset); return false; }
             if ((i & 1) == 0) sum += OddMap[idx]; else sum += idx;
         }
         char check = (char)('A' + (sum % 26));
         if (chars[15] != check)
         {
             result = new ValidationResult<CodiceFiscaleValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<CodiceFiscaleValue>(true, new CodiceFiscaleValue(new string(chars)), ValidationError.None);
         return true;

@@ -11,7 +11,7 @@ public readonly struct SedolValue
 
 public static class Sedol
 {
-    private static readonly int[] Weights = {1,3,1,7,3,9,1};
+    private static readonly int[] Weights = { 1, 3, 1, 7, 3, 9, 1 };
 
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<SedolValue> result)
     {
@@ -19,25 +19,25 @@ public static class Sedol
         if (!Normalize(input, chars, out int len))
         {
             result = new ValidationResult<SedolValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 7)
         {
             result = new ValidationResult<SedolValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         int sum = 0;
         for (int i = 0; i < 6; i++)
         {
             int v = ValueOf(chars[i]);
-            if (v < 0) { result = new ValidationResult<SedolValue>(false, default, ValidationError.Charset); return true; }
+            if (v < 0) { result = new ValidationResult<SedolValue>(false, default, ValidationError.Charset); return false; }
             sum += v * Weights[i];
         }
         int check = (10 - (sum % 10)) % 10;
         if (chars[6] - '0' != check)
         {
             result = new ValidationResult<SedolValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<SedolValue>(true, new SedolValue(new string(chars)), ValidationError.None);
         return true;

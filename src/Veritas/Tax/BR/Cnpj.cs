@@ -20,33 +20,33 @@ public static class Cnpj
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<CnpjValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 14)
         {
             result = new ValidationResult<CnpjValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         if (AllEqual(digits))
         {
             result = new ValidationResult<CnpjValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         int d1 = ComputeCheckDigit(digits[..12], Weights1);
         if (digits[12] - '0' != d1)
         {
             result = new ValidationResult<CnpjValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         int d2 = ComputeCheckDigit(digits[..13], Weights2);
         if (digits[13] - '0' != d2)
         {
             result = new ValidationResult<CnpjValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         string value = new string(digits);
-       result = new ValidationResult<CnpjValue>(true, new CnpjValue(value), ValidationError.None);
-       return true;
+        result = new ValidationResult<CnpjValue>(true, new CnpjValue(value), ValidationError.None);
+        return true;
     }
 
     public static bool TryGenerate(Span<char> destination, out int written)

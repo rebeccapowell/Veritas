@@ -9,7 +9,7 @@ public class AbnTests
     [InlineData("51824753557", false)]
     public void Validate_Works(string input, bool expected)
     {
-        Abn.TryValidate(input, out var result);
+        Abn.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 
@@ -18,7 +18,7 @@ public class AbnTests
     {
         Span<char> buffer = stackalloc char[11];
         Abn.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Abn.TryValidate(buffer[..written], out var result);
+        Abn.TryValidate(buffer[..written], out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
     }
 }

@@ -5,7 +5,7 @@ namespace Veritas.Algorithms;
 /// <summary>VIN transliteration and checksum helpers.</summary>
 internal static class VinMap
 {
-    private static readonly int[] Weights = {8,7,6,5,4,3,2,10,0,9,8,7,6,5,4,3,2};
+    private static readonly int[] Weights = { 8, 7, 6, 5, 4, 3, 2, 10, 0, 9, 8, 7, 6, 5, 4, 3, 2 };
 
     /// <summary>Validates a VIN string including its check digit.</summary>
     public static bool Validate(ReadOnlySpan<char> vin)

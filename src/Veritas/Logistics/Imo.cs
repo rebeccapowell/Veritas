@@ -21,19 +21,19 @@ public static class Imo
             if ((uint)(ch - '0') > 9)
             {
                 result = new ValidationResult<ImoValue>(false, default, ValidationError.Charset);
-                return true;
+                return false;
             }
             if (len >= 7)
             {
                 result = new ValidationResult<ImoValue>(false, default, ValidationError.Length);
-                return true;
+                return false;
             }
             digits[len++] = ch;
         }
         if (len != 7)
         {
             result = new ValidationResult<ImoValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         int sum = 0;
         for (int i = 0; i < 6; i++)
@@ -42,7 +42,7 @@ public static class Imo
         if (digits[6] - '0' != check)
         {
             result = new ValidationResult<ImoValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         Span<char> norm = stackalloc char[10];
         norm[0] = 'I';

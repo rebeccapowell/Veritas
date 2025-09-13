@@ -20,19 +20,19 @@ public static class Pod
     /// <summary>Attempts to validate the supplied input as a POD identifier.</summary>
     /// <param name="input">Candidate identifier to validate.</param>
     /// <param name="result">The validation outcome including the parsed value when valid.</param>
-    /// <returns><c>true</c> if validation executed; the <see cref="ValidationResult{T}.IsValid"/> property indicates success.</returns>
+    /// <returns><c>true</c> if validation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<PodValue> result)
     {
         Span<char> chars = stackalloc char[16];
         if (!Normalize(input, chars, out int len))
         {
             result = new ValidationResult<PodValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 16 || chars[0] != 'I' || chars[1] != 'T')
         {
             result = new ValidationResult<PodValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         result = new ValidationResult<PodValue>(true, new PodValue(new string(chars)), ValidationError.None);
         return true;

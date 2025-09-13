@@ -17,19 +17,19 @@ public static class Awb
             if ((uint)(ch - '0') > 9)
             {
                 result = new ValidationResult<AwbValue>(false, default, ValidationError.Charset);
-                return true;
+                return false;
             }
             if (len >= 11)
             {
                 result = new ValidationResult<AwbValue>(false, default, ValidationError.Length);
-                return true;
+                return false;
             }
             digits[len++] = ch;
         }
         if (len != 11)
         {
             result = new ValidationResult<AwbValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         int serial = 0;
         for (int i = 3; i < 10; i++)
@@ -38,7 +38,7 @@ public static class Awb
         if (digits[10] - '0' != check)
         {
             result = new ValidationResult<AwbValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<AwbValue>(true, new AwbValue(new string(digits)), ValidationError.None);
         return true;

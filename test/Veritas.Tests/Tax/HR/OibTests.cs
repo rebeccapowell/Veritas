@@ -9,7 +9,7 @@ public class HrOibTests
     [InlineData("12345678904", false)]
     public void Validate_Works(string input, bool expected)
     {
-        Oib.TryValidate(input, out var result);
+        Oib.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 
@@ -18,7 +18,7 @@ public class HrOibTests
     {
         Span<char> buffer = stackalloc char[11];
         Oib.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Oib.TryValidate(buffer[..written], out var result);
+        Oib.TryValidate(buffer[..written], out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
     }
 }

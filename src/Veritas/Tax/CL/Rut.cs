@@ -20,18 +20,18 @@ public static class Rut
         if (!Normalize(input, buffer, out int len))
         {
             result = new ValidationResult<RutValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len < 2 || len > 9)
         {
             result = new ValidationResult<RutValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         char expected = ComputeCheckChar(buffer[..(len - 1)]);
         if (buffer[len - 1] != expected)
         {
             result = new ValidationResult<RutValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         string value = new string(buffer[..len]);
         result = new ValidationResult<RutValue>(true, new RutValue(value), ValidationError.None);

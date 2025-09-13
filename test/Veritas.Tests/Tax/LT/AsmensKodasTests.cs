@@ -29,7 +29,7 @@ public class AsmensKodasTests
     [InlineData("abcdefghijk")]
     public void ValidateBad(string input)
     {
-        AsmensKodas.TryValidate(input, out var r).ShouldBeTrue();
+        AsmensKodas.TryValidate(input, out var r).ShouldBeFalse();
         r.IsValid.ShouldBeFalse();
     }
 }

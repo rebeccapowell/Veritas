@@ -9,7 +9,7 @@ public class IbanTests
     [InlineData("FR14 2004 1010 0505 0001 3M02 607", false)]
     public void Validate_Works(string input, bool expected)
     {
-        Iban.TryValidate(input, out var result);
+        Iban.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 }

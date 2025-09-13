@@ -30,7 +30,7 @@ public class UidTests
     [InlineData("CHE100155709XYZ")]
     public void ValidateBad(string input)
     {
-        Uid.TryValidate(input, out var r).ShouldBeTrue();
+        Uid.TryValidate(input, out var r).ShouldBeFalse();
         r.IsValid.ShouldBeFalse();
     }
 }

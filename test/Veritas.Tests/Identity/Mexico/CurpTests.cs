@@ -10,7 +10,7 @@ public class CurpTests
     {
         Span<char> buffer = stackalloc char[18];
         Curp.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Curp.TryValidate(buffer[..written], out var result);
+        Curp.TryValidate(buffer[..written], out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
     }
 
@@ -20,7 +20,7 @@ public class CurpTests
         Span<char> buffer = stackalloc char[18];
         Curp.TryGenerate(new GenerationOptions { Seed = 3 }, buffer, out var w).ShouldBeTrue();
         buffer[w - 1] = buffer[w - 1] == '0' ? '1' : '0';
-        Curp.TryValidate(buffer[..w], out var result);
+        Curp.TryValidate(buffer[..w], out var result).ShouldBeFalse();
         result.IsValid.ShouldBeFalse();
     }
 }

@@ -10,7 +10,7 @@ public class IssnTests
     [InlineData("0378-5954", false)]
     public void Validate(string input, bool expected)
     {
-        Issn.TryValidate(input, out var r);
+        Issn.TryValidate(input, out var r).ShouldBe(expected);
         r.IsValid.ShouldBe(expected);
     }
 
@@ -19,7 +19,7 @@ public class IssnTests
     {
         Span<char> buffer = stackalloc char[8];
         Issn.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Issn.TryValidate(buffer[..written], out var r);
+        Issn.TryValidate(buffer[..written], out var r).ShouldBeTrue();
         r.IsValid.ShouldBeTrue();
     }
 }

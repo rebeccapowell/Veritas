@@ -12,7 +12,7 @@ public class CupsTests
     [InlineData("ES1234123456789012JY1Q", false)]
     public void Validate(string input, bool expected)
     {
-        Cups.TryValidate(input, out var result);
+        Cups.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 
@@ -21,7 +21,7 @@ public class CupsTests
     {
         Span<char> buffer = stackalloc char[20];
         Cups.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Cups.TryValidate(buffer[..written], out var result);
+        Cups.TryValidate(buffer[..written], out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
     }
 }

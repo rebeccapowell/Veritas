@@ -21,7 +21,7 @@ public static class Asn
     /// <summary>Attempts to validate the supplied input as an ASN.</summary>
     /// <param name="input">Candidate ASN to validate.</param>
     /// <param name="result">The validation outcome including the parsed value when valid.</param>
-    /// <returns><c>true</c> if validation executed; the <see cref="ValidationResult{T}.IsValid"/> property indicates success.</returns>
+    /// <returns><c>true</c> if validation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<AsnValue> result)
     {
         if (uint.TryParse(input, NumberStyles.None, CultureInfo.InvariantCulture, out var value))
@@ -30,7 +30,7 @@ public static class Asn
             return true;
         }
         result = new ValidationResult<AsnValue>(false, default, ValidationError.Format);
-        return true;
+        return false;
     }
 
     /// <summary>Attempts to generate a random ASN into the provided buffer.</summary>

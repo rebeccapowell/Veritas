@@ -20,7 +20,7 @@ public static class Mac
     /// <summary>Attempts to validate the supplied input as a MAC address.</summary>
     /// <param name="input">Candidate address to validate.</param>
     /// <param name="result">The validation outcome including the parsed value when valid.</param>
-    /// <returns><c>true</c> if validation executed; the <see cref="ValidationResult{T}.IsValid"/> property indicates success.</returns>
+    /// <returns><c>true</c> if validation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<MacValue> result)
     {
         Span<char> buf = stackalloc char[12];
@@ -29,11 +29,11 @@ public static class Mac
         {
             if (ch == '-' || ch == ':' || ch == '.') continue;
             char c = char.ToUpperInvariant(ch);
-            if (!Uri.IsHexDigit(c)) { result = new ValidationResult<MacValue>(false, default, ValidationError.Charset); return true; }
-            if (len >= 12) { result = new ValidationResult<MacValue>(false, default, ValidationError.Length); return true; }
+            if (!Uri.IsHexDigit(c)) { result = new ValidationResult<MacValue>(false, default, ValidationError.Charset); return false; }
+            if (len >= 12) { result = new ValidationResult<MacValue>(false, default, ValidationError.Length); return false; }
             buf[len++] = c;
         }
-        if (len != 12) { result = new ValidationResult<MacValue>(false, default, ValidationError.Length); return true; }
+        if (len != 12) { result = new ValidationResult<MacValue>(false, default, ValidationError.Length); return false; }
         result = new ValidationResult<MacValue>(true, new MacValue(new string(buf)), ValidationError.None);
         return true;
     }

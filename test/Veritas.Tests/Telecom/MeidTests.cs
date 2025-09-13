@@ -10,7 +10,7 @@ public class MeidTests
     [InlineData("A000000000232", false)]
     public void Validate(string input, bool expected)
     {
-        Meid.TryValidate(input, out var result);
+        Meid.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 }

@@ -22,19 +22,19 @@ public static class Mpan
     /// <summary>Attempts to validate the supplied input as an MPAN.</summary>
     /// <param name="input">Candidate identifier to validate.</param>
     /// <param name="result">The validation outcome including the parsed value when valid.</param>
-    /// <returns><c>true</c> if validation executed; the <see cref="ValidationResult{T}.IsValid"/> property indicates success.</returns>
+    /// <returns><c>true</c> if validation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<MpanValue> result)
     {
         Span<char> digits = stackalloc char[13];
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<MpanValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 13)
         {
             result = new ValidationResult<MpanValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         int sum = 0;
         for (int i = 0; i < 12; i++)
@@ -44,7 +44,7 @@ public static class Mpan
         if (digits[12] - '0' != check)
         {
             result = new ValidationResult<MpanValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         string value = new string(digits);
         result = new ValidationResult<MpanValue>(true, new MpanValue(value), ValidationError.None);

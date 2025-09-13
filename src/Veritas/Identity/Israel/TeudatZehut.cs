@@ -20,18 +20,18 @@ public static class TeudatZehut
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<TeudatZehutValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 9)
         {
             result = new ValidationResult<TeudatZehutValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         int sum = 0;
         for (int i = 0; i < 9; i++)
         {
             int d = digits[i] - '0';
-            if ((uint)d > 9) { result = new ValidationResult<TeudatZehutValue>(false, default, ValidationError.Charset); return true; }
+            if ((uint)d > 9) { result = new ValidationResult<TeudatZehutValue>(false, default, ValidationError.Charset); return false; }
             int v = d * ((i % 2) + 1);
             if (v > 9) v -= 9;
             sum += v;
@@ -39,7 +39,7 @@ public static class TeudatZehut
         if (sum % 10 != 0)
         {
             result = new ValidationResult<TeudatZehutValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<TeudatZehutValue>(true, new TeudatZehutValue(new string(digits)), ValidationError.None);
         return true;

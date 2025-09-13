@@ -9,7 +9,7 @@ public class Ipv4Tests
     [InlineData("256.0.0.1", false)]
     public void Validate(string input, bool expected)
     {
-        Ipv4.TryValidate(input, out var r);
+        Ipv4.TryValidate(input, out var r).ShouldBe(expected);
         r.IsValid.ShouldBe(expected);
     }
 }

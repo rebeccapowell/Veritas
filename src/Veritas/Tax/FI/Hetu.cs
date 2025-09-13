@@ -22,36 +22,36 @@ public static class Hetu
         if (!Normalize(input, buffer, out int len))
         {
             result = new ValidationResult<HetuValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 11)
         {
             result = new ValidationResult<HetuValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         char sep = buffer[6];
         if (sep != '+' && sep != '-' && sep != 'A')
         {
             result = new ValidationResult<HetuValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         for (int i = 0; i < 6; i++)
             if (!char.IsDigit(buffer[i]))
             {
                 result = new ValidationResult<HetuValue>(false, default, ValidationError.Format);
-                return true;
+                return false;
             }
         for (int i = 7; i < 10; i++)
             if (!char.IsDigit(buffer[i]))
             {
                 result = new ValidationResult<HetuValue>(false, default, ValidationError.Format);
-                return true;
+                return false;
             }
         char check = char.ToUpperInvariant(buffer[10]);
         if (!CheckMap.Contains(check))
         {
             result = new ValidationResult<HetuValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         int number = 0;
         for (int i = 0; i < 6; i++)
@@ -62,7 +62,7 @@ public static class Hetu
         if (check != expected)
         {
             result = new ValidationResult<HetuValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<HetuValue>(true, new HetuValue(new string(buffer)), ValidationError.None);
         return true;

@@ -11,7 +11,7 @@ public class EnergyEanTests
     [InlineData("12345678901234567", false)]
     public void Validate(string input, bool expected)
     {
-        EnergyEan.TryValidate(input, out var result);
+        EnergyEan.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 
@@ -20,7 +20,7 @@ public class EnergyEanTests
     {
         Span<char> buffer = stackalloc char[18];
         EnergyEan.TryGenerate(buffer, out var written).ShouldBeTrue();
-        EnergyEan.TryValidate(buffer[..written], out var result);
+        EnergyEan.TryValidate(buffer[..written], out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
     }
 }

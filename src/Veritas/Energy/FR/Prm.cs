@@ -20,14 +20,14 @@ public static class Prm
     /// <summary>Attempts to validate the supplied input as a PRM identifier.</summary>
     /// <param name="input">Candidate identifier to validate.</param>
     /// <param name="result">The validation outcome including the parsed value when valid.</param>
-    /// <returns><c>true</c> if validation executed; the <see cref="ValidationResult{T}.IsValid"/> property indicates success.</returns>
+    /// <returns><c>true</c> if validation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<PrmValue> result)
     {
         Span<char> digits = stackalloc char[14];
         if (!Normalize(input, digits, out int len) || len != 14)
         {
             result = new ValidationResult<PrmValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         string value = new string(digits);
         result = new ValidationResult<PrmValue>(true, new PrmValue(value), ValidationError.None);

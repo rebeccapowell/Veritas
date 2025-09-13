@@ -14,12 +14,12 @@ public static class SctId
         if (!Normalize(input, digits, out int len) || len < MinLength || len > MaxLength)
         {
             result = new ValidationResult<SctIdValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         if (!Verhoeff.Validate(digits[..len]))
         {
             result = new ValidationResult<SctIdValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         var value = new string(digits[..len]);
         result = new ValidationResult<SctIdValue>(true, new SctIdValue(value), ValidationError.None);

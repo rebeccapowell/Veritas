@@ -27,19 +27,19 @@ public static class CompanyNumber
             }
             else if (u >= '0' && u <= '9')
             {
-                if (len >= 8) { result = new ValidationResult<CompanyNumberValue>(false, default, ValidationError.Length); return true; }
+                if (len >= 8) { result = new ValidationResult<CompanyNumberValue>(false, default, ValidationError.Length); return false; }
                 buf[len++] = u;
             }
             else
             {
                 result = new ValidationResult<CompanyNumberValue>(false, default, ValidationError.Charset);
-                return true;
+                return false;
             }
         }
         if (len != 8 || (letterCount != 0 && letterCount != 2))
         {
             result = new ValidationResult<CompanyNumberValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         result = new ValidationResult<CompanyNumberValue>(true, new CompanyNumberValue(new string(buf)), ValidationError.None);
         return true;

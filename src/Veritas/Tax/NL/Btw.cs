@@ -17,19 +17,19 @@ public static class Btw
         if (!Normalize(input, buffer, out int len))
         {
             result = new ValidationResult<BtwValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 12 || buffer[9] != 'B')
         {
             result = new ValidationResult<BtwValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         for (int i = 0; i < 9; i++)
         {
             if (buffer[i] < '0' || buffer[i] > '9')
             {
                 result = new ValidationResult<BtwValue>(false, default, ValidationError.Format);
-                return true;
+                return false;
             }
         }
         int sum = 0;
@@ -42,13 +42,13 @@ public static class Btw
         if (check != buffer[8] - '0')
         {
             result = new ValidationResult<BtwValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         // last two digits after B are extension; any digits ok
         if (buffer[10] < '0' || buffer[10] > '9' || buffer[11] < '0' || buffer[11] > '9')
         {
             result = new ValidationResult<BtwValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         result = new ValidationResult<BtwValue>(true, new BtwValue(new string(buffer)), ValidationError.None);
         return true;

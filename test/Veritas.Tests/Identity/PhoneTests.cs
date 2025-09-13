@@ -9,7 +9,7 @@ public class PhoneTests
     [InlineData("123-abc", false)]
     public void Validate(string input, bool expected)
     {
-        Phone.TryValidate(input, out var r);
+        Phone.TryValidate(input, out var r).ShouldBe(expected);
         r.IsValid.ShouldBe(expected);
     }
 }

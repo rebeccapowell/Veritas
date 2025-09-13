@@ -9,7 +9,7 @@ public class NoFodselsnummerTests
     [InlineData("12078586469", false)]
     public void Validate_Works(string input, bool expected)
     {
-        Fodselsnummer.TryValidate(input, out var result);
+        Fodselsnummer.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 
@@ -18,7 +18,7 @@ public class NoFodselsnummerTests
     {
         Span<char> buffer = stackalloc char[11];
         Fodselsnummer.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Fodselsnummer.TryValidate(buffer[..written], out var result);
+        Fodselsnummer.TryValidate(buffer[..written], out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
     }
 }

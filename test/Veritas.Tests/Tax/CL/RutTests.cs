@@ -10,7 +10,7 @@ public class RutTests
     [InlineData("12.345.678-4", false)]
     public void Validate_Works(string input, bool expected)
     {
-        Rut.TryValidate(input, out var result);
+        Rut.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 
@@ -19,7 +19,7 @@ public class RutTests
     {
         Span<char> buffer = stackalloc char[9];
         Rut.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Rut.TryValidate(buffer[..written], out var result);
+        Rut.TryValidate(buffer[..written], out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
     }
 }

@@ -9,7 +9,7 @@ public class NipTests
     [InlineData("6111780028", false)]
     public void Validate(string input, bool expected)
     {
-        Nip.TryValidate(input, out var result);
+        Nip.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 }

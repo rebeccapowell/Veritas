@@ -21,7 +21,7 @@ public static class Ipv4
     /// <summary>Attempts to validate the supplied input as an IPv4 address.</summary>
     /// <param name="input">Candidate address to validate.</param>
     /// <param name="result">The validation outcome including the parsed value when valid.</param>
-    /// <returns><c>true</c> if validation executed; the <see cref="ValidationResult{T}.IsValid"/> property indicates success.</returns>
+    /// <returns><c>true</c> if validation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<Ipv4Value> result)
     {
         if (IPAddress.TryParse(input, out var addr) && addr.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
@@ -30,7 +30,7 @@ public static class Ipv4
             return true;
         }
         result = new ValidationResult<Ipv4Value>(false, default, ValidationError.Format);
-        return true;
+        return false;
     }
 }
 

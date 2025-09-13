@@ -26,18 +26,18 @@ public static class Kid
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<KidValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len < 2 || len > 25)
         {
             result = new ValidationResult<KidValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         bool ok = variant == KidVariant.Mod10 ? VerifyMod10(digits[..len]) : VerifyMod11(digits[..len]);
         if (!ok)
         {
             result = new ValidationResult<KidValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<KidValue>(true, new KidValue(new string(digits[..len])), ValidationError.None);
         return true;
@@ -54,9 +54,9 @@ public static class Kid
         for (int i = 0; i < length - 1; i++)
             destination[i] = (char)('0' + rng.Next(0, 10));
         if (variant == KidVariant.Mod10)
-            destination[length - 1] = (char)('0' + ComputeMod10(destination[..(length-1)]));
+            destination[length - 1] = (char)('0' + ComputeMod10(destination[..(length - 1)]));
         else
-            destination[length - 1] = (char)('0' + ComputeMod11(destination[..(length-1)]));
+            destination[length - 1] = (char)('0' + ComputeMod11(destination[..(length - 1)]));
         written = length;
         return true;
     }
@@ -133,7 +133,7 @@ public static class Kid
         len = 0;
         foreach (var ch in input)
         {
-            if (ch==' '||ch=='-') continue;
+            if (ch == ' ' || ch == '-') continue;
             if (!char.IsDigit(ch) || len >= dest.Length)
             {
                 len = 0; return false;

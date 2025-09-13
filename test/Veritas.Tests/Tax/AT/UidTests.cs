@@ -29,7 +29,7 @@ public class UidTests
     [InlineData("ATU12345A75")]
     public void ValidateBad(string input)
     {
-        Uid.TryValidate(input, out var r).ShouldBeTrue();
+        Uid.TryValidate(input, out var r).ShouldBeFalse();
         r.IsValid.ShouldBeFalse();
     }
 }

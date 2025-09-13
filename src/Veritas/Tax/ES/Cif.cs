@@ -19,12 +19,12 @@ public static class Cif
         if (!Normalize(input, buffer, out int len))
         {
             result = new ValidationResult<CifValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 9)
         {
             result = new ValidationResult<CifValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         char first = buffer[0];
         int sum = 0;
@@ -54,7 +54,7 @@ public static class Cif
         if (!ok)
         {
             result = new ValidationResult<CifValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<CifValue>(true, new CifValue(new string(buffer)), ValidationError.None);
         return true;

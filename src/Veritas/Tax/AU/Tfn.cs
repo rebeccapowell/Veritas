@@ -11,8 +11,8 @@ public readonly struct TfnValue
 
 public static class Tfn
 {
-    private static readonly int[] Weights8 = {1,4,3,7,5,8,6,9};
-    private static readonly int[] Weights9 = {1,4,3,7,5,8,6,9,10};
+    private static readonly int[] Weights8 = { 1, 4, 3, 7, 5, 8, 6, 9 };
+    private static readonly int[] Weights9 = { 1, 4, 3, 7, 5, 8, 6, 9, 10 };
 
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<TfnValue> result)
     {
@@ -20,12 +20,12 @@ public static class Tfn
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<TfnValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 8 && len != 9)
         {
             result = new ValidationResult<TfnValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         var weights = len == 8 ? Weights8 : Weights9;
         int sum = 0;
@@ -34,7 +34,7 @@ public static class Tfn
         if (sum % 11 != 0)
         {
             result = new ValidationResult<TfnValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<TfnValue>(true, new TfnValue(new string(digits[..len])), ValidationError.None);
         return true;

@@ -19,17 +19,17 @@ public static class Pesel
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<PeselValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 11)
         {
             result = new ValidationResult<PeselValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         if (!IsValidDate(digits))
         {
             result = new ValidationResult<PeselValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         int sum = 0;
         for (int i = 0; i < 10; i++)
@@ -38,7 +38,7 @@ public static class Pesel
         if (check != digits[10] - '0')
         {
             result = new ValidationResult<PeselValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<PeselValue>(true, new PeselValue(new string(digits)), ValidationError.None);
         return true;

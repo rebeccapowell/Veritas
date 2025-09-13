@@ -20,14 +20,14 @@ public static class Malo
     /// <summary>Attempts to validate the supplied input as a MaLo identifier.</summary>
     /// <param name="input">Candidate identifier to validate.</param>
     /// <param name="result">The validation outcome including the parsed value when valid.</param>
-    /// <returns><c>true</c> if validation executed; the <see cref="ValidationResult{T}.IsValid"/> property indicates success.</returns>
+    /// <returns><c>true</c> if validation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<MaloValue> result)
     {
         Span<char> digits = stackalloc char[11];
         if (!Normalize(input, digits, out int len) || len != 11)
         {
             result = new ValidationResult<MaloValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         int sumOdd = 0, sumEven = 0;
         for (int i = 0; i < 10; i++)
@@ -40,7 +40,7 @@ public static class Malo
         if (digits[10] != (char)('0' + check))
         {
             result = new ValidationResult<MaloValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         string value = new string(digits);
         result = new ValidationResult<MaloValue>(true, new MaloValue(value), ValidationError.None);

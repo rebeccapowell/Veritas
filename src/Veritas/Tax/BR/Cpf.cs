@@ -20,29 +20,29 @@ public static class Cpf
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<CpfValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 11)
         {
             result = new ValidationResult<CpfValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         if (AllEqual(digits))
         {
             result = new ValidationResult<CpfValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         int d1 = ComputeCheckDigit(digits[..9], Weights1);
         if (digits[9] - '0' != d1)
         {
             result = new ValidationResult<CpfValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         int d2 = ComputeCheckDigit(digits[..10], Weights2);
         if (digits[10] - '0' != d2)
         {
             result = new ValidationResult<CpfValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         string value = new string(digits);
         result = new ValidationResult<CpfValue>(true, new CpfValue(value), ValidationError.None);

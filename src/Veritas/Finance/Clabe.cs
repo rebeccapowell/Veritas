@@ -11,7 +11,7 @@ public readonly struct ClabeValue
 
 public static class Clabe
 {
-    private static readonly int[] Weights = {3,7,1};
+    private static readonly int[] Weights = { 3, 7, 1 };
 
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<ClabeValue> result)
     {
@@ -19,7 +19,7 @@ public static class Clabe
         if (!Normalize(input, digits, out int len) || len != 18)
         {
             result = new ValidationResult<ClabeValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         int sum = 0;
         for (int i = 0; i < 17; i++)
@@ -31,7 +31,7 @@ public static class Clabe
         if (digits[17] != (char)('0' + check))
         {
             result = new ValidationResult<ClabeValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         string value = new string(digits);
         result = new ValidationResult<ClabeValue>(true, new ClabeValue(value), ValidationError.None);

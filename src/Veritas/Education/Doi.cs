@@ -10,10 +10,10 @@ public static class Doi
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<DoiValue> result)
     {
         string s = new string(input).Trim();
-        if (!s.StartsWith("10.")) { result = new ValidationResult<DoiValue>(false, default, ValidationError.Format); return true; }
+        if (!s.StartsWith("10.")) { result = new ValidationResult<DoiValue>(false, default, ValidationError.Format); return false; }
         int slash = s.IndexOf('/');
-        if (slash <= 3 || slash == s.Length - 1) { result = new ValidationResult<DoiValue>(false, default, ValidationError.Format); return true; }
-        for (int i = 3; i < slash; i++) if (!char.IsDigit(s[i])) { result = new ValidationResult<DoiValue>(false, default, ValidationError.Charset); return true; }
+        if (slash <= 3 || slash == s.Length - 1) { result = new ValidationResult<DoiValue>(false, default, ValidationError.Format); return false; }
+        for (int i = 3; i < slash; i++) if (!char.IsDigit(s[i])) { result = new ValidationResult<DoiValue>(false, default, ValidationError.Charset); return false; }
         result = new ValidationResult<DoiValue>(true, new DoiValue(s), ValidationError.None);
         return true;
     }

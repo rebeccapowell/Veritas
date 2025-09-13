@@ -17,12 +17,12 @@ public static class Mic
         if (!Normalize(input, chars, out int len))
         {
             result = new ValidationResult<MicValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 4)
         {
             result = new ValidationResult<MicValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         result = new ValidationResult<MicValue>(true, new MicValue(new string(chars)), ValidationError.None);
         return true;

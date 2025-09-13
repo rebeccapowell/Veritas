@@ -10,7 +10,7 @@ public class SouthAfricaNationalIdTests
     {
         Span<char> buffer = stackalloc char[13];
         NationalId.TryGenerate(buffer, out var written).ShouldBeTrue();
-        NationalId.TryValidate(buffer[..written], out var result);
+        NationalId.TryValidate(buffer[..written], out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
     }
 
@@ -20,7 +20,7 @@ public class SouthAfricaNationalIdTests
         Span<char> buffer = stackalloc char[13];
         NationalId.TryGenerate(new GenerationOptions { Seed = 5 }, buffer, out var w).ShouldBeTrue();
         buffer[w - 1] = buffer[w - 1] == '0' ? '1' : '0';
-        NationalId.TryValidate(buffer[..w], out var result);
+        NationalId.TryValidate(buffer[..w], out var result).ShouldBeFalse();
         result.IsValid.ShouldBeFalse();
     }
 }

@@ -15,11 +15,11 @@ public static class Phone
         {
             if (ch == ' ' || ch == '-') continue;
             if (len == 0 && ch == '+') { buf[len++] = ch; continue; }
-            if (ch < '0' || ch > '9') { result = new ValidationResult<PhoneValue>(false, default, ValidationError.Charset); return true; }
-            if (len >= buf.Length) { result = new ValidationResult<PhoneValue>(false, default, ValidationError.Length); return true; }
+            if (ch < '0' || ch > '9') { result = new ValidationResult<PhoneValue>(false, default, ValidationError.Charset); return false; }
+            if (len >= buf.Length) { result = new ValidationResult<PhoneValue>(false, default, ValidationError.Length); return false; }
             buf[len++] = ch;
         }
-        if (len < 4 || len > 16) { result = new ValidationResult<PhoneValue>(false, default, ValidationError.Length); return true; }
+        if (len < 4 || len > 16) { result = new ValidationResult<PhoneValue>(false, default, ValidationError.Length); return false; }
         result = new ValidationResult<PhoneValue>(true, new PhoneValue(new string(buf[..len])), ValidationError.None);
         return true;
     }

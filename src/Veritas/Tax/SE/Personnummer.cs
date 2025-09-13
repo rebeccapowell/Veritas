@@ -18,23 +18,23 @@ public static class Personnummer
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<PersonnummerValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 10 && len != 12)
         {
             result = new ValidationResult<PersonnummerValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         ReadOnlySpan<char> num = len == 10 ? digits[..10] : digits[(len - 10)..len];
         if (!IsValidDate(num))
         {
             result = new ValidationResult<PersonnummerValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (!Luhn.Validate(num))
         {
             result = new ValidationResult<PersonnummerValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<PersonnummerValue>(true, new PersonnummerValue(new string(digits[..len])), ValidationError.None);
         return true;

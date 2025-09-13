@@ -29,7 +29,7 @@ public class AhvTests
     [InlineData("756.9217.0769.85a")]
     public void ValidateBad(string input)
     {
-        Ahv.TryValidate(input, out var r).ShouldBeTrue();
+        Ahv.TryValidate(input, out var r).ShouldBeFalse();
         r.IsValid.ShouldBeFalse();
     }
 }

@@ -8,9 +8,9 @@ public class UsccTests
     public void Validate_Works()
     {
         const string valid = "UCQWD18YGFCXRT9YFY";
-        Uscc.TryValidate(valid, out var result);
+        Uscc.TryValidate(valid, out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
-        Uscc.TryValidate(valid[..17] + '0', out var invalid);
+        Uscc.TryValidate(valid[..17] + '0', out var invalid).ShouldBeFalse();
         invalid.IsValid.ShouldBeFalse();
     }
 
@@ -19,7 +19,7 @@ public class UsccTests
     {
         Span<char> buffer = stackalloc char[18];
         Uscc.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Uscc.TryValidate(buffer[..written], out var result);
+        Uscc.TryValidate(buffer[..written], out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
     }
 }

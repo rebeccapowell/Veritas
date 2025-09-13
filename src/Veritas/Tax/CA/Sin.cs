@@ -18,17 +18,17 @@ public static class Sin
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<SinValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 9)
         {
             result = new ValidationResult<SinValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         if (!Luhn.Validate(digits))
         {
             result = new ValidationResult<SinValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<SinValue>(true, new SinValue(new string(digits)), ValidationError.None);
         return true;

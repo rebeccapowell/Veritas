@@ -12,7 +12,7 @@ public readonly struct GstinValue
 public static class Gstin
 {
     private const string Alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    private static readonly int[] Weights = new[] {1,2,3,4,5,6,7,8,9,10,1,2,3,4};
+    private static readonly int[] Weights = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4 };
 
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<GstinValue> result)
     {
@@ -20,18 +20,18 @@ public static class Gstin
         if (!Normalize(input, chars, out int len))
         {
             result = new ValidationResult<GstinValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 15)
         {
             result = new ValidationResult<GstinValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         int sum = 0;
         for (int i = 0; i < 14; i++)
         {
             int v = Alphabet.IndexOf(chars[i]);
-            if (v < 0) { result = new ValidationResult<GstinValue>(false, default, ValidationError.Charset); return true; }
+            if (v < 0) { result = new ValidationResult<GstinValue>(false, default, ValidationError.Charset); return false; }
             sum += v * Weights[i];
         }
         int check = (36 - (sum % 36)) % 36;
@@ -39,7 +39,7 @@ public static class Gstin
         if (chars[14] != expected)
         {
             result = new ValidationResult<GstinValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<GstinValue>(true, new GstinValue(new string(chars)), ValidationError.None);
         return true;

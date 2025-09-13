@@ -9,7 +9,7 @@ public class PodTests
     [InlineData("FR123ABCDE123456", false)]
     public void Validate_Works(string input, bool expected)
     {
-        Pod.TryValidate(input, out var result);
+        Pod.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 }

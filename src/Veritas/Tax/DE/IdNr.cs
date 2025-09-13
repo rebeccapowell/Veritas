@@ -18,17 +18,17 @@ public static class IdNr
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<IdNrValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 11)
         {
             result = new ValidationResult<IdNrValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         if (digits[0] == '0')
         {
             result = new ValidationResult<IdNrValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         Span<int> counts = stackalloc int[10];
         for (int i = 0; i < 10; i++)
@@ -45,12 +45,12 @@ public static class IdNr
         if (!(repeatGroups == 1 && (repeatCount == 2 || repeatCount == 3)))
         {
             result = new ValidationResult<IdNrValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (!Iso7064.ValidateMod11_10(digits))
         {
             result = new ValidationResult<IdNrValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<IdNrValue>(true, new IdNrValue(new string(digits)), ValidationError.None);
         return true;

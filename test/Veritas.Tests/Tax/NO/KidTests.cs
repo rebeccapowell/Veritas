@@ -11,7 +11,7 @@ public class NoKidTests
     [InlineData("12344", KidVariant.Mod11, false)]
     public void Validate_Works(string input, KidVariant variant, bool expected)
     {
-        Kid.TryValidate(input, variant, out var result);
+        Kid.TryValidate(input, variant, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 
@@ -20,7 +20,7 @@ public class NoKidTests
     {
         Span<char> buffer = stackalloc char[5];
         Kid.TryGenerate(KidVariant.Mod10, 5, buffer, out var written).ShouldBeTrue();
-        Kid.TryValidate(buffer[..written], KidVariant.Mod10, out var result);
+        Kid.TryValidate(buffer[..written], KidVariant.Mod10, out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
     }
 
@@ -29,7 +29,7 @@ public class NoKidTests
     {
         Span<char> buffer = stackalloc char[5];
         Kid.TryGenerate(KidVariant.Mod11, 5, buffer, out var written).ShouldBeTrue();
-        Kid.TryValidate(buffer[..written], KidVariant.Mod11, out var result);
+        Kid.TryValidate(buffer[..written], KidVariant.Mod11, out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
     }
 }

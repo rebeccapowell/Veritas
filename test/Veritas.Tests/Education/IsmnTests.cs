@@ -13,7 +13,7 @@ public class IsmnTests
     [InlineData("M12345", false)]
     public void Validate(string input, bool expected)
     {
-        Ismn.TryValidate(input, out var r);
+        Ismn.TryValidate(input, out var r).ShouldBe(expected);
         r.IsValid.ShouldBe(expected);
     }
 
@@ -22,7 +22,7 @@ public class IsmnTests
     {
         Span<char> buffer = stackalloc char[13];
         Ismn.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Ismn.TryValidate(buffer[..written], out var r);
+        Ismn.TryValidate(buffer[..written], out var r).ShouldBeTrue();
         r.IsValid.ShouldBeTrue();
     }
 }

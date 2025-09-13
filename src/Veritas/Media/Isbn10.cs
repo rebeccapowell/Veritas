@@ -16,11 +16,11 @@ public static class Isbn10
         {
             if (ch == '-' || ch == ' ') continue;
             char u = char.ToUpperInvariant(ch);
-            if ((u < '0' || u > '9') && !(u == 'X' && len == 9)) { result = new ValidationResult<Isbn10Value>(false, default, ValidationError.Charset); return true; }
-            if (len >= 10) { result = new ValidationResult<Isbn10Value>(false, default, ValidationError.Length); return true; }
+            if ((u < '0' || u > '9') && !(u == 'X' && len == 9)) { result = new ValidationResult<Isbn10Value>(false, default, ValidationError.Charset); return false; }
+            if (len >= 10) { result = new ValidationResult<Isbn10Value>(false, default, ValidationError.Length); return false; }
             buf[len++] = u;
         }
-        if (len != 10) { result = new ValidationResult<Isbn10Value>(false, default, ValidationError.Length); return true; }
+        if (len != 10) { result = new ValidationResult<Isbn10Value>(false, default, ValidationError.Length); return false; }
         int sum = 0;
         for (int i = 0; i < 9; i++)
         {
@@ -28,7 +28,7 @@ public static class Isbn10
         }
         int check = 11 - (sum % 11);
         char expected = check == 10 ? 'X' : check == 11 ? '0' : (char)('0' + check);
-        if (buf[9] != expected) { result = new ValidationResult<Isbn10Value>(false, default, ValidationError.Checksum); return true; }
+        if (buf[9] != expected) { result = new ValidationResult<Isbn10Value>(false, default, ValidationError.Checksum); return false; }
         result = new ValidationResult<Isbn10Value>(true, new Isbn10Value(new string(buf)), ValidationError.None);
         return true;
     }

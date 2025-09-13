@@ -21,7 +21,7 @@ public static class Ipv6
     /// <summary>Attempts to validate the supplied input as an IPv6 address.</summary>
     /// <param name="input">Candidate address to validate.</param>
     /// <param name="result">The validation outcome including the parsed value when valid.</param>
-    /// <returns><c>true</c> if validation executed; the <see cref="ValidationResult{T}.IsValid"/> property indicates success.</returns>
+    /// <returns><c>true</c> if validation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<Ipv6Value> result)
     {
         if (IPAddress.TryParse(input, out var addr) && addr.AddressFamily == System.Net.Sockets.AddressFamily.InterNetworkV6)
@@ -30,7 +30,7 @@ public static class Ipv6
             return true;
         }
         result = new ValidationResult<Ipv6Value>(false, default, ValidationError.Format);
-        return true;
+        return false;
     }
 }
 

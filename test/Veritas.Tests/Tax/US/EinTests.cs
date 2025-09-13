@@ -9,7 +9,7 @@ public class EinTests
     [InlineData("00-1234567", false)]
     public void Validate(string input, bool expected)
     {
-        Ein.TryValidate(input, out var r);
+        Ein.TryValidate(input, out var r).ShouldBe(expected);
         r.IsValid.ShouldBe(expected);
     }
 }

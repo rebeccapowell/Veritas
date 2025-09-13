@@ -29,7 +29,7 @@ public class EgnTests
     [InlineData("abcdefghij")]
     public void ValidateBad(string input)
     {
-        Egn.TryValidate(input, out var r).ShouldBeTrue();
+        Egn.TryValidate(input, out var r).ShouldBeFalse();
         r.IsValid.ShouldBeFalse();
     }
 }

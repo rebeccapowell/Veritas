@@ -10,7 +10,7 @@ public class PrmTests
     [InlineData("1234567890123A", false)]
     public void Validate(string input, bool expected)
     {
-        Prm.TryValidate(input, out var result);
+        Prm.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 }

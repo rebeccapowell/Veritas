@@ -22,17 +22,17 @@ public static class Ahv
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<AhvValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 13)
         {
             result = new ValidationResult<AhvValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         if (!Iso7064.ValidateMod11_10(digits))
         {
             result = new ValidationResult<AhvValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<AhvValue>(true, new AhvValue(new string(digits)), ValidationError.None);
         return true;

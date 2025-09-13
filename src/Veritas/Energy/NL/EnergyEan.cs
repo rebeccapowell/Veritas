@@ -21,24 +21,24 @@ public static class EnergyEan
     /// <summary>Attempts to validate the supplied input as an energy EAN code.</summary>
     /// <param name="input">Candidate code to validate.</param>
     /// <param name="result">The validation outcome including the parsed value when valid.</param>
-    /// <returns><c>true</c> if validation executed; the <see cref="ValidationResult{T}.IsValid"/> property indicates success.</returns>
+    /// <returns><c>true</c> if validation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<EnergyEanValue> result)
     {
         Span<char> digits = stackalloc char[18];
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<EnergyEanValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 18)
         {
             result = new ValidationResult<EnergyEanValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         if (!Gs1.Validate(digits))
         {
             result = new ValidationResult<EnergyEanValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         string value = new string(digits);
         result = new ValidationResult<EnergyEanValue>(true, new EnergyEanValue(value), ValidationError.None);

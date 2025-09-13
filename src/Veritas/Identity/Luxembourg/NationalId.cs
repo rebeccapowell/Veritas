@@ -12,19 +12,19 @@ public static class NationalId
         if (!Normalize(input, digits, out int len) || len != 13)
         {
             result = new ValidationResult<NationalIdValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         byte luhn = (byte)Luhn.ComputeCheckDigit(digits[..11]);
         if (digits[11] != (char)('0' + luhn))
         {
             result = new ValidationResult<NationalIdValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         byte ver = Verhoeff.Compute(digits[..11]);
         if (digits[12] != (char)('0' + ver))
         {
             result = new ValidationResult<NationalIdValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         var value = new string(digits);
         result = new ValidationResult<NationalIdValue>(true, new NationalIdValue(value), ValidationError.None);

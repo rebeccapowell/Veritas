@@ -22,18 +22,18 @@ public static class Cuit
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<CuitValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 11)
         {
             result = new ValidationResult<CuitValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         int check = ComputeCheckDigit(digits[..10]);
         if (digits[10] - '0' != check)
         {
             result = new ValidationResult<CuitValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         string value = new string(digits);
         result = new ValidationResult<CuitValue>(true, new CuitValue(value), ValidationError.None);

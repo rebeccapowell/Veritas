@@ -25,8 +25,8 @@ dotnet add package Veritas --version 1.0.3
 
 ```csharp
 // Validate an IBAN
-Finance.Iban.TryValidate("FR14 2004 1010 0505 0001 3M02 606", out var iban);
-Console.WriteLine(iban.IsValid);            // True
+var ok = Finance.Iban.TryValidate("FR14 2004 1010 0505 0001 3M02 606", out var iban);
+Console.WriteLine(ok);                      // True
 
 // Generate an IMEI
 Telecom.Imei.TryGenerate(default, stackalloc char[15], out var written);

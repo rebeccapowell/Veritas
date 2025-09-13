@@ -22,14 +22,14 @@ public static class Ismn
         {
             if (ch == ' ' || ch == '-') continue;
             char up = char.ToUpperInvariant(ch);
-            if (len >= buf.Length) { result = new ValidationResult<IsmnValue>(false, default, ValidationError.Length); return true; }
+            if (len >= buf.Length) { result = new ValidationResult<IsmnValue>(false, default, ValidationError.Length); return false; }
             buf[len++] = up;
         }
         if (len == 10)
         {
-            if (buf[0] != 'M') { result = new ValidationResult<IsmnValue>(false, default, ValidationError.Format); return true; }
+            if (buf[0] != 'M') { result = new ValidationResult<IsmnValue>(false, default, ValidationError.Format); return false; }
             for (int i = 1; i < 10; i++)
-                if (buf[i] < '0' || buf[i] > '9') { result = new ValidationResult<IsmnValue>(false, default, ValidationError.Charset); return true; }
+                if (buf[i] < '0' || buf[i] > '9') { result = new ValidationResult<IsmnValue>(false, default, ValidationError.Charset); return false; }
             int sum = 3 * 3; // 'M' treated as 3
             for (int i = 1; i < 9; i++)
             {
@@ -37,22 +37,22 @@ public static class Ismn
                 sum += d * ((i % 2 == 1) ? 1 : 3);
             }
             int check = (10 - (sum % 10)) % 10;
-            if (buf[9] - '0' != check) { result = new ValidationResult<IsmnValue>(false, default, ValidationError.Checksum); return true; }
+            if (buf[9] - '0' != check) { result = new ValidationResult<IsmnValue>(false, default, ValidationError.Checksum); return false; }
             result = new ValidationResult<IsmnValue>(true, new IsmnValue(new string(buf[..10])), ValidationError.None);
             return true;
         }
         else if (len == 13)
         {
             for (int i = 0; i < 13; i++)
-                if (buf[i] < '0' || buf[i] > '9') { result = new ValidationResult<IsmnValue>(false, default, ValidationError.Charset); return true; }
-            if (!Gs1.Validate(buf)) { result = new ValidationResult<IsmnValue>(false, default, ValidationError.Checksum); return true; }
+                if (buf[i] < '0' || buf[i] > '9') { result = new ValidationResult<IsmnValue>(false, default, ValidationError.Charset); return false; }
+            if (!Gs1.Validate(buf)) { result = new ValidationResult<IsmnValue>(false, default, ValidationError.Checksum); return false; }
             result = new ValidationResult<IsmnValue>(true, new IsmnValue(new string(buf)), ValidationError.None);
             return true;
         }
         else
         {
             result = new ValidationResult<IsmnValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
     }
 

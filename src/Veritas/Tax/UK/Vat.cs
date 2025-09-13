@@ -17,17 +17,17 @@ public static class Vat
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<VatValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 9 && len != 12)
         {
             result = new ValidationResult<VatValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         if (!ValidateCore(digits[..9]))
         {
             result = new ValidationResult<VatValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<VatValue>(true, new VatValue(new string(digits[..len])), ValidationError.None);
         return true;

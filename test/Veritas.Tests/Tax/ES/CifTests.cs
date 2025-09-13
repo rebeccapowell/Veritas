@@ -10,14 +10,14 @@ public class CifTests
     [InlineData("B12345678", false)]
     public void Validate(string input, bool expected)
     {
-        Cif.TryValidate(input, out var result);
+        Cif.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 
     [Theory, AutoData]
     public void RandomString_IsInvalid(string random)
     {
-        Cif.TryValidate(random, out var result);
+        Cif.TryValidate(random, out var result).ShouldBeFalse();
         result.IsValid.ShouldBeFalse();
     }
 }

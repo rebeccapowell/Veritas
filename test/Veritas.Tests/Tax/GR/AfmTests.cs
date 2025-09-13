@@ -10,7 +10,7 @@ public class AfmTests
     [InlineData("291417770", false)]
     public void Validate_Works(string input, bool expected)
     {
-        Afm.TryValidate(input, out var result);
+        Afm.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 
@@ -19,7 +19,7 @@ public class AfmTests
     {
         Span<char> buffer = stackalloc char[9];
         Afm.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Afm.TryValidate(buffer[..written], out var result);
+        Afm.TryValidate(buffer[..written], out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
     }
 }

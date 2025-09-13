@@ -10,7 +10,7 @@ public class EthereumTests
     [InlineData("zz709f2102306220921060314715629080e2fb77", false)]
     public void Validate(string input, bool expected)
     {
-        Ethereum.TryValidate(input, out var r);
+        Ethereum.TryValidate(input, out var r).ShouldBe(expected);
         r.IsValid.ShouldBe(expected);
     }
 }

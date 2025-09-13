@@ -29,7 +29,7 @@ public class PersonasKodsTests
     [InlineData("abcdefghijk")]
     public void ValidateBad(string input)
     {
-        PersonasKods.TryValidate(input, out var r).ShouldBeTrue();
+        PersonasKods.TryValidate(input, out var r).ShouldBeFalse();
         r.IsValid.ShouldBeFalse();
     }
 }

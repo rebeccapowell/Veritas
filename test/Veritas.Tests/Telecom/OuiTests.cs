@@ -11,7 +11,7 @@ public class OuiTests
     [InlineData("00A0CZ", false)]
     public void Validate(string input, bool expected)
     {
-        Oui.TryValidate(input, out var result);
+        Oui.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 }

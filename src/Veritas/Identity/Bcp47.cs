@@ -19,7 +19,7 @@ public static class Bcp47
         if (input.IsEmpty)
         {
             result = new ValidationResult<Bcp47Value>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         Span<char> buf = stackalloc char[input.Length];
         for (int i = 0; i < input.Length; i++)
@@ -31,7 +31,7 @@ public static class Bcp47
             else
             {
                 result = new ValidationResult<Bcp47Value>(false, default, ValidationError.Charset);
-                return true;
+                return false;
             }
         }
         var span = buf[..input.Length];
@@ -41,7 +41,7 @@ public static class Bcp47
             if (span.Length < 2 || span.Length > 8)
             {
                 result = new ValidationResult<Bcp47Value>(false, default, ValidationError.Format);
-                return true;
+                return false;
             }
         }
         else
@@ -51,12 +51,12 @@ public static class Bcp47
             if (lang.Length < 2 || lang.Length > 8 || region.Length != 2)
             {
                 result = new ValidationResult<Bcp47Value>(false, default, ValidationError.Format);
-                return true;
+                return false;
             }
             if (!(region[0] >= 'a' && region[0] <= 'z' && region[1] >= 'a' && region[1] <= 'z'))
             {
                 result = new ValidationResult<Bcp47Value>(false, default, ValidationError.Charset);
-                return true;
+                return false;
             }
         }
         var tag = new string(span);
@@ -64,11 +64,12 @@ public static class Bcp47
         {
             CultureInfo.GetCultureInfo(tag);
             result = new ValidationResult<Bcp47Value>(true, new Bcp47Value(tag), ValidationError.None);
+            return true;
         }
         catch (CultureNotFoundException)
         {
             result = new ValidationResult<Bcp47Value>(false, default, ValidationError.Format);
+            return false;
         }
-        return true;
     }
 }

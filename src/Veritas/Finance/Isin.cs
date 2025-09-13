@@ -20,7 +20,7 @@ public static class Isin
         if (!Normalize(input, buffer, out int len) || len != 12)
         {
             result = new ValidationResult<IsinValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         Span<char> digits = stackalloc char[24];
         int idx = 0;
@@ -41,7 +41,7 @@ public static class Isin
         if (!Luhn.Validate(digits[..idx]))
         {
             result = new ValidationResult<IsinValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         string value = new string(buffer[..len]);
         result = new ValidationResult<IsinValue>(true, new IsinValue(value), ValidationError.None);

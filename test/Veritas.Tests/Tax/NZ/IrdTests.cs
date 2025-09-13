@@ -9,7 +9,7 @@ public class IrdTests
     [InlineData("49091851", false)]
     public void Validate_Works(string input, bool expected)
     {
-        Ird.TryValidate(input, out var result);
+        Ird.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 }

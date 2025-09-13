@@ -17,21 +17,21 @@ public static class Nino
             char u = char.ToUpperInvariant(ch);
             if (len < 2)
             {
-                if (u < 'A' || u > 'Z') { result = new ValidationResult<NinoValue>(false, default, ValidationError.Charset); return true; }
+                if (u < 'A' || u > 'Z') { result = new ValidationResult<NinoValue>(false, default, ValidationError.Charset); return false; }
             }
             else if (len < 8)
             {
-                if (u < '0' || u > '9') { result = new ValidationResult<NinoValue>(false, default, ValidationError.Charset); return true; }
+                if (u < '0' || u > '9') { result = new ValidationResult<NinoValue>(false, default, ValidationError.Charset); return false; }
             }
             else
             {
-                if (!(u == 'A' || u == 'B' || u == 'C' || u == 'D' || u == ' ')) { result = new ValidationResult<NinoValue>(false, default, ValidationError.Charset); return true; }
+                if (!(u == 'A' || u == 'B' || u == 'C' || u == 'D' || u == ' ')) { result = new ValidationResult<NinoValue>(false, default, ValidationError.Charset); return false; }
             }
-            if (len >= 9) { result = new ValidationResult<NinoValue>(false, default, ValidationError.Length); return true; }
+            if (len >= 9) { result = new ValidationResult<NinoValue>(false, default, ValidationError.Length); return false; }
             buf[len++] = u;
         }
-        if (len < 8 || len > 9) { result = new ValidationResult<NinoValue>(false, default, ValidationError.Length); return true; }
-        if ("DFIQUV".IndexOf(buf[0]) >= 0 || "DFIQUVO".IndexOf(buf[1]) >= 0) { result = new ValidationResult<NinoValue>(false, default, ValidationError.CountryRule); return true; }
+        if (len < 8 || len > 9) { result = new ValidationResult<NinoValue>(false, default, ValidationError.Length); return false; }
+        if ("DFIQUV".IndexOf(buf[0]) >= 0 || "DFIQUVO".IndexOf(buf[1]) >= 0) { result = new ValidationResult<NinoValue>(false, default, ValidationError.CountryRule); return false; }
         result = new ValidationResult<NinoValue>(true, new NinoValue(new string(buf[..len])), ValidationError.None);
         return true;
     }

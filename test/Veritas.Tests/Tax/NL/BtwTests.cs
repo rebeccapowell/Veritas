@@ -10,14 +10,14 @@ public class BtwTests
     [InlineData("100000003B01", false)]
     public void Validate(string input, bool expected)
     {
-        Btw.TryValidate(input, out var result);
+        Btw.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 
     [Theory, AutoData]
     public void RandomString_IsInvalid(string random)
     {
-        Btw.TryValidate(random, out var result);
+        Btw.TryValidate(random, out var result).ShouldBeFalse();
         result.IsValid.ShouldBeFalse();
     }
 }

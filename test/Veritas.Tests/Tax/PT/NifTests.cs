@@ -10,7 +10,7 @@ public class PtNifTests
     [InlineData("166048764", false)]
     public void Validate_Works(string input, bool expected)
     {
-        Nif.TryValidate(input, out var result);
+        Nif.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 
@@ -19,7 +19,7 @@ public class PtNifTests
     {
         Span<char> buffer = stackalloc char[9];
         Nif.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Nif.TryValidate(buffer[..written], out var result);
+        Nif.TryValidate(buffer[..written], out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
     }
 }

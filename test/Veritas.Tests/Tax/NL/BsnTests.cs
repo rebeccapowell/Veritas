@@ -10,14 +10,14 @@ public class BsnTests
     [InlineData("100000008", false)]
     public void Validate(string input, bool expected)
     {
-        Bsn.TryValidate(input, out var result);
+        Bsn.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 
     [Theory, AutoData]
     public void RandomString_IsInvalid(string random)
     {
-        Bsn.TryValidate(random, out var result);
+        Bsn.TryValidate(random, out var result).ShouldBeFalse();
         result.IsValid.ShouldBeFalse();
     }
 }

@@ -10,7 +10,7 @@ public class MpanTests
     [InlineData("1234567890124", false)]
     public void Validate_Works(string input, bool expected)
     {
-        Mpan.TryValidate(input, out var result);
+        Mpan.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 
@@ -19,7 +19,7 @@ public class MpanTests
     {
         Span<char> buffer = stackalloc char[13];
         Mpan.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Mpan.TryValidate(buffer[..written], out var result);
+        Mpan.TryValidate(buffer[..written], out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
     }
 }

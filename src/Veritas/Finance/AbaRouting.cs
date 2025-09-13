@@ -19,7 +19,7 @@ public static class AbaRouting
         if (!Normalize(input, buffer, out int len) || len != 9)
         {
             result = new ValidationResult<AbaRoutingValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         int sum = 0;
         for (int i = 0; i < 9; i++)
@@ -28,7 +28,7 @@ public static class AbaRouting
             if ((uint)d > 9)
             {
                 result = new ValidationResult<AbaRoutingValue>(false, default, ValidationError.Charset);
-                return true;
+                return false;
             }
             int weight = i % 3 == 0 ? 3 : i % 3 == 1 ? 7 : 1;
             sum += d * weight;
@@ -36,7 +36,7 @@ public static class AbaRouting
         if (sum % 10 != 0)
         {
             result = new ValidationResult<AbaRoutingValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         string value = new string(buffer);
         result = new ValidationResult<AbaRoutingValue>(true, new AbaRoutingValue(value), ValidationError.None);

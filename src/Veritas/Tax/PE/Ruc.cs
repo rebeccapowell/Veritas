@@ -14,7 +14,7 @@ public readonly struct RucValue
 /// </summary>
 public static class Ruc
 {
-    private static readonly int[] Weights = {5,4,3,2,7,6,5,4,3,2};
+    private static readonly int[] Weights = { 5, 4, 3, 2, 7, 6, 5, 4, 3, 2 };
 
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<RucValue> result)
     {
@@ -22,18 +22,18 @@ public static class Ruc
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<RucValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 11)
         {
             result = new ValidationResult<RucValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         int check = ComputeCheckDigit(digits[..10]);
-        if (digits[10]-'0' != check)
+        if (digits[10] - '0' != check)
         {
             result = new ValidationResult<RucValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<RucValue>(true, new RucValue(new string(digits)), ValidationError.None);
         return true;
@@ -44,35 +44,35 @@ public static class Ruc
 
     public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written)
     {
-        written=0;
-        if(destination.Length<11) return false;
+        written = 0;
+        if (destination.Length < 11) return false;
         var rng = options.Seed.HasValue ? new Random(options.Seed.Value) : Random.Shared;
         Span<char> digits = destination[..11];
-        for(int i=0;i<10;i++) digits[i]=(char)('0'+rng.Next(10));
-        digits[10]=(char)('0'+ComputeCheckDigit(digits[..10]));
-        written=11;
+        for (int i = 0; i < 10; i++) digits[i] = (char)('0' + rng.Next(10));
+        digits[10] = (char)('0' + ComputeCheckDigit(digits[..10]));
+        written = 11;
         return true;
     }
 
     private static int ComputeCheckDigit(ReadOnlySpan<char> digits)
     {
-        int sum=0;
-        for(int i=0;i<Weights.Length;i++) sum += (digits[i]-'0')*Weights[i];
+        int sum = 0;
+        for (int i = 0; i < Weights.Length; i++) sum += (digits[i] - '0') * Weights[i];
         int r = 11 - (sum % 11);
-        if (r==10) return 0;
-        if (r==11) return 1;
+        if (r == 10) return 0;
+        if (r == 11) return 1;
         return r;
     }
 
     private static bool Normalize(ReadOnlySpan<char> input, Span<char> dest, out int len)
     {
-        len=0;
-        foreach(var ch in input)
+        len = 0;
+        foreach (var ch in input)
         {
-            if (ch==' '||ch=='-') continue;
-            if(!char.IsDigit(ch)){ len=0; return false; }
-            if(len>=dest.Length){ len=0; return false; }
-            dest[len++]=ch;
+            if (ch == ' ' || ch == '-') continue;
+            if (!char.IsDigit(ch)) { len = 0; return false; }
+            if (len >= dest.Length) { len = 0; return false; }
+            dest[len++] = ch;
         }
         return true;
     }

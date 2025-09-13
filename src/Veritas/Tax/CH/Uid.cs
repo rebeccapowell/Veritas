@@ -20,18 +20,18 @@ public static class Uid
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<UidValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 9)
         {
             result = new ValidationResult<UidValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         int check = ComputeCheckDigit(digits[..8]);
         if (digits[8] - '0' != check)
         {
             result = new ValidationResult<UidValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<UidValue>(true, new UidValue("CHE" + new string(digits)), ValidationError.None);
         return true;
@@ -75,7 +75,7 @@ public static class Uid
         bool prefixSeen = false;
         int i = 0;
         while (i < input.Length && char.IsWhiteSpace(input[i])) i++;
-        if (i + 3 <= input.Length && (input[i] == 'C' || input[i] == 'c') && (input[i+1]=='H' || input[i+1]=='h') && (input[i+2]=='E'||input[i+2]=='e'))
+        if (i + 3 <= input.Length && (input[i] == 'C' || input[i] == 'c') && (input[i + 1] == 'H' || input[i + 1] == 'h') && (input[i + 2] == 'E' || input[i + 2] == 'e'))
         {
             prefixSeen = true;
             i += 3;

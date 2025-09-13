@@ -10,7 +10,7 @@ public class NnTests
     [InlineData("90010100124", false)]
     public void Validate_Works(string input, bool expected)
     {
-        Nn.TryValidate(input, out var result);
+        Nn.TryValidate(input, out var result).ShouldBe(expected);
         result.IsValid.ShouldBe(expected);
     }
 
@@ -19,7 +19,7 @@ public class NnTests
     {
         Span<char> buffer = stackalloc char[11];
         Nn.TryGenerate(buffer, out var written).ShouldBeTrue();
-        Nn.TryValidate(buffer[..written], out var result);
+        Nn.TryValidate(buffer[..written], out var result).ShouldBeTrue();
         result.IsValid.ShouldBeTrue();
     }
 }

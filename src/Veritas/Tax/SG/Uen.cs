@@ -22,18 +22,18 @@ public static class Uen
         if (!Normalize(input, chars, out int len))
         {
             result = new ValidationResult<UenValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 9 && len != 10)
         {
             result = new ValidationResult<UenValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         int sum = 0;
         for (int i = 0; i < len - 1; i++)
         {
             int v = Alphabet.IndexOf(chars[i]);
-            if (v < 0) { result = new ValidationResult<UenValue>(false, default, ValidationError.Charset); return true; }
+            if (v < 0) { result = new ValidationResult<UenValue>(false, default, ValidationError.Charset); return false; }
             sum += v * (len - i);
         }
         int checkVal = (11 - (sum % 11)) % 11;
@@ -41,7 +41,7 @@ public static class Uen
         if (chars[len - 1] != expected)
         {
             result = new ValidationResult<UenValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<UenValue>(true, new UenValue(new string(chars[..len])), ValidationError.None);
         return true;

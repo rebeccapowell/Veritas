@@ -14,7 +14,7 @@ public readonly struct UidValue
 /// </summary>
 public static class Uid
 {
-    private static readonly int[] Weights = {1,2,1,2,1,2,1};
+    private static readonly int[] Weights = { 1, 2, 1, 2, 1, 2, 1 };
 
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<UidValue> result)
     {
@@ -22,18 +22,18 @@ public static class Uid
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<UidValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 8)
         {
             result = new ValidationResult<UidValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         int check = ComputeCheckDigit(digits[..7]);
         if (digits[7] - '0' != check)
         {
             result = new ValidationResult<UidValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<UidValue>(true, new UidValue("ATU" + new string(digits)), ValidationError.None);
         return true;
@@ -50,42 +50,42 @@ public static class Uid
         destination[1] = 'T';
         destination[2] = 'U';
         var rng = options.Seed.HasValue ? new Random(options.Seed.Value) : Random.Shared;
-        Span<char> digits = destination.Slice(3,8);
-        for (int i=0;i<7;i++)
-            digits[i] = (char)('0'+rng.Next(10));
-        digits[7] = (char)('0'+ComputeCheckDigit(digits[..7]));
+        Span<char> digits = destination.Slice(3, 8);
+        for (int i = 0; i < 7; i++)
+            digits[i] = (char)('0' + rng.Next(10));
+        digits[7] = (char)('0' + ComputeCheckDigit(digits[..7]));
         written = 11;
         return true;
     }
 
     private static int ComputeCheckDigit(ReadOnlySpan<char> digits)
     {
-        int sum=0;
-        for(int i=0;i<Weights.Length;i++)
+        int sum = 0;
+        for (int i = 0; i < Weights.Length; i++)
         {
-            int prod = (digits[i]-'0')*Weights[i];
-            sum += prod/10 + prod%10;
+            int prod = (digits[i] - '0') * Weights[i];
+            sum += prod / 10 + prod % 10;
         }
         sum += 4; // constant per spec
-        int check = 10 - (sum%10);
-        return check%10;
+        int check = 10 - (sum % 10);
+        return check % 10;
     }
 
     private static bool Normalize(ReadOnlySpan<char> input, Span<char> dest, out int len)
     {
         len = 0;
         int i = 0;
-        if (input.Length >=3 && (input[0]=='A'||input[0]=='a') && (input[1]=='T'||input[1]=='t') && (input[2]=='U'||input[2]=='u'))
+        if (input.Length >= 3 && (input[0] == 'A' || input[0] == 'a') && (input[1] == 'T' || input[1] == 't') && (input[2] == 'U' || input[2] == 'u'))
             i = 3;
         for (; i < input.Length; i++)
         {
             char ch = input[i];
-            if (ch==' '||ch=='-') continue;
+            if (ch == ' ' || ch == '-') continue;
             if (!char.IsDigit(ch)) { len = 0; return false; }
-            if (len>=dest.Length){ len=0; return false; }
+            if (len >= dest.Length) { len = 0; return false; }
             dest[len++] = ch;
         }
-        return len>0;
+        return len > 0;
     }
 }
 

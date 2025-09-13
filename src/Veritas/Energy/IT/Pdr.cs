@@ -20,19 +20,19 @@ public static class Pdr
     /// <summary>Attempts to validate the supplied input as a PDR identifier.</summary>
     /// <param name="input">Candidate identifier to validate.</param>
     /// <param name="result">The validation outcome including the parsed value when valid.</param>
-    /// <returns><c>true</c> if validation executed; the <see cref="ValidationResult{T}.IsValid"/> property indicates success.</returns>
+    /// <returns><c>true</c> if validation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<PdrValue> result)
     {
         Span<char> digits = stackalloc char[14];
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<PdrValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 14)
         {
             result = new ValidationResult<PdrValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         result = new ValidationResult<PdrValue>(true, new PdrValue(new string(digits)), ValidationError.None);
         return true;

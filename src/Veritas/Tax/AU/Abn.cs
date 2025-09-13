@@ -11,7 +11,7 @@ public readonly struct AbnValue
 
 public static class Abn
 {
-    private static readonly int[] Weights = {10,1,3,5,7,9,11,13,15,17,19};
+    private static readonly int[] Weights = { 10, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 };
 
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<AbnValue> result)
     {
@@ -19,12 +19,12 @@ public static class Abn
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<AbnValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 11)
         {
             result = new ValidationResult<AbnValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         int sum = (digits[0] - '1') * Weights[0];
         for (int i = 1; i < 11; i++)
@@ -32,7 +32,7 @@ public static class Abn
         if (sum % 89 != 0)
         {
             result = new ValidationResult<AbnValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<AbnValue>(true, new AbnValue(new string(digits)), ValidationError.None);
         return true;

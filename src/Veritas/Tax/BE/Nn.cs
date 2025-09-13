@@ -20,19 +20,19 @@ public static class Nn
         if (!Normalize(input, digits, out int len))
         {
             result = new ValidationResult<NnValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 11)
         {
             result = new ValidationResult<NnValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         long baseNumber = ParseLong(digits[..9]);
         int check = (digits[9] - '0') * 10 + (digits[10] - '0');
         if (!Verify(baseNumber, check))
         {
             result = new ValidationResult<NnValue>(false, default, ValidationError.Checksum);
-            return true;
+            return false;
         }
         result = new ValidationResult<NnValue>(true, new NnValue(new string(digits)), ValidationError.None);
         return true;

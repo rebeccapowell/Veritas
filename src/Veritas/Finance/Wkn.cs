@@ -17,12 +17,12 @@ public static class Wkn
         if (!Normalize(input, chars, out int len))
         {
             result = new ValidationResult<WknValue>(false, default, ValidationError.Format);
-            return true;
+            return false;
         }
         if (len != 6)
         {
             result = new ValidationResult<WknValue>(false, default, ValidationError.Length);
-            return true;
+            return false;
         }
         result = new ValidationResult<WknValue>(true, new WknValue(new string(chars)), ValidationError.None);
         return true;

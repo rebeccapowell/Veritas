@@ -177,8 +177,8 @@ Additional identifiers and algorithms will be added per the [PRD](prds/PRD.md).
 ## Example usage
 ```csharp
 // Validate an IBAN
-Finance.Iban.TryValidate("FR14 2004 1010 0505 0001 3M02 606", out var iban);
-Console.WriteLine(iban.IsValid);            // True
+var ok = Finance.Iban.TryValidate("FR14 2004 1010 0505 0001 3M02 606", out var iban);
+Console.WriteLine(ok);                      // True
 Console.WriteLine(iban.Value!.Value);       // FR1420041010050500013M02606
 
 // Generate a GTIN-13
@@ -191,8 +191,8 @@ foreach (var s in Bulk.GenerateMany((dst, rng) => {
 }
 
 // Validate a telecom identifier
-Telecom.Imei.TryValidate("490154203237518", out var imei);
-Console.WriteLine(imei.IsValid);            // True
+var imeiOk = Telecom.Imei.TryValidate("490154203237518", out var imei);
+Console.WriteLine(imeiOk);                  // True
 ```
 
 ## Contributing
