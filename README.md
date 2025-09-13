@@ -35,6 +35,9 @@ dotnet add package Veritas --version 1.0.3
 - ISIN validation (alphabetic + numeric with Luhn check digit)
 - ISO 11649 RF creditor reference validation and generation
 - Belgium structured communication (OGM) validation and generation
+- SEPA Creditor Identifier (SCI) validation and generation
+- French RIB key validation and generation
+- Spanish CCC validation and generation
 - Payment card PAN validation (Luhn)
 - US ABA routing number validation
 - Mexican CLABE validation and generation
@@ -71,6 +74,7 @@ dotnet add package Veritas --version 1.0.3
 - India Aadhaar validation and generation
 - Luxembourg National ID validation and generation
 - France NIR (INSEE) validation and generation
+- ICAO 9303 MRZ passport lines validation and generation
 
 ### Tax
 - Brazil CPF validation/generation
@@ -141,6 +145,7 @@ dotnet add package Veritas --version 1.0.3
 - Singapore UEN validation/generation
 - South Africa National ID validation/generation
 - Israel Teudat Zehut validation/generation
+- EU/GB EORI validation and generation
 
 ### Logistics
 - GTIN/EAN/UPC validation and generation (GS1 mod 10)
@@ -149,6 +154,9 @@ dotnet add package Veritas --version 1.0.3
 - Global Service Relation Number (GSRN) validation and generation
 - Global Returnable Asset Identifier (GRAI) validation and generation
 - Global Shipment Identification Number (GSIN) validation and generation
+- Global Document Type Identifier (GDTI) validation and generation
+- Global Individual Asset Identifier (GIAI) validation and generation
+- UPU S10 postal tracking validation and generation
 - Vehicle Identification Number (VIN) validation
 - ISO 6346 container code validation
 - Air Waybill (AWB) validation and generation
@@ -156,6 +164,7 @@ dotnet add package Veritas --version 1.0.3
 
 ### Telecom
 - IMEI validation and generation
+- IMSI validation and generation
 - MEID validation and generation
 - ICCID validation and generation
 - MAC address validation and generation
@@ -180,6 +189,8 @@ dotnet add package Veritas --version 1.0.3
 - NHS Number validation and generation
 - ORCID validation and generation
 - SNOMED CT Concept ID validation and generation
+- NPI validation and generation
+- DEA Number validation and generation
 
 Additional identifiers and algorithms will be added per the [PRD](prds/PRD.md).
 
