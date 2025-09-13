@@ -102,6 +102,39 @@ dotnet add package Veritas --version 1.0.3
 - Sweden Personnummer checksum validation
 - Sweden OrgNr checksum validation
 - New Zealand IRD checksum validation
+- Argentina CUIT validation/generation
+- Chile RUT validation/generation
+- Belgium National Number validation/generation
+- Portugal NIF validation/generation
+- Greece AFM validation/generation
+- Finland HETU validation/generation
+- Ireland PPSN validation/generation
+- Norway Fodselsnummer validation/generation
+- Norway KID validation/generation
+- Czech Rodne cislo validation/generation
+- Slovakia Rodne cislo validation/generation
+- Croatia OIB validation/generation
+- Romania CNP validation/generation
+- Bulgaria EGN validation/generation
+- Slovenia EMSO validation/generation
+- Serbia JMBG validation/generation
+- Switzerland AHV validation/generation
+- Switzerland UID validation/generation
+- Austria UID validation/generation
+- Iceland Kennitala validation/generation
+- Lithuania Asmens kodas validation/generation
+- Latvia Personas kods validation/generation
+- Estonia Isikukood validation/generation
+- Denmark CPR validation/generation
+- Colombia NIT validation/generation
+- Peru RUC validation/generation
+- Turkey TCKN validation/generation
+- Italy Codice Fiscale validation/generation
+- Mexico RFC validation/generation
+- Mexico CURP validation/generation
+- Singapore UEN validation/generation
+- South Africa National ID validation/generation
+- Israel Teudat Zehut validation/generation
 
 ### Logistics
 - GTIN/EAN/UPC validation and generation (GS1 mod 10)
@@ -139,7 +172,7 @@ dotnet add package Veritas --version 1.0.3
 - ORCID validation and generation
 - SNOMED CT Concept ID validation and generation
 
-Additional identifiers and algorithms will be added per the [PRD](PRD.md).
+Additional identifiers and algorithms will be added per the [PRD](prds/PRD.md).
 
 ## Example usage
 ```csharp
@@ -163,7 +196,7 @@ Console.WriteLine(imei.IsValid);            // True
 ```
 
 ## Contributing
-Contributions are welcome! Fork the repository, create a topic branch, and open a pull request:
+See [contributors.md](contributors.md) for guidelines. In short, fork the repository, create a topic branch, and open a pull request:
 1. Describe the motivation and design in the PR description.
 2. Ensure tests and formatting checks pass.
 3. The maintainers will review and merge when ready.
