@@ -41,6 +41,19 @@ foreach (var s in Bulk.GenerateMany((dst, rng) => {
 }
 ```
 
+## Algorithms
+
+- Luhn (mod 10 and base-36)
+- ISO 7064 (mod 11,10; mod 97; mod 37,2; mod 37,36)
+- GS1 mod 10
+- Weighted mod 11 variants (custom weights)
+- ISO 6346 container check digit
+- MRZ (ICAO 9303 7-3-1 pattern)
+- Base58Check codec
+- Verhoeff checksum
+- Damm checksum
+- Checksum strategies via `IChecksum` interface and transliteration helpers
+
 ## Supported identifiers
 
 ### Finance
@@ -51,6 +64,7 @@ foreach (var s in Bulk.GenerateMany((dst, rng) => {
 | BIC/SWIFT | International | format check | <xref:Veritas.Finance.Bic> |
 | ISIN | International | Luhn checksum | <xref:Veritas.Finance.Isin> |
 | RF Creditor Reference | International | ISO 11649 mod 97; generation | <xref:Veritas.Finance.Rf> |
+| Structured Reference (OGM) | BE | mod 97 checksum; generation | <xref:Veritas.Finance.BE.Ogm> |
 | Payment card PAN | International | Luhn checksum; test generation | <xref:Veritas.Finance.Pan> |
 | ABA Routing | US | weighted mod 11 checksum | <xref:Veritas.Finance.AbaRouting> |
 | CLABE | Mexico | weighted mod 11 checksum; generation | <xref:Veritas.Finance.Clabe> |
@@ -95,6 +109,7 @@ foreach (var s in Bulk.GenerateMany((dst, rng) => {
 | CURP | Mexico | mod 10 checksum; generation | <xref:Veritas.Identity.Mexico.Curp> |
 | National ID | South Africa | Luhn checksum; generation | <xref:Veritas.Identity.SouthAfrica.NationalId> |
 | Teudat Zehut | Israel | weighted mod 10 checksum; generation | <xref:Veritas.Identity.Israel.TeudatZehut> |
+| NIR (INSEE) | France | mod 97 key; generation | <xref:Veritas.Identity.France.Nir> |
 
 ### Tax
 
@@ -121,11 +136,14 @@ foreach (var s in Bulk.GenerateMany((dst, rng) => {
 | FR | Siret | mod 11 checksum | <xref:Veritas.Tax.FR.Siret> |
 | FR | VAT | ISO 7064 mod 97 checksum | <xref:Veritas.Tax.FR.Vat> |
 | GR | AFM | mod 11 checksum; generation | <xref:Veritas.Tax.GR.Afm> |
+| HU | Adoszam | weighted mod 10 checksum; generation | <xref:Veritas.Tax.HU.Adoszam> |
 | HR | OIB | ISO 7064 mod 11,10 checksum; generation | <xref:Veritas.Tax.HR.Oib> |
 | RO | CNP | mod 11 checksum; generation | <xref:Veritas.Tax.RO.Cnp> |
 | BG | EGN | weighted checksum; generation | <xref:Veritas.Tax.BG.Egn> |
 | SI | EMSO | mod 11 checksum; generation | <xref:Veritas.Tax.SI.Emso> |
 | RS | JMBG | mod 11 checksum; generation | <xref:Veritas.Tax.RS.Jmbg> |
+| BA | JMBG | mod 11 checksum; generation | <xref:Veritas.Tax.BA.Jmbg> |
+| MK | EMBG | mod 11 checksum; generation | <xref:Veritas.Tax.MK.Embg> |
 | CH | AHV | ISO 7064 mod 11,10 checksum; generation | <xref:Veritas.Tax.CH.Ahv> |
 | CH | UID | mod 10 (EAN) checksum; generation | <xref:Veritas.Tax.CH.Uid> |
 | AT | UID | weighted mod 10 checksum; generation | <xref:Veritas.Tax.AT.Uid> |
@@ -171,6 +189,9 @@ foreach (var s in Bulk.GenerateMany((dst, rng) => {
 | GTIN/EAN/UPC | International | GS1 mod 10 checksum; generation | <xref:Veritas.Logistics.Gtin> |
 | GLN | International | GS1 mod 10 checksum; generation | <xref:Veritas.Logistics.Gln> |
 | SSCC | International | GS1 mod 10 checksum; generation | <xref:Veritas.Logistics.Sscc> |
+| GSRN | International | GS1 mod 10 checksum; generation | <xref:Veritas.Logistics.Gsrn> |
+| GRAI | International | GS1 mod 10 checksum; generation | <xref:Veritas.Logistics.Grai> |
+| GSIN | International | GS1 mod 10 checksum; generation | <xref:Veritas.Logistics.Gsin> |
 | VIN | International | transliteration + weighted checksum | <xref:Veritas.Logistics.Vin> |
 | ISO 6346 | International | ISO 6346 checksum | <xref:Veritas.Logistics.Iso6346> |
 | AWB | International | mod 7 checksum; generation | <xref:Veritas.Logistics.Awb> |

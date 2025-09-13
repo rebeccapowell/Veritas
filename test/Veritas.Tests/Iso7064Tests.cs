@@ -55,4 +55,23 @@ public class Iso7064Tests
         Iso7064.ValidateMod37_2(full).ShouldBeTrue();
         Iso7064.ValidateMod37_2(baseStr + (check == '0' ? '1' : '0')).ShouldBeFalse();
     }
+
+    [Theory]
+    [InlineData("ABC", 'Z')]
+    [InlineData("123456", 'J')]
+    public void ComputeCheckCharacterMod37_36_Works(string input, char expected)
+    {
+        var check = Iso7064.ComputeCheckCharacterMod37_36(input.AsSpan());
+        check.ShouldBe(expected);
+    }
+
+    [Theory]
+    [InlineData("ABCZ", true)]
+    [InlineData("123456J", true)]
+    [InlineData("ABC0", false)]
+    [InlineData("", false)]
+    public void ValidateMod37_36_Works(string input, bool expected)
+    {
+        Iso7064.ValidateMod37_36(input).ShouldBe(expected);
+    }
 }

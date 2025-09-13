@@ -101,6 +101,53 @@ internal static class Iso7064
         return (sum + check) % 11 == 1;
     }
 
+    private static bool TryGetMod36Value(char ch, out int value)
+    {
+        if (ch >= '0' && ch <= '9') { value = ch - '0'; return true; }
+        if (ch >= 'A' && ch <= 'Z') { value = ch - 'A' + 10; return true; }
+        if (ch >= 'a' && ch <= 'z') { value = ch - 'a' + 10; return true; }
+        value = 0;
+        return false;
+    }
+
+    private static int CharToMod36(char ch)
+    {
+        if (TryGetMod36Value(ch, out int value)) return value;
+        throw new ArgumentException("Invalid character", nameof(ch));
+    }
+
+    private static char ValueToMod36Char(int value)
+        => value < 10 ? (char)('0' + value) : (char)('A' + value - 10);
+
+    /// <summary>Computes the ISO 7064 Mod 37,36 check character for the supplied string.</summary>
+    public static char ComputeCheckCharacterMod37_36(ReadOnlySpan<char> input)
+    {
+        const int modulus = 36;
+        int check = modulus / 2;
+        foreach (var ch in input)
+        {
+            int c = CharToMod36(ch);
+            check = (((check == 0 ? modulus : check) * 2) % 37 + c) % modulus;
+        }
+        int cd = (1 - ((check == 0 ? modulus : check) * 2) % 37) % modulus;
+        if (cd < 0) cd += modulus;
+        return ValueToMod36Char(cd);
+    }
+
+    /// <summary>Validates a string with ISO 7064 Mod 37,36 checksum.</summary>
+    public static bool ValidateMod37_36(ReadOnlySpan<char> input)
+    {
+        if (input.IsEmpty) return false;
+        const int modulus = 36;
+        int check = modulus / 2;
+        foreach (var ch in input)
+        {
+            if (!TryGetMod36Value(ch, out int c)) return false;
+            check = (((check == 0 ? modulus : check) * 2) % 37 + c) % modulus;
+        }
+        return check == 1;
+    }
+
     private static int CharToMod37Value(char ch)
     {
         if (ch >= '0' && ch <= '9') return ch - '0';

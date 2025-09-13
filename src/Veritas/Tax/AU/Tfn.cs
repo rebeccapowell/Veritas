@@ -48,23 +48,20 @@ public static class Tfn
         written = 0;
         if (destination.Length < 9) return false;
         var rng = options.Seed.HasValue ? new Random(options.Seed.Value) : Random.Shared;
-        int len = 9;
-        Span<char> digits = destination[..len];
-        for (int i = 0; i < len - 1; i++)
-            digits[i] = (char)('0' + rng.Next(10));
-        var weights = Weights9;
-        for (int check = 0; check < 10; check++)
+        Span<char> digits = destination[..9];
+        while (true)
         {
-            digits[len - 1] = (char)('0' + check);
+            for (int i = 0; i < 8; i++)
+                digits[i] = (char)('0' + rng.Next(10));
             int sum = 0;
-            for (int i = 0; i < len; i++) sum += (digits[i] - '0') * weights[i];
-            if (sum % 11 == 0)
-            {
-                written = len;
-                return true;
-            }
+            for (int i = 0; i < 8; i++)
+                sum += (digits[i] - '0') * Weights9[i];
+            int check = ((11 - (sum % 11)) * 10) % 11;
+            if (check == 10) continue;
+            digits[8] = (char)('0' + check);
+            written = 9;
+            return true;
         }
-        return false;
     }
 
     private static bool Normalize(ReadOnlySpan<char> input, Span<char> dest, out int len)
