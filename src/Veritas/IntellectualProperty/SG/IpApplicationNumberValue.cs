@@ -1,4 +1,4 @@
-namespace Veritas.IP.Singapore;
+namespace Veritas.IntellectualProperty.SG;
 
 /// <summary>Represents a validated Singapore IPOS application number.</summary>
 public readonly struct IpApplicationNumberValue

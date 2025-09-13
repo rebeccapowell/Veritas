@@ -1,8 +1,14 @@
 using Veritas.Checksums;
 
-namespace Veritas.IP.Singapore;
+namespace Veritas.IntellectualProperty.SG;
 
 /// <summary>Validation and generation for Singapore IPOS application numbers.</summary>
+/// <example>
+/// <code language="csharp">
+/// Span&lt;char&gt; dst = stackalloc char[12];
+/// IpApplicationNumber.TryGenerate(default, dst, out _);
+/// </code>
+/// </example>
 public static class IpApplicationNumber
 {
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<IpApplicationNumberValue> result)

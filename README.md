@@ -173,8 +173,18 @@ dotnet add package Veritas --version 1.0.3
 - IPv4 structural validation
 - IPv6 structural validation
 
-### IP
+### Intellectual Property
 - Singapore IPOS application number validation and generation
+- ISWC validation and generation
+- Patent application number (WIPO ST.13) validation and generation
+- Patent publication number (WIPO ST.16) validation and generation
+- Trademark registration number validation and generation
+- Copyright registration number validation and generation
+
+### Legal
+- European Case Law Identifier (ECLI) validation and generation
+- U.S. court case number validation and generation
+- European Patent Office publication identifier validation and generation
 
 ### Education & Media
 - ISBN-10 validation and generation

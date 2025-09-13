@@ -1,4 +1,4 @@
-using Veritas.IP.Singapore;
+using Veritas.IntellectualProperty.SG;
 using Veritas;
 using Shouldly;
 using Xunit;
