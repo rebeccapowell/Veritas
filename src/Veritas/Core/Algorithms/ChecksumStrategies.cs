@@ -18,6 +18,9 @@ public static class ChecksumStrategies
     public static IChecksum Gs1Mod10 { get; } = new Gs1Mod10Strategy();
 
     /// <summary>Creates a weighted mod 11 checksum strategy.</summary>
+    /// <param name="weights">Weighting factors applied to each digit.</param>
+    /// <param name="fromRight">If <c>true</c>, weights are applied starting from the rightmost digit.</param>
+    /// <returns>An <see cref="IChecksum"/> instance implementing weighted mod 11.</returns>
     public static IChecksum CreateWeightedMod11(ReadOnlySpan<int> weights, bool fromRight = false)
         => new WeightedMod11Strategy(weights.ToArray(), fromRight);
 

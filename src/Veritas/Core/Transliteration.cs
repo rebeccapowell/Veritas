@@ -6,6 +6,9 @@ namespace Veritas;
 public static class Transliteration
 {
     /// <summary>Attempts to transliterate a VIN character to its numeric value.</summary>
+    /// <param name="ch">Character to transliterate.</param>
+    /// <param name="value">Resulting numeric value when the method returns.</param>
+    /// <returns><c>true</c> if the character was successfully transliterated; otherwise, <c>false</c>.</returns>
     public static bool TryVin(char ch, out int value)
     {
         if (ch >= '0' && ch <= '9') { value = ch - '0'; return true; }
@@ -47,6 +50,9 @@ public static class Transliteration
     }
 
     /// <summary>Attempts to transliterate an alphanumeric base-36 character.</summary>
+    /// <param name="ch">Character to transliterate.</param>
+    /// <param name="value">Numeric value when conversion succeeds.</param>
+    /// <returns><c>true</c> if the character maps to base-36; otherwise, <c>false</c>.</returns>
     public static bool TryBase36(char ch, out int value)
     {
         if (ch >= '0' && ch <= '9') { value = ch - '0'; return true; }

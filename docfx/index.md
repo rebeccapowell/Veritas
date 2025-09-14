@@ -74,8 +74,10 @@ foreach (var s in Bulk.GenerateMany((dst, rng) => {
 | LEI | International | ISO 7064 mod 97 checksum; generation | <xref:Veritas.Finance.Lei> |
 | SEDOL | UK | weighted mod 10 checksum; generation | <xref:Veritas.Finance.Sedol> |
 | CUSIP | US/Canada | weighted mod 10 checksum; generation | <xref:Veritas.Finance.Cusip> |
-| MIC | Global | structural check | <xref:Veritas.Finance.Mic> |
+| Market Identifier Code (MIC) | Global | structural check | <xref:Veritas.Finance.MarketIdentifierCode> |
 | WKN | Germany | structural check | <xref:Veritas.Finance.Wkn> |
+| FIGI | Global | Luhn check digit; generation | <xref:Veritas.Finance.Figi> |
+| CHIPS Participant ID | US | format check; generation | <xref:Veritas.Finance.ChipsParticipantId> |
 
 ### Energy
 
@@ -105,7 +107,6 @@ foreach (var s in Bulk.GenerateMany((dst, rng) => {
 | Phone | Global | E.164 length/format | <xref:Veritas.Identity.Phone> |
 | Domain | Global | hostname rules | <xref:Veritas.Identity.Domain> |
 | BCP47 tag | Global | structural check | <xref:Veritas.Identity.Bcp47> |
-| Ethereum address | Global | EIP-55 checksum | <xref:Veritas.Identity.Ethereum> |
 | Base58Check | Global | Base58 + double SHA-256 | <xref:Veritas.Identity.Base58Check> |
 | Aadhaar | India | Verhoeff checksum; test generation | <xref:Veritas.Identity.India.Aadhaar> |
 | National ID | Luxembourg | Luhn + Verhoeff; test generation | <xref:Veritas.Identity.Luxembourg.NationalId> |
@@ -249,6 +250,10 @@ foreach (var s in Bulk.GenerateMany((dst, rng) => {
 | ISNI | International | ISO 7064 mod 11,2 checksum; generation | <xref:Veritas.Education.Isni> |
 | ISMN | International | mod 10 checksum; generation | <xref:Veritas.Education.Ismn> |
 | ISRC | International | structural check | <xref:Veritas.Media.Isrc> |
+| ROR ID | International | structural check; generation | <xref:Veritas.Education.RorId> |
+| Scopus Author ID | International | structural check; generation | <xref:Veritas.Education.ScopusAuthorId> |
+| ResearcherID | International | structural check; generation | <xref:Veritas.Education.ResearcherId> |
+| GRID ID | International | structural check; generation | <xref:Veritas.Education.GridId> |
 
 ### Healthcare
 
@@ -259,6 +264,85 @@ foreach (var s in Bulk.GenerateMany((dst, rng) => {
 | SNOMED CT Concept ID | International | Verhoeff checksum; test generation | <xref:Veritas.Healthcare.Snomed.SctId> |
 | NPI | US | Luhn checksum; generation | <xref:Veritas.Healthcare.Npi> |
 | DEA Number | US | weighted checksum; generation | <xref:Veritas.Healthcare.DeaNumber> |
+| Unique Device Identifier (UDI) | Global | format check; generation | <xref:Veritas.Healthcare.Udi> |
+| National Drug Code (NDC) | US | structural check; generation | <xref:Veritas.Healthcare.Ndc> |
+| ICD Code | International | format check; generation | <xref:Veritas.Healthcare.IcdCode> |
+| RxNorm Identifier | US | structural check; generation | <xref:Veritas.Healthcare.RxNormIdentifier> |
+| NDC Package Code | US | structural check; generation | <xref:Veritas.Healthcare.NdcPackageCode> |
+
+### Transportation / Vehicles
+
+| Identifier | Country/Region | Validation & Generation | Docs |
+|------------|----------------|-------------------------|------|
+| FAA N-number | US | format check; generation | <xref:Veritas.Transportation.FaaNNumber> |
+| ICAO Airline Code | International | format check; generation | <xref:Veritas.Transportation.IcaoAirlineCode> |
+| IATA Airline Code | International | format check; generation | <xref:Veritas.Transportation.IataAirlineCode> |
+| Flight Number | International | format check; generation | <xref:Veritas.Transportation.FlightNumber> |
+| Train UIC Number | International | mod 11 checksum; generation | <xref:Veritas.Transportation.TrainUicNumber> |
+| IMO Call Sign | International | format check; generation | <xref:Veritas.Transportation.ImoCallSign> |
+
+### Crypto / Blockchain
+
+| Identifier | Country/Region | Validation & Generation | Docs |
+|------------|----------------|-------------------------|------|
+| Bitcoin address | Global | Base58 + double SHA-256 | <xref:Veritas.Crypto.BitcoinAddress> |
+| Ethereum transaction hash | Global | structural check; generation | <xref:Veritas.Crypto.EthereumTransactionHash> |
+| Chain ID | Global | numeric; generation | <xref:Veritas.Crypto.ChainId> |
+
+### Government / Public Administration
+
+| Identifier | Country/Region | Validation & Generation | Docs |
+|------------|----------------|-------------------------|------|
+| Passport Number | Global | format check; generation | <xref:Veritas.Government.PassportNumber> |
+| Visa Number | Global | format check; generation | <xref:Veritas.Government.VisaNumber> |
+| Driver Licence Number (CA) | US | structural check; generation | <xref:Veritas.Government.US.CA.DriverLicenseNumber> |
+| Driver Licence Number (NY) | US | structural check; generation | <xref:Veritas.Government.US.NY.DriverLicenseNumber> |
+| Driver Licence Number (FL) | US | structural check; generation | <xref:Veritas.Government.US.FL.DriverLicenseNumber> |
+| Driver Licence Number (TX) | US | structural check; generation | <xref:Veritas.Government.US.TX.DriverLicenseNumber> |
+| Driver Licence Number (ON) | CA | structural check; generation | <xref:Veritas.Government.CA.ON.DriverLicenceNumber> |
+| Driver Licence Number (BC) | CA | structural check; generation | <xref:Veritas.Government.CA.BC.DriverLicenceNumber> |
+| Driver Licence Number (QC) | CA | structural check; generation | <xref:Veritas.Government.CA.QC.DriverLicenceNumber> |
+| Driver Licence Number (NSW) | AU | structural check; generation | <xref:Veritas.Government.AU.NSW.DriverLicenceNumber> |
+| Driver Licence Number (VIC) | AU | structural check; generation | <xref:Veritas.Government.AU.VIC.DriverLicenceNumber> |
+| Driver Licence Number (QLD) | AU | structural check; generation | <xref:Veritas.Government.AU.QLD.DriverLicenceNumber> |
+| Driver Licence Number (WA) | AU | structural check; generation | <xref:Veritas.Government.AU.WA.DriverLicenceNumber> |
+| Licencia de Conducir (CDMX) | MX | structural check; generation | <xref:Veritas.Government.MX.CDMX.LicenciaDeConducir> |
+| Licencia de Conducir (JAL) | MX | structural check; generation | <xref:Veritas.Government.MX.JAL.LicenciaDeConducir> |
+| Licencia de Conducir (NLE) | MX | structural check; generation | <xref:Veritas.Government.MX.NLE.LicenciaDeConducir> |
+| Licencia de Conducir (BCN) | MX | structural check; generation | <xref:Veritas.Government.MX.BCN.LicenciaDeConducir> |
+| Führerscheinnummer | DE | structural check; generation | <xref:Veritas.Government.DE.Fuehrerscheinnummer> |
+| Permis de Conduire | FR | structural check; generation | <xref:Veritas.Government.FR.PermisDeConduire> |
+| Patente di guida | IT | structural check; generation | <xref:Veritas.Government.IT.PatenteDiGuida> |
+| Rijbewijsnummer | NL | structural check; generation | <xref:Veritas.Government.NL.Rijbewijsnummer> |
+| Körkortsnr | SE | format check; generation | <xref:Veritas.Government.SE.Korkortsnr> |
+| Driving Licence Number | IN | structural check; generation | <xref:Veritas.Government.IN.DrivingLicenceNumber> |
+| Driver Licence Number | NZ | structural check; generation | <xref:Veritas.Government.NZ.DriverLicenceNumber> |
+| Driver Licence Number | IE | structural check; generation | <xref:Veritas.Government.IE.DriverLicenceNumber> |
+| Licencia Nacional de Conducir | AR | structural check; generation | <xref:Veritas.Government.AR.LicenciaNacionalConducir> |
+| Driving Licence Number | CN | structural check; generation | <xref:Veritas.Government.CN.DrivingLicenceNumber> |
+| Driving Licence Number | UK | Luhn base36 check; generation | <xref:Veritas.Government.UK.DrivingLicenceNumber> |
+| Número de permiso de conducción | ES | mod 23 check; generation | <xref:Veritas.Government.ES.NumeroPermisoConduccion> |
+| South African Licence Number | ZA | Luhn checksum; generation | <xref:Veritas.Government.ZA.SouthAfricanLicenceNumber> |
+| CNH | BR | mod 11 checksum; generation | <xref:Veritas.Government.BR.Cnh> |
+| Japanese Driver Licence Number | JP | mod 11 checksum; generation | <xref:Veritas.Government.JP.JapaneseDriverLicenseNumber> |
+
+### Standards & Protocols
+
+| Identifier | Country/Region | Validation & Generation | Docs |
+|------------|----------------|-------------------------|------|
+| IEC Standard Number | International | format check; generation | <xref:Veritas.Standards.IecStandardNumber> |
+| ISO Standard Number | International | format check; generation | <xref:Veritas.Standards.IsoStandardNumber> |
+| RFC Number | International | format check; generation | <xref:Veritas.Standards.RfcNumber> |
+| UL File Number | International | format check; generation | <xref:Veritas.Standards.UlFileNumber> |
+
+### Geospatial & Infrastructure
+
+| Identifier | Country/Region | Validation & Generation | Docs |
+|------------|----------------|-------------------------|------|
+| Geohash | International | format check; generation | <xref:Veritas.Geospatial.Geohash> |
+| Plus Code (Open Location Code) | International | format check; generation | <xref:Veritas.Geospatial.PlusCode> |
+| Flurstücknummer | DE | structural check; generation | <xref:Veritas.Geospatial.DE.Flurstuecknummer> |
+| Kadastrale Aanduiding | NL | structural check; generation | <xref:Veritas.Geospatial.NL.KadastraleAanduiding> |
 
 ## Future identifiers
 
