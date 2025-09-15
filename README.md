@@ -12,7 +12,7 @@ Core primitives and algorithms for identifier validation and generation.
 ## Install
 
 ```bash
-dotnet add package Veritas --version 1.0.3
+dotnet add package Veritas --version 1.0.5
 ```
 
 ## Currently implemented
@@ -46,6 +46,8 @@ dotnet add package Veritas --version 1.0.3
 - CUSIP validation and generation
 - Market Identifier Code (MIC) structural validation
 - German WKN structural validation
+- Financial Instrument Global Identifier (FIGI) validation and generation
+- CHIPS participant identifier structural validation and generation
 
 ### Energy
 - Energy Identification Code (EIC) validation and generation (ISO 7064 mod 37,2)
@@ -69,7 +71,6 @@ dotnet add package Veritas --version 1.0.3
 - Domain name validation
 - KSUID validation and generation
 - BCP 47 language tag validation
-- Ethereum address validation
 - Base58Check validation and generation
 - India Aadhaar validation and generation
 - Luxembourg National ID validation and generation
@@ -194,6 +195,10 @@ dotnet add package Veritas --version 1.0.3
 - ISNI validation and generation
 - ISMN validation and generation
 - ISRC structural validation
+- ROR ID structural validation and generation
+- Scopus Author ID structural validation and generation
+- ResearcherID structural validation and generation
+- GRID ID structural validation and generation
 
 ### Healthcare
 - NHS Number validation and generation
@@ -201,6 +206,50 @@ dotnet add package Veritas --version 1.0.3
 - SNOMED CT Concept ID validation and generation
 - NPI validation and generation
 - DEA Number validation and generation
+- Unique Device Identifier (UDI) structural validation and generation
+- National Drug Code (NDC) structural validation and generation
+- ICD code structural validation and generation
+- RxNorm identifier structural validation and generation
+- NDC package code structural validation and generation
+
+### Transportation / Vehicles
+- FAA N-number structural validation and generation
+- ICAO airline code structural validation and generation
+- IATA airline code structural validation and generation
+- Flight number structural validation and generation
+- Train UIC number Mod 11 checksum validation and generation
+- IMO call sign structural validation and generation
+
+### Crypto / Blockchain
+- Bitcoin address validation and generation
+- Ethereum transaction hash validation and generation
+- Chain ID validation and generation
+
+### Government / Public Administration
+- Passport number structural validation and generation
+- Visa number structural validation and generation
+- US driver licence numbers for CA, FL, NY, and TX structural validation and generation
+- Canadian provincial driver licence numbers for ON, BC, and QC structural validation and generation
+- Australian state driver licence numbers for NSW, VIC, QLD, and WA structural validation and generation
+- Mexican state driver licence numbers for CDMX, JAL, NLE, and BCN structural validation and generation
+- German, French, Italian, Dutch, Swedish, Indian, New Zealand, Irish, Argentine, Chinese, Spanish, South African, Brazilian (CNH), and Japanese driving licence numbers structural validation and generation
+- UK driving licence number structural validation and generation
+- Spanish driving licence number structural validation and generation
+- South African licence number validation and generation
+- Brazilian CNH driver licence number validation and generation
+- Japanese driver licence number validation and generation
+
+### Standards & Protocols
+- IEC standard number structural validation and generation
+- ISO standard number structural validation and generation
+- RFC number structural validation and generation
+- UL file number structural validation and generation
+
+### Geospatial & Infrastructure
+- Geohash structural validation and generation
+- Plus Code (Open Location Code) structural validation and generation
+- Flurstücknummer structural validation and generation
+- Kadastrale Aanduiding structural validation and generation
 
 Additional identifiers and algorithms will be added per the [PRD](prds/PRD.md).
 
