@@ -12,7 +12,7 @@ Core primitives and algorithms for identifier validation and generation.
 ## Install
 
 ```bash
-dotnet add package Veritas --version 1.0.3
+dotnet add package Veritas --version 1.0.5
 ```
 
 ## Currently implemented
