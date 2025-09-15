@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/rebeccapowell/Veritas/new/1.0.4/apiSpec/new?filename=Veritas_Transliteration.md&amp;value=---%0Auid%3A%20Veritas.Transliteration%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/rebeccapowell/Veritas/new/1.0.5/apiSpec/new?filename=Veritas_Transliteration.md&amp;value=---%0Auid%3A%20Veritas.Transliteration%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Veritas_Transliteration" data-uid="Veritas.Transliteration" class="text-break">
-Class Transliteration  <a class="header-action link-secondary" title="View source" href="https://github.com/rebeccapowell/Veritas/blob/1.0.4/src/Veritas/Core/Transliteration.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Class Transliteration  <a class="header-action link-secondary" title="View source" href="https://github.com/rebeccapowell/Veritas/blob/1.0.5/src/Veritas/Core/Transliteration.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -157,7 +157,7 @@ Class Transliteration  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Veritas_Transliteration_TryBase36_System_Char_System_Int32__" data-uid="Veritas.Transliteration.TryBase36(System.Char,System.Int32@)">
   TryBase36(char, out int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/rebeccapowell/Veritas/blob/1.0.4/src/Veritas/Core/Transliteration.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rebeccapowell/Veritas/blob/1.0.5/src/Veritas/Core/Transliteration.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Attempts to transliterate an alphanumeric base-36 character.</p>
@@ -171,15 +171,18 @@ Class Transliteration  <a class="header-action link-secondary" title="View sourc
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>ch</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
-    <dd></dd>
+    <dd><p>Character to transliterate.</p>
+</dd>
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>Numeric value when conversion succeeds.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p><code>true</code> if the character maps to base-36; otherwise, <code>false</code>.</p>
+</dd>
   </dl>
 
 
@@ -196,7 +199,7 @@ Class Transliteration  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Veritas_Transliteration_TryVin_System_Char_System_Int32__" data-uid="Veritas.Transliteration.TryVin(System.Char,System.Int32@)">
   TryVin(char, out int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/rebeccapowell/Veritas/blob/1.0.4/src/Veritas/Core/Transliteration.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/rebeccapowell/Veritas/blob/1.0.5/src/Veritas/Core/Transliteration.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Attempts to transliterate a VIN character to its numeric value.</p>
@@ -210,15 +213,18 @@ Class Transliteration  <a class="header-action link-secondary" title="View sourc
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>ch</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
-    <dd></dd>
+    <dd><p>Character to transliterate.</p>
+</dd>
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>Resulting numeric value when the method returns.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p><code>true</code> if the character was successfully transliterated; otherwise, <code>false</code>.</p>
+</dd>
   </dl>
 
 
@@ -235,7 +241,7 @@ Class Transliteration  <a class="header-action link-secondary" title="View sourc
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/rebeccapowell/Veritas/blob/1.0.4/src/Veritas/Core/Transliteration.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/rebeccapowell/Veritas/blob/1.0.5/src/Veritas/Core/Transliteration.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 

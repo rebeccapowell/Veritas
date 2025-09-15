@@ -124,6 +124,104 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Crypto.BitcoinAddress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Crypto.BitcoinAddress.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Crypto.BitcoinAddress",
+      "Summary": "<p sourcefile=\"api/Veritas.Crypto.BitcoinAddress.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Bitcoin addresses.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Crypto.BitcoinAddressValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Crypto.BitcoinAddressValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Crypto.BitcoinAddressValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Crypto.BitcoinAddressValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Bitcoin address.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Crypto.ChainId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Crypto.ChainId.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Crypto.ChainId",
+      "Summary": "<p sourcefile=\"api/Veritas.Crypto.ChainId.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for blockchain chain identifiers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Crypto.ChainIdValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Crypto.ChainIdValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Crypto.ChainIdValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Crypto.ChainIdValue.yml\" sourcestartlinenumber=\"1\">Represents a blockchain chain identifier.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Crypto.EthereumTransactionHash.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Crypto.EthereumTransactionHash.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Crypto.EthereumTransactionHash",
+      "Summary": "<p sourcefile=\"api/Veritas.Crypto.EthereumTransactionHash.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Ethereum transaction hashes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Crypto.EthereumTransactionHashValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Crypto.EthereumTransactionHashValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Crypto.EthereumTransactionHashValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Crypto.EthereumTransactionHashValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Ethereum transaction hash.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Crypto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Crypto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Crypto",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Veritas.Education.Doi.yml",
       "output": {
         ".html": {
@@ -149,6 +247,34 @@
       "IsMRef": true,
       "Title": "Veritas.Education.DoiValue",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Education.GridId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Education.GridId.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Education.GridId",
+      "Summary": "<p sourcefile=\"api/Veritas.Education.GridId.yml\" sourcestartlinenumber=\"1\">Validation and generation for Global Research Identifier Database (GRID) identifiers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Education.GridIdValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Education.GridIdValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Education.GridIdValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Education.GridIdValue.yml\" sourcestartlinenumber=\"1\">Canonical GRID identifier value.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -205,6 +331,90 @@
       "IsMRef": true,
       "Title": "Veritas.Education.IsniValue",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Education.ResearcherId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Education.ResearcherId.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Education.ResearcherId",
+      "Summary": "<p sourcefile=\"api/Veritas.Education.ResearcherId.yml\" sourcestartlinenumber=\"1\">Validation and generation for ResearcherID identifiers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Education.ResearcherIdValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Education.ResearcherIdValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Education.ResearcherIdValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Education.ResearcherIdValue.yml\" sourcestartlinenumber=\"1\">Canonical ResearcherID value.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Education.RorId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Education.RorId.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Education.RorId",
+      "Summary": "<p sourcefile=\"api/Veritas.Education.RorId.yml\" sourcestartlinenumber=\"1\">Validation and generation for Research Organization Registry (ROR) identifiers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Education.RorIdValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Education.RorIdValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Education.RorIdValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Education.RorIdValue.yml\" sourcestartlinenumber=\"1\">Canonical ROR identifier value.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Education.ScopusAuthorId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Education.ScopusAuthorId.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Education.ScopusAuthorId",
+      "Summary": "<p sourcefile=\"api/Veritas.Education.ScopusAuthorId.yml\" sourcestartlinenumber=\"1\">Validation and generation for Scopus Author identifiers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Education.ScopusAuthorIdValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Education.ScopusAuthorIdValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Education.ScopusAuthorIdValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Education.ScopusAuthorIdValue.yml\" sourcestartlinenumber=\"1\">Canonical Scopus Author ID value.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -726,6 +936,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.ChipsParticipantId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.ChipsParticipantId.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.ChipsParticipantId",
+      "Summary": "<p sourcefile=\"api/Veritas.Finance.ChipsParticipantId.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for CHIPS participant identifiers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.ChipsParticipantIdValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.ChipsParticipantIdValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.ChipsParticipantIdValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Finance.ChipsParticipantIdValue.yml\" sourcestartlinenumber=\"1\">Represents a validated CHIPS participant identifier.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Veritas.Finance.Clabe.yml",
       "output": {
         ".html": {
@@ -866,6 +1104,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.Figi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.Figi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.Figi",
+      "Summary": "<p sourcefile=\"api/Veritas.Finance.Figi.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Financial Instrument Global Identifiers (FIGI).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.FigiValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.FigiValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.FigiValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Finance.FigiValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Financial Instrument Global Identifier (FIGI).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Veritas.Finance.Iban.yml",
       "output": {
         ".html": {
@@ -947,6 +1213,34 @@
       "IsMRef": true,
       "Title": "Veritas.Finance.LeiValue",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.MarketIdentifierCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.MarketIdentifierCode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.MarketIdentifierCode",
+      "Summary": "<p sourcefile=\"api/Veritas.Finance.MarketIdentifierCode.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Market Identifier Codes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Finance.MarketIdentifierCodeValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Finance.MarketIdentifierCodeValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Finance.MarketIdentifierCodeValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Finance.MarketIdentifierCodeValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Market Identifier Code (MIC).</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1160,6 +1454,1490 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Geospatial.DE.Flurstuecknummer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Geospatial.DE.Flurstuecknummer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Geospatial.DE.Flurstuecknummer",
+      "Summary": "<p sourcefile=\"api/Veritas.Geospatial.DE.Flurstuecknummer.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for German land parcel numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Geospatial.DE.FlurstuecknummerValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Geospatial.DE.FlurstuecknummerValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Geospatial.DE.FlurstuecknummerValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Geospatial.DE.FlurstuecknummerValue.yml\" sourcestartlinenumber=\"1\">Represents a validated German land parcel number (Flurstücknummer).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Geospatial.DE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Geospatial.DE.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Geospatial.DE",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Geospatial.Geohash.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Geospatial.Geohash.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Geospatial.Geohash",
+      "Summary": "<p sourcefile=\"api/Veritas.Geospatial.Geohash.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for geohashes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Geospatial.GeohashValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Geospatial.GeohashValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Geospatial.GeohashValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Geospatial.GeohashValue.yml\" sourcestartlinenumber=\"1\">Represents a validated geohash.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Geospatial.NL.KadastraleAanduiding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Geospatial.NL.KadastraleAanduiding.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Geospatial.NL.KadastraleAanduiding",
+      "Summary": "<p sourcefile=\"api/Veritas.Geospatial.NL.KadastraleAanduiding.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Dutch cadastral parcel identifiers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Geospatial.NL.KadastraleAanduidingValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Geospatial.NL.KadastraleAanduidingValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Geospatial.NL.KadastraleAanduidingValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Geospatial.NL.KadastraleAanduidingValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Dutch cadastral parcel identifier (Kadastrale Aanduiding).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Geospatial.NL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Geospatial.NL.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Geospatial.NL",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Geospatial.PlusCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Geospatial.PlusCode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Geospatial.PlusCode",
+      "Summary": "<p sourcefile=\"api/Veritas.Geospatial.PlusCode.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Plus Codes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Geospatial.PlusCodeValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Geospatial.PlusCodeValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Geospatial.PlusCodeValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Geospatial.PlusCodeValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Plus Code (Open Location Code).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Geospatial.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Geospatial.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Geospatial",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.AR.LicenciaNacionalConducir.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.AR.LicenciaNacionalConducir.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.AR.LicenciaNacionalConducir",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.AR.LicenciaNacionalConducir.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Argentine driver licence numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.AR.LicenciaNacionalConducirValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.AR.LicenciaNacionalConducirValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.AR.LicenciaNacionalConducirValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.AR.LicenciaNacionalConducirValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Argentine driver licence number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.AR.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.AR.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.AR",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.AU.NSW.DriverLicenceNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.AU.NSW.DriverLicenceNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.AU.NSW.DriverLicenceNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.AU.NSW.DriverLicenceNumber.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for New South Wales driver licence numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.AU.NSW.DriverLicenceNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.AU.NSW.DriverLicenceNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.AU.NSW.DriverLicenceNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.AU.NSW.DriverLicenceNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated New South Wales driver licence number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.AU.NSW.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.AU.NSW.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.AU.NSW",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.AU.QLD.DriverLicenceNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.AU.QLD.DriverLicenceNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.AU.QLD.DriverLicenceNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.AU.QLD.DriverLicenceNumber.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Queensland driver licence numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.AU.QLD.DriverLicenceNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.AU.QLD.DriverLicenceNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.AU.QLD.DriverLicenceNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.AU.QLD.DriverLicenceNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Queensland driver licence number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.AU.QLD.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.AU.QLD.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.AU.QLD",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.AU.VIC.DriverLicenceNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.AU.VIC.DriverLicenceNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.AU.VIC.DriverLicenceNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.AU.VIC.DriverLicenceNumber.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Victoria driver licence numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.AU.VIC.DriverLicenceNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.AU.VIC.DriverLicenceNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.AU.VIC.DriverLicenceNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.AU.VIC.DriverLicenceNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Victoria driver licence number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.AU.VIC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.AU.VIC.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.AU.VIC",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.AU.WA.DriverLicenceNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.AU.WA.DriverLicenceNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.AU.WA.DriverLicenceNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.AU.WA.DriverLicenceNumber.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Western Australia driver licence numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.AU.WA.DriverLicenceNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.AU.WA.DriverLicenceNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.AU.WA.DriverLicenceNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.AU.WA.DriverLicenceNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Western Australia driver licence number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.AU.WA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.AU.WA.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.AU.WA",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.BR.Cnh.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.BR.Cnh.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.BR.Cnh",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.BR.Cnh.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Brazilian CNH numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.BR.CnhValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.BR.CnhValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.BR.CnhValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.BR.CnhValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Brazilian CNH driver licence number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.BR.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.BR.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.BR",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.CA.BC.DriverLicenceNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.CA.BC.DriverLicenceNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.CA.BC.DriverLicenceNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.CA.BC.DriverLicenceNumber.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for British Columbia driver licence numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.CA.BC.DriverLicenceNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.CA.BC.DriverLicenceNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.CA.BC.DriverLicenceNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.CA.BC.DriverLicenceNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated British Columbia driver licence number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.CA.BC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.CA.BC.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.CA.BC",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.CA.ON.DriverLicenceNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.CA.ON.DriverLicenceNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.CA.ON.DriverLicenceNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.CA.ON.DriverLicenceNumber.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Ontario driver licence numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.CA.ON.DriverLicenceNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.CA.ON.DriverLicenceNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.CA.ON.DriverLicenceNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.CA.ON.DriverLicenceNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Ontario driver licence number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.CA.ON.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.CA.ON.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.CA.ON",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.CA.QC.DriverLicenceNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.CA.QC.DriverLicenceNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.CA.QC.DriverLicenceNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.CA.QC.DriverLicenceNumber.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Québec driver licence numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.CA.QC.DriverLicenceNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.CA.QC.DriverLicenceNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.CA.QC.DriverLicenceNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.CA.QC.DriverLicenceNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Québec driver licence number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.CA.QC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.CA.QC.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.CA.QC",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.CN.DrivingLicenceNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.CN.DrivingLicenceNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.CN.DrivingLicenceNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.CN.DrivingLicenceNumber.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Chinese driving licence numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.CN.DrivingLicenceNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.CN.DrivingLicenceNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.CN.DrivingLicenceNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.CN.DrivingLicenceNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Chinese driving licence number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.CN.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.CN.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.CN",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.DE.Fuehrerscheinnummer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.DE.Fuehrerscheinnummer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.DE.Fuehrerscheinnummer",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.DE.Fuehrerscheinnummer.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for German driver licence numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.DE.FuehrerscheinnummerValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.DE.FuehrerscheinnummerValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.DE.FuehrerscheinnummerValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.DE.FuehrerscheinnummerValue.yml\" sourcestartlinenumber=\"1\">Represents a validated German driver licence number (Führerscheinnummer).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.DE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.DE.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.DE",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.ES.NumeroPermisoConduccion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.ES.NumeroPermisoConduccion.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.ES.NumeroPermisoConduccion",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.ES.NumeroPermisoConduccion.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Spanish driving licence numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.ES.NumeroPermisoConduccionValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.ES.NumeroPermisoConduccionValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.ES.NumeroPermisoConduccionValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.ES.NumeroPermisoConduccionValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Spanish driving licence number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.ES.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.ES.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.ES",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.FR.PermisDeConduire.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.FR.PermisDeConduire.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.FR.PermisDeConduire",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.FR.PermisDeConduire.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for French driving licence numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.FR.PermisDeConduireValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.FR.PermisDeConduireValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.FR.PermisDeConduireValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.FR.PermisDeConduireValue.yml\" sourcestartlinenumber=\"1\">Represents a validated French driving licence number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.FR.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.FR.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.FR",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.IE.DriverLicenceNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.IE.DriverLicenceNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.IE.DriverLicenceNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.IE.DriverLicenceNumber.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Irish driver licence numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.IE.DriverLicenceNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.IE.DriverLicenceNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.IE.DriverLicenceNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.IE.DriverLicenceNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Irish driver licence number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.IE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.IE.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.IE",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.IN.DrivingLicenceNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.IN.DrivingLicenceNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.IN.DrivingLicenceNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.IN.DrivingLicenceNumber.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Indian driving licence numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.IN.DrivingLicenceNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.IN.DrivingLicenceNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.IN.DrivingLicenceNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.IN.DrivingLicenceNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Indian driving licence number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.IN.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.IN.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.IN",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.IT.PatenteDiGuida.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.IT.PatenteDiGuida.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.IT.PatenteDiGuida",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.IT.PatenteDiGuida.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Italian driving licence numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.IT.PatenteDiGuidaValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.IT.PatenteDiGuidaValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.IT.PatenteDiGuidaValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.IT.PatenteDiGuidaValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Italian driving licence number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.IT.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.IT.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.IT",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.JP.JapaneseDriverLicenseNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.JP.JapaneseDriverLicenseNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.JP.JapaneseDriverLicenseNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.JP.JapaneseDriverLicenseNumber.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Japanese driver licence numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.JP.JapaneseDriverLicenseNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.JP.JapaneseDriverLicenseNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.JP.JapaneseDriverLicenseNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.JP.JapaneseDriverLicenseNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Japanese driver licence number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.JP.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.JP.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.JP",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.MX.BCN.LicenciaDeConducir.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.MX.BCN.LicenciaDeConducir.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.MX.BCN.LicenciaDeConducir",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.MX.BCN.LicenciaDeConducir.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Baja California driver licence numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.MX.BCN.LicenciaDeConducirValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.MX.BCN.LicenciaDeConducirValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.MX.BCN.LicenciaDeConducirValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.MX.BCN.LicenciaDeConducirValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Baja California driver licence number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.MX.BCN.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.MX.BCN.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.MX.BCN",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.MX.CDMX.LicenciaDeConducir.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.MX.CDMX.LicenciaDeConducir.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.MX.CDMX.LicenciaDeConducir",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.MX.CDMX.LicenciaDeConducir.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Ciudad de México driver licence numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.MX.CDMX.LicenciaDeConducirValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.MX.CDMX.LicenciaDeConducirValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.MX.CDMX.LicenciaDeConducirValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.MX.CDMX.LicenciaDeConducirValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Ciudad de México driver licence number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.MX.CDMX.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.MX.CDMX.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.MX.CDMX",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.MX.JAL.LicenciaDeConducir.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.MX.JAL.LicenciaDeConducir.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.MX.JAL.LicenciaDeConducir",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.MX.JAL.LicenciaDeConducir.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Jalisco driver licence numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.MX.JAL.LicenciaDeConducirValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.MX.JAL.LicenciaDeConducirValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.MX.JAL.LicenciaDeConducirValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.MX.JAL.LicenciaDeConducirValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Jalisco driver licence number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.MX.JAL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.MX.JAL.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.MX.JAL",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.MX.NLE.LicenciaDeConducir.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.MX.NLE.LicenciaDeConducir.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.MX.NLE.LicenciaDeConducir",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.MX.NLE.LicenciaDeConducir.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Nuevo León driver licence numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.MX.NLE.LicenciaDeConducirValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.MX.NLE.LicenciaDeConducirValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.MX.NLE.LicenciaDeConducirValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.MX.NLE.LicenciaDeConducirValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Nuevo León driver licence number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.MX.NLE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.MX.NLE.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.MX.NLE",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.NL.Rijbewijsnummer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.NL.Rijbewijsnummer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.NL.Rijbewijsnummer",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.NL.Rijbewijsnummer.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Dutch driving licence numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.NL.RijbewijsnummerValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.NL.RijbewijsnummerValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.NL.RijbewijsnummerValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.NL.RijbewijsnummerValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Dutch driving licence number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.NL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.NL.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.NL",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.NZ.DriverLicenceNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.NZ.DriverLicenceNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.NZ.DriverLicenceNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.NZ.DriverLicenceNumber.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for New Zealand driver licence numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.NZ.DriverLicenceNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.NZ.DriverLicenceNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.NZ.DriverLicenceNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.NZ.DriverLicenceNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated New Zealand driver licence number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.NZ.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.NZ.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.NZ",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.PassportNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.PassportNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.PassportNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.PassportNumber.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for passport numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.PassportNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.PassportNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.PassportNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.PassportNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated passport number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.SE.Korkortsnr.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.SE.Korkortsnr.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.SE.Korkortsnr",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.SE.Korkortsnr.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Swedish driver licence numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.SE.KorkortsnrValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.SE.KorkortsnrValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.SE.KorkortsnrValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.SE.KorkortsnrValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Swedish driver licence number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.SE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.SE.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.SE",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.UK.DrivingLicenceNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.UK.DrivingLicenceNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.UK.DrivingLicenceNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.UK.DrivingLicenceNumber.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for UK driving licence numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.UK.DrivingLicenceNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.UK.DrivingLicenceNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.UK.DrivingLicenceNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.UK.DrivingLicenceNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated UK driving licence number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.UK.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.UK.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.UK",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.US.CA.DriverLicenseNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.US.CA.DriverLicenseNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.US.CA.DriverLicenseNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.US.CA.DriverLicenseNumber.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for California driver license numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.US.CA.DriverLicenseNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.US.CA.DriverLicenseNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.US.CA.DriverLicenseNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.US.CA.DriverLicenseNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated California driver license number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.US.CA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.US.CA.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.US.CA",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.US.FL.DriverLicenseNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.US.FL.DriverLicenseNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.US.FL.DriverLicenseNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.US.FL.DriverLicenseNumber.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Florida driver license numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.US.FL.DriverLicenseNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.US.FL.DriverLicenseNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.US.FL.DriverLicenseNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.US.FL.DriverLicenseNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Florida driver license number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.US.FL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.US.FL.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.US.FL",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.US.NY.DriverLicenseNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.US.NY.DriverLicenseNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.US.NY.DriverLicenseNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.US.NY.DriverLicenseNumber.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for New York driver license numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.US.NY.DriverLicenseNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.US.NY.DriverLicenseNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.US.NY.DriverLicenseNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.US.NY.DriverLicenseNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated New York driver license number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.US.NY.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.US.NY.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.US.NY",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.US.TX.DriverLicenseNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.US.TX.DriverLicenseNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.US.TX.DriverLicenseNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.US.TX.DriverLicenseNumber.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Texas driver license numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.US.TX.DriverLicenseNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.US.TX.DriverLicenseNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.US.TX.DriverLicenseNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.US.TX.DriverLicenseNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Texas driver license number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.US.TX.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.US.TX.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.US.TX",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.VisaNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.VisaNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.VisaNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.VisaNumber.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for visa numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.VisaNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.VisaNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.VisaNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.VisaNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated visa number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.ZA.SouthAfricanLicenceNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.ZA.SouthAfricanLicenceNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.ZA.SouthAfricanLicenceNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.ZA.SouthAfricanLicenceNumber.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for South African driver licence numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.ZA.SouthAfricanLicenceNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.ZA.SouthAfricanLicenceNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.ZA.SouthAfricanLicenceNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Government.ZA.SouthAfricanLicenceNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated South African driver licence number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.ZA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.ZA.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government.ZA",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Government.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Government.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Government",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Veritas.Healthcare.DeaNumber.yml",
       "output": {
         ".html": {
@@ -1185,6 +2963,90 @@
       "IsMRef": true,
       "Title": "Veritas.Healthcare.DeaNumberValue",
       "Summary": "<p sourcefile=\"api/Veritas.Healthcare.DeaNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated U.S. DEA registration number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Healthcare.IcdCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Healthcare.IcdCode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Healthcare.IcdCode",
+      "Summary": "<p sourcefile=\"api/Veritas.Healthcare.IcdCode.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for ICD-9/10/11 codes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Healthcare.IcdCodeValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Healthcare.IcdCodeValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Healthcare.IcdCodeValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Healthcare.IcdCodeValue.yml\" sourcestartlinenumber=\"1\">Represents a validated ICD diagnostic code.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Healthcare.Ndc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Healthcare.Ndc.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Healthcare.Ndc",
+      "Summary": "<p sourcefile=\"api/Veritas.Healthcare.Ndc.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for U.S. National Drug Codes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Healthcare.NdcPackageCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Healthcare.NdcPackageCode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Healthcare.NdcPackageCode",
+      "Summary": "<p sourcefile=\"api/Veritas.Healthcare.NdcPackageCode.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for NDC package codes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Healthcare.NdcPackageCodeValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Healthcare.NdcPackageCodeValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Healthcare.NdcPackageCodeValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Healthcare.NdcPackageCodeValue.yml\" sourcestartlinenumber=\"1\">Represents a validated NDC package code.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Healthcare.NdcValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Healthcare.NdcValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Healthcare.NdcValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Healthcare.NdcValue.yml\" sourcestartlinenumber=\"1\">Represents a validated National Drug Code (NDC).</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1272,6 +3134,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Healthcare.RxNormIdentifier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Healthcare.RxNormIdentifier.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Healthcare.RxNormIdentifier",
+      "Summary": "<p sourcefile=\"api/Veritas.Healthcare.RxNormIdentifier.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for RxNorm identifiers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Healthcare.RxNormIdentifierValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Healthcare.RxNormIdentifierValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Healthcare.RxNormIdentifierValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Healthcare.RxNormIdentifierValue.yml\" sourcestartlinenumber=\"1\">Represents a validated RxNorm identifier.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Veritas.Healthcare.Snomed.SctId.yml",
       "output": {
         ".html": {
@@ -1311,6 +3201,34 @@
       "IsMRef": true,
       "Title": "Veritas.Healthcare.Snomed",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Healthcare.Udi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Healthcare.Udi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Healthcare.Udi",
+      "Summary": "<p sourcefile=\"api/Veritas.Healthcare.Udi.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for Unique Device Identifiers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Healthcare.UdiValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Healthcare.UdiValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Healthcare.UdiValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Healthcare.UdiValue.yml\" sourcestartlinenumber=\"1\">Represents a validated Unique Device Identifier (UDI).</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1465,34 +3383,6 @@
       "IsMRef": true,
       "Title": "Veritas.Identity.EmailValue",
       "Summary": "<p sourcefile=\"api/Veritas.Identity.EmailValue.yml\" sourcestartlinenumber=\"1\">Represents a validated email address.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Veritas.Identity.Ethereum.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Veritas.Identity.Ethereum.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Veritas.Identity.Ethereum",
-      "Summary": "<p sourcefile=\"api/Veritas.Identity.Ethereum.yml\" sourcestartlinenumber=\"1\">Provides validation for Ethereum addresses.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Veritas.Identity.EthereumValue.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Veritas.Identity.EthereumValue.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Veritas.Identity.EthereumValue",
-      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -2738,6 +4628,132 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Veritas.Media",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Standards.IecStandardNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Standards.IecStandardNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Standards.IecStandardNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.Standards.IecStandardNumber.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for IEC standard numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Standards.IecStandardNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Standards.IecStandardNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Standards.IecStandardNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Standards.IecStandardNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated IEC standard number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Standards.IsoStandardNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Standards.IsoStandardNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Standards.IsoStandardNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.Standards.IsoStandardNumber.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for ISO standard numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Standards.IsoStandardNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Standards.IsoStandardNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Standards.IsoStandardNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Standards.IsoStandardNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated ISO standard number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Standards.RfcNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Standards.RfcNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Standards.RfcNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.Standards.RfcNumber.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for RFC numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Standards.RfcNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Standards.RfcNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Standards.RfcNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Standards.RfcNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated RFC number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Standards.UlFileNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Standards.UlFileNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Standards.UlFileNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.Standards.UlFileNumber.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for UL file numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Standards.UlFileNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Standards.UlFileNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Standards.UlFileNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Standards.UlFileNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated UL file number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Standards.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Standards.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Standards",
       "Summary": null
     },
     {
@@ -5553,6 +7569,188 @@
       "IsMRef": true,
       "Title": "Veritas.Transliteration",
       "Summary": "<p sourcefile=\"api/Veritas.Transliteration.yml\" sourcestartlinenumber=\"1\">Provides transliteration helpers for various identifier schemes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Transportation.FaaNNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Transportation.FaaNNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Transportation.FaaNNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.Transportation.FaaNNumber.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for FAA N-numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Transportation.FaaNNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Transportation.FaaNNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Transportation.FaaNNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Transportation.FaaNNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated FAA N-number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Transportation.FlightNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Transportation.FlightNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Transportation.FlightNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.Transportation.FlightNumber.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for flight numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Transportation.FlightNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Transportation.FlightNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Transportation.FlightNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Transportation.FlightNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated flight number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Transportation.IataAirlineCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Transportation.IataAirlineCode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Transportation.IataAirlineCode",
+      "Summary": "<p sourcefile=\"api/Veritas.Transportation.IataAirlineCode.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for IATA airline codes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Transportation.IataAirlineCodeValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Transportation.IataAirlineCodeValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Transportation.IataAirlineCodeValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Transportation.IataAirlineCodeValue.yml\" sourcestartlinenumber=\"1\">Represents a validated IATA airline code.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Transportation.IcaoAirlineCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Transportation.IcaoAirlineCode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Transportation.IcaoAirlineCode",
+      "Summary": "<p sourcefile=\"api/Veritas.Transportation.IcaoAirlineCode.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for ICAO airline codes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Transportation.IcaoAirlineCodeValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Transportation.IcaoAirlineCodeValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Transportation.IcaoAirlineCodeValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Transportation.IcaoAirlineCodeValue.yml\" sourcestartlinenumber=\"1\">Represents a validated ICAO airline code.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Transportation.ImoCallSign.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Transportation.ImoCallSign.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Transportation.ImoCallSign",
+      "Summary": "<p sourcefile=\"api/Veritas.Transportation.ImoCallSign.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for IMO call signs.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Transportation.ImoCallSignValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Transportation.ImoCallSignValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Transportation.ImoCallSignValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Transportation.ImoCallSignValue.yml\" sourcestartlinenumber=\"1\">Represents a validated IMO call sign.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Transportation.TrainUicNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Transportation.TrainUicNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Transportation.TrainUicNumber",
+      "Summary": "<p sourcefile=\"api/Veritas.Transportation.TrainUicNumber.yml\" sourcestartlinenumber=\"1\">Provides validation and generation for UIC train numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Transportation.TrainUicNumberValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Transportation.TrainUicNumberValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Transportation.TrainUicNumberValue",
+      "Summary": "<p sourcefile=\"api/Veritas.Transportation.TrainUicNumberValue.yml\" sourcestartlinenumber=\"1\">Represents a validated UIC train number.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veritas.Transportation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veritas.Transportation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Veritas.Transportation",
+      "Summary": null
     },
     {
       "type": "ManagedReference",

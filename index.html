@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="">
       
       
-      <meta name="docfx:docurl" content="https://github.com/rebeccapowell/Veritas/blob/1.0.4/docfx/index.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/rebeccapowell/Veritas/blob/1.0.5/docfx/index.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -212,16 +212,28 @@ foreach (var s in Bulk.GenerateMany((dst, rng) =&gt; {
 <td><a class="xref" href="api/Veritas.Finance.Cusip.html">Cusip</a></td>
 </tr>
 <tr>
-<td>MIC</td>
+<td>Market Identifier Code (MIC)</td>
 <td>Global</td>
 <td>structural check</td>
-<td><a class="xref" href="api/Veritas.Finance.Mic.html">Mic</a></td>
+<td><a class="xref" href="api/Veritas.Finance.MarketIdentifierCode.html">MarketIdentifierCode</a></td>
 </tr>
 <tr>
 <td>WKN</td>
 <td>Germany</td>
 <td>structural check</td>
 <td><a class="xref" href="api/Veritas.Finance.Wkn.html">Wkn</a></td>
+</tr>
+<tr>
+<td>FIGI</td>
+<td>Global</td>
+<td>Luhn check digit; generation</td>
+<td><a class="xref" href="api/Veritas.Finance.Figi.html">Figi</a></td>
+</tr>
+<tr>
+<td>CHIPS Participant ID</td>
+<td>US</td>
+<td>format check; generation</td>
+<td><a class="xref" href="api/Veritas.Finance.ChipsParticipantId.html">ChipsParticipantId</a></td>
 </tr>
 </tbody>
 </table>
@@ -362,12 +374,6 @@ foreach (var s in Bulk.GenerateMany((dst, rng) =&gt; {
 <td>Global</td>
 <td>structural check</td>
 <td><a class="xref" href="api/Veritas.Identity.Bcp47.html">Bcp47</a></td>
-</tr>
-<tr>
-<td>Ethereum address</td>
-<td>Global</td>
-<td>EIP-55 checksum</td>
-<td><a class="xref" href="api/Veritas.Identity.Ethereum.html">Ethereum</a></td>
 </tr>
 <tr>
 <td>Base58Check</td>
@@ -1125,6 +1131,30 @@ foreach (var s in Bulk.GenerateMany((dst, rng) =&gt; {
 <td>structural check</td>
 <td><a class="xref" href="api/Veritas.Media.Isrc.html">Isrc</a></td>
 </tr>
+<tr>
+<td>ROR ID</td>
+<td>International</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Education.RorId.html">RorId</a></td>
+</tr>
+<tr>
+<td>Scopus Author ID</td>
+<td>International</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Education.ScopusAuthorId.html">ScopusAuthorId</a></td>
+</tr>
+<tr>
+<td>ResearcherID</td>
+<td>International</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Education.ResearcherId.html">ResearcherId</a></td>
+</tr>
+<tr>
+<td>GRID ID</td>
+<td>International</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Education.GridId.html">GridId</a></td>
+</tr>
 </tbody>
 </table>
 <h3 id="healthcare">Healthcare</h3>
@@ -1168,6 +1198,395 @@ foreach (var s in Bulk.GenerateMany((dst, rng) =&gt; {
 <td>weighted checksum; generation</td>
 <td><a class="xref" href="api/Veritas.Healthcare.DeaNumber.html">DeaNumber</a></td>
 </tr>
+<tr>
+<td>Unique Device Identifier (UDI)</td>
+<td>Global</td>
+<td>format check; generation</td>
+<td><a class="xref" href="api/Veritas.Healthcare.Udi.html">Udi</a></td>
+</tr>
+<tr>
+<td>National Drug Code (NDC)</td>
+<td>US</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Healthcare.Ndc.html">Ndc</a></td>
+</tr>
+<tr>
+<td>ICD Code</td>
+<td>International</td>
+<td>format check; generation</td>
+<td><a class="xref" href="api/Veritas.Healthcare.IcdCode.html">IcdCode</a></td>
+</tr>
+<tr>
+<td>RxNorm Identifier</td>
+<td>US</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Healthcare.RxNormIdentifier.html">RxNormIdentifier</a></td>
+</tr>
+<tr>
+<td>NDC Package Code</td>
+<td>US</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Healthcare.NdcPackageCode.html">NdcPackageCode</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="transportation--vehicles">Transportation / Vehicles</h3>
+<table>
+<thead>
+<tr>
+<th>Identifier</th>
+<th>Country/Region</th>
+<th>Validation &amp; Generation</th>
+<th>Docs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FAA N-number</td>
+<td>US</td>
+<td>format check; generation</td>
+<td><a class="xref" href="api/Veritas.Transportation.FaaNNumber.html">FaaNNumber</a></td>
+</tr>
+<tr>
+<td>ICAO Airline Code</td>
+<td>International</td>
+<td>format check; generation</td>
+<td><a class="xref" href="api/Veritas.Transportation.IcaoAirlineCode.html">IcaoAirlineCode</a></td>
+</tr>
+<tr>
+<td>IATA Airline Code</td>
+<td>International</td>
+<td>format check; generation</td>
+<td><a class="xref" href="api/Veritas.Transportation.IataAirlineCode.html">IataAirlineCode</a></td>
+</tr>
+<tr>
+<td>Flight Number</td>
+<td>International</td>
+<td>format check; generation</td>
+<td><a class="xref" href="api/Veritas.Transportation.FlightNumber.html">FlightNumber</a></td>
+</tr>
+<tr>
+<td>Train UIC Number</td>
+<td>International</td>
+<td>mod 11 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Transportation.TrainUicNumber.html">TrainUicNumber</a></td>
+</tr>
+<tr>
+<td>IMO Call Sign</td>
+<td>International</td>
+<td>format check; generation</td>
+<td><a class="xref" href="api/Veritas.Transportation.ImoCallSign.html">ImoCallSign</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="crypto--blockchain">Crypto / Blockchain</h3>
+<table>
+<thead>
+<tr>
+<th>Identifier</th>
+<th>Country/Region</th>
+<th>Validation &amp; Generation</th>
+<th>Docs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bitcoin address</td>
+<td>Global</td>
+<td>Base58 + double SHA-256</td>
+<td><a class="xref" href="api/Veritas.Crypto.BitcoinAddress.html">BitcoinAddress</a></td>
+</tr>
+<tr>
+<td>Ethereum transaction hash</td>
+<td>Global</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Crypto.EthereumTransactionHash.html">EthereumTransactionHash</a></td>
+</tr>
+<tr>
+<td>Chain ID</td>
+<td>Global</td>
+<td>numeric; generation</td>
+<td><a class="xref" href="api/Veritas.Crypto.ChainId.html">ChainId</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="government--public-administration">Government / Public Administration</h3>
+<table>
+<thead>
+<tr>
+<th>Identifier</th>
+<th>Country/Region</th>
+<th>Validation &amp; Generation</th>
+<th>Docs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Passport Number</td>
+<td>Global</td>
+<td>format check; generation</td>
+<td><a class="xref" href="api/Veritas.Government.PassportNumber.html">PassportNumber</a></td>
+</tr>
+<tr>
+<td>Visa Number</td>
+<td>Global</td>
+<td>format check; generation</td>
+<td><a class="xref" href="api/Veritas.Government.VisaNumber.html">VisaNumber</a></td>
+</tr>
+<tr>
+<td>Driver Licence Number (CA)</td>
+<td>US</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Government.US.CA.DriverLicenseNumber.html">DriverLicenseNumber</a></td>
+</tr>
+<tr>
+<td>Driver Licence Number (NY)</td>
+<td>US</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Government.US.NY.DriverLicenseNumber.html">DriverLicenseNumber</a></td>
+</tr>
+<tr>
+<td>Driver Licence Number (FL)</td>
+<td>US</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Government.US.FL.DriverLicenseNumber.html">DriverLicenseNumber</a></td>
+</tr>
+<tr>
+<td>Driver Licence Number (TX)</td>
+<td>US</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Government.US.TX.DriverLicenseNumber.html">DriverLicenseNumber</a></td>
+</tr>
+<tr>
+<td>Driver Licence Number (ON)</td>
+<td>CA</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Government.CA.ON.DriverLicenceNumber.html">DriverLicenceNumber</a></td>
+</tr>
+<tr>
+<td>Driver Licence Number (BC)</td>
+<td>CA</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Government.CA.BC.DriverLicenceNumber.html">DriverLicenceNumber</a></td>
+</tr>
+<tr>
+<td>Driver Licence Number (QC)</td>
+<td>CA</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Government.CA.QC.DriverLicenceNumber.html">DriverLicenceNumber</a></td>
+</tr>
+<tr>
+<td>Driver Licence Number (NSW)</td>
+<td>AU</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Government.AU.NSW.DriverLicenceNumber.html">DriverLicenceNumber</a></td>
+</tr>
+<tr>
+<td>Driver Licence Number (VIC)</td>
+<td>AU</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Government.AU.VIC.DriverLicenceNumber.html">DriverLicenceNumber</a></td>
+</tr>
+<tr>
+<td>Driver Licence Number (QLD)</td>
+<td>AU</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Government.AU.QLD.DriverLicenceNumber.html">DriverLicenceNumber</a></td>
+</tr>
+<tr>
+<td>Driver Licence Number (WA)</td>
+<td>AU</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Government.AU.WA.DriverLicenceNumber.html">DriverLicenceNumber</a></td>
+</tr>
+<tr>
+<td>Licencia de Conducir (CDMX)</td>
+<td>MX</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Government.MX.CDMX.LicenciaDeConducir.html">LicenciaDeConducir</a></td>
+</tr>
+<tr>
+<td>Licencia de Conducir (JAL)</td>
+<td>MX</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Government.MX.JAL.LicenciaDeConducir.html">LicenciaDeConducir</a></td>
+</tr>
+<tr>
+<td>Licencia de Conducir (NLE)</td>
+<td>MX</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Government.MX.NLE.LicenciaDeConducir.html">LicenciaDeConducir</a></td>
+</tr>
+<tr>
+<td>Licencia de Conducir (BCN)</td>
+<td>MX</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Government.MX.BCN.LicenciaDeConducir.html">LicenciaDeConducir</a></td>
+</tr>
+<tr>
+<td>Führerscheinnummer</td>
+<td>DE</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Government.DE.Fuehrerscheinnummer.html">Fuehrerscheinnummer</a></td>
+</tr>
+<tr>
+<td>Permis de Conduire</td>
+<td>FR</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Government.FR.PermisDeConduire.html">PermisDeConduire</a></td>
+</tr>
+<tr>
+<td>Patente di guida</td>
+<td>IT</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Government.IT.PatenteDiGuida.html">PatenteDiGuida</a></td>
+</tr>
+<tr>
+<td>Rijbewijsnummer</td>
+<td>NL</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Government.NL.Rijbewijsnummer.html">Rijbewijsnummer</a></td>
+</tr>
+<tr>
+<td>Körkortsnr</td>
+<td>SE</td>
+<td>format check; generation</td>
+<td><a class="xref" href="api/Veritas.Government.SE.Korkortsnr.html">Korkortsnr</a></td>
+</tr>
+<tr>
+<td>Driving Licence Number</td>
+<td>IN</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Government.IN.DrivingLicenceNumber.html">DrivingLicenceNumber</a></td>
+</tr>
+<tr>
+<td>Driver Licence Number</td>
+<td>NZ</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Government.NZ.DriverLicenceNumber.html">DriverLicenceNumber</a></td>
+</tr>
+<tr>
+<td>Driver Licence Number</td>
+<td>IE</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Government.IE.DriverLicenceNumber.html">DriverLicenceNumber</a></td>
+</tr>
+<tr>
+<td>Licencia Nacional de Conducir</td>
+<td>AR</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Government.AR.LicenciaNacionalConducir.html">LicenciaNacionalConducir</a></td>
+</tr>
+<tr>
+<td>Driving Licence Number</td>
+<td>CN</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Government.CN.DrivingLicenceNumber.html">DrivingLicenceNumber</a></td>
+</tr>
+<tr>
+<td>Driving Licence Number</td>
+<td>UK</td>
+<td>Luhn base36 check; generation</td>
+<td><a class="xref" href="api/Veritas.Government.UK.DrivingLicenceNumber.html">DrivingLicenceNumber</a></td>
+</tr>
+<tr>
+<td>Número de permiso de conducción</td>
+<td>ES</td>
+<td>mod 23 check; generation</td>
+<td><a class="xref" href="api/Veritas.Government.ES.NumeroPermisoConduccion.html">NumeroPermisoConduccion</a></td>
+</tr>
+<tr>
+<td>South African Licence Number</td>
+<td>ZA</td>
+<td>Luhn checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Government.ZA.SouthAfricanLicenceNumber.html">SouthAfricanLicenceNumber</a></td>
+</tr>
+<tr>
+<td>CNH</td>
+<td>BR</td>
+<td>mod 11 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Government.BR.Cnh.html">Cnh</a></td>
+</tr>
+<tr>
+<td>Japanese Driver Licence Number</td>
+<td>JP</td>
+<td>mod 11 checksum; generation</td>
+<td><a class="xref" href="api/Veritas.Government.JP.JapaneseDriverLicenseNumber.html">JapaneseDriverLicenseNumber</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="standards--protocols">Standards &amp; Protocols</h3>
+<table>
+<thead>
+<tr>
+<th>Identifier</th>
+<th>Country/Region</th>
+<th>Validation &amp; Generation</th>
+<th>Docs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IEC Standard Number</td>
+<td>International</td>
+<td>format check; generation</td>
+<td><a class="xref" href="api/Veritas.Standards.IecStandardNumber.html">IecStandardNumber</a></td>
+</tr>
+<tr>
+<td>ISO Standard Number</td>
+<td>International</td>
+<td>format check; generation</td>
+<td><a class="xref" href="api/Veritas.Standards.IsoStandardNumber.html">IsoStandardNumber</a></td>
+</tr>
+<tr>
+<td>RFC Number</td>
+<td>International</td>
+<td>format check; generation</td>
+<td><a class="xref" href="api/Veritas.Standards.RfcNumber.html">RfcNumber</a></td>
+</tr>
+<tr>
+<td>UL File Number</td>
+<td>International</td>
+<td>format check; generation</td>
+<td><a class="xref" href="api/Veritas.Standards.UlFileNumber.html">UlFileNumber</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="geospatial--infrastructure">Geospatial &amp; Infrastructure</h3>
+<table>
+<thead>
+<tr>
+<th>Identifier</th>
+<th>Country/Region</th>
+<th>Validation &amp; Generation</th>
+<th>Docs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geohash</td>
+<td>International</td>
+<td>format check; generation</td>
+<td><a class="xref" href="api/Veritas.Geospatial.Geohash.html">Geohash</a></td>
+</tr>
+<tr>
+<td>Plus Code (Open Location Code)</td>
+<td>International</td>
+<td>format check; generation</td>
+<td><a class="xref" href="api/Veritas.Geospatial.PlusCode.html">PlusCode</a></td>
+</tr>
+<tr>
+<td>Flurstücknummer</td>
+<td>DE</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Geospatial.DE.Flurstuecknummer.html">Flurstuecknummer</a></td>
+</tr>
+<tr>
+<td>Kadastrale Aanduiding</td>
+<td>NL</td>
+<td>structural check; generation</td>
+<td><a class="xref" href="api/Veritas.Geospatial.NL.KadastraleAanduiding.html">KadastraleAanduiding</a></td>
+</tr>
 </tbody>
 </table>
 <h2 id="future-identifiers">Future identifiers</h2>
@@ -1195,7 +1614,7 @@ foreach (var s in Bulk.GenerateMany((dst, rng) =&gt; {
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/rebeccapowell/Veritas/blob/1.0.4/docfx/index.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/rebeccapowell/Veritas/blob/1.0.5/docfx/index.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
