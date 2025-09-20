@@ -7,7 +7,7 @@
 Core primitives and algorithms for identifier validation and generation.
 
 > **⚠️ Caution**
-> In active development. Please perform your own due diligence before deploying it in production. Feedback via GitHub issues and merge requests is always welcome.
+> In active development. AI Agentic coding experiment. Please perform your own due diligence before deploying it in production. Feedback via GitHub issues and merge requests is always welcome.
 
 ## Install
 
