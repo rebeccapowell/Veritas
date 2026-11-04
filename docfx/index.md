@@ -380,3 +380,7 @@ Unseeded ULID, KSUID and NanoID generation uses cryptographic randomness. Seeded
 Unrestricted `Eic.TryGenerate` now returns false with zero characters written: ENTSO-E reserves allocation-related algorithm use to authorised issuing offices. SEPA's default synthetic generator now emits the documented German national format rather than arbitrary country/length combinations. Its validator checks the supported national shapes and the SEPA checksum, without checking each underlying national tax identifier or registry.
 
 See [the issue #22 remediation notes](https://github.com/rebeccapowell/Veritas/blob/fix/22-critical-review/docs/remediation-22.md) for specification references, dependency audit results and operational follow-up.
+
+## German market partner identifiers
+
+<xref:Veritas.Energy.DE.MarketPartnerId> supports the BDEW electricity and DVGW gas schemes with explicit classification and synthetic generation. It validates the 13 ASCII digits, allocation-mode position and Lok-/Waggon checksum. Spaces are normalised. This checks structure and check digits, not registry allocation; GS1 GLNs are a separate scheme. See BDEW guide 1.2, sections 2 and 8.1.

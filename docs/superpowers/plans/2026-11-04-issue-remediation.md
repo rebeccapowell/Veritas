@@ -41,3 +41,5 @@ For each deliverable: write the regression/specification tests first, observe th
 - Compatibility rulings: affected parser raw resource limit4096; Base58 payload limit1024 bytes; EIC arbitrary generation disabled per ENTSO-E restriction; SEPA default synthetic generator emits DE18; seeded ULID/KSUID fixtures use epoch or explicit Timestamp. These are documented in README, DocFX and remediation notes.
 - Operational follow-up: NuGet trusted-publishing trust policy/protected release environment require external owner configuration; existing API-key publication path retained. No publishing/merging authorised or performed.
 - Next: #23 MP-ID, then #24-29. Keep separate issue PRs and subagent review gates, stack dependent PRs as necessary.
+
+- #23 complete: MarketPartnerId classifies BDEW99 and DVGW98, validates allocation-mode bounds, and requires explicit generation scheme. Shared numeric checksum retains official MaLo vector. Reviewer found loss of checksum error in expected-scheme overload; failing test reproduced on both targets and fixed. Release1159/1159 on each target; DocFX metadata/HTML0 warnings/errors. Next#24.

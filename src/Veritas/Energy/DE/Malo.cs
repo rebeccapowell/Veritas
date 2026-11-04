@@ -34,14 +34,7 @@ public static class Malo
             result = new ValidationResult<MaloValue>(false, default, ValidationError.Format);
             return false;
         }
-        int sumOdd = 0, sumEven = 0;
-        for (int i = 0; i < 10; i++)
-        {
-            int d = digits[i] - '0';
-            if ((i & 1) == 0) sumOdd += d; else sumEven += d;
-        }
-        int total = sumOdd + 2 * sumEven;
-        int check = (10 - total % 10) % 10;
+        int check = BdewChecksum.ComputeNumeric(digits[..10]);
         if (digits[10] != (char)('0' + check))
         {
             result = new ValidationResult<MaloValue>(false, default, ValidationError.Checksum);
@@ -73,14 +66,7 @@ public static class Malo
         digits[0] = (char)('1' + rng.Next(9));
         for (int i = 1; i < 10; i++)
             digits[i] = (char)('0' + rng.Next(10));
-        int sumOdd = 0, sumEven = 0;
-        for (int i = 0; i < 10; i++)
-        {
-            int d = digits[i] - '0';
-            if ((i & 1) == 0) sumOdd += d; else sumEven += d;
-        }
-        int total = sumOdd + 2 * sumEven;
-        digits[10] = (char)('0' + ((10 - total % 10) % 10));
+        digits[10] = (char)('0' + BdewChecksum.ComputeNumeric(digits[..10]));
         written = 11;
         return true;
     }
