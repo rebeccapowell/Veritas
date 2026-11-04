@@ -304,3 +304,7 @@ See [the issue #22 remediation notes](https://github.com/rebeccapowell/Veritas/b
 ## German market partner identifiers
 
 `Energy.DE.MarketPartnerId` checks BDEW electricity (`99`, allocation mode 0–8) and DVGW gas (`98`, allocation mode 0–9) MP-IDs. The value exposes `Scheme` and `AllocationMode`. Pass an expected scheme to validation or select a scheme explicitly for synthetic generation. The Lok-/Waggon checksum is shared with MaLo and differs from GS1 GLN. Spaces are normalised; Unicode digits and other punctuation are rejected. Neither validation nor generation establishes official allocation. Reference: [BDEW guide 1.2, sections 2 and 8.1](https://www.bdew.de/media/documents/AWH_Identifikatoren-in-der-Marktkommunikation_Version.1.2.pdf).
+
+## German network locations (NeLo)
+
+`Energy.DE.Nelo` and `NeloValue` support the eleven-character Netzlokations-ID: `E`, nine ASCII alphanumeric characters and one decimal check digit. Validation normalises lower-case ASCII and spaces, rejects other punctuation and enforces a 4,096-character raw-input resource cap. Generation is deterministic with a seed and produces synthetic values that may already be assigned. Structure and check digits do not establish official allocation. The shared ASCII procedure is independently checked with BDEW's published `A1137355925` example. Reference: [BDEW guide 1.2, sections 4 and 8.2](https://www.bdew.de/media/documents/AWH_Identifikatoren-in-der-Marktkommunikation_Version.1.2.pdf).

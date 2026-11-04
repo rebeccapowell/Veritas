@@ -5,6 +5,18 @@ namespace Veritas.Energy.DE;
 /// <summary>BDEW application guide 1.2, section 8.1: Lok-/Waggon numeric check digit.</summary>
 internal static class BdewChecksum
 {
+    // Section 8.2: digits keep numeric values; only letters use ASCII code points.
+    internal static int ComputeAlphanumeric(ReadOnlySpan<char> body)
+    {
+        int sum = 0;
+        for (int i = 0; i < body.Length; i++)
+        {
+            int value = char.IsAsciiDigit(body[i]) ? body[i] - '0' : body[i];
+            sum += value * (i % 2 == 0 ? 1 : 2);
+        }
+        return (10 - sum % 10) % 10;
+    }
+
     internal static int ComputeNumeric(ReadOnlySpan<char> body)
     {
         int sum = 0;
