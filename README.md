@@ -312,3 +312,16 @@ See [the issue #22 remediation notes](https://github.com/rebeccapowell/Veritas/b
 ## German network areas (NeBe)
 
 `Energy.DE.Nebe` and `NebeValue` implement the distinct `F`-prefix Netzbereichs-ID under BDEW guide 1.2, sections 5 and 8.2. The eleven-character format shares the verified ASCII checksum with NeLo. Validation normalises ASCII case and spaces, rejects Unicode lookalikes and checksum-valid identifiers of another type, and applies a 4,096-character raw-input cap. Seeded generation is deterministic synthetic test data, with no promise of non-assignment or official allocation.
+
+## German resource identifiers
+
+`Energy.DE.ResourceId` parses a typed `ResourceIdValue`; its expected-type overload rejects a checksum-valid identifier of another type. Generation requires an explicit `ResourceIdType`. BDEW guide 1.2, sections 6 and 8.2 specifies:
+
+| Prefix | Type | Enum |
+| --- | --- | --- |
+| A | Cluster resource, CR-ID | Cluster |
+| B | Control group, SG-ID | ControlGroup |
+| C | Controllable resource, SR-ID | Controllable |
+| D | Technical resource, TR-ID | Technical |
+
+All variants use eleven characters and the verified shared ASCII checksum. NeLo and NeBe are separate types. Validation normalises ASCII case and spaces, rejects other punctuation and Unicode lookalikes, and caps raw input at 4,096 characters. Synthetic, optionally seeded generation neither allocates a resource nor guarantees that its value is unassigned.
