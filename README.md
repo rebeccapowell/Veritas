@@ -308,3 +308,7 @@ See [the issue #22 remediation notes](https://github.com/rebeccapowell/Veritas/b
 ## German network locations (NeLo)
 
 `Energy.DE.Nelo` and `NeloValue` support the eleven-character Netzlokations-ID: `E`, nine ASCII alphanumeric characters and one decimal check digit. Validation normalises lower-case ASCII and spaces, rejects other punctuation and enforces a 4,096-character raw-input resource cap. Generation is deterministic with a seed and produces synthetic values that may already be assigned. Structure and check digits do not establish official allocation. The shared ASCII procedure is independently checked with BDEW's published `A1137355925` example. Reference: [BDEW guide 1.2, sections 4 and 8.2](https://www.bdew.de/media/documents/AWH_Identifikatoren-in-der-Marktkommunikation_Version.1.2.pdf).
+
+## German network areas (NeBe)
+
+`Energy.DE.Nebe` and `NebeValue` implement the distinct `F`-prefix Netzbereichs-ID under BDEW guide 1.2, sections 5 and 8.2. The eleven-character format shares the verified ASCII checksum with NeLo. Validation normalises ASCII case and spaces, rejects Unicode lookalikes and checksum-valid identifiers of another type, and applies a 4,096-character raw-input cap. Seeded generation is deterministic synthetic test data, with no promise of non-assignment or official allocation.
