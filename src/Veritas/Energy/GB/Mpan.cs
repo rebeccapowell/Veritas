@@ -36,6 +36,13 @@ public static class Mpan
             result = new ValidationResult<MpanValue>(false, default, ValidationError.Length);
             return false;
         }
+        // Distributor codes are two non-zero-prefixed digits. Actual allocation is registry data.
+        // Do not freeze Ofgem's older upper bound of 28: EMRS WP25 includes IDNOs 29 and 30.
+        if (digits[0] == '0')
+        {
+            result = new ValidationResult<MpanValue>(false, default, ValidationError.Format);
+            return false;
+        }
         int sum = 0;
         for (int i = 0; i < 12; i++)
             sum += (digits[i] - '0') * Weights[i];
@@ -71,7 +78,10 @@ public static class Mpan
             return false;
         }
         var rng = options.Seed.HasValue ? new Random(options.Seed.Value) : Random.Shared;
-        for (int i = 0; i < 12; i++)
+        // Synthetic subset: London distributor 12, with a random ten-digit reference.
+        destination[0] = '1';
+        destination[1] = '2';
+        for (int i = 2; i < 12; i++)
             destination[i] = (char)('0' + rng.Next(10));
         int sum = 0;
         for (int i = 0; i < 12; i++)

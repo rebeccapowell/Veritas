@@ -83,6 +83,7 @@ public static class Cnpj
         foreach (var ch in input)
         {
             if (ch == '.' || ch == '-' || ch == '/' || ch == ' ') continue;
+            if (!char.IsAsciiLetterOrDigit(ch)) { len = 0; return false; }
             char c = char.ToUpperInvariant(ch);
             if (!(char.IsAsciiDigit(c) || len < 12 && c >= 'A' && c <= 'Z')) { len = 0; return false; }
             if (len >= dest.Length) { len = 0; return false; }

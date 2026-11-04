@@ -81,6 +81,9 @@ public class ModernFormatsRegressionTests
     [InlineData("00.000.000/E08G-12", true)]
     [InlineData("00000000E08G13", false)]
     [InlineData("04252011000110", true)]
+    [InlineData("S0000000000018", true)]
+    [InlineData("s0000000000018", true)]
+    [InlineData("ſ0000000000018", false)]
     public void Cnpj_SupportsAlphanumericAndLegacyFormats(string input, bool expected)
         => Veritas.Tax.BR.Cnpj.TryValidate(input, out _).ShouldBe(expected);
 
