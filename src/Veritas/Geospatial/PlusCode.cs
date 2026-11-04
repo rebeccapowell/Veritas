@@ -24,44 +24,31 @@ public static class PlusCode
     /// <returns><c>true</c> if validation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<PlusCodeValue> result)
     {
-        Span<char> buf = stackalloc char[Math.Min(15, input.Length)];
-        int len = 0;
-        int plusPos = -1;
-        foreach (var ch in input)
+        result = new ValidationResult<PlusCodeValue>(false, default, ValidationError.Format);
+        if (input.Length > 4096) return false;
+        Span<char> buf = stackalloc char[16];
+        int len = 0, plusPos = -1;
+        foreach (char c in input)
         {
-            if (ch == ' ')
-                continue;
-            char u = char.ToUpperInvariant(ch);
+            if (c == ' ') continue;
+            if (len == buf.Length) return false;
+            char u = char.ToUpperInvariant(c);
             if (u == '+')
             {
-                if (plusPos != -1)
-                {
-                    result = new ValidationResult<PlusCodeValue>(false, default, ValidationError.Format);
-                    return false;
-                }
+                if (plusPos >= 0) return false;
                 plusPos = len;
-                buf[len++] = '+';
             }
-            else
-            {
-                if (Alphabet.IndexOf(u) < 0)
-                {
-                    result = new ValidationResult<PlusCodeValue>(false, default, ValidationError.Charset);
-                    return false;
-                }
-                if (len >= 15)
-                {
-                    result = new ValidationResult<PlusCodeValue>(false, default, ValidationError.Length);
-                    return false;
-                }
-                buf[len++] = u;
-            }
+            else if (u != '0' && Alphabet.IndexOf(u) < 0) return false;
+            buf[len++] = u;
         }
-        if (plusPos != 8 || plusPos == len - 1 || len < 9)
+        if (len < 2 || plusPos < 0 || plusPos > 8 || plusPos % 2 != 0 || len - plusPos - 1 == 1) return false;
+        int padding = buf[..len].IndexOf('0');
+        if (padding >= 0)
         {
-            result = new ValidationResult<PlusCodeValue>(false, default, ValidationError.Format);
-            return false;
+            if (plusPos != 8 || len != 9 || padding < 2 || padding % 2 != 0) return false;
+            for (int i = padding; i < 8; i++) if (buf[i] != '0') return false;
         }
+        if (plusPos == 8 && (Alphabet.IndexOf(buf[0]) >= 9 || Alphabet.IndexOf(buf[1]) >= 18)) return false;
         result = new ValidationResult<PlusCodeValue>(true, new PlusCodeValue(new string(buf[..len])), ValidationError.None);
         return true;
     }
@@ -80,7 +67,7 @@ public static class PlusCode
     /// <returns><c>true</c> if generation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryGenerate(in GenerationOptions options, Span<char> destination, out int written)
     {
-        const int TotalLength = 10; // 8 chars + '+' + 1 char
+        const int TotalLength = 11; // Ten significant characters and the separator.
         if (destination.Length < TotalLength)
         {
             written = 0;
@@ -89,8 +76,11 @@ public static class PlusCode
         var rng = options.Seed.HasValue ? new Random(options.Seed.Value) : Random.Shared;
         for (int i = 0; i < 8; i++)
             destination[i] = Alphabet[rng.Next(Alphabet.Length)];
+        destination[0] = Alphabet[rng.Next(9)];
+        destination[1] = Alphabet[rng.Next(18)];
         destination[8] = '+';
         destination[9] = Alphabet[rng.Next(Alphabet.Length)];
+        destination[10] = Alphabet[rng.Next(Alphabet.Length)];
         written = TotalLength;
         return true;
     }

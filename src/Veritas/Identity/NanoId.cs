@@ -1,4 +1,5 @@
 using System;
+using System.Security.Cryptography;
 using Veritas;
 
 namespace Veritas.Identity;
@@ -36,8 +37,9 @@ public static class NanoId
             return false;
         }
         var rng = options.Seed.HasValue ? new Random(options.Seed.Value) : Random.Shared;
-        for (int i = 0; i < length; i++)
-            destination[i] = Alphabet[rng.Next(Alphabet.Length)];
+        Span<byte> random = stackalloc byte[length];
+        if (options.Seed.HasValue) rng.NextBytes(random); else RandomNumberGenerator.Fill(random);
+        for (int i = 0; i < length; i++) destination[i] = Alphabet[random[i] & 63];
         written = length;
         return true;
     }

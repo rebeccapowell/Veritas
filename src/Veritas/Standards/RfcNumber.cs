@@ -23,7 +23,13 @@ public static class RfcNumber
     /// <returns><c>true</c> if validation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<RfcNumberValue> result)
     {
-        Span<char> buf = stackalloc char[input.Length];
+        if (input.Length > 4096)
+        {
+            result = new ValidationResult<RfcNumberValue>(false, default, ValidationError.Length);
+            return false;
+        }
+
+        Span<char> buf = input.Length <= 256 ? stackalloc char[input.Length] : new char[input.Length];
         int len = 0;
         foreach (var ch in input)
         {

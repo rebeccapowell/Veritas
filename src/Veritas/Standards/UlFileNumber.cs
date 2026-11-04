@@ -21,7 +21,13 @@ public static class UlFileNumber
     /// <returns><c>true</c> if validation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<UlFileNumberValue> result)
     {
-        Span<char> buf = stackalloc char[input.Length];
+        if (input.Length > 4096)
+        {
+            result = new ValidationResult<UlFileNumberValue>(false, default, ValidationError.Length);
+            return false;
+        }
+
+        Span<char> buf = stackalloc char[7];
         int len = 0;
         foreach (var ch in input)
         {
@@ -35,6 +41,11 @@ public static class UlFileNumber
                     result = new ValidationResult<UlFileNumberValue>(false, default, ValidationError.Format);
                     return false;
                 }
+                if (len >= buf.Length)
+                {
+                    result = new ValidationResult<UlFileNumberValue>(false, default, ValidationError.Length);
+                    return false;
+                }
                 buf[len++] = 'E';
             }
             else
@@ -45,6 +56,11 @@ public static class UlFileNumber
                     return false;
                 }
                 if (len >= 7)
+                {
+                    result = new ValidationResult<UlFileNumberValue>(false, default, ValidationError.Length);
+                    return false;
+                }
+                if (len >= buf.Length)
                 {
                     result = new ValidationResult<UlFileNumberValue>(false, default, ValidationError.Length);
                     return false;

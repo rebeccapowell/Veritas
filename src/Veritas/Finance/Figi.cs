@@ -29,23 +29,12 @@ public static class Figi
             result = new ValidationResult<FigiValue>(false, default, ValidationError.Length);
             return false;
         }
-        Span<char> digits = stackalloc char[24];
-        int di = 0;
-        for (int i = 0; i < 11; i++)
+        if (!HasValidStructure(buf))
         {
-            char ch = buf[i];
-            int v = ch <= '9' ? ch - '0' : ch - 'A' + 10;
-            if (v >= 10)
-            {
-                digits[di++] = (char)('0' + v / 10);
-                digits[di++] = (char)('0' + v % 10);
-            }
-            else
-            {
-                digits[di++] = (char)('0' + v);
-            }
+            result = new ValidationResult<FigiValue>(false, default, ValidationError.Format);
+            return false;
         }
-        int check = Luhn.ComputeCheckDigit(digits[..di]);
+        int check = ComputeCheckDigit(buf[..11]);
         if (buf[11] - '0' != check)
         {
             result = new ValidationResult<FigiValue>(false, default, ValidationError.Checksum);
@@ -75,29 +64,36 @@ public static class Figi
             return false;
         }
         var rng = options.Seed.HasValue ? new Random(options.Seed.Value) : Random.Shared;
-        const string alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const string alphabet = "0123456789BCDFGHJKLMNPQRSTVWXYZ";
         Span<char> buf = destination[..12];
-        for (int i = 0; i < 11; i++)
-            buf[i] = alphabet[rng.Next(alphabet.Length)];
-        Span<char> digits = stackalloc char[24];
-        int di = 0;
-        for (int i = 0; i < 11; i++)
-        {
-            char ch = buf[i];
-            int v = ch <= '9' ? ch - '0' : ch - 'A' + 10;
-            if (v >= 10)
-            {
-                digits[di++] = (char)('0' + v / 10);
-                digits[di++] = (char)('0' + v % 10);
-            }
-            else
-            {
-                digits[di++] = (char)('0' + v);
-            }
-        }
-        buf[11] = (char)('0' + Luhn.ComputeCheckDigit(digits[..di]));
+        buf[0] = buf[1] = 'B';
+        buf[2] = 'G';
+        for (int i = 3; i < 11; i++) buf[i] = alphabet[rng.Next(alphabet.Length)];
+        buf[11] = (char)('0' + ComputeCheckDigit(buf[..11]));
         written = 12;
         return true;
+    }
+
+    private static bool HasValidStructure(ReadOnlySpan<char> value)
+    {
+        const string consonants = "BCDFGHJKLMNPQRSTVWXYZ";
+        if (consonants.IndexOf(value[0]) < 0 || consonants.IndexOf(value[1]) < 0 || value[2] != 'G' || value[11] < '0' || value[11] > '9') return false;
+        if (value[..2] is "BS" or "BM" or "GG" or "GB" or "VG" or "GH" or "KY") return false;
+        for (int i = 3; i < 11; i++)
+            if (!(value[i] >= '0' && value[i] <= '9') && consonants.IndexOf(value[i]) < 0) return false;
+        return true;
+    }
+
+    private static int ComputeCheckDigit(ReadOnlySpan<char> body)
+    {
+        int sum = 0;
+        for (int i = 0; i < body.Length; i++)
+        {
+            int value = body[i] <= '9' ? body[i] - '0' : body[i] - 'A' + 10;
+            value *= (i % 2 == 0 ? 1 : 2);
+            sum += value / 10 + value % 10;
+        }
+        return (10 - sum % 10) % 10;
     }
 
     private static bool Normalize(ReadOnlySpan<char> input, Span<char> dest, out int len)

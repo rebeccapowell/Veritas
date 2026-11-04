@@ -6,7 +6,7 @@ using Shouldly;
 public class MpanTests
 {
     [Theory]
-    [InlineData("1234567890123", true)]
+    [InlineData("1234567890126", true)]
     [InlineData("1234567890124", false)]
     public void Validate_Works(string input, bool expected)
     {

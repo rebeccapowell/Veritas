@@ -22,7 +22,13 @@ public static class IecStandardNumber
     /// <returns><c>true</c> if validation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<IecStandardNumberValue> result)
     {
-        Span<char> buf = stackalloc char[input.Length];
+        if (input.Length > 4096)
+        {
+            result = new ValidationResult<IecStandardNumberValue>(false, default, ValidationError.Length);
+            return false;
+        }
+
+        Span<char> buf = stackalloc char[12];
         int len = 0;
         int digitCount = 0;
         int yearCount = 0;
@@ -40,6 +46,11 @@ public static class IecStandardNumber
                     result = new ValidationResult<IecStandardNumberValue>(false, default, ValidationError.Format);
                     return false;
                 }
+                if (len >= buf.Length)
+                {
+                    result = new ValidationResult<IecStandardNumberValue>(false, default, ValidationError.Length);
+                    return false;
+                }
                 buf[len++] = u;
             }
             else if (!afterColon)
@@ -51,11 +62,21 @@ public static class IecStandardNumber
                         result = new ValidationResult<IecStandardNumberValue>(false, default, ValidationError.Length);
                         return false;
                     }
+                    if (len >= buf.Length)
+                    {
+                        result = new ValidationResult<IecStandardNumberValue>(false, default, ValidationError.Length);
+                        return false;
+                    }
                     buf[len++] = ch;
                     digitCount++;
                 }
                 else if (ch == ':' && digitCount == 4)
                 {
+                    if (len >= buf.Length)
+                    {
+                        result = new ValidationResult<IecStandardNumberValue>(false, default, ValidationError.Length);
+                        return false;
+                    }
                     buf[len++] = ':';
                     afterColon = true;
                 }
@@ -73,6 +94,11 @@ public static class IecStandardNumber
                     return false;
                 }
                 if (yearCount >= 4)
+                {
+                    result = new ValidationResult<IecStandardNumberValue>(false, default, ValidationError.Length);
+                    return false;
+                }
+                if (len >= buf.Length)
                 {
                     result = new ValidationResult<IecStandardNumberValue>(false, default, ValidationError.Length);
                     return false;

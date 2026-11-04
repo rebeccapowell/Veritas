@@ -68,7 +68,7 @@ public static class Lei
         {
             if (ch == ' ' || ch == '\t') continue;
             char u = char.ToUpperInvariant(ch);
-            if (!(char.IsDigit(u) || (u >= 'A' && u <= 'Z'))) { len = 0; return false; }
+            if (!(char.IsAsciiDigit(u) || (u >= 'A' && u <= 'Z'))) { len = 0; return false; }
             if (len >= dest.Length) { len = 0; return false; }
             dest[len++] = u;
         }

@@ -6,7 +6,7 @@ using Shouldly;
 public class SepaCreditorIdentifierTests
 {
     [Theory]
-    [InlineData("DE74ZZZ09999999999", true)]
+    [InlineData("DE98ZZZ09999999999", true)]
     [InlineData("DE75ZZZ09999999999", false)]
     public void Validate_Works(string input, bool expected)
     {

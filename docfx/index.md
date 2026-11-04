@@ -76,14 +76,14 @@ foreach (var s in Bulk.GenerateMany((dst, rng) => {
 | CUSIP | US/Canada | weighted mod 10 checksum; generation | <xref:Veritas.Finance.Cusip> |
 | Market Identifier Code (MIC) | Global | structural check | <xref:Veritas.Finance.MarketIdentifierCode> |
 | WKN | Germany | structural check | <xref:Veritas.Finance.Wkn> |
-| FIGI | Global | Luhn check digit; generation | <xref:Veritas.Finance.Figi> |
+| FIGI | Global | character-weighted check digit; synthetic generation | <xref:Veritas.Finance.Figi> |
 | CHIPS Participant ID | US | format check; generation | <xref:Veritas.Finance.ChipsParticipantId> |
 
 ### Energy
 
 | Identifier | Country/Region | Validation & Generation | Docs |
 |------------|----------------|-------------------------|------|
-| EIC | International | ISO 7064 mod 37,2 checksum; generation | <xref:Veritas.Energy.Eic> |
+| EIC | International | ENTSO-E weighted checksum; validation only | <xref:Veritas.Energy.Eic> |
 | MPAN | GB | weighted mod 11 checksum; generation | <xref:Veritas.Energy.GB.Mpan> |
 | MPRN | GB | length & format | <xref:Veritas.Energy.GB.Mprn> |
 | Energy EAN | NL | GS1 mod 10 checksum; generation | <xref:Veritas.Energy.NL.EnergyEan> |
@@ -364,3 +364,19 @@ foreach (var s in Bulk.GenerateMany((dst, rng) => {
 
 Contributions for these and other identifiers are welcome!
 
+## Validation boundaries
+
+Validation is offline and does not establish official assignment or ownership. Generation produces synthetic test data that may coincide with assigned identifiers. The parsers hardened for issue #22 enforce a 4,096-character raw-input resource limit, including separators; generic Base58Check supports at most 1,024 payload bytes. See the README for the affected parser families.
+
+
+## Corrected validation behaviour (unreleased)
+
+The issue #22 corrections validate EIC with the ENTSO-E weighted algorithm, MPAN with prime weights, SEPA without the business code, FIGI and CUSIP using character-wise digit sums, and Codice Fiscale with its positional maps and calendar structure. IBAN checks the SWIFT national BBAN format; ISIN requires a letter prefix; MaLo requires a non-zero first digit. Validation can now reject values that earlier releases incorrectly accepted.
+
+Plus Codes support full, short and padded syntax; generated full codes contain ten significant characters. KID Mod11 generation can return false for a body with an unrepresentable check digit. MRZ generation writes the two-digit year. CNPJ accepts the 2026 alphanumeric format alongside numeric CNPJs, and HETU accepts the 2023 century markers and rejects impossible dates. BCP 47 checks RFC 5646 well-formed syntax, including grandfathered and private-use tags, without claiming IANA registration.
+
+Unseeded ULID, KSUID and NanoID generation uses cryptographic randomness. Seeded ULID/KSUID fixtures use their scheme epoch unless `GenerationOptions.Timestamp` is supplied. Timestamp values outside the scheme range fail explicitly. Seeded generation is for reproducible fixtures, not security tokens.
+
+Unrestricted `Eic.TryGenerate` now returns false with zero characters written: ENTSO-E reserves allocation-related algorithm use to authorised issuing offices. SEPA's default synthetic generator now emits the documented German national format rather than arbitrary country/length combinations. Its validator checks the supported national shapes and the SEPA checksum, without checking each underlying national tax identifier or registry.
+
+See [the issue #22 remediation notes](https://github.com/rebeccapowell/Veritas/blob/fix/22-critical-review/docs/remediation-22.md) for specification references, dependency audit results and operational follow-up.

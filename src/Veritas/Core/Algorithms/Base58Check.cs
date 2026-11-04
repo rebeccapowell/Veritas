@@ -7,6 +7,8 @@ namespace Veritas.Algorithms;
 /// <summary>Provides Base58Check encoding and decoding utilities.</summary>
 internal static class Base58Check
 {
+    internal const int MaxPayloadLength = 1024;
+    private const int MaxEncodedLength = (MaxPayloadLength + 4) * 138 / 100 + 1;
     private const string Alphabet = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz";
 
     private static readonly sbyte[] Map;
@@ -22,7 +24,8 @@ internal static class Base58Check
     public static bool TryDecode(ReadOnlySpan<char> input, Span<byte> destination, out int written)
     {
         written = 0;
-        if (input.IsEmpty) return false;
+        if (input.IsEmpty || input.Length > MaxEncodedLength ||
+            input.Length > ((long)destination.Length + 4) * 138 / 100 + 1) return false;
 
         var map = Map;
         BigInteger num = BigInteger.Zero;
@@ -36,14 +39,16 @@ internal static class Base58Check
         int zeros = 0;
         while (zeros < input.Length && input[zeros] == '1') zeros++;
 
-        int byteCount = num.GetByteCount(true);
-        Span<byte> buffer = stackalloc byte[byteCount];
-        if (!num.TryWriteBytes(buffer, out int bytesWritten, isUnsigned: true, isBigEndian: true))
+        int byteCount = num.IsZero ? 0 : num.GetByteCount(true);
+        int total = zeros + byteCount;
+        if (total < 4 || total > MaxPayloadLength + 4 || total - 4 > destination.Length) return false;
+        Span<byte> buffer = stackalloc byte[MaxPayloadLength + 4];
+        int bytesWritten = 0;
+        if (!num.IsZero && !num.TryWriteBytes(buffer, out bytesWritten, isUnsigned: true, isBigEndian: true))
             return false;
 
-        int total = zeros + bytesWritten;
-        if (total < 4) return false;
-        Span<byte> full = stackalloc byte[total];
+        Span<byte> fullBuffer = stackalloc byte[MaxPayloadLength + 4];
+        Span<byte> full = fullBuffer[..total];
         full.Slice(0, zeros).Fill(0);
         buffer.Slice(byteCount - bytesWritten, bytesWritten).CopyTo(full.Slice(zeros));
 
@@ -64,7 +69,9 @@ internal static class Base58Check
     public static bool TryEncode(ReadOnlySpan<byte> data, Span<char> destination, out int written)
     {
         written = 0;
-        Span<byte> input = stackalloc byte[data.Length + 4];
+        if (data.Length > MaxPayloadLength) return false;
+        Span<byte> inputBuffer = stackalloc byte[MaxPayloadLength + 4];
+        Span<byte> input = inputBuffer[..(data.Length + 4)];
         data.CopyTo(input);
 
         Span<byte> hash = stackalloc byte[32];
@@ -74,7 +81,7 @@ internal static class Base58Check
         hash.Slice(0, 4).CopyTo(input.Slice(data.Length));
 
         BigInteger num = new BigInteger(input, isUnsigned: true, isBigEndian: true);
-        Span<char> buffer = stackalloc char[destination.Length];
+        Span<char> buffer = stackalloc char[MaxEncodedLength];
         int pos = buffer.Length;
         while (num > 0)
         {

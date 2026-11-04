@@ -33,6 +33,11 @@ public static class Ksuid
                 return false;
             }
         }
+        if (input.SequenceCompareTo("aWgEPTl1tmebfsQzFP4bxwgy80V") > 0)
+        {
+            result = new ValidationResult<KsuidValue>(false, default, ValidationError.Format);
+            return false;
+        }
         result = new ValidationResult<KsuidValue>(true, new KsuidValue(new string(input)), ValidationError.None);
         return true;
     }
@@ -45,9 +50,12 @@ public static class Ksuid
             return false;
         }
         Span<byte> bytes = stackalloc byte[20];
-        uint ts = (uint)(DateTimeOffset.UtcNow.ToUnixTimeSeconds() - 1400000000); // KSUID epoch
+        long seconds = (options.Timestamp ?? (options.Seed.HasValue ? DateTimeOffset.FromUnixTimeSeconds(1400000000) : DateTimeOffset.UtcNow)).ToUnixTimeSeconds() - 1400000000;
+        if (seconds < 0 || seconds > uint.MaxValue) { written = 0; return false; }
+        uint ts = (uint)seconds;
         BinaryPrimitives.WriteUInt32BigEndian(bytes, ts);
-        RandomNumberGenerator.Fill(bytes.Slice(4));
+        if (options.Seed.HasValue) new Random(options.Seed.Value).NextBytes(bytes[4..]);
+        else RandomNumberGenerator.Fill(bytes[4..]);
         EncodeBase62(bytes, destination);
         written = 27;
         return true;

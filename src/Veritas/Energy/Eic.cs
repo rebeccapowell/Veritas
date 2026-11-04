@@ -30,7 +30,8 @@ public static class Eic
             result = new ValidationResult<EicValue>(false, default, ValidationError.Length);
             return false;
         }
-        if (!Iso7064.ValidateMod37_2(buffer))
+        if (buffer[0] < '0' || buffer[0] > '9' || buffer[1] < '0' || buffer[1] > '9' ||
+            "XYZTWAV".IndexOf(buffer[2]) < 0 || buffer[15] == '-' || ComputeCheckCharacter(buffer[..15]) != buffer[15])
         {
             result = new ValidationResult<EicValue>(false, default, ValidationError.Checksum);
             return false;
@@ -40,14 +41,14 @@ public static class Eic
         return true;
     }
 
-    /// <summary>Attempts to generate a random EIC code into the provided buffer.</summary>
+    /// <summary>Returns false because unrestricted EIC generation is unavailable into the provided buffer.</summary>
     /// <param name="destination">Buffer that receives the generated code.</param>
     /// <param name="written">When the method returns, contains the number of characters produced.</param>
     /// <returns><c>true</c> if generation was attempted; otherwise, <c>false</c>.</returns>
     public static bool TryGenerate(Span<char> destination, out int written)
         => TryGenerate(default, destination, out written);
 
-    /// <summary>Attempts to generate a random EIC code using the supplied options.</summary>
+    /// <summary>Returns false because unrestricted EIC generation is unavailable using the supplied options.</summary>
     /// <param name="options">Options controlling generation.</param>
     /// <param name="destination">Buffer that receives the generated code.</param>
     /// <param name="written">When the method returns, contains the number of characters produced.</param>
@@ -56,16 +57,17 @@ public static class Eic
     {
         written = 0;
         if (destination.Length < 16) return false;
-        var rng = options.Seed.HasValue ? new Random(options.Seed.Value) : Random.Shared;
-        Span<char> chars = destination[..16];
-        for (int i = 0; i < 15; i++)
-        {
-            int v = rng.Next(36);
-            chars[i] = v < 10 ? (char)('0' + v) : (char)('A' + v - 10);
-        }
-        chars[15] = Iso7064.ComputeCheckCharacterMod37_2(chars[..15]);
-        written = 16;
-        return true;
+        // ENTSO-E restricts algorithm use for allocation to authorised issuing offices.
+        // Arbitrary synthetic generation is therefore deliberately unavailable.
+        return false;
+    }
+
+    private static char ComputeCheckCharacter(ReadOnlySpan<char> body)
+    {
+        const string alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ-";
+        int sum = 0;
+        for (int i = 0; i < body.Length; i++) sum += alphabet.IndexOf(body[i]) * (16 - i);
+        return alphabet[(37 - sum % 37) % 37];
     }
 
     private static bool Normalize(ReadOnlySpan<char> input, Span<char> dest, out int written)
@@ -75,7 +77,7 @@ public static class Eic
         {
             if (ch == ' ' || ch == '\t') continue;
             char u = char.ToUpperInvariant(ch);
-            if (!(char.IsDigit(u) || (u >= 'A' && u <= 'Z') || u == '*')) { written = 0; return false; }
+            if (!((u >= '0' && u <= '9') || (u >= 'A' && u <= 'Z') || u == '-')) { written = 0; return false; }
             if (written >= dest.Length) { written = 0; return false; }
             dest[written++] = u;
         }

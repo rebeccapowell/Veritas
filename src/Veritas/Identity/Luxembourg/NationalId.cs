@@ -50,7 +50,7 @@ public static class NationalId
         foreach (var ch in input)
         {
             if (ch == ' ' || ch == '-') continue;
-            if (!char.IsDigit(ch)) { len = 0; return false; }
+            if (!char.IsAsciiDigit(ch)) { len = 0; return false; }
             if (len >= dest.Length) { len = 0; return false; }
             dest[len++] = ch;
         }

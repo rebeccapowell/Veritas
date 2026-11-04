@@ -23,7 +23,13 @@ public static class FaaNNumber
     /// <returns><c>true</c> if validation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<FaaNNumberValue> result)
     {
-        Span<char> buf = stackalloc char[input.Length];
+        if (input.Length > 4096)
+        {
+            result = new ValidationResult<FaaNNumberValue>(false, default, ValidationError.Length);
+            return false;
+        }
+
+        Span<char> buf = stackalloc char[6];
         int len = 0;
         int digitCount = 0;
         int letterCount = 0;
@@ -39,6 +45,11 @@ public static class FaaNNumber
                     result = new ValidationResult<FaaNNumberValue>(false, default, ValidationError.Format);
                     return false;
                 }
+                if (len >= buf.Length)
+                {
+                    result = new ValidationResult<FaaNNumberValue>(false, default, ValidationError.Length);
+                    return false;
+                }
                 buf[len++] = 'N';
             }
             else if (letterCount == 0 && ch >= '0' && ch <= '9')
@@ -49,6 +60,11 @@ public static class FaaNNumber
                     return false;
                 }
                 if (++digitCount > 5)
+                {
+                    result = new ValidationResult<FaaNNumberValue>(false, default, ValidationError.Length);
+                    return false;
+                }
+                if (len >= buf.Length)
                 {
                     result = new ValidationResult<FaaNNumberValue>(false, default, ValidationError.Length);
                     return false;
@@ -74,6 +90,11 @@ public static class FaaNNumber
                     return false;
                 }
                 letterCount++;
+                if (len >= buf.Length)
+                {
+                    result = new ValidationResult<FaaNNumberValue>(false, default, ValidationError.Length);
+                    return false;
+                }
                 buf[len++] = u;
             }
             else

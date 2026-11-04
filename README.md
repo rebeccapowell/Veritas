@@ -282,3 +282,21 @@ See [contributors.md](contributors.md) for guidelines. In short, fork the reposi
 
 Continuous integration via [GitHub Actions](.github/workflows/ci.yml) restores dependencies, builds, and runs the test suite on every push and pull request. Packages are produced by the [publish workflow](.github/workflows/publish.yml) and releases are drafted automatically.
 
+## Validation boundaries
+
+Offline validation checks syntax and, where implemented, check digits. It does not establish assignment, ownership or registration. Generated identifiers are synthetic test data and may coincide with assigned values.
+
+The parsers hardened in issue #22 (passport/visa, BCP 47, healthcare, standards, transportation and cadastral helpers) accept at most 4,096 raw characters, including ignored separators. This resource limit prevents excessive parser work; normal identifier lengths remain unchanged. Generic Base58Check supports payloads up to 1,024 bytes and rejects oversized encoded input before numeric conversion. Bitcoin address validation remains limited to the supported legacy address versions.
+
+
+## Corrected validation behaviour (unreleased)
+
+The issue #22 corrections validate EIC with the ENTSO-E weighted algorithm, MPAN with prime weights, SEPA without the business code, FIGI and CUSIP using character-wise digit sums, and Codice Fiscale with its positional maps and calendar structure. IBAN checks the SWIFT national BBAN format; ISIN requires a letter prefix; MaLo requires a non-zero first digit. Validation can now reject values that earlier releases incorrectly accepted.
+
+Plus Codes support full, short and padded syntax; generated full codes contain ten significant characters. KID Mod11 generation can return false for a body with an unrepresentable check digit. MRZ generation writes the two-digit year. CNPJ accepts the 2026 alphanumeric format alongside numeric CNPJs, and HETU accepts the 2023 century markers and rejects impossible dates. BCP 47 checks RFC 5646 well-formed syntax, including grandfathered and private-use tags, without claiming IANA registration.
+
+Unseeded ULID, KSUID and NanoID generation uses cryptographic randomness. Seeded ULID/KSUID fixtures use their scheme epoch unless `GenerationOptions.Timestamp` is supplied. Timestamp values outside the scheme range fail explicitly. Seeded generation is for reproducible fixtures, not security tokens.
+
+Unrestricted `Eic.TryGenerate` now returns false with zero characters written: ENTSO-E reserves allocation-related algorithm use to authorised issuing offices. SEPA's default synthetic generator now emits the documented German national format rather than arbitrary country/length combinations. Its validator checks the supported national shapes and the SEPA checksum, without checking each underlying national tax identifier or registry.
+
+See [the issue #22 remediation notes](https://github.com/rebeccapowell/Veritas/blob/fix/22-critical-review/docs/remediation-22.md) for specification references, dependency audit results and operational follow-up.

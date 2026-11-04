@@ -22,6 +22,11 @@ public static class Isin
             result = new ValidationResult<IsinValue>(false, default, ValidationError.Length);
             return false;
         }
+        if (buffer[0] < 'A' || buffer[0] > 'Z' || buffer[1] < 'A' || buffer[1] > 'Z' || buffer[11] < '0' || buffer[11] > '9')
+        {
+            result = new ValidationResult<IsinValue>(false, default, ValidationError.Format);
+            return false;
+        }
         Span<char> digits = stackalloc char[24];
         int idx = 0;
         for (int i = 0; i < len; i++)
@@ -55,7 +60,7 @@ public static class Isin
         {
             if (ch == ' ' || ch == '\t') continue;
             char u = char.ToUpperInvariant(ch);
-            if (!(char.IsDigit(u) || (u >= 'A' && u <= 'Z'))) { written = 0; return false; }
+            if (!((u >= '0' && u <= '9') || (u >= 'A' && u <= 'Z'))) { written = 0; return false; }
             if (written >= dest.Length) { written = 0; return false; }
             dest[written++] = u;
         }

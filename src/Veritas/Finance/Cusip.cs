@@ -61,9 +61,9 @@ public static class Cusip
             if (dbl)
             {
                 v *= 2;
-                if (v > 9) v -= 9;
+
             }
-            sum += v;
+            sum += v / 10 + v % 10;
             dbl = !dbl;
         }
         return (10 - (sum % 10)) % 10;
@@ -71,7 +71,7 @@ public static class Cusip
 
     private static int ValueOf(char c)
     {
-        if (char.IsDigit(c)) return c - '0';
+        if ((c >= '0' && c <= '9')) return c - '0';
         if (c >= 'A' && c <= 'Z') return c - 'A' + 10;
         return c switch
         {
@@ -89,7 +89,7 @@ public static class Cusip
         {
             if (ch == ' ') continue;
             char c = char.ToUpperInvariant(ch);
-            if (!(char.IsLetterOrDigit(c) || c == '*' || c == '@' || c == '#')) { len = 0; return false; }
+            if (!((c >= '0' && c <= '9' || c >= 'A' && c <= 'Z') || c == '*' || c == '@' || c == '#')) { len = 0; return false; }
             if (len >= dest.Length) { len = 0; return false; }
             dest[len++] = c;
         }

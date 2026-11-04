@@ -17,7 +17,7 @@ public readonly struct MpanValue
 /// <summary>Provides validation and generation for MPAN identifiers.</summary>
 public static class Mpan
 {
-    private static readonly int[] Weights = new[] { 3, 7, 1, 3, 7, 1, 3, 7, 1, 3, 7, 1 };
+    private static readonly int[] Weights = new[] { 3, 5, 7, 13, 17, 19, 23, 29, 31, 37, 41, 43 };
 
     /// <summary>Attempts to validate the supplied input as an MPAN.</summary>
     /// <param name="input">Candidate identifier to validate.</param>
@@ -88,7 +88,7 @@ public static class Mpan
         foreach (var ch in input)
         {
             if (ch == ' ') continue;
-            if (!char.IsDigit(ch)) { len = 0; return false; }
+            if (!(ch >= '0' && ch <= '9')) { len = 0; return false; }
             if (len >= dest.Length) { len = 0; return false; }
             dest[len++] = ch;
         }

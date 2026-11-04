@@ -22,7 +22,13 @@ public static class KadastraleAanduiding
     /// <returns><c>true</c> if validation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<KadastraleAanduidingValue> result)
     {
-        Span<char> buf = stackalloc char[input.Length];
+        if (input.Length > 4096)
+        {
+            result = new ValidationResult<KadastraleAanduidingValue>(false, default, ValidationError.Length);
+            return false;
+        }
+
+        Span<char> buf = input.Length <= 256 ? stackalloc char[input.Length] : new char[input.Length];
         int len = 0;
         foreach (var ch in input)
         {
