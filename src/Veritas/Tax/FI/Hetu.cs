@@ -30,23 +30,32 @@ public static class Hetu
             return false;
         }
         char sep = buffer[6];
-        if (sep != '+' && sep != '-' && sep != 'A')
+        if ("+-YXWVUABCDEF".IndexOf(sep) < 0)
         {
             result = new ValidationResult<HetuValue>(false, default, ValidationError.Format);
             return false;
         }
         for (int i = 0; i < 6; i++)
-            if (!char.IsDigit(buffer[i]))
+            if (!char.IsAsciiDigit(buffer[i]))
             {
                 result = new ValidationResult<HetuValue>(false, default, ValidationError.Format);
                 return false;
             }
         for (int i = 7; i < 10; i++)
-            if (!char.IsDigit(buffer[i]))
+            if (!char.IsAsciiDigit(buffer[i]))
             {
                 result = new ValidationResult<HetuValue>(false, default, ValidationError.Format);
                 return false;
             }
+        int century = sep == '+' ? 1800 : "-YXWVU".IndexOf(sep) >= 0 ? 1900 : 2000;
+        int day = (buffer[0] - '0') * 10 + buffer[1] - '0';
+        int month = (buffer[2] - '0') * 10 + buffer[3] - '0';
+        int year = century + (buffer[4] - '0') * 10 + buffer[5] - '0';
+        if (month < 1 || month > 12 || day < 1 || day > DateTime.DaysInMonth(year, month))
+        {
+            result = new ValidationResult<HetuValue>(false, default, ValidationError.Format);
+            return false;
+        }
         char check = char.ToUpperInvariant(buffer[10]);
         if (!CheckMap.Contains(check))
         {

@@ -1,4 +1,5 @@
 using System;
+using System.Security.Cryptography;
 using Veritas;
 
 namespace Veritas.Identity;
@@ -21,7 +22,7 @@ public static class Ulid
             if (len >= 26) { result = new ValidationResult<UlidValue>(false, default, ValidationError.Length); return false; }
             buf[len++] = u;
         }
-        if (len != 26) { result = new ValidationResult<UlidValue>(false, default, ValidationError.Length); return false; }
+        if (len != 26 || buf[0] > '7') { result = new ValidationResult<UlidValue>(false, default, ValidationError.Length); return false; }
         result = new ValidationResult<UlidValue>(true, new UlidValue(new string(buf)), ValidationError.None);
         return true;
     }
@@ -36,7 +37,8 @@ public static class Ulid
             written = 0;
             return false;
         }
-        long timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+        long timestamp = (options.Timestamp ?? (options.Seed.HasValue ? DateTimeOffset.UnixEpoch : DateTimeOffset.UtcNow)).ToUnixTimeMilliseconds();
+        if (timestamp < 0 || timestamp > 281474976710655L) { written = 0; return false; }
         for (int i = 9; i >= 0; i--)
         {
             destination[i] = Alphabet[(int)(timestamp & 31)];
@@ -44,7 +46,7 @@ public static class Ulid
         }
         var rng = options.Seed.HasValue ? new Random(options.Seed.Value) : Random.Shared;
         Span<byte> random = stackalloc byte[10];
-        rng.NextBytes(random);
+        if (options.Seed.HasValue) rng.NextBytes(random); else RandomNumberGenerator.Fill(random);
         int idx = 10;
         int bitBuffer = 0;
         int bitsInBuffer = 0;

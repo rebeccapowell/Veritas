@@ -8,6 +8,9 @@ on:
     types:
       - published
 
+permissions:
+  contents: read
+
 env:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
   DOTNET_NOLOGO: true
@@ -23,13 +26,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
       - name: install dotnet
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@v6.1.0
         with:
-          dotnet-version: 8.0.x
+          dotnet-version: |
+            8.0.x
+            10.0.x
+      - name: test exact release commit
+        run: dotnet test Veritas.sln --configuration Release
       - name: dotnet pack
         if: ${{ github.event_name != 'release' }}
         run: dotnet pack ${{ env.TargetProject }} --configuration Release --output ${{ env.NuGetDirectory }}
@@ -37,7 +44,7 @@ jobs:
         if: ${{ github.event_name == 'release' && github.ref_type == 'tag' || github.event.release.tag_name }}
         run: dotnet pack ${{ env.TargetProject }} --configuration Release -p:PackageVersion="${{ github.event.release.tag_name || github.ref_name }}" --output ${{ env.NuGetDirectory }}
       - name: store artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7.0.2
         with:
           name: nuget
           if-no-files-found: error
@@ -50,12 +57,14 @@ jobs:
     needs: [create_nuget]
     steps:
       - name: download artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8.0.2
         with:
           name: nuget
           path: ${{ env.NuGetDirectory }}
       - name: install dotnet
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@v6.1.0
+        with:
+          dotnet-version: 10.0.x
       - name: nuget push
         run: |
           foreach($file in (Get-ChildItem "${{ env.NuGetDirectory }}" -Recurse -Include *.nupkg)) {

@@ -14,7 +14,7 @@ public static class Base58Check
 {
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<Base58CheckValue> result)
     {
-        Span<byte> buffer = stackalloc byte[input.Length];
+        Span<byte> buffer = stackalloc byte[Algorithms.Base58Check.MaxPayloadLength];
         if (Algorithms.Base58Check.TryDecode(input, buffer, out _))
         {
             result = new ValidationResult<Base58CheckValue>(true, new Base58CheckValue(new string(input)), ValidationError.None);

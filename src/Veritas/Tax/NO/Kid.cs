@@ -49,14 +49,18 @@ public static class Kid
     public static bool TryGenerate(KidVariant variant, in GenerationOptions options, int length, Span<char> destination, out int written)
     {
         written = 0;
-        if (length < 2 || length > 25 || destination.Length < length) return false;
+        if (variant is not (KidVariant.Mod10 or KidVariant.Mod11) || length < 2 || length > 25 || destination.Length < length) return false;
         var rng = options.Seed.HasValue ? new Random(options.Seed.Value) : Random.Shared;
         for (int i = 0; i < length - 1; i++)
             destination[i] = (char)('0' + rng.Next(0, 10));
         if (variant == KidVariant.Mod10)
             destination[length - 1] = (char)('0' + ComputeMod10(destination[..(length - 1)]));
         else
-            destination[length - 1] = (char)('0' + ComputeMod11(destination[..(length - 1)]));
+        {
+            int check = ComputeMod11(destination[..(length - 1)]);
+            if (check < 0) return false;
+            destination[length - 1] = (char)('0' + check);
+        }
         written = length;
         return true;
     }
@@ -124,7 +128,7 @@ public static class Kid
         }
         int check = 11 - sum % 11;
         if (check == 11) check = 0;
-        if (check == 10) check = 0; // rare; set to 0
+        if (check == 10) return -1;
         return check;
     }
 
@@ -134,7 +138,7 @@ public static class Kid
         foreach (var ch in input)
         {
             if (ch == ' ' || ch == '-') continue;
-            if (!char.IsDigit(ch) || len >= dest.Length)
+            if (!char.IsAsciiDigit(ch) || len >= dest.Length)
             {
                 len = 0; return false;
             }

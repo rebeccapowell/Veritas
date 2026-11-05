@@ -29,6 +29,11 @@ public static class Malo
             result = new ValidationResult<MaloValue>(false, default, ValidationError.Length);
             return false;
         }
+        if (digits[0] == '0')
+        {
+            result = new ValidationResult<MaloValue>(false, default, ValidationError.Format);
+            return false;
+        }
         int sumOdd = 0, sumEven = 0;
         for (int i = 0; i < 10; i++)
         {
@@ -86,7 +91,7 @@ public static class Malo
         foreach (var ch in input)
         {
             if (ch == ' ') continue;
-            if (!char.IsDigit(ch)) { len = 0; return false; }
+            if (!(ch >= '0' && ch <= '9')) { len = 0; return false; }
             if (len >= dest.Length) { len = 0; return false; }
             dest[len++] = ch;
         }

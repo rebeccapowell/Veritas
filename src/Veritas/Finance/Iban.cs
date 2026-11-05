@@ -22,12 +22,26 @@ public static class Iban
             result = new ValidationResult<IbanValue>(false, default, ValidationError.Format);
             return false;
         }
-        if (len < 5)
+        if (len < 5 || normalized[0] < 'A' || normalized[0] > 'Z' || normalized[1] < 'A' || normalized[1] > 'Z' ||
+            normalized[2] < '0' || normalized[2] > '9' || normalized[3] < '0' || normalized[3] > '9')
         {
             result = new ValidationResult<IbanValue>(false, default, ValidationError.Length);
             return false;
         }
 
+        string? pattern = IbanRegistry.GetBbanPattern(normalized[..2]);
+        if (pattern is null || !NationalFormat.Matches(normalized[4..len], pattern))
+        {
+            result = new ValidationResult<IbanValue>(false, default, ValidationError.Format);
+            return false;
+        }
+
+        int checkDigits = (normalized[2] - '0') * 10 + normalized[3] - '0';
+        if (checkDigits < 2 || checkDigits > 98)
+        {
+            result = new ValidationResult<IbanValue>(false, default, ValidationError.Checksum);
+            return false;
+        }
         Span<char> digits = stackalloc char[68];
         int idx = 0;
         for (int i = 4; i < len; i++) Append(digits, ref idx, normalized[i]);
@@ -63,7 +77,7 @@ public static class Iban
         {
             if (ch == ' ' || ch == '\t') continue;
             char u = char.ToUpperInvariant(ch);
-            if (!(char.IsDigit(u) || (u >= 'A' && u <= 'Z'))) { written = 0; return false; }
+            if (!((u >= '0' && u <= '9') || (u >= 'A' && u <= 'Z'))) { written = 0; return false; }
             if (written >= dest.Length) { written = 0; return false; }
             dest[written++] = u;
         }

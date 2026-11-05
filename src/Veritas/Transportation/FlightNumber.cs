@@ -21,13 +21,24 @@ public static class FlightNumber
     /// <returns><c>true</c> if validation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<FlightNumberValue> result)
     {
-        Span<char> buf = stackalloc char[input.Length];
+        if (input.Length > 4096)
+        {
+            result = new ValidationResult<FlightNumberValue>(false, default, ValidationError.Length);
+            return false;
+        }
+
+        Span<char> buf = stackalloc char[6];
         int len = 0;
         foreach (var ch in input)
         {
             if (ch == ' ' || ch == '-')
                 continue;
             if (len == input.Length)
+            {
+                result = new ValidationResult<FlightNumberValue>(false, default, ValidationError.Length);
+                return false;
+            }
+            if (len >= buf.Length)
             {
                 result = new ValidationResult<FlightNumberValue>(false, default, ValidationError.Length);
                 return false;

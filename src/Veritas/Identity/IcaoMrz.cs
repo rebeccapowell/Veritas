@@ -131,8 +131,8 @@ public static class IcaoMrz
         int year = rng.Next(startYear, endYear + 1);
         int month = rng.Next(1, 13);
         int day = rng.Next(1, 28);
-        dest[0] = (char)('0' + (year / 10_00) % 10);
-        dest[1] = (char)('0' + (year / 100) % 10);
+        dest[0] = (char)('0' + (year % 100) / 10);
+        dest[1] = (char)('0' + year % 10);
         dest[2] = (char)('0' + (month / 10));
         dest[3] = (char)('0' + (month % 10));
         dest[4] = (char)('0' + (day / 10));

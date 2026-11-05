@@ -22,7 +22,13 @@ public static class NdcPackageCode
     /// <returns><c>true</c> if validation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<NdcPackageCodeValue> result)
     {
-        Span<char> buf = stackalloc char[input.Length];
+        if (input.Length > 4096)
+        {
+            result = new ValidationResult<NdcPackageCodeValue>(false, default, ValidationError.Length);
+            return false;
+        }
+
+        Span<char> buf = stackalloc char[12];
         int len = 0;
         foreach (var ch in input)
         {
@@ -31,6 +37,11 @@ public static class NdcPackageCode
             if (ch < '0' || ch > '9')
             {
                 result = new ValidationResult<NdcPackageCodeValue>(false, default, ValidationError.Charset);
+                return false;
+            }
+            if (len >= buf.Length)
+            {
+                result = new ValidationResult<NdcPackageCodeValue>(false, default, ValidationError.Length);
                 return false;
             }
             buf[len++] = ch;

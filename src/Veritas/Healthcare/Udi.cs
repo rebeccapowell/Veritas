@@ -22,13 +22,19 @@ public static class Udi
     /// <returns><c>true</c> if validation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<UdiValue> result)
     {
+        if (input.Length > 4096)
+        {
+            result = new ValidationResult<UdiValue>(false, default, ValidationError.Length);
+            return false;
+        }
+
         if (input.IsEmpty)
         {
             result = new ValidationResult<UdiValue>(false, default, ValidationError.Length);
             return false;
         }
 
-        Span<char> buf = stackalloc char[input.Length];
+        Span<char> buf = input.Length <= 256 ? stackalloc char[input.Length] : new char[input.Length];
         int len = 0;
         foreach (var ch in input)
         {

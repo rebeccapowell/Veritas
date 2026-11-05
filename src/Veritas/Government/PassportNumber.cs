@@ -24,7 +24,13 @@ public static class PassportNumber
     /// <returns><c>true</c> if validation succeeded; otherwise, <c>false</c>.</returns>
     public static bool TryValidate(ReadOnlySpan<char> input, out ValidationResult<PassportNumberValue> result)
     {
-        Span<char> buf = stackalloc char[input.Length];
+        if (input.Length > 4096)
+        {
+            result = new ValidationResult<PassportNumberValue>(false, default, ValidationError.Length);
+            return false;
+        }
+
+        Span<char> buf = stackalloc char[9];
         int len = 0;
         foreach (var ch in input)
         {
@@ -32,10 +38,20 @@ public static class PassportNumber
                 continue;
             if (ch >= '0' && ch <= '9')
             {
+                if (len >= buf.Length)
+                {
+                    result = new ValidationResult<PassportNumberValue>(false, default, ValidationError.Length);
+                    return false;
+                }
                 buf[len++] = ch;
             }
             else if ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))
             {
+                if (len >= buf.Length)
+                {
+                    result = new ValidationResult<PassportNumberValue>(false, default, ValidationError.Length);
+                    return false;
+                }
                 buf[len++] = char.ToUpperInvariant(ch);
             }
             else
