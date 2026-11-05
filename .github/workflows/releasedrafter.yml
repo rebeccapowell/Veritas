@@ -18,12 +18,23 @@ concurrency:
 
 jobs:
   update_release_draft:
+    if: github.event_name != 'pull_request_target'
     permissions:
       contents: write
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
       - name: "Draft Release"
-        uses: release-drafter/release-drafter@v6.1.0
+        uses: release-drafter/release-drafter@v7.10.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  auto_label:
+    if: github.event_name == 'pull_request_target'
+    permissions:
+      contents: read
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Label Pull Request"
+        uses: release-drafter/release-drafter/autolabeler@v7.10.0
