@@ -421,3 +421,9 @@ WIdV section 1(2) confirms reuse of pre-existing VAT numbers for one population,
 ## D-U-N-S business identifiers
 
 `Commerce.Duns` validates structure only: exactly nine ASCII digits or the display form `12-345-6789`. It normalises the two defined hyphens, preserves leading zeros in `DunsValue` and rejects all other punctuation, whitespace and Unicode numerals. It does not enforce Luhn or an unconfirmed checksum. Successful offline validation does not establish D&B assignment, company identity, active registration or creditworthiness. There is no network dependency. Seeded generation produces reproducible synthetic nine-digit examples that may coincide with assigned numbers and are not promised safe for production enrichment calls. Reference: [D&B D-U-N-S documentation](https://docs.dnb.com/office-apps/en-US/DUNS-Number).
+
+## MPAN distributor boundary
+
+MPAN validation checks the 13-digit core, a non-zero-prefixed two-digit distributor field and the prime-weight checksum; it does not check current distributor allocation or meter registration. Synthetic generation uses distributor 12 with a random ten-digit reference. The older Ofgem FIT guidance quotes 10–28, while [EMRS WP25 appendix 4](https://www.emrsettlement.co.uk/document/working-practice/wp25-aggregation-rules-for-suppliers-and-cfd-generators/) also lists 29 and 30 and directs readers to Elexon for new LDSOs. The validator therefore avoids a stale upper allocation bound while rejecting 00–09; live allocation checks belong in the consuming application.
+
+CNPJ normalisation checks raw ASCII letters/digits before case conversion, so Unicode letters such as long s cannot become valid ASCII checksum input. ASCII lower-case alphanumeric CNPJs remain supported.

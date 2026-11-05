@@ -47,3 +47,7 @@ Trusted publishing requires a trust policy configured on NuGet.org and a protect
 - [Receita Federal alphanumeric CNPJ conversion](https://normas.receita.fazenda.gov.br/sijut2consulta/anexoOutros.action?idArquivoBinario=76204)
 - [Finnish tax administration identity-code rules](https://www.vero.fi/globalassets/tietoa-verohallinnosta/ohjelmistokehittajille/finnish-tax-administration_the-control-character-for-verifying-the-authenticity-of-finnish-business-ids-and-personal-identity-codes.pdf)
 - [ULID specification](https://github.com/ulid/spec), [KSUID reference](https://github.com/segmentio/ksuid), [BCP 47 grammar](https://www.rfc-editor.org/rfc/rfc5646)
+
+## Final integration follow-up
+
+The final acceptance check added MPAN distributor syntax and constrained synthetic generation to known distributor 12. It preserves codes 29/30 supported by EMRS WP25 instead of freezing the outdated Ofgem upper range 28; actual live allocation is not checked offline. The final integration reviewer also identified CNPJ's Unicode long-s casefold acceptance. A compiled regression reproduced it on both runtimes; raw ASCII is now checked before case conversion while ASCII lower-case input remains supported.
