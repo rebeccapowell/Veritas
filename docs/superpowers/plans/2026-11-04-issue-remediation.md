@@ -47,3 +47,5 @@ For each deliverable: write the regression/specification tests first, observe th
 - #24 complete: Nelo/NeloValue and shared alphanumeric helper implement the E-prefix scheme and letter-ASCII/numeric-digit checksum. Independent official A example and derived E vectors; 200 seeds, short buffers and hostile/Unicode tests. Long-s Unicode folding bypass reproduced and fixed by validating raw ASCII before folding. Subagent review: no findings. Release1172 on each target; DocFX0 warnings/errors. Next#25.
 
 - #25 complete: Nebe/NebeValue enforce F-type and reuse reviewed ASCII helper. Independent F vectors, valid-E wrong-type regression,200seeds,Unicode/short/hostile tests. Subagent review:no findings. Release1186 each runtime and DocFX0warnings/errors. Next#26.
+
+- #26 complete: ResourceId/ResourceIdType implement exact ACR/BSG/CSR/DTR mapping, parsed type, expected-type validation preserving checksum errors, explicit generation type, shared ASCII checksum. Independent mixed-body vectors and200seeds/type; invalid enums, wrong types, Unicode/hostile/short buffers. Subagent:no findings. Release1204 eachruntime; DocFX0warnings/errors. Next#27.
