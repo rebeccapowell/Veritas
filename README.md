@@ -325,3 +325,7 @@ See [the issue #22 remediation notes](https://github.com/rebeccapowell/Veritas/b
 | D | Technical resource, TR-ID | Technical |
 
 All variants use eleven characters and the verified shared ASCII checksum. NeLo and NeBe are separate types. Validation normalises ASCII case and spaces, rejects other punctuation and Unicode lookalikes, and caps raw input at 4,096 characters. Synthetic, optionally seeded generation neither allocates a resource nor guarantees that its value is unassigned.
+
+## Leitweg-ID invoice routing
+
+`Finance.DE.LeitwegId` validates KoSIT format 2.0.2 component syntax and MOD97 check digits. `LeitwegIdValue` exposes coarse/fine addresses and check digits, preserving zeros. Generation accepts explicit components or seeded synthetic data, with an option to omit the fine address. Coarse lengths are 2,3,5,8,9 or12, using state codes01–16 or99; the optional fine component has1–30 ASCII alphanumeric characters and is canonicalised to uppercase. Required ASCII hyphens are preserved; spaces and a Peppol `0204:` prefix are rejected. Actual AGS entries, allocation and routing reachability are outside offline validation. BT-10 and a recipient's Peppol participant identifier need not contain identical values. Generated values may coincide with assigned routing IDs. Reference: [KoSIT 2.0.2](https://xeinkauf.de/app/uploads/2022/11/Leitweg-ID-Formatspezifikation-v2-0-2-1.pdf).
