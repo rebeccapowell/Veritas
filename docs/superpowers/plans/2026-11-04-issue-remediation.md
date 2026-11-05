@@ -43,3 +43,5 @@ For each deliverable: write the regression/specification tests first, observe th
 - Next: #23 MP-ID, then #24-29. Keep separate issue PRs and subagent review gates, stack dependent PRs as necessary.
 
 - #23 complete: MarketPartnerId classifies BDEW99 and DVGW98, validates allocation-mode bounds, and requires explicit generation scheme. Shared numeric checksum retains official MaLo vector. Reviewer found loss of checksum error in expected-scheme overload; failing test reproduced on both targets and fixed. Release1159/1159 on each target; DocFX metadata/HTML0 warnings/errors. Next#24.
+
+- #24 complete: Nelo/NeloValue and shared alphanumeric helper implement the E-prefix scheme and letter-ASCII/numeric-digit checksum. Independent official A example and derived E vectors; 200 seeds, short buffers and hostile/Unicode tests. Long-s Unicode folding bypass reproduced and fixed by validating raw ASCII before folding. Subagent review: no findings. Release1172 on each target; DocFX0 warnings/errors. Next#25.
